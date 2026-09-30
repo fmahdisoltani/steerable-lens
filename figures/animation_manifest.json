@@ -1,5 +1,5 @@
 {
-  "encoding": "Actual optimizer states. Main and CelebA comparisons are deterministic replays with exact endpoint equality verified; natural-image GIFs use twelve original saved frames. No image interpolation.",
+  "encoding": "Recorded optimization states; no generated or interpolated intermediate images. Main and CelebA trajectories are verified deterministic replays. Reference cats and golf use saved arrays. Additional legacy cats use exact saved figure panels and their printed, rounded target scores. GIF palette quantization applies.",
   "main_selection": "User-selected illustrative cases 3-8_00944 and Eyeglasses_183143, selected after inspecting images and outcomes; not representative sampling.",
   "matched_inputs": [
     {
@@ -7763,6 +7763,1812 @@
       ],
       "encoding": "Real accepted optimizer states before the budget, followed by the exact matched-budget endpoint. All recorded states appear in chronological order. Shorter paths hold existing frames; no image interpolation. Nearest-neighbor display and grayscale palette.",
       "selection": "First two common-attainment source IDs in each direction, excluding Eyeglasses_183143 already in the main comparison. Illustrative examples, not estimates of success rates."
+    },
+    {
+      "id": "legacy_cat1_lynx_amp250",
+      "group": "cat1",
+      "title": "cat1 \u2192 lynx",
+      "option_label": "Lynx \u00b7 amp 250",
+      "gif": "legacy_cat1_lynx_amp250.gif",
+      "poster": "legacy_cat1_lynx_amp250_poster.png",
+      "frame_count": 12,
+      "dimensions": [
+        500,
+        382
+      ],
+      "durations_ms": [
+        1200,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        1800
+      ],
+      "loop_duration_ms": 7000,
+      "description": "Legacy live trajectory with amp 250. All 12 saved frames are shown; G target probabilities are the two-decimal values printed on the original strip.",
+      "target_label": "lynx",
+      "target_class_index": 287,
+      "legacy_amp": 250,
+      "recorded_target_probabilities_rounded": [
+        0.02,
+        0.23,
+        0.48,
+        0.73,
+        0.86,
+        0.9,
+        0.91,
+        0.93,
+        0.94,
+        0.94,
+        0.95,
+        0.95
+      ],
+      "recorded_top1_labels_printed": [
+        "Egyptian cat",
+        "lynx",
+        "lynx",
+        "lynx",
+        "lynx",
+        "lynx",
+        "lynx",
+        "lynx",
+        "lynx",
+        "lynx",
+        "lynx",
+        "lynx"
+      ],
+      "source_strip": "outputs/imagenet_live/cat1_live_to_287_amp250.png",
+      "source_strip_sha256": "6538b47dbac12a09f6fe960cee1b5b799785749382192ce22d86cb0171f0998e",
+      "source_strip_rgb_sha256": "c9b2d42d84d026720dd93666fa12c5db5e1ba861c66a73c421ecbcc9f469fad5",
+      "attachment_filename": "codex-clipboard-77eb4506-c50b-40ff-ab4e-81cb9b6a3d37.png",
+      "attachment_sha256": "6538b47dbac12a09f6fe960cee1b5b799785749382192ce22d86cb0171f0998e",
+      "attachment_rgb_sha256": "c9b2d42d84d026720dd93666fa12c5db5e1ba861c66a73c421ecbcc9f469fad5",
+      "attachment_pixels_match_original": true,
+      "frame_crop_boxes_xyxy": [
+        [
+          11,
+          70,
+          170,
+          228
+        ],
+        [
+          201,
+          70,
+          360,
+          228
+        ],
+        [
+          391,
+          70,
+          550,
+          228
+        ],
+        [
+          582,
+          70,
+          741,
+          228
+        ],
+        [
+          772,
+          70,
+          931,
+          228
+        ],
+        [
+          962,
+          70,
+          1121,
+          228
+        ],
+        [
+          1152,
+          70,
+          1311,
+          228
+        ],
+        [
+          1342,
+          70,
+          1501,
+          228
+        ],
+        [
+          1533,
+          70,
+          1692,
+          228
+        ],
+        [
+          1723,
+          70,
+          1882,
+          228
+        ],
+        [
+          1913,
+          70,
+          2072,
+          228
+        ],
+        [
+          2103,
+          70,
+          2262,
+          228
+        ]
+      ],
+      "frame_crop_dimensions": [
+        159,
+        158
+      ],
+      "frame_rgb_sha256": [
+        "35fd2e447c69425000f66486e88828b9a341c8ea4df6161f134702acdf555fa8",
+        "ce05c9ee8f9943d6bfbc61ae46c70657c5481e856fd2150cd0da69f1b777554e",
+        "58fc7b867702b5b9b0b724a175b555db798ec726dd5c1562f2d5e0a76506b007",
+        "fa403a802e9ea2bc83b7d62280273803cde35b40e213021dd88173af6e544988",
+        "3059ba6b56b103265e0bbdeda2a2b3a92a457c8f42ed932c73128b5104568383",
+        "10e6a8a660b93dd44ddd895e2cb8e75cd7af0176596a5e18a5700170128c7163",
+        "4823df52fe9b602811b07c7be747fce7581a4057dac2d30b8e5f3e2851b03656",
+        "f125c48c2d3e8f0c6ace15c7d15b619bc620988c5f6f8264c4d71a76365f55ec",
+        "a06e53ac1e2464da681380f61d3f9ff5e2c05fd76221ea0aca2bc4f3423df909",
+        "781190f5d0fa284f457b2f482b5feb196fc86cf9107e02db69bf2201d558be56",
+        "bae55b71cbf61cd7280a2e4290ce82a31956849db1cfe8c99406757df71c5b3f",
+        "09077989ab62900ccb51659e92ba84fe81a06bd88a3e6f6cbc7dc418086314ad"
+      ],
+      "crop_verification": "All 12 image rectangles detected from nonwhite row and column extents; exact saved image pixels cropped from the original strip.",
+      "score_provenance": "Manually transcribed from original strip labels, verified visually; target-probability meaning established by save_row in tools/imagenet_live_sweep.py. Full precision and independent-judge scores are not available in these saved strips.",
+      "score_precision_decimal_places": 2,
+      "protocol_note": "Legacy live sweep. amp is the saved legacy amplifier, not the phase-cap parameter of the separately shown current Y-only runs. These selected examples are not a matched-distance comparison.",
+      "encoding": "Nearest-neighbor display scaling from 159\u00d7158 saved strip tiles to 224\u00d7223; shared global 256-color palette, no dithering; no generated frames and no temporal interpolation.",
+      "poster_sha256": "8b19956e141764f9844272608faed64f364b336f2bd8891ac1715576c717f9a0",
+      "sha256": "79eb328299b5721fdfe9159dc3c0b926f6a293c7da1c7e154d91df76d738e669",
+      "bytes": 791232
+    },
+    {
+      "id": "legacy_cat2_red_fox_amp250",
+      "group": "cat2",
+      "title": "cat2 \u2192 red fox",
+      "option_label": "Red fox \u00b7 amp 250",
+      "gif": "legacy_cat2_red_fox_amp250.gif",
+      "poster": "legacy_cat2_red_fox_amp250_poster.png",
+      "frame_count": 12,
+      "dimensions": [
+        500,
+        382
+      ],
+      "durations_ms": [
+        1200,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        1800
+      ],
+      "loop_duration_ms": 7000,
+      "description": "Legacy live trajectory with amp 250. All 12 saved frames are shown; G target probabilities are the two-decimal values printed on the original strip.",
+      "target_label": "red fox",
+      "target_class_index": 277,
+      "legacy_amp": 250,
+      "recorded_target_probabilities_rounded": [
+        0.11,
+        0.66,
+        0.76,
+        0.82,
+        0.85,
+        0.88,
+        0.89,
+        0.91,
+        0.91,
+        0.92,
+        0.93,
+        0.93
+      ],
+      "recorded_top1_labels_printed": [
+        "tiger cat",
+        "red fox",
+        "red fox",
+        "red fox",
+        "red fox",
+        "red fox",
+        "red fox",
+        "red fox",
+        "red fox",
+        "red fox",
+        "red fox",
+        "red fox"
+      ],
+      "source_strip": "outputs/imagenet_live/cat2_live_to_277_amp250.png",
+      "source_strip_sha256": "b8411be9b69885a3b4cef6f0ce6124f9381d535c96c8c3a79df1bfdb6ffcd0fb",
+      "source_strip_rgb_sha256": "0c3939eaeb6eea329f837348c1836ca15d9aa3a73c7e788f00c91eddee689d46",
+      "attachment_filename": "codex-clipboard-b9ce7131-c22a-470e-b611-484241dbc2c4.png",
+      "attachment_sha256": "b8411be9b69885a3b4cef6f0ce6124f9381d535c96c8c3a79df1bfdb6ffcd0fb",
+      "attachment_rgb_sha256": "0c3939eaeb6eea329f837348c1836ca15d9aa3a73c7e788f00c91eddee689d46",
+      "attachment_pixels_match_original": true,
+      "frame_crop_boxes_xyxy": [
+        [
+          11,
+          70,
+          170,
+          228
+        ],
+        [
+          201,
+          70,
+          360,
+          228
+        ],
+        [
+          391,
+          70,
+          550,
+          228
+        ],
+        [
+          582,
+          70,
+          741,
+          228
+        ],
+        [
+          772,
+          70,
+          931,
+          228
+        ],
+        [
+          962,
+          70,
+          1121,
+          228
+        ],
+        [
+          1152,
+          70,
+          1311,
+          228
+        ],
+        [
+          1342,
+          70,
+          1501,
+          228
+        ],
+        [
+          1533,
+          70,
+          1692,
+          228
+        ],
+        [
+          1723,
+          70,
+          1882,
+          228
+        ],
+        [
+          1913,
+          70,
+          2072,
+          228
+        ],
+        [
+          2103,
+          70,
+          2262,
+          228
+        ]
+      ],
+      "frame_crop_dimensions": [
+        159,
+        158
+      ],
+      "frame_rgb_sha256": [
+        "70f82f623fa8fbb5c26e6267cc129ccb4701ee9cdb9222a3e089da758000372b",
+        "8a8dc64fa3907046af194112bade5a45faf5362d057e7d8da2161d1d45755dc1",
+        "20865dc5e4f4f39d264ae905ab34d0fa01ee96ac81f059c8012154e9d65c5143",
+        "575a24aba03f9b86c7ae72ddac44fdfce66b1f4c5fe00402fe88c9e1bfc911d0",
+        "98f56ca495c76cf9e24cf3a1d6c44070f930e09e45f1cec16b465e4dc5fcc288",
+        "e32413bf4bbf6d64c217eb040a802dc1628eee720645a006722d4b4027b868ba",
+        "e10caaec792e0ed27a824d2084acbd6f33c998806716bfcb46aa813bc561583a",
+        "d6031126459ad3c2b3d5040243a3d5d3f315caca43690f9a7b9286c3ca6f611e",
+        "cc5a864ce3b6496b6fe4ead0368ac5c3ca118a0270709fa5c8516d4f6f1d7412",
+        "22564ad4861b7313d432a4cc9e8e1c22fa78d5980a79da0095dbd1cca9a7e4b8",
+        "87b7ec83008bf10983f3e93d3bc54fb91245bc30684a0581bae1d8cd30f96036",
+        "80af4dcabdc6c256ce56d3d034fccd3d708783f61bf2a8563e4b143758a98c23"
+      ],
+      "crop_verification": "All 12 image rectangles detected from nonwhite row and column extents; exact saved image pixels cropped from the original strip.",
+      "score_provenance": "Manually transcribed from original strip labels, verified visually; target-probability meaning established by save_row in tools/imagenet_live_sweep.py. Full precision and independent-judge scores are not available in these saved strips.",
+      "score_precision_decimal_places": 2,
+      "protocol_note": "Legacy live sweep. amp is the saved legacy amplifier, not the phase-cap parameter of the separately shown current Y-only runs. These selected examples are not a matched-distance comparison.",
+      "encoding": "Nearest-neighbor display scaling from 159\u00d7158 saved strip tiles to 224\u00d7223; shared global 256-color palette, no dithering; no generated frames and no temporal interpolation.",
+      "poster_sha256": "79cc105af543c4b387ae8d61bdb35afc64245e4f0b168f9bcf9380b8e435b204",
+      "sha256": "af56ab81ee1dccebdf72caf3d63a4447075f9ddbfb9d62c006d41d78c5da367d",
+      "bytes": 923597
+    },
+    {
+      "id": "legacy_cat2_kit_fox_amp120",
+      "group": "cat2",
+      "title": "cat2 \u2192 kit fox",
+      "option_label": "Kit fox \u00b7 amp 120",
+      "gif": "legacy_cat2_kit_fox_amp120.gif",
+      "poster": "legacy_cat2_kit_fox_amp120_poster.png",
+      "frame_count": 12,
+      "dimensions": [
+        500,
+        382
+      ],
+      "durations_ms": [
+        1200,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        1800
+      ],
+      "loop_duration_ms": 7000,
+      "description": "Legacy live trajectory with amp 120. All 12 saved frames are shown; G target probabilities are the two-decimal values printed on the original strip.",
+      "target_label": "kit fox",
+      "target_class_index": 278,
+      "legacy_amp": 120,
+      "recorded_target_probabilities_rounded": [
+        0.05,
+        0.24,
+        0.3,
+        0.35,
+        0.39,
+        0.44,
+        0.48,
+        0.51,
+        0.54,
+        0.57,
+        0.59,
+        0.62
+      ],
+      "recorded_top1_labels_printed": [
+        "tiger cat",
+        "red fox",
+        "red fox",
+        "red fox",
+        "kit fox",
+        "kit fox",
+        "kit fox",
+        "kit fox",
+        "kit fox",
+        "kit fox",
+        "kit fox",
+        "kit fox"
+      ],
+      "source_strip": "outputs/imagenet_live/cat2_live_to_278_amp120.png",
+      "source_strip_sha256": "77bca2085017d7ad2aaad2d16f75f4f0c3a6112a175cd9b4f7e5f7162eb2b9ad",
+      "source_strip_rgb_sha256": "e82b63de37e203feede33daa7d00ee375cc3c519cf3b2db17a1ea5384ac583c0",
+      "attachment_filename": "codex-clipboard-614136bf-e26d-4dbc-aedd-82737f0c6482.png",
+      "attachment_sha256": "77bca2085017d7ad2aaad2d16f75f4f0c3a6112a175cd9b4f7e5f7162eb2b9ad",
+      "attachment_rgb_sha256": "e82b63de37e203feede33daa7d00ee375cc3c519cf3b2db17a1ea5384ac583c0",
+      "attachment_pixels_match_original": true,
+      "frame_crop_boxes_xyxy": [
+        [
+          11,
+          70,
+          170,
+          228
+        ],
+        [
+          201,
+          70,
+          360,
+          228
+        ],
+        [
+          391,
+          70,
+          550,
+          228
+        ],
+        [
+          582,
+          70,
+          741,
+          228
+        ],
+        [
+          772,
+          70,
+          931,
+          228
+        ],
+        [
+          962,
+          70,
+          1121,
+          228
+        ],
+        [
+          1152,
+          70,
+          1311,
+          228
+        ],
+        [
+          1342,
+          70,
+          1501,
+          228
+        ],
+        [
+          1533,
+          70,
+          1692,
+          228
+        ],
+        [
+          1723,
+          70,
+          1882,
+          228
+        ],
+        [
+          1913,
+          70,
+          2072,
+          228
+        ],
+        [
+          2103,
+          70,
+          2262,
+          228
+        ]
+      ],
+      "frame_crop_dimensions": [
+        159,
+        158
+      ],
+      "frame_rgb_sha256": [
+        "70f82f623fa8fbb5c26e6267cc129ccb4701ee9cdb9222a3e089da758000372b",
+        "c4d2a48226278e0130857872183a931324e9017a9387a59cfea64bbc62274d60",
+        "a450b3bab8868ac30485cd08f6a15c738d25b2e44e5e74d546f57c74802a6cb8",
+        "ed7090dffabf10a42349a3e26627fa2e00b2568f4facb1d7dba867c2993bef2f",
+        "dcfc859d62f13cadd098b89b09373ee07407762d3bc7a1ae0cfc3b10e6028a6a",
+        "98ec4c9fe61c5aabb4beb59b79d167ab4a84f658f06c5ff56cbeb24a3203085f",
+        "93d86da16f5d47a36a4be2583ae77e0a9008a08e19b005c0930ce643b43361c2",
+        "97391e422366a9ac7bb6c62a4f283ced2f98b84b14573cd7758b176d1cf4fe77",
+        "1aa1eec72ef5c14b8753846a146d34a4724561d412a30871acb8bc1730c70e12",
+        "f6815853358aa16bea5f8a4806ef70b4f63a9a9c0e519cc6263bda8b8bebd033",
+        "b7454b3adfdfbbdd97d94fc582b6eb5591bc4a68edf0cca9627328a2d78580b9",
+        "8f0b473aebb4fd6000a14c439f72141c153adc9f617fa2e5ea4aeea557891de5"
+      ],
+      "crop_verification": "All 12 image rectangles detected from nonwhite row and column extents; exact saved image pixels cropped from the original strip.",
+      "score_provenance": "Manually transcribed from original strip labels, verified visually; target-probability meaning established by save_row in tools/imagenet_live_sweep.py. Full precision and independent-judge scores are not available in these saved strips.",
+      "score_precision_decimal_places": 2,
+      "protocol_note": "Legacy live sweep. amp is the saved legacy amplifier, not the phase-cap parameter of the separately shown current Y-only runs. These selected examples are not a matched-distance comparison.",
+      "encoding": "Nearest-neighbor display scaling from 159\u00d7158 saved strip tiles to 224\u00d7223; shared global 256-color palette, no dithering; no generated frames and no temporal interpolation.",
+      "poster_sha256": "1a85fefa152b5405520fe4e1fe505adf2fa6ebe3486fd341345737b3e49fcd4c",
+      "sha256": "5b4e29d325fc661d35b97f5e3d0a2b3100126a85777823227fd3560f5f0d01ec",
+      "bytes": 919082
+    },
+    {
+      "id": "legacy_cat2_lynx_amp250",
+      "group": "cat2",
+      "title": "cat2 \u2192 lynx",
+      "option_label": "Lynx \u00b7 amp 250",
+      "gif": "legacy_cat2_lynx_amp250.gif",
+      "poster": "legacy_cat2_lynx_amp250_poster.png",
+      "frame_count": 12,
+      "dimensions": [
+        500,
+        382
+      ],
+      "durations_ms": [
+        1200,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        1800
+      ],
+      "loop_duration_ms": 7000,
+      "description": "Legacy live trajectory with amp 250. All 12 saved frames are shown; G target probabilities are the two-decimal values printed on the original strip.",
+      "target_label": "lynx",
+      "target_class_index": 287,
+      "legacy_amp": 250,
+      "recorded_target_probabilities_rounded": [
+        0.07,
+        0.5,
+        0.79,
+        0.89,
+        0.92,
+        0.93,
+        0.94,
+        0.95,
+        0.96,
+        0.96,
+        0.96,
+        0.97
+      ],
+      "recorded_top1_labels_printed": [
+        "tiger cat",
+        "lynx",
+        "lynx",
+        "lynx",
+        "lynx",
+        "lynx",
+        "lynx",
+        "lynx",
+        "lynx",
+        "lynx",
+        "lynx",
+        "lynx"
+      ],
+      "source_strip": "outputs/imagenet_live/cat2_live_to_287_amp250.png",
+      "source_strip_sha256": "a9cd1ec08fb5663d3ece6e706cb92982128869f2c8e897fbb541f57b3612b05e",
+      "source_strip_rgb_sha256": "299bcb25bc3a1181fb6f9ad9ef2c65ac18ecce0028f165eed2156292e77797da",
+      "attachment_filename": "codex-clipboard-fb4f6e18-b1f9-44d7-8246-bb271e976cbb.png",
+      "attachment_sha256": "a9cd1ec08fb5663d3ece6e706cb92982128869f2c8e897fbb541f57b3612b05e",
+      "attachment_rgb_sha256": "299bcb25bc3a1181fb6f9ad9ef2c65ac18ecce0028f165eed2156292e77797da",
+      "attachment_pixels_match_original": true,
+      "frame_crop_boxes_xyxy": [
+        [
+          11,
+          70,
+          170,
+          228
+        ],
+        [
+          201,
+          70,
+          360,
+          228
+        ],
+        [
+          391,
+          70,
+          550,
+          228
+        ],
+        [
+          582,
+          70,
+          741,
+          228
+        ],
+        [
+          772,
+          70,
+          931,
+          228
+        ],
+        [
+          962,
+          70,
+          1121,
+          228
+        ],
+        [
+          1152,
+          70,
+          1311,
+          228
+        ],
+        [
+          1342,
+          70,
+          1501,
+          228
+        ],
+        [
+          1533,
+          70,
+          1692,
+          228
+        ],
+        [
+          1723,
+          70,
+          1882,
+          228
+        ],
+        [
+          1913,
+          70,
+          2072,
+          228
+        ],
+        [
+          2103,
+          70,
+          2262,
+          228
+        ]
+      ],
+      "frame_crop_dimensions": [
+        159,
+        158
+      ],
+      "frame_rgb_sha256": [
+        "70f82f623fa8fbb5c26e6267cc129ccb4701ee9cdb9222a3e089da758000372b",
+        "729a7faac8ccc2e6aa12ed78f7bbd19985f9cf8336d4a6a09105301c03921427",
+        "1d1a1f60ce3b1c8e406e3e859a61ac52e75709ce57b1197d5a1f75896c3d185f",
+        "8362d5690d544f107e6889b9afeb9747152a6a274889d7aa7cfebf71fda7310a",
+        "afee3ec2a212b757d3f612cbb0da878264c6f17d73c9dca1d0292ff1f1d2bfb9",
+        "c050dd8928c55d36647319f795a77e23975ea746bb6b0d59477435a84fa62fec",
+        "997d7729a9471c2ee08eefd112c0eee727d399ef8f2ab8457a32c622a777d35b",
+        "db5370cfe49a273894fd3808b1904ba6379de2e2c0cbfc87cb36f203328d252e",
+        "715871967cc823e96f254d4feaf15ef05d47af9dab2d938a23f6a88e49c18c07",
+        "7784ffa7d2a431aa822a4c938107b1f404c459cf82beaf94f513e5c52cce7104",
+        "5c7d5525bd598302920e75a03144f332a6e0fc13718e00340c8c285371205e3d",
+        "eefd76ca8e72e408e0453ae33fdf7ef896f5f98a5c9ffd9587ef668746d4428f"
+      ],
+      "crop_verification": "All 12 image rectangles detected from nonwhite row and column extents; exact saved image pixels cropped from the original strip.",
+      "score_provenance": "Manually transcribed from original strip labels, verified visually; target-probability meaning established by save_row in tools/imagenet_live_sweep.py. Full precision and independent-judge scores are not available in these saved strips.",
+      "score_precision_decimal_places": 2,
+      "protocol_note": "Legacy live sweep. amp is the saved legacy amplifier, not the phase-cap parameter of the separately shown current Y-only runs. These selected examples are not a matched-distance comparison.",
+      "encoding": "Nearest-neighbor display scaling from 159\u00d7158 saved strip tiles to 224\u00d7223; shared global 256-color palette, no dithering; no generated frames and no temporal interpolation.",
+      "poster_sha256": "49c1b2ed8dd6db1a3abf032d2b079c8bfc75130f4160de8cfa5161ebdb50175f",
+      "sha256": "060bf5485c3b282aefe2b3c5f7b583bddc0f797eee0e0dd17b1d43e4c6e42c78",
+      "bytes": 956942
+    },
+    {
+      "id": "legacy_cat3_flamingo_amp30",
+      "group": "cat3",
+      "title": "cat3 \u2192 flamingo",
+      "option_label": "Flamingo \u00b7 amp 30",
+      "gif": "legacy_cat3_flamingo_amp30.gif",
+      "poster": "legacy_cat3_flamingo_amp30_poster.png",
+      "frame_count": 12,
+      "dimensions": [
+        500,
+        382
+      ],
+      "durations_ms": [
+        1200,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        1800
+      ],
+      "loop_duration_ms": 7000,
+      "description": "Legacy live trajectory with amp 30. All 12 saved frames are shown; G target probabilities are the two-decimal values printed on the original strip.",
+      "target_label": "flamingo",
+      "target_class_index": 130,
+      "legacy_amp": 30,
+      "recorded_target_probabilities_rounded": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recorded_top1_labels_printed": [
+        "lynx",
+        "lynx",
+        "lynx",
+        "tabby",
+        "tabby",
+        "tabby",
+        "tabby",
+        "tabby",
+        "ruffed grous",
+        "ruffed grous",
+        "ruffed grous",
+        "ruffed grous"
+      ],
+      "source_strip": "outputs/imagenet_live/cat3_live_to_130_amp30.png",
+      "source_strip_sha256": "18f40326e0e293f7e2182c85f36e740dd364435fc6cf1bd8c2ba629603509202",
+      "source_strip_rgb_sha256": "3fd6ed19af476284dffd5cff4e4ca4c9c8747b6d1713bdbd34717307afc8f4ef",
+      "attachment_filename": "codex-clipboard-38ff1aff-2a51-4b81-8c84-c9d0a658e0e3.png",
+      "attachment_sha256": "18f40326e0e293f7e2182c85f36e740dd364435fc6cf1bd8c2ba629603509202",
+      "attachment_rgb_sha256": "3fd6ed19af476284dffd5cff4e4ca4c9c8747b6d1713bdbd34717307afc8f4ef",
+      "attachment_pixels_match_original": true,
+      "frame_crop_boxes_xyxy": [
+        [
+          11,
+          70,
+          170,
+          228
+        ],
+        [
+          201,
+          70,
+          360,
+          228
+        ],
+        [
+          391,
+          70,
+          550,
+          228
+        ],
+        [
+          582,
+          70,
+          741,
+          228
+        ],
+        [
+          772,
+          70,
+          931,
+          228
+        ],
+        [
+          962,
+          70,
+          1121,
+          228
+        ],
+        [
+          1152,
+          70,
+          1311,
+          228
+        ],
+        [
+          1342,
+          70,
+          1501,
+          228
+        ],
+        [
+          1533,
+          70,
+          1692,
+          228
+        ],
+        [
+          1723,
+          70,
+          1882,
+          228
+        ],
+        [
+          1913,
+          70,
+          2072,
+          228
+        ],
+        [
+          2103,
+          70,
+          2262,
+          228
+        ]
+      ],
+      "frame_crop_dimensions": [
+        159,
+        158
+      ],
+      "frame_rgb_sha256": [
+        "3d29affa2f5db693de1a727aaccd4ffd44d3b674696cf02f793a78eafcc692fa",
+        "6838a2e60cfae03547810e5784daa1b2594f193792ac59cf7af6ca138d9d5950",
+        "eae5a81fa09e6d109820b52d0f6ba1f97a776c5acc0990747632c023fc4edacf",
+        "7352364567efa07200e6de4998e237cf9788f0135756d0be9099da60c9247822",
+        "cd29273ff57f3b3010fca676440e74e1e1a409847fd16052a50dfddc0a2a797b",
+        "4d4e6308e03e7c50cd7ad918d403e948b70c4dbb0422001e7391a9f4952ce4b6",
+        "754f9ed8d689e3c623d24f3a014ff2fcf0f8a2a2ee4483f3ea42e716cc332ff3",
+        "8ed435283fad3daa6f8c36a3f32621f322b618dc7d68931347d7178de9add8ff",
+        "1773bcf3ea27c2f647cc871cb54853197a1843ecc29c25120915d16d32a4a8e7",
+        "119f38bc787db462ad9f04599275bd747b2e49f2aa1868d034b3112b53ca03c3",
+        "9fbd6d3b03829c01224c04c11e6807dfc688842724b9681959ee9fc34563c58c",
+        "de507e6ba09ba361db2a73fb3e4069b545b40fd09c6f5ff0b0afec92c92dd4f9"
+      ],
+      "crop_verification": "All 12 image rectangles detected from nonwhite row and column extents; exact saved image pixels cropped from the original strip.",
+      "score_provenance": "Manually transcribed from original strip labels, verified visually; target-probability meaning established by save_row in tools/imagenet_live_sweep.py. Full precision and independent-judge scores are not available in these saved strips.",
+      "score_precision_decimal_places": 2,
+      "protocol_note": "Legacy live sweep. amp is the saved legacy amplifier, not the phase-cap parameter of the separately shown current Y-only runs. These selected examples are not a matched-distance comparison.",
+      "encoding": "Nearest-neighbor display scaling from 159\u00d7158 saved strip tiles to 224\u00d7223; shared global 256-color palette, no dithering; no generated frames and no temporal interpolation.",
+      "poster_sha256": "badcbbaf9d08c05df2595988642aadc6e3e4f58f0339590abcd6592415d419bf",
+      "sha256": "1a75161a80e6f9bcc311d114b7fe3f8734b71de5153edd685cb87d9d97d0a932",
+      "bytes": 902635
+    },
+    {
+      "id": "legacy_cat3_flamingo_amp60",
+      "group": "cat3",
+      "title": "cat3 \u2192 flamingo",
+      "option_label": "Flamingo \u00b7 amp 60",
+      "gif": "legacy_cat3_flamingo_amp60.gif",
+      "poster": "legacy_cat3_flamingo_amp60_poster.png",
+      "frame_count": 12,
+      "dimensions": [
+        500,
+        382
+      ],
+      "durations_ms": [
+        1200,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        1800
+      ],
+      "loop_duration_ms": 7000,
+      "description": "Legacy live trajectory with amp 60. All 12 saved frames are shown; G target probabilities are the two-decimal values printed on the original strip.",
+      "target_label": "flamingo",
+      "target_class_index": 130,
+      "legacy_amp": 60,
+      "recorded_target_probabilities_rounded": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.01,
+        0.07,
+        0.21,
+        0.43,
+        0.61
+      ],
+      "recorded_top1_labels_printed": [
+        "lynx",
+        "lynx",
+        "tabby",
+        "tabby",
+        "tabby",
+        "ruffed grous",
+        "ruffed grous",
+        "ruffed grous",
+        "flamingo",
+        "flamingo",
+        "flamingo",
+        "flamingo"
+      ],
+      "source_strip": "outputs/imagenet_live/cat3_live_to_130_amp60.png",
+      "source_strip_sha256": "f8aa8550c9cd05a34dd4d8b3c49ad7c2baa5e080a4f86c238e1e6634263a76a9",
+      "source_strip_rgb_sha256": "95352354615e4ca8740af56fcc7fc4ddde1880d30896ed56951679dae3dbd0e5",
+      "attachment_filename": "codex-clipboard-6f1f9352-d670-4fd4-87db-4132fbcd446c.png",
+      "attachment_sha256": "f8aa8550c9cd05a34dd4d8b3c49ad7c2baa5e080a4f86c238e1e6634263a76a9",
+      "attachment_rgb_sha256": "95352354615e4ca8740af56fcc7fc4ddde1880d30896ed56951679dae3dbd0e5",
+      "attachment_pixels_match_original": true,
+      "frame_crop_boxes_xyxy": [
+        [
+          11,
+          70,
+          170,
+          228
+        ],
+        [
+          201,
+          70,
+          360,
+          228
+        ],
+        [
+          391,
+          70,
+          550,
+          228
+        ],
+        [
+          582,
+          70,
+          741,
+          228
+        ],
+        [
+          772,
+          70,
+          931,
+          228
+        ],
+        [
+          962,
+          70,
+          1121,
+          228
+        ],
+        [
+          1152,
+          70,
+          1311,
+          228
+        ],
+        [
+          1342,
+          70,
+          1501,
+          228
+        ],
+        [
+          1533,
+          70,
+          1692,
+          228
+        ],
+        [
+          1723,
+          70,
+          1882,
+          228
+        ],
+        [
+          1913,
+          70,
+          2072,
+          228
+        ],
+        [
+          2103,
+          70,
+          2262,
+          228
+        ]
+      ],
+      "frame_crop_dimensions": [
+        159,
+        158
+      ],
+      "frame_rgb_sha256": [
+        "3d29affa2f5db693de1a727aaccd4ffd44d3b674696cf02f793a78eafcc692fa",
+        "1fcecf203d3a01a74941a231202638b6be93f9b206e8c1f1fc31e8e4713c4921",
+        "aeb43ce54474ed4b3e3e71df801bf3d39734eaa5bed7056fa0fe2eccefba79f5",
+        "4990bb71eafa05062a85ea6a8055f1388b4e1923fae3e184e87b6294c9d24556",
+        "31702859a6e7ad2d33cbba00e354f68c287ed1b9abe2bcdceb12732064a77b2c",
+        "d6f933880a8d83089eb52f1cee774f906095a2fe92520b6998e7b25cb07ef829",
+        "e0f346e088da7ffb8708c6384fbbc76caa3915c172adb1c765262cc0bf204296",
+        "5b43c5aad827d7e7e7a27c6a2b56cbb399ef091e69f3fddf989ae327d0d2a0e5",
+        "662d0c7ecf4476c17d36cb6ac2f91c2fa133a3c5497ad874e3cbf45a02166e73",
+        "78943e7442eba967e7b37c7670798ff4ec9458441ac34603df9501ff48140ef8",
+        "ea3e440d86aa8fdac38670a2da60cee6bfcd9d86205c8371d62ac6ceba5bbf10",
+        "6bfe55c4306cb34630d18ad76c8d8d604bb7f0feac3adcbad9cc3876144fad6d"
+      ],
+      "crop_verification": "All 12 image rectangles detected from nonwhite row and column extents; exact saved image pixels cropped from the original strip.",
+      "score_provenance": "Manually transcribed from original strip labels, verified visually; target-probability meaning established by save_row in tools/imagenet_live_sweep.py. Full precision and independent-judge scores are not available in these saved strips.",
+      "score_precision_decimal_places": 2,
+      "protocol_note": "Legacy live sweep. amp is the saved legacy amplifier, not the phase-cap parameter of the separately shown current Y-only runs. These selected examples are not a matched-distance comparison.",
+      "encoding": "Nearest-neighbor display scaling from 159\u00d7158 saved strip tiles to 224\u00d7223; shared global 256-color palette, no dithering; no generated frames and no temporal interpolation.",
+      "poster_sha256": "c084e26defcff4d58676ae1134c8a0fe56b8bc72276262a42b5e7380969aa984",
+      "sha256": "280f538f1111b71d1dc2c6a35a06eea74e7e37115ffc94901b58f96a16a05a8d",
+      "bytes": 907716
+    },
+    {
+      "id": "legacy_cat3_flamingo_amp1000",
+      "group": "cat3",
+      "title": "cat3 \u2192 flamingo",
+      "option_label": "Flamingo \u00b7 amp 1000",
+      "gif": "legacy_cat3_flamingo_amp1000.gif",
+      "poster": "legacy_cat3_flamingo_amp1000_poster.png",
+      "frame_count": 12,
+      "dimensions": [
+        500,
+        382
+      ],
+      "durations_ms": [
+        1200,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        1800
+      ],
+      "loop_duration_ms": 7000,
+      "description": "Legacy live trajectory with amp 1000. All 12 saved frames are shown; G target probabilities are the two-decimal values printed on the original strip.",
+      "target_label": "flamingo",
+      "target_class_index": 130,
+      "legacy_amp": 1000,
+      "recorded_target_probabilities_rounded": [
+        0.0,
+        0.0,
+        0.0,
+        0.01,
+        0.42,
+        0.99,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "recorded_top1_labels_printed": [
+        "lynx",
+        "bullfrog",
+        "bubble",
+        "bubble",
+        "flamingo",
+        "flamingo",
+        "flamingo",
+        "flamingo",
+        "flamingo",
+        "flamingo",
+        "flamingo",
+        "flamingo"
+      ],
+      "source_strip": "outputs/imagenet_live/cat3_live_to_130_amp1000.png",
+      "source_strip_sha256": "ef9de7680efc4243d8de2031fa7bd0f8079a4d15958345642f271b709d5b1d3d",
+      "source_strip_rgb_sha256": "c388be03b5208c8421072f5ca89a5783fbdba0d90881c2f490ebd7b45627bcd8",
+      "attachment_filename": "codex-clipboard-e12ecbcd-2556-47a3-840e-aff07fa87cfb.png",
+      "attachment_sha256": "ef9de7680efc4243d8de2031fa7bd0f8079a4d15958345642f271b709d5b1d3d",
+      "attachment_rgb_sha256": "c388be03b5208c8421072f5ca89a5783fbdba0d90881c2f490ebd7b45627bcd8",
+      "attachment_pixels_match_original": true,
+      "frame_crop_boxes_xyxy": [
+        [
+          11,
+          70,
+          170,
+          228
+        ],
+        [
+          201,
+          70,
+          360,
+          228
+        ],
+        [
+          391,
+          70,
+          550,
+          228
+        ],
+        [
+          582,
+          70,
+          741,
+          228
+        ],
+        [
+          772,
+          70,
+          931,
+          228
+        ],
+        [
+          962,
+          70,
+          1121,
+          228
+        ],
+        [
+          1152,
+          70,
+          1311,
+          228
+        ],
+        [
+          1342,
+          70,
+          1501,
+          228
+        ],
+        [
+          1533,
+          70,
+          1692,
+          228
+        ],
+        [
+          1723,
+          70,
+          1882,
+          228
+        ],
+        [
+          1913,
+          70,
+          2072,
+          228
+        ],
+        [
+          2103,
+          70,
+          2262,
+          228
+        ]
+      ],
+      "frame_crop_dimensions": [
+        159,
+        158
+      ],
+      "frame_rgb_sha256": [
+        "3d29affa2f5db693de1a727aaccd4ffd44d3b674696cf02f793a78eafcc692fa",
+        "4e13e6cd2c433f9d033186e779dab1e18b6015521292c5516c44ccd4dc7bc64d",
+        "d82db64fc1c1223b3ae1e210c7d215eee5cadd5f6d0f54dbc5268249c611ca44",
+        "afc9c39c0c2f72f670afdc819fa4ad1e90aa207b1f3f77dd5de6da71c9c452a8",
+        "84f8f602dfd67e5de8a962a235c873b5282aa8e231da4f1ac7c7afa38a32fead",
+        "5bb16936c1057c00d6e743fb2d6db2c0ecdf96519ffe3a148bd3c3906624961f",
+        "4abf6e079fbcaff72c67ceef2faf141f49d8ee15de590ba992df18db5767a9bc",
+        "27e429012eee6fe848a350535792e554135d1208a4cb96a2694544d7af095346",
+        "3f11bc45430eb4cdf9cdbf553adf60f38d8513abfd0a693cd05b52e5dce498c8",
+        "c6fedb298ca734c63388d10f65d0e465f82462f58a331656840abd5324670f44",
+        "0c4752fcfb36bf4646c78bbe2f4435843f54e32d59acb8db57eb64a49c2452d2",
+        "b1b1d3182a53fc765f7a73c80e637f50695a8d88e61f43699c9b62fcb2f80487"
+      ],
+      "crop_verification": "All 12 image rectangles detected from nonwhite row and column extents; exact saved image pixels cropped from the original strip.",
+      "score_provenance": "Manually transcribed from original strip labels, verified visually; target-probability meaning established by save_row in tools/imagenet_live_sweep.py. Full precision and independent-judge scores are not available in these saved strips.",
+      "score_precision_decimal_places": 2,
+      "protocol_note": "Legacy live sweep. amp is the saved legacy amplifier, not the phase-cap parameter of the separately shown current Y-only runs. These selected examples are not a matched-distance comparison.",
+      "encoding": "Nearest-neighbor display scaling from 159\u00d7158 saved strip tiles to 224\u00d7223; shared global 256-color palette, no dithering; no generated frames and no temporal interpolation.",
+      "poster_sha256": "753d2c5affd21a5dc3411670c6200ce6e9879531e36581f2aa09ccbe665b8a73",
+      "sha256": "d48bd9c9829172da20c4977c7fa7586094ef63ee72a712063a9d83d4621f92e9",
+      "bytes": 968889
+    },
+    {
+      "id": "legacy_cat3_leopard_amp250",
+      "group": "cat3",
+      "title": "cat3 \u2192 leopard",
+      "option_label": "Leopard \u00b7 amp 250",
+      "gif": "legacy_cat3_leopard_amp250.gif",
+      "poster": "legacy_cat3_leopard_amp250_poster.png",
+      "frame_count": 12,
+      "dimensions": [
+        500,
+        382
+      ],
+      "durations_ms": [
+        1200,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        1800
+      ],
+      "loop_duration_ms": 7000,
+      "description": "Legacy live trajectory with amp 250. All 12 saved frames are shown; G target probabilities are the two-decimal values printed on the original strip.",
+      "target_label": "leopard",
+      "target_class_index": 288,
+      "legacy_amp": 250,
+      "recorded_target_probabilities_rounded": [
+        0.01,
+        0.76,
+        0.85,
+        0.88,
+        0.89,
+        0.91,
+        0.92,
+        0.93,
+        0.93,
+        0.94,
+        0.94,
+        0.94
+      ],
+      "recorded_top1_labels_printed": [
+        "lynx",
+        "leopard",
+        "leopard",
+        "leopard",
+        "leopard",
+        "leopard",
+        "leopard",
+        "leopard",
+        "leopard",
+        "leopard",
+        "leopard",
+        "leopard"
+      ],
+      "source_strip": "outputs/imagenet_live/cat3_live_to_288_amp250.png",
+      "source_strip_sha256": "3e7529acde9bd5272a68c14b9feef499cf189f68220239eca3024d02e9ee5e9e",
+      "source_strip_rgb_sha256": "a41ffddf0d6b6910781aab76a4268c355a500d86489b18af605c777e07488c13",
+      "attachment_filename": "codex-clipboard-56317d94-d244-4d9f-9e34-38c9503d56e7.png",
+      "attachment_sha256": "3e7529acde9bd5272a68c14b9feef499cf189f68220239eca3024d02e9ee5e9e",
+      "attachment_rgb_sha256": "a41ffddf0d6b6910781aab76a4268c355a500d86489b18af605c777e07488c13",
+      "attachment_pixels_match_original": true,
+      "frame_crop_boxes_xyxy": [
+        [
+          11,
+          70,
+          170,
+          228
+        ],
+        [
+          201,
+          70,
+          360,
+          228
+        ],
+        [
+          391,
+          70,
+          550,
+          228
+        ],
+        [
+          582,
+          70,
+          741,
+          228
+        ],
+        [
+          772,
+          70,
+          931,
+          228
+        ],
+        [
+          962,
+          70,
+          1121,
+          228
+        ],
+        [
+          1152,
+          70,
+          1311,
+          228
+        ],
+        [
+          1342,
+          70,
+          1501,
+          228
+        ],
+        [
+          1533,
+          70,
+          1692,
+          228
+        ],
+        [
+          1723,
+          70,
+          1882,
+          228
+        ],
+        [
+          1913,
+          70,
+          2072,
+          228
+        ],
+        [
+          2103,
+          70,
+          2262,
+          228
+        ]
+      ],
+      "frame_crop_dimensions": [
+        159,
+        158
+      ],
+      "frame_rgb_sha256": [
+        "3d29affa2f5db693de1a727aaccd4ffd44d3b674696cf02f793a78eafcc692fa",
+        "269dc56e458d2e6b87f3709ca51bc502b94cd215c49caa09afe2a6d3e6cb8975",
+        "0d499efc6a79a53dbe9352c6f0632100fe7b9904f5c77ba5712cb92a1b2b8322",
+        "f33133b7f50f38da0384df2a3bbee9a6d078c4d0d0feb1065e3291081b95713c",
+        "864cd388a1d898253512ff813aa3674c86b8178e3acdf25d26dd7d2aab9cc54a",
+        "d36089139da185b81ce69d8dc7ce27cb7115c386a803870060db66b832b2e489",
+        "ad540925084a53b1060cd710398fea32e1d8b857312912960835fcdaebf6e3e8",
+        "2927b4490ce8193e5f6e608848ae2e6092a179480f8a7080afb9cb66c89b952a",
+        "be566abf637682529e51fedefcdae55100b1f96b3464dfe16345fd549e0ffe3b",
+        "eb4c1888b3b47edd02d4967fcaf27f71367c8cfc2ad7ef488a8b00debbbc04d3",
+        "38aec7e625d7ad1134590a49a80a6912b7801fd40939be405939f1413d424bc3",
+        "455e4b3df12da00e2eaec17f8bedbf35af106452a46d244fc29ad56f10454e54"
+      ],
+      "crop_verification": "All 12 image rectangles detected from nonwhite row and column extents; exact saved image pixels cropped from the original strip.",
+      "score_provenance": "Manually transcribed from original strip labels, verified visually; target-probability meaning established by save_row in tools/imagenet_live_sweep.py. Full precision and independent-judge scores are not available in these saved strips.",
+      "score_precision_decimal_places": 2,
+      "protocol_note": "Legacy live sweep. amp is the saved legacy amplifier, not the phase-cap parameter of the separately shown current Y-only runs. These selected examples are not a matched-distance comparison.",
+      "encoding": "Nearest-neighbor display scaling from 159\u00d7158 saved strip tiles to 224\u00d7223; shared global 256-color palette, no dithering; no generated frames and no temporal interpolation.",
+      "poster_sha256": "d5ad692388649d3f6ebf5d53963ae3759dbce7813e538ce76965ea86465a11da",
+      "sha256": "7043d0202b0b303b4b39678ec73ca7aec8921acd6b2f09f852979ea965cd9e00",
+      "bytes": 938055
+    },
+    {
+      "id": "legacy_cat3_tiger_amp1000",
+      "group": "cat3",
+      "title": "cat3 \u2192 tiger",
+      "option_label": "Tiger \u00b7 amp 1000",
+      "gif": "legacy_cat3_tiger_amp1000.gif",
+      "poster": "legacy_cat3_tiger_amp1000_poster.png",
+      "frame_count": 12,
+      "dimensions": [
+        500,
+        382
+      ],
+      "durations_ms": [
+        1200,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        1800
+      ],
+      "loop_duration_ms": 7000,
+      "description": "Legacy live trajectory with amp 1000. All 12 saved frames are shown; G target probabilities are the two-decimal values printed on the original strip.",
+      "target_label": "tiger",
+      "target_class_index": 292,
+      "legacy_amp": 1000,
+      "recorded_target_probabilities_rounded": [
+        0.01,
+        0.61,
+        0.9,
+        0.93,
+        0.94,
+        0.95,
+        0.95,
+        0.96,
+        0.96,
+        0.96,
+        0.96,
+        0.97
+      ],
+      "recorded_top1_labels_printed": [
+        "lynx",
+        "tiger",
+        "tiger",
+        "tiger",
+        "tiger",
+        "tiger",
+        "tiger",
+        "tiger",
+        "tiger",
+        "tiger",
+        "tiger",
+        "tiger"
+      ],
+      "source_strip": "outputs/imagenet_live/cat3_live_to_292_amp1000.png",
+      "source_strip_sha256": "c5eb1087347ff430e23656bb0875ee0a9f3df837e206ace7c11d0894e98d0d8e",
+      "source_strip_rgb_sha256": "f69edcd7c4129c3703dc8a2db4f66d96e47ef7786363e81daa2890181535489d",
+      "attachment_filename": "codex-clipboard-d58deb6b-3aa1-40a6-9913-f3e51f955eed.png",
+      "attachment_sha256": "c5eb1087347ff430e23656bb0875ee0a9f3df837e206ace7c11d0894e98d0d8e",
+      "attachment_rgb_sha256": "f69edcd7c4129c3703dc8a2db4f66d96e47ef7786363e81daa2890181535489d",
+      "attachment_pixels_match_original": true,
+      "frame_crop_boxes_xyxy": [
+        [
+          11,
+          70,
+          170,
+          228
+        ],
+        [
+          201,
+          70,
+          360,
+          228
+        ],
+        [
+          391,
+          70,
+          550,
+          228
+        ],
+        [
+          582,
+          70,
+          741,
+          228
+        ],
+        [
+          772,
+          70,
+          931,
+          228
+        ],
+        [
+          962,
+          70,
+          1121,
+          228
+        ],
+        [
+          1152,
+          70,
+          1311,
+          228
+        ],
+        [
+          1342,
+          70,
+          1501,
+          228
+        ],
+        [
+          1533,
+          70,
+          1692,
+          228
+        ],
+        [
+          1723,
+          70,
+          1882,
+          228
+        ],
+        [
+          1913,
+          70,
+          2072,
+          228
+        ],
+        [
+          2103,
+          70,
+          2262,
+          228
+        ]
+      ],
+      "frame_crop_dimensions": [
+        159,
+        158
+      ],
+      "frame_rgb_sha256": [
+        "3d29affa2f5db693de1a727aaccd4ffd44d3b674696cf02f793a78eafcc692fa",
+        "ecf8ef7b7a7d5d29fc98c67e4bbdb664aa3271e51a837dedf5545f6cc771c7fd",
+        "24b200689949f1ccc72d2f55f42033f3dc73fb33e58e611179b0fc961d1bf25b",
+        "227206d5f180ee30bf3d52d8ad7f8836be83e9a7ddc19949d2a290a468a050d7",
+        "84c58382f2f1aa28620e4eac51e66786be3dbef4d9d4a095dd5206414e7d24f1",
+        "58e6264b6e85349f5c8924ffc341f6e04d2aaa94e426ae9dc45483142fbbeadd",
+        "c73f325eb01c0508f5e0b3f29d95d0731fe3c0668add8d7413b3bb425d406ed3",
+        "d37bae28fde5640565b17cf945b47b672bf47bfad7cc9794980ba0a27d64bf59",
+        "704969bd2c49b08f5286a726fefcaada55777ed03d67f444ebb511a5f91e78df",
+        "52f3d5d91b286fbd411c9886cfa45b8c776937fd038534293a7f02be000b9f33",
+        "dd5088449c3d150f695cb10ccca86c1373a0006ecf4a2ad64bc6fa6bfaaccff2",
+        "3e4a729d72c2efafb604e70b1b67ea73c678caadb33f072baaf195d185df3741"
+      ],
+      "crop_verification": "All 12 image rectangles detected from nonwhite row and column extents; exact saved image pixels cropped from the original strip.",
+      "score_provenance": "Manually transcribed from original strip labels, verified visually; target-probability meaning established by save_row in tools/imagenet_live_sweep.py. Full precision and independent-judge scores are not available in these saved strips.",
+      "score_precision_decimal_places": 2,
+      "protocol_note": "Legacy live sweep. amp is the saved legacy amplifier, not the phase-cap parameter of the separately shown current Y-only runs. These selected examples are not a matched-distance comparison.",
+      "encoding": "Nearest-neighbor display scaling from 159\u00d7158 saved strip tiles to 224\u00d7223; shared global 256-color palette, no dithering; no generated frames and no temporal interpolation.",
+      "poster_sha256": "07bc03bc45a456045b901e1233b8aaabbbfdbf9aeb37745a3d7758c3101b7343",
+      "sha256": "dffe27ab7a174b62ae2399a0b44a09eba8be71909c21105072516b1c17c8d4e2",
+      "bytes": 954164
+    },
+    {
+      "id": "golf_to_soccer_amp1000",
+      "group": "golf",
+      "title": "Golf ball \u2192 Soccer ball",
+      "option_label": "Soccer ball \u00b7 amplification 1000",
+      "gif": "golf_to_soccer_amp1000.gif",
+      "poster": "golf_to_soccer_amp1000_poster.png",
+      "frame_count": 12,
+      "dimensions": [
+        500,
+        380
+      ],
+      "durations_ms": [
+        1200,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        1800
+      ],
+      "loop_duration_ms": 7000,
+      "bytes": 1333375,
+      "sha256": "4284602e2c9357dac25a740e48f81c4cffcb622c8eda75ea350078f2d5ebd624",
+      "poster_sha256": "839a1aafdb788abe4c78fe9908d77ac7b04f0a55c3a38dd4ca0e5ac165a4ffca",
+      "description": "Twelve recorded states of a step-local Y-only phase edit, with the source fixed on the left. G is robust ResNet-50 and O is standard ResNet-18; scores are soccer-ball target probabilities.",
+      "source_class": {
+        "index": 574,
+        "name": "golf ball"
+      },
+      "target_class": {
+        "index": 805,
+        "name": "soccer ball"
+      },
+      "amplification": 1000,
+      "encoding": "Original 224\u00d7224 arrays rounded to 8-bit RGB, exactly as in the supplied strip. One shared 256-color GIF palette; no resizing, pixel interpolation, or invented states.",
+      "validation": {
+        "all_12_image_tiles_equal_original_strip": true,
+        "original_strip_pixel_identical_to_user_attachment": true,
+        "max_l2_recalculation_difference": 0.000164031982421875,
+        "l2_atol": 0.0002,
+        "all_gif_decoded_frames_match_encoded_frames": true
+      },
+      "frames": [
+        {
+          "frame": 0,
+          "l2": 0.0,
+          "scores": {
+            "G": {
+              "contrast": -2.5467329025268555,
+              "prediction": 574,
+              "target_probability": 0.06855723261833191
+            },
+            "O": {
+              "contrast": -3.7697696685791016,
+              "prediction": 574,
+              "target_probability": 0.019194627180695534
+            }
+          }
+        },
+        {
+          "frame": 1,
+          "l2": 50.51768493652344,
+          "scores": {
+            "G": {
+              "contrast": 3.442615509033203,
+              "prediction": 805,
+              "target_probability": 0.38983744382858276
+            },
+            "O": {
+              "contrast": -0.22642755508422852,
+              "prediction": 249,
+              "target_probability": 0.042045850306749344
+            }
+          }
+        },
+        {
+          "frame": 2,
+          "l2": 50.512962341308594,
+          "scores": {
+            "G": {
+              "contrast": 4.279070854187012,
+              "prediction": 805,
+              "target_probability": 0.7917695045471191
+            },
+            "O": {
+              "contrast": 2.665834426879883,
+              "prediction": 805,
+              "target_probability": 0.6029254794120789
+            }
+          }
+        },
+        {
+          "frame": 3,
+          "l2": 48.326812744140625,
+          "scores": {
+            "G": {
+              "contrast": 4.410686492919922,
+              "prediction": 805,
+              "target_probability": 0.9073569178581238
+            },
+            "O": {
+              "contrast": 2.514632225036621,
+              "prediction": 805,
+              "target_probability": 0.7260767221450806
+            }
+          }
+        },
+        {
+          "frame": 4,
+          "l2": 47.85396957397461,
+          "scores": {
+            "G": {
+              "contrast": 5.788294792175293,
+              "prediction": 805,
+              "target_probability": 0.9713279604911804
+            },
+            "O": {
+              "contrast": 4.149977684020996,
+              "prediction": 805,
+              "target_probability": 0.9431631565093994
+            }
+          }
+        },
+        {
+          "frame": 5,
+          "l2": 47.87153625488281,
+          "scores": {
+            "G": {
+              "contrast": 6.557997226715088,
+              "prediction": 805,
+              "target_probability": 0.9875746369361877
+            },
+            "O": {
+              "contrast": 4.977153778076172,
+              "prediction": 805,
+              "target_probability": 0.962253212928772
+            }
+          }
+        },
+        {
+          "frame": 6,
+          "l2": 47.9011116027832,
+          "scores": {
+            "G": {
+              "contrast": 6.881608963012695,
+              "prediction": 805,
+              "target_probability": 0.990794837474823
+            },
+            "O": {
+              "contrast": 5.377382278442383,
+              "prediction": 805,
+              "target_probability": 0.9670134782791138
+            }
+          }
+        },
+        {
+          "frame": 7,
+          "l2": 47.979652404785156,
+          "scores": {
+            "G": {
+              "contrast": 7.04945707321167,
+              "prediction": 805,
+              "target_probability": 0.992434024810791
+            },
+            "O": {
+              "contrast": 5.570823669433594,
+              "prediction": 805,
+              "target_probability": 0.9705395102500916
+            }
+          }
+        },
+        {
+          "frame": 8,
+          "l2": 48.03173828125,
+          "scores": {
+            "G": {
+              "contrast": 7.176988124847412,
+              "prediction": 805,
+              "target_probability": 0.9934353828430176
+            },
+            "O": {
+              "contrast": 5.720510482788086,
+              "prediction": 805,
+              "target_probability": 0.9728055000305176
+            }
+          }
+        },
+        {
+          "frame": 9,
+          "l2": 48.08447265625,
+          "scores": {
+            "G": {
+              "contrast": 7.285191059112549,
+              "prediction": 805,
+              "target_probability": 0.994155764579773
+            },
+            "O": {
+              "contrast": 5.8068342208862305,
+              "prediction": 805,
+              "target_probability": 0.9738209843635559
+            }
+          }
+        },
+        {
+          "frame": 10,
+          "l2": 48.11720657348633,
+          "scores": {
+            "G": {
+              "contrast": 7.366634368896484,
+              "prediction": 805,
+              "target_probability": 0.9946698546409607
+            },
+            "O": {
+              "contrast": 5.830715179443359,
+              "prediction": 805,
+              "target_probability": 0.9737743139266968
+            }
+          }
+        },
+        {
+          "frame": 11,
+          "l2": 48.146785736083984,
+          "scores": {
+            "G": {
+              "contrast": 7.432400226593018,
+              "prediction": 805,
+              "target_probability": 0.9950700998306274
+            },
+            "O": {
+              "contrast": 5.85134220123291,
+              "prediction": 805,
+              "target_probability": 0.9738283157348633
+            }
+          }
+        }
+      ],
+      "provenance": {
+        "inputs": {
+          "outputs/imagenette_live_yiq_exploration/n03445777_ILSVRC2012_val_00009902_to805_amp1000.npz": "4c7b349b42c05af191a382181e9504f00d9f7fef4096a08ad1336c692d0d3de6",
+          "outputs/imagenette_live_yiq_exploration/n03445777_ILSVRC2012_val_00009902_to805_amp1000.json": "667f611d00da6558c94cb7e38fad039f46965dd2b4013d95f82c488218912777",
+          "outputs/imagenette_live_yiq_exploration/n03445777_ILSVRC2012_val_00009902_to805_amp1000.png": "9f5e50b38b0cb682d69b6d777941970a2caa4634f746ceb539772c8295cef2ef",
+          "outputs/imagenette_live_yiq_exploration/protocol.json": "f5d19157d5f66950e2800938733af90d24b1795f731acab20a866df2972703fe",
+          "outputs/imagenette_live_yiq_exploration/results.json": "6fd2300cef685809d7cde1d4f81c294ebf1c22412c72f69f75263d4873c3090f",
+          "tools/imagenette_morph_exploration.py": "635edf5d77f62dd47ec893b16f5861f2fe74e8eb03a08b395cf9e7a18d0519f6"
+        },
+        "user_attachment_filename": "codex-clipboard-2851a946-5460-493a-a70a-5b5a87e886b9.png",
+        "user_attachment_sha256": "9f5e50b38b0cb682d69b6d777941970a2caa4634f746ceb539772c8295cef2ef",
+        "source_run": {
+          "synset": "n03445777",
+          "file": "n03445777_ILSVRC2012_val_00009902.JPEG",
+          "archive_member": "imagenette2-320/val/n03445777/ILSVRC2012_val_00009902.JPEG",
+          "sha256": "1a0bdf8e00ad72a16860c4c45e17d75cbaa075cdf31a3da373af138b8402907d",
+          "source": 574,
+          "target": 805,
+          "clean_G_prediction": 574,
+          "amp": 1000,
+          "status": "complete",
+          "n_frames": 12,
+          "final": {
+            "frame": 11,
+            "l2": 48.146785736083984,
+            "scores": {
+              "G": {
+                "contrast": 7.432400226593018,
+                "prediction": 805,
+                "target_probability": 0.9950700998306274
+              },
+              "O": {
+                "contrast": 5.85134220123291,
+                "prediction": 805,
+                "target_probability": 0.9738283157348633
+              }
+            }
+          }
+        },
+        "dataset": "Imagenette2-320",
+        "dataset_url": "https://s3.amazonaws.com/fast-ai-imageclas/imagenette2-320.tgz",
+        "selection": "first two lexicographic val filenames per synset, no outcome filtering; val designation does not imply unseen by pretrained models",
+        "target_rule": "highest clean G class other than annotated source and G top1",
+        "procedure": "existing LocalPyramid live local-phase YIQ, all Y bands, fixed step-local magnitude/residuals, reanalysis each frame",
+        "preprocessing": "bilinear square resize224 RGB; ImageNet normalization inside model",
+        "model_checkpoint_sha256": {
+          "G": "380b14e6f9750bffa1447cf7017f65da4dc5ce71a3dd112f107515dcf7b14d9d",
+          "O": "f37072fd47e89c5e827621c5baffa7500819f7896bbacec160b1a16c560e07ec"
+        },
+        "models": {
+          "G": "robust ResNet-50, L2 epsilon 3 checkpoint",
+          "O": "standard torchvision ResNet-18"
+        },
+        "historical_script_sha256": "635edf5d77f62dd47ec893b16f5861f2fe74e8eb03a08b395cf9e7a18d0519f6",
+        "historical_backend_sha256": "ddee952f5ecb16be1446faa2ad7623f378590641352f875ae1c39d142b989eb9",
+        "interpretation": "exploratory qualitative search; confidence and independent predictions are not semantic validity; retain every attempted run",
+        "website_selection": "User-selected example supplied as a trajectory strip.",
+        "builder_sha256": "2a46352702a4a9ea6a008973e0b21b71ef8778515b2a4057d2e8dbeace2b7ae7",
+        "uncertainties": []
+      }
     }
   ]
 }

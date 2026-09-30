@@ -6,7 +6,7 @@
 <meta name="description" content="Confidence Is Not Evidence: Probing Classifier Sensitivity with Steerable Lens - ICLR 2027 submission project page.">
 <title>Steerable Lens — Confidence Is Not Evidence</title>
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
-<script src="animations.js" defer></script>
+<script src="animations.js?v=natural-gallery-1" defer></script>
 <link rel="stylesheet" href="fonts/fonts.css">
 <style>
 /* Layout: single centered scholarly column; hero + abstract + three-axis cards + figure results + bibtex. */
@@ -129,6 +129,16 @@ html,body{margin:0}img{max-width:100%}
 .celeba-case-title{font-size:21px;margin-bottom:16px}
 @media(max-width:760px){.celeba-figure img{min-width:720px}.celeba-controls{align-items:start}.celeba-directions{gap:6px}.gallery-choice{padding-inline:12px}}
 
+
+.natural-controls{display:flex;justify-content:space-between;align-items:end;gap:22px;flex-wrap:wrap;margin:28px 0}
+.natural-sources{display:flex;gap:8px;flex-wrap:wrap}
+.natural-options{display:flex;flex-direction:column;gap:6px;min-width:240px}
+.natural-options label{font-size:13px;color:var(--muted)}
+.natural-options select{font:500 14px var(--sans);min-height:44px;padding:9px 32px 9px 12px;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:8px;width:100%}
+.natural-options select:hover{border-color:var(--accent)}
+.natural-viewer{max-width:660px;margin-inline:auto}
+@media(max-width:500px){.natural-options{width:100%}.natural-controls{gap:18px}}
+
 </style>
 </head>
 <body>
@@ -146,6 +156,7 @@ html,body{margin:0}img{max-width:100%}
     <nav class="btns" aria-label="Project links">
       <a class="btn" href="explore.html">Explore results</a>
       <a class="btn" href="#celeba-animations">Animated examples</a>
+      <a class="btn ghost" href="#more-trajectories">Natural images</a>
       <a class="btn ghost" href="#resources">Figures &amp; data</a>
       <a class="btn ghost" href="https://github.com/fmahdisoltani/steerable-lens">Website source</a>
     </nav>
@@ -271,6 +282,33 @@ html,body{margin:0}img{max-width:100%}
     <div class="col"><p class="animation-note">These selected demonstrations use the current reference implementation. They are not a matched method comparison or a human-validated semantic change. Amplitudes and residuals stay fixed within each step but can drift across the trajectory. GIFs use a limited color palette; the interactive viewer retains PNG frames.</p><p><a href="explore.html#trajectories">Inspect every frame and all three phase caps</a></p></div>
   </div>
 </section>
+<section id="more-trajectories">
+  <div class="wrap">
+    <div class="col">
+      <h2 class="sechead">More natural-image trajectories</h2>
+      <p class="lead">One source, <em>different target directions.</em></p>
+      <p>Explore ten more sequences: cats toward lynx, fox, flamingo, leopard, and tiger, plus a golf ball toward a soccer ball. Choose a source and a target/amplification setting to watch all twelve recorded frames.</p>
+    </div>
+    <div class="natural-controls">
+      <div class="natural-sources" role="group" aria-label="Natural-image source">
+        <button class="gallery-choice" type="button" data-natural-source="cat1" aria-pressed="true">Cat 1</button>
+        <button class="gallery-choice" type="button" data-natural-source="cat2" aria-pressed="false">Cat 2</button>
+        <button class="gallery-choice" type="button" data-natural-source="cat3" aria-pressed="false">Cat 3</button>
+        <button class="gallery-choice" type="button" data-natural-source="golf" aria-pressed="false">Golf ball</button>
+      </div>
+      <div class="natural-options"><label for="natural-example">Target and amplification</label><select id="natural-example"><option value="legacy_cat1_lynx_amp250">Lynx · amp 250</option></select></div>
+    </div>
+    <figure class="natural-viewer">
+      <h3 id="natural-case-title" class="celeba-case-title" aria-live="polite">cat1 → lynx</h3>
+      <div class="animation-toolbar"><span id="natural-case-timing">12 recorded frames &middot; 7.0-second loop</span><button class="motion-toggle" type="button" aria-pressed="true">Pause animations</button></div>
+      <div class="fig"><img id="natural-morph" class="animated" src="figures/legacy_cat1_lynx_amp250.gif" data-gif="figures/legacy_cat1_lynx_amp250.gif" data-still="figures/legacy_cat1_lynx_amp250_poster.png" loading="lazy" alt="cat1 → lynx: twelve recorded frames, with the original source alongside."></div>
+      <figcaption><span id="natural-case-description">Legacy live trajectory with amp 250. All 12 saved frames are shown; G target probabilities are the two-decimal values printed on the original strip.</span> <a id="natural-download" href="figures/legacy_cat1_lynx_amp250.gif" download>Download this GIF</a>.</figcaption>
+    </figure>
+    <div class="col"><p class="animation-note">The cat animations preserve the twelve image panels and rounded target scores in the original figures; the golf-ball animation uses saved numerical frames and measurements. No intermediate images are synthesized. The legacy amplification values shown here are not the phase caps used above. These examples have different settings and image distances, and target confidence alone does not establish a recognizable class change.</p></div>
+  </div>
+</section>
+<script type="application/json" id="natural-gallery-data">[{"id":"legacy_cat1_lynx_amp250","group":"cat1","title":"cat1 \u2192 lynx","option_label":"Lynx \u00b7 amp 250","gif":"legacy_cat1_lynx_amp250.gif","poster":"legacy_cat1_lynx_amp250_poster.png","frame_count":12,"loop_duration_ms":7000,"description":"Legacy live trajectory with amp 250. All 12 saved frames are shown; G target probabilities are the two-decimal values printed on the original strip."},{"id":"legacy_cat2_red_fox_amp250","group":"cat2","title":"cat2 \u2192 red fox","option_label":"Red fox \u00b7 amp 250","gif":"legacy_cat2_red_fox_amp250.gif","poster":"legacy_cat2_red_fox_amp250_poster.png","frame_count":12,"loop_duration_ms":7000,"description":"Legacy live trajectory with amp 250. All 12 saved frames are shown; G target probabilities are the two-decimal values printed on the original strip."},{"id":"legacy_cat2_kit_fox_amp120","group":"cat2","title":"cat2 \u2192 kit fox","option_label":"Kit fox \u00b7 amp 120","gif":"legacy_cat2_kit_fox_amp120.gif","poster":"legacy_cat2_kit_fox_amp120_poster.png","frame_count":12,"loop_duration_ms":7000,"description":"Legacy live trajectory with amp 120. All 12 saved frames are shown; G target probabilities are the two-decimal values printed on the original strip."},{"id":"legacy_cat2_lynx_amp250","group":"cat2","title":"cat2 \u2192 lynx","option_label":"Lynx \u00b7 amp 250","gif":"legacy_cat2_lynx_amp250.gif","poster":"legacy_cat2_lynx_amp250_poster.png","frame_count":12,"loop_duration_ms":7000,"description":"Legacy live trajectory with amp 250. All 12 saved frames are shown; G target probabilities are the two-decimal values printed on the original strip."},{"id":"legacy_cat3_flamingo_amp30","group":"cat3","title":"cat3 \u2192 flamingo","option_label":"Flamingo \u00b7 amp 30","gif":"legacy_cat3_flamingo_amp30.gif","poster":"legacy_cat3_flamingo_amp30_poster.png","frame_count":12,"loop_duration_ms":7000,"description":"Legacy live trajectory with amp 30. All 12 saved frames are shown; G target probabilities are the two-decimal values printed on the original strip."},{"id":"legacy_cat3_flamingo_amp60","group":"cat3","title":"cat3 \u2192 flamingo","option_label":"Flamingo \u00b7 amp 60","gif":"legacy_cat3_flamingo_amp60.gif","poster":"legacy_cat3_flamingo_amp60_poster.png","frame_count":12,"loop_duration_ms":7000,"description":"Legacy live trajectory with amp 60. All 12 saved frames are shown; G target probabilities are the two-decimal values printed on the original strip."},{"id":"legacy_cat3_flamingo_amp1000","group":"cat3","title":"cat3 \u2192 flamingo","option_label":"Flamingo \u00b7 amp 1000","gif":"legacy_cat3_flamingo_amp1000.gif","poster":"legacy_cat3_flamingo_amp1000_poster.png","frame_count":12,"loop_duration_ms":7000,"description":"Legacy live trajectory with amp 1000. All 12 saved frames are shown; G target probabilities are the two-decimal values printed on the original strip."},{"id":"legacy_cat3_leopard_amp250","group":"cat3","title":"cat3 \u2192 leopard","option_label":"Leopard \u00b7 amp 250","gif":"legacy_cat3_leopard_amp250.gif","poster":"legacy_cat3_leopard_amp250_poster.png","frame_count":12,"loop_duration_ms":7000,"description":"Legacy live trajectory with amp 250. All 12 saved frames are shown; G target probabilities are the two-decimal values printed on the original strip."},{"id":"legacy_cat3_tiger_amp1000","group":"cat3","title":"cat3 \u2192 tiger","option_label":"Tiger \u00b7 amp 1000","gif":"legacy_cat3_tiger_amp1000.gif","poster":"legacy_cat3_tiger_amp1000_poster.png","frame_count":12,"loop_duration_ms":7000,"description":"Legacy live trajectory with amp 1000. All 12 saved frames are shown; G target probabilities are the two-decimal values printed on the original strip."},{"id":"golf_to_soccer_amp1000","group":"golf","title":"Golf ball \u2192 Soccer ball","option_label":"Soccer ball \u00b7 amplification 1000","gif":"golf_to_soccer_amp1000.gif","poster":"golf_to_soccer_amp1000_poster.png","frame_count":12,"loop_duration_ms":7000,"description":"Twelve recorded states of a step-local Y-only phase edit, with the source fixed on the left. G is robust ResNet-50 and O is standard ResNet-18; scores are soccer-ball target probabilities."}]</script>
+
 <section id="resources">
   <div class="wrap"><div class="col">
     <h2 class="sechead">Figures &amp; data</h2>
