@@ -1,5 +1,5 @@
 {
-  "encoding": "Actual optimizer states. Main comparison is a deterministic replay of the original experiments with endpoint equality verified; natural-image GIFs use their original twelve saved frames. No image interpolation.",
+  "encoding": "Actual optimizer states. Main and CelebA comparisons are deterministic replays with exact endpoint equality verified; natural-image GIFs use twelve original saved frames. No image interpolation.",
   "main_selection": "User-selected illustrative cases 3-8_00944 and Eyeglasses_183143, selected after inspecting images and outcomes; not representative sampling.",
   "matched_inputs": [
     {
@@ -1626,6 +1626,6143 @@
       "source_sha256": "5ac514f9c10cc3712329406b4f664bc0e5e95ca7bf18328a2e3f858c43a5fbfb",
       "l2_verified_atol": 0.0002,
       "max_l2_recalculation_difference": 0.00014495849609375
+    },
+    {
+      "id": "Smiling_184729",
+      "group": "add-smile",
+      "title": "Add smile",
+      "source_id": "184729",
+      "gif": "celeba_smiling_184729.gif",
+      "poster": "celeba_smiling_184729_poster.png",
+      "dimensions": [
+        960,
+        390
+      ],
+      "frame_count": 67,
+      "loop_duration_ms": 10100,
+      "durations_ms": [
+        1200,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        2400
+      ],
+      "bytes": 4927908,
+      "sha256": "118d6439438b502e40051253947dc6b6ca2e7bc8dc1a5f88555640a39801cd8d",
+      "inputs": [
+        {
+          "method": "pixel",
+          "frames": 67,
+          "recorded_npz": "outputs/website_celeba_morphs/smiles/Smiling_184729_pixel.npz",
+          "sha256": "658d690855a3c28846efbd0a063faab0bfd274d09ccf1b70d61fc6344fa7bcb5",
+          "validation": {
+            "endpoint_max_abs_error": 0.0,
+            "endpoint_target_probability_error": {
+              "G": 0.0,
+              "O": 0.0,
+              "O2": 0.0
+            },
+            "matches_original_endpoint": true,
+            "recorded_frames": 67,
+            "optimizer_updates": 66,
+            "seconds": 0.59
+          }
+        },
+        {
+          "method": "fourier_phase",
+          "frames": 12,
+          "recorded_npz": "outputs/website_celeba_morphs/smiles/Smiling_184729_fourier_phase.npz",
+          "sha256": "758aae5e0fd849e5ce2e65529b89c3f20c3c88b6e38274453ed0a27f0ad20964",
+          "validation": {
+            "endpoint_max_abs_error": 0.0,
+            "endpoint_target_probability_error": {
+              "G": 0.0,
+              "O": 0.0,
+              "O2": 0.0
+            },
+            "matches_original_endpoint": true,
+            "recorded_frames": 12,
+            "optimizer_updates": 11,
+            "seconds": 0.16
+          }
+        },
+        {
+          "method": "csp_phase",
+          "frames": 25,
+          "recorded_npz": "outputs/website_celeba_morphs/smiles/Smiling_184729_csp_phase.npz",
+          "sha256": "cf001453d2e12baa19a3638531d499379e93999c1546f3e7f461311c9b4757a4",
+          "validation": {
+            "endpoint_max_abs_error": 0.0,
+            "endpoint_target_probability_error": {
+              "G": 0.0,
+              "O": 0.0,
+              "O2": 0.0
+            },
+            "matches_original_endpoint": true,
+            "recorded_frames": 25,
+            "optimizer_updates": 24,
+            "seconds": 2.06
+          }
+        },
+        {
+          "method": "csp_joint",
+          "frames": 12,
+          "recorded_npz": "outputs/website_celeba_morphs/smiles/Smiling_184729_csp_joint.npz",
+          "sha256": "2cd2cdaa1f5bba8b1ef4ef2bcbd2531dd467c96aadec290fe54c65d488c0c532",
+          "validation": {
+            "endpoint_max_abs_error": 0.0,
+            "endpoint_target_probability_error": {
+              "G": 0.0,
+              "O": 0.0,
+              "O2": 0.0
+            },
+            "matches_original_endpoint": true,
+            "recorded_frames": 12,
+            "optimizer_updates": 11,
+            "seconds": 0.67
+          }
+        }
+      ],
+      "frame_map": [
+        {
+          "pixel": 0,
+          "fourier_phase": 0,
+          "csp_phase": 0,
+          "csp_joint": 0
+        },
+        {
+          "pixel": 1,
+          "fourier_phase": 0,
+          "csp_phase": 0,
+          "csp_joint": 0
+        },
+        {
+          "pixel": 2,
+          "fourier_phase": 0,
+          "csp_phase": 1,
+          "csp_joint": 0
+        },
+        {
+          "pixel": 3,
+          "fourier_phase": 0,
+          "csp_phase": 1,
+          "csp_joint": 0
+        },
+        {
+          "pixel": 4,
+          "fourier_phase": 1,
+          "csp_phase": 1,
+          "csp_joint": 1
+        },
+        {
+          "pixel": 5,
+          "fourier_phase": 1,
+          "csp_phase": 2,
+          "csp_joint": 1
+        },
+        {
+          "pixel": 6,
+          "fourier_phase": 1,
+          "csp_phase": 2,
+          "csp_joint": 1
+        },
+        {
+          "pixel": 7,
+          "fourier_phase": 1,
+          "csp_phase": 3,
+          "csp_joint": 1
+        },
+        {
+          "pixel": 8,
+          "fourier_phase": 1,
+          "csp_phase": 3,
+          "csp_joint": 1
+        },
+        {
+          "pixel": 9,
+          "fourier_phase": 2,
+          "csp_phase": 3,
+          "csp_joint": 2
+        },
+        {
+          "pixel": 10,
+          "fourier_phase": 2,
+          "csp_phase": 4,
+          "csp_joint": 2
+        },
+        {
+          "pixel": 11,
+          "fourier_phase": 2,
+          "csp_phase": 4,
+          "csp_joint": 2
+        },
+        {
+          "pixel": 12,
+          "fourier_phase": 2,
+          "csp_phase": 4,
+          "csp_joint": 2
+        },
+        {
+          "pixel": 13,
+          "fourier_phase": 2,
+          "csp_phase": 5,
+          "csp_joint": 2
+        },
+        {
+          "pixel": 14,
+          "fourier_phase": 2,
+          "csp_phase": 5,
+          "csp_joint": 2
+        },
+        {
+          "pixel": 15,
+          "fourier_phase": 2,
+          "csp_phase": 5,
+          "csp_joint": 2
+        },
+        {
+          "pixel": 16,
+          "fourier_phase": 3,
+          "csp_phase": 6,
+          "csp_joint": 3
+        },
+        {
+          "pixel": 17,
+          "fourier_phase": 3,
+          "csp_phase": 6,
+          "csp_joint": 3
+        },
+        {
+          "pixel": 18,
+          "fourier_phase": 3,
+          "csp_phase": 7,
+          "csp_joint": 3
+        },
+        {
+          "pixel": 19,
+          "fourier_phase": 3,
+          "csp_phase": 7,
+          "csp_joint": 3
+        },
+        {
+          "pixel": 20,
+          "fourier_phase": 3,
+          "csp_phase": 7,
+          "csp_joint": 3
+        },
+        {
+          "pixel": 21,
+          "fourier_phase": 4,
+          "csp_phase": 8,
+          "csp_joint": 4
+        },
+        {
+          "pixel": 22,
+          "fourier_phase": 4,
+          "csp_phase": 8,
+          "csp_joint": 4
+        },
+        {
+          "pixel": 23,
+          "fourier_phase": 4,
+          "csp_phase": 8,
+          "csp_joint": 4
+        },
+        {
+          "pixel": 24,
+          "fourier_phase": 4,
+          "csp_phase": 9,
+          "csp_joint": 4
+        },
+        {
+          "pixel": 25,
+          "fourier_phase": 4,
+          "csp_phase": 9,
+          "csp_joint": 4
+        },
+        {
+          "pixel": 26,
+          "fourier_phase": 4,
+          "csp_phase": 9,
+          "csp_joint": 4
+        },
+        {
+          "pixel": 27,
+          "fourier_phase": 4,
+          "csp_phase": 10,
+          "csp_joint": 4
+        },
+        {
+          "pixel": 28,
+          "fourier_phase": 5,
+          "csp_phase": 10,
+          "csp_joint": 5
+        },
+        {
+          "pixel": 29,
+          "fourier_phase": 5,
+          "csp_phase": 11,
+          "csp_joint": 5
+        },
+        {
+          "pixel": 30,
+          "fourier_phase": 5,
+          "csp_phase": 11,
+          "csp_joint": 5
+        },
+        {
+          "pixel": 31,
+          "fourier_phase": 5,
+          "csp_phase": 11,
+          "csp_joint": 5
+        },
+        {
+          "pixel": 32,
+          "fourier_phase": 5,
+          "csp_phase": 12,
+          "csp_joint": 5
+        },
+        {
+          "pixel": 33,
+          "fourier_phase": 6,
+          "csp_phase": 12,
+          "csp_joint": 6
+        },
+        {
+          "pixel": 34,
+          "fourier_phase": 6,
+          "csp_phase": 12,
+          "csp_joint": 6
+        },
+        {
+          "pixel": 35,
+          "fourier_phase": 6,
+          "csp_phase": 13,
+          "csp_joint": 6
+        },
+        {
+          "pixel": 36,
+          "fourier_phase": 6,
+          "csp_phase": 13,
+          "csp_joint": 6
+        },
+        {
+          "pixel": 37,
+          "fourier_phase": 6,
+          "csp_phase": 13,
+          "csp_joint": 6
+        },
+        {
+          "pixel": 38,
+          "fourier_phase": 6,
+          "csp_phase": 14,
+          "csp_joint": 6
+        },
+        {
+          "pixel": 39,
+          "fourier_phase": 6,
+          "csp_phase": 14,
+          "csp_joint": 6
+        },
+        {
+          "pixel": 40,
+          "fourier_phase": 7,
+          "csp_phase": 15,
+          "csp_joint": 7
+        },
+        {
+          "pixel": 41,
+          "fourier_phase": 7,
+          "csp_phase": 15,
+          "csp_joint": 7
+        },
+        {
+          "pixel": 42,
+          "fourier_phase": 7,
+          "csp_phase": 15,
+          "csp_joint": 7
+        },
+        {
+          "pixel": 43,
+          "fourier_phase": 7,
+          "csp_phase": 16,
+          "csp_joint": 7
+        },
+        {
+          "pixel": 44,
+          "fourier_phase": 7,
+          "csp_phase": 16,
+          "csp_joint": 7
+        },
+        {
+          "pixel": 45,
+          "fourier_phase": 8,
+          "csp_phase": 16,
+          "csp_joint": 8
+        },
+        {
+          "pixel": 46,
+          "fourier_phase": 8,
+          "csp_phase": 17,
+          "csp_joint": 8
+        },
+        {
+          "pixel": 47,
+          "fourier_phase": 8,
+          "csp_phase": 17,
+          "csp_joint": 8
+        },
+        {
+          "pixel": 48,
+          "fourier_phase": 8,
+          "csp_phase": 17,
+          "csp_joint": 8
+        },
+        {
+          "pixel": 49,
+          "fourier_phase": 8,
+          "csp_phase": 18,
+          "csp_joint": 8
+        },
+        {
+          "pixel": 50,
+          "fourier_phase": 8,
+          "csp_phase": 18,
+          "csp_joint": 8
+        },
+        {
+          "pixel": 51,
+          "fourier_phase": 8,
+          "csp_phase": 19,
+          "csp_joint": 8
+        },
+        {
+          "pixel": 52,
+          "fourier_phase": 9,
+          "csp_phase": 19,
+          "csp_joint": 9
+        },
+        {
+          "pixel": 53,
+          "fourier_phase": 9,
+          "csp_phase": 19,
+          "csp_joint": 9
+        },
+        {
+          "pixel": 54,
+          "fourier_phase": 9,
+          "csp_phase": 20,
+          "csp_joint": 9
+        },
+        {
+          "pixel": 55,
+          "fourier_phase": 9,
+          "csp_phase": 20,
+          "csp_joint": 9
+        },
+        {
+          "pixel": 56,
+          "fourier_phase": 9,
+          "csp_phase": 20,
+          "csp_joint": 9
+        },
+        {
+          "pixel": 57,
+          "fourier_phase": 10,
+          "csp_phase": 21,
+          "csp_joint": 10
+        },
+        {
+          "pixel": 58,
+          "fourier_phase": 10,
+          "csp_phase": 21,
+          "csp_joint": 10
+        },
+        {
+          "pixel": 59,
+          "fourier_phase": 10,
+          "csp_phase": 21,
+          "csp_joint": 10
+        },
+        {
+          "pixel": 60,
+          "fourier_phase": 10,
+          "csp_phase": 22,
+          "csp_joint": 10
+        },
+        {
+          "pixel": 61,
+          "fourier_phase": 10,
+          "csp_phase": 22,
+          "csp_joint": 10
+        },
+        {
+          "pixel": 62,
+          "fourier_phase": 10,
+          "csp_phase": 23,
+          "csp_joint": 10
+        },
+        {
+          "pixel": 63,
+          "fourier_phase": 10,
+          "csp_phase": 23,
+          "csp_joint": 10
+        },
+        {
+          "pixel": 64,
+          "fourier_phase": 11,
+          "csp_phase": 23,
+          "csp_joint": 11
+        },
+        {
+          "pixel": 65,
+          "fourier_phase": 11,
+          "csp_phase": 24,
+          "csp_joint": 11
+        },
+        {
+          "pixel": 66,
+          "fourier_phase": 11,
+          "csp_phase": 24,
+          "csp_joint": 11
+        }
+      ],
+      "encoding": "Real accepted optimizer states before the budget, followed by the exact matched-budget endpoint. All recorded states appear in chronological order. Shorter paths hold existing frames; no image interpolation. Nearest-neighbor display and grayscale palette.",
+      "selection": "First two common-attainment source IDs in each direction, excluding Eyeglasses_183143 already in the main comparison. Illustrative examples, not estimates of success rates."
+    },
+    {
+      "id": "Smiling_186468",
+      "group": "add-smile",
+      "title": "Add smile",
+      "source_id": "186468",
+      "gif": "celeba_smiling_186468.gif",
+      "poster": "celeba_smiling_186468_poster.png",
+      "dimensions": [
+        960,
+        390
+      ],
+      "frame_count": 69,
+      "loop_duration_ms": 10300,
+      "durations_ms": [
+        1200,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        2400
+      ],
+      "bytes": 4702404,
+      "sha256": "8835c00d72964eba2ff5f349eb85de5902aaf0999ddd91990cbb9ca7e4c9fcae",
+      "inputs": [
+        {
+          "method": "pixel",
+          "frames": 69,
+          "recorded_npz": "outputs/website_celeba_morphs/smiles/Smiling_186468_pixel.npz",
+          "sha256": "671f7be91dedae13d5f40f96d9b3dda39079b947bd41ce4a3fe09a2dd73fc97b",
+          "validation": {
+            "endpoint_max_abs_error": 0.0,
+            "endpoint_target_probability_error": {
+              "G": 0.0,
+              "O": 0.0,
+              "O2": 0.0
+            },
+            "matches_original_endpoint": true,
+            "recorded_frames": 69,
+            "optimizer_updates": 68,
+            "seconds": 0.52
+          }
+        },
+        {
+          "method": "fourier_phase",
+          "frames": 15,
+          "recorded_npz": "outputs/website_celeba_morphs/smiles/Smiling_186468_fourier_phase.npz",
+          "sha256": "62f50539dc55acd1d0b565f9f07fc2560d0f33241ce8bae9497a30af04ba1373",
+          "validation": {
+            "endpoint_max_abs_error": 0.0,
+            "endpoint_target_probability_error": {
+              "G": 0.0,
+              "O": 0.0,
+              "O2": 0.0
+            },
+            "matches_original_endpoint": true,
+            "recorded_frames": 15,
+            "optimizer_updates": 14,
+            "seconds": 0.17
+          }
+        },
+        {
+          "method": "csp_phase",
+          "frames": 63,
+          "recorded_npz": "outputs/website_celeba_morphs/smiles/Smiling_186468_csp_phase.npz",
+          "sha256": "4247594e233142057b522ae985d03ed01843f22c360b27be09321e97ca8de9c3",
+          "validation": {
+            "endpoint_max_abs_error": 0.0,
+            "endpoint_target_probability_error": {
+              "G": 0.0,
+              "O": 0.0,
+              "O2": 0.0
+            },
+            "matches_original_endpoint": true,
+            "recorded_frames": 63,
+            "optimizer_updates": 62,
+            "seconds": 3.38
+          }
+        },
+        {
+          "method": "csp_joint",
+          "frames": 21,
+          "recorded_npz": "outputs/website_celeba_morphs/smiles/Smiling_186468_csp_joint.npz",
+          "sha256": "e7fbe24885d8e04fe57f5f26203ef643f8885f643268e0d0a9eb8f1b7a504b98",
+          "validation": {
+            "endpoint_max_abs_error": 0.0,
+            "endpoint_target_probability_error": {
+              "G": 0.0,
+              "O": 0.0,
+              "O2": 0.0
+            },
+            "matches_original_endpoint": true,
+            "recorded_frames": 21,
+            "optimizer_updates": 20,
+            "seconds": 1.15
+          }
+        }
+      ],
+      "frame_map": [
+        {
+          "pixel": 0,
+          "fourier_phase": 0,
+          "csp_phase": 0,
+          "csp_joint": 0
+        },
+        {
+          "pixel": 1,
+          "fourier_phase": 0,
+          "csp_phase": 1,
+          "csp_joint": 0
+        },
+        {
+          "pixel": 2,
+          "fourier_phase": 0,
+          "csp_phase": 2,
+          "csp_joint": 1
+        },
+        {
+          "pixel": 3,
+          "fourier_phase": 1,
+          "csp_phase": 3,
+          "csp_joint": 1
+        },
+        {
+          "pixel": 4,
+          "fourier_phase": 1,
+          "csp_phase": 4,
+          "csp_joint": 1
+        },
+        {
+          "pixel": 5,
+          "fourier_phase": 1,
+          "csp_phase": 5,
+          "csp_joint": 1
+        },
+        {
+          "pixel": 6,
+          "fourier_phase": 1,
+          "csp_phase": 5,
+          "csp_joint": 2
+        },
+        {
+          "pixel": 7,
+          "fourier_phase": 1,
+          "csp_phase": 6,
+          "csp_joint": 2
+        },
+        {
+          "pixel": 8,
+          "fourier_phase": 2,
+          "csp_phase": 7,
+          "csp_joint": 2
+        },
+        {
+          "pixel": 9,
+          "fourier_phase": 2,
+          "csp_phase": 8,
+          "csp_joint": 3
+        },
+        {
+          "pixel": 10,
+          "fourier_phase": 2,
+          "csp_phase": 9,
+          "csp_joint": 3
+        },
+        {
+          "pixel": 11,
+          "fourier_phase": 2,
+          "csp_phase": 10,
+          "csp_joint": 3
+        },
+        {
+          "pixel": 12,
+          "fourier_phase": 2,
+          "csp_phase": 11,
+          "csp_joint": 4
+        },
+        {
+          "pixel": 13,
+          "fourier_phase": 3,
+          "csp_phase": 12,
+          "csp_joint": 4
+        },
+        {
+          "pixel": 14,
+          "fourier_phase": 3,
+          "csp_phase": 13,
+          "csp_joint": 4
+        },
+        {
+          "pixel": 15,
+          "fourier_phase": 3,
+          "csp_phase": 14,
+          "csp_joint": 4
+        },
+        {
+          "pixel": 16,
+          "fourier_phase": 3,
+          "csp_phase": 15,
+          "csp_joint": 5
+        },
+        {
+          "pixel": 17,
+          "fourier_phase": 4,
+          "csp_phase": 16,
+          "csp_joint": 5
+        },
+        {
+          "pixel": 18,
+          "fourier_phase": 4,
+          "csp_phase": 16,
+          "csp_joint": 5
+        },
+        {
+          "pixel": 19,
+          "fourier_phase": 4,
+          "csp_phase": 17,
+          "csp_joint": 6
+        },
+        {
+          "pixel": 20,
+          "fourier_phase": 4,
+          "csp_phase": 18,
+          "csp_joint": 6
+        },
+        {
+          "pixel": 21,
+          "fourier_phase": 4,
+          "csp_phase": 19,
+          "csp_joint": 6
+        },
+        {
+          "pixel": 22,
+          "fourier_phase": 5,
+          "csp_phase": 20,
+          "csp_joint": 6
+        },
+        {
+          "pixel": 23,
+          "fourier_phase": 5,
+          "csp_phase": 21,
+          "csp_joint": 7
+        },
+        {
+          "pixel": 24,
+          "fourier_phase": 5,
+          "csp_phase": 22,
+          "csp_joint": 7
+        },
+        {
+          "pixel": 25,
+          "fourier_phase": 5,
+          "csp_phase": 23,
+          "csp_joint": 7
+        },
+        {
+          "pixel": 26,
+          "fourier_phase": 5,
+          "csp_phase": 24,
+          "csp_joint": 8
+        },
+        {
+          "pixel": 27,
+          "fourier_phase": 6,
+          "csp_phase": 25,
+          "csp_joint": 8
+        },
+        {
+          "pixel": 28,
+          "fourier_phase": 6,
+          "csp_phase": 26,
+          "csp_joint": 8
+        },
+        {
+          "pixel": 29,
+          "fourier_phase": 6,
+          "csp_phase": 26,
+          "csp_joint": 9
+        },
+        {
+          "pixel": 30,
+          "fourier_phase": 6,
+          "csp_phase": 27,
+          "csp_joint": 9
+        },
+        {
+          "pixel": 31,
+          "fourier_phase": 6,
+          "csp_phase": 28,
+          "csp_joint": 9
+        },
+        {
+          "pixel": 32,
+          "fourier_phase": 7,
+          "csp_phase": 29,
+          "csp_joint": 9
+        },
+        {
+          "pixel": 33,
+          "fourier_phase": 7,
+          "csp_phase": 30,
+          "csp_joint": 10
+        },
+        {
+          "pixel": 34,
+          "fourier_phase": 7,
+          "csp_phase": 31,
+          "csp_joint": 10
+        },
+        {
+          "pixel": 35,
+          "fourier_phase": 7,
+          "csp_phase": 32,
+          "csp_joint": 10
+        },
+        {
+          "pixel": 36,
+          "fourier_phase": 7,
+          "csp_phase": 33,
+          "csp_joint": 11
+        },
+        {
+          "pixel": 37,
+          "fourier_phase": 8,
+          "csp_phase": 34,
+          "csp_joint": 11
+        },
+        {
+          "pixel": 38,
+          "fourier_phase": 8,
+          "csp_phase": 35,
+          "csp_joint": 11
+        },
+        {
+          "pixel": 39,
+          "fourier_phase": 8,
+          "csp_phase": 36,
+          "csp_joint": 11
+        },
+        {
+          "pixel": 40,
+          "fourier_phase": 8,
+          "csp_phase": 36,
+          "csp_joint": 12
+        },
+        {
+          "pixel": 41,
+          "fourier_phase": 8,
+          "csp_phase": 37,
+          "csp_joint": 12
+        },
+        {
+          "pixel": 42,
+          "fourier_phase": 9,
+          "csp_phase": 38,
+          "csp_joint": 12
+        },
+        {
+          "pixel": 43,
+          "fourier_phase": 9,
+          "csp_phase": 39,
+          "csp_joint": 13
+        },
+        {
+          "pixel": 44,
+          "fourier_phase": 9,
+          "csp_phase": 40,
+          "csp_joint": 13
+        },
+        {
+          "pixel": 45,
+          "fourier_phase": 9,
+          "csp_phase": 41,
+          "csp_joint": 13
+        },
+        {
+          "pixel": 46,
+          "fourier_phase": 9,
+          "csp_phase": 42,
+          "csp_joint": 14
+        },
+        {
+          "pixel": 47,
+          "fourier_phase": 10,
+          "csp_phase": 43,
+          "csp_joint": 14
+        },
+        {
+          "pixel": 48,
+          "fourier_phase": 10,
+          "csp_phase": 44,
+          "csp_joint": 14
+        },
+        {
+          "pixel": 49,
+          "fourier_phase": 10,
+          "csp_phase": 45,
+          "csp_joint": 14
+        },
+        {
+          "pixel": 50,
+          "fourier_phase": 10,
+          "csp_phase": 46,
+          "csp_joint": 15
+        },
+        {
+          "pixel": 51,
+          "fourier_phase": 10,
+          "csp_phase": 46,
+          "csp_joint": 15
+        },
+        {
+          "pixel": 52,
+          "fourier_phase": 11,
+          "csp_phase": 47,
+          "csp_joint": 15
+        },
+        {
+          "pixel": 53,
+          "fourier_phase": 11,
+          "csp_phase": 48,
+          "csp_joint": 16
+        },
+        {
+          "pixel": 54,
+          "fourier_phase": 11,
+          "csp_phase": 49,
+          "csp_joint": 16
+        },
+        {
+          "pixel": 55,
+          "fourier_phase": 11,
+          "csp_phase": 50,
+          "csp_joint": 16
+        },
+        {
+          "pixel": 56,
+          "fourier_phase": 12,
+          "csp_phase": 51,
+          "csp_joint": 16
+        },
+        {
+          "pixel": 57,
+          "fourier_phase": 12,
+          "csp_phase": 52,
+          "csp_joint": 17
+        },
+        {
+          "pixel": 58,
+          "fourier_phase": 12,
+          "csp_phase": 53,
+          "csp_joint": 17
+        },
+        {
+          "pixel": 59,
+          "fourier_phase": 12,
+          "csp_phase": 54,
+          "csp_joint": 17
+        },
+        {
+          "pixel": 60,
+          "fourier_phase": 12,
+          "csp_phase": 55,
+          "csp_joint": 18
+        },
+        {
+          "pixel": 61,
+          "fourier_phase": 13,
+          "csp_phase": 56,
+          "csp_joint": 18
+        },
+        {
+          "pixel": 62,
+          "fourier_phase": 13,
+          "csp_phase": 57,
+          "csp_joint": 18
+        },
+        {
+          "pixel": 63,
+          "fourier_phase": 13,
+          "csp_phase": 57,
+          "csp_joint": 19
+        },
+        {
+          "pixel": 64,
+          "fourier_phase": 13,
+          "csp_phase": 58,
+          "csp_joint": 19
+        },
+        {
+          "pixel": 65,
+          "fourier_phase": 13,
+          "csp_phase": 59,
+          "csp_joint": 19
+        },
+        {
+          "pixel": 66,
+          "fourier_phase": 14,
+          "csp_phase": 60,
+          "csp_joint": 19
+        },
+        {
+          "pixel": 67,
+          "fourier_phase": 14,
+          "csp_phase": 61,
+          "csp_joint": 20
+        },
+        {
+          "pixel": 68,
+          "fourier_phase": 14,
+          "csp_phase": 62,
+          "csp_joint": 20
+        }
+      ],
+      "encoding": "Real accepted optimizer states before the budget, followed by the exact matched-budget endpoint. All recorded states appear in chronological order. Shorter paths hold existing frames; no image interpolation. Nearest-neighbor display and grayscale palette.",
+      "selection": "First two common-attainment source IDs in each direction, excluding Eyeglasses_183143 already in the main comparison. Illustrative examples, not estimates of success rates."
+    },
+    {
+      "id": "Smiling_183135",
+      "group": "remove-smile",
+      "title": "Remove smile",
+      "source_id": "183135",
+      "gif": "celeba_smiling_183135.gif",
+      "poster": "celeba_smiling_183135_poster.png",
+      "dimensions": [
+        960,
+        390
+      ],
+      "frame_count": 69,
+      "loop_duration_ms": 10300,
+      "durations_ms": [
+        1200,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        2400
+      ],
+      "bytes": 5251975,
+      "sha256": "6184cd072d1b8020ef1c6dafac6e5099c50bb4a8a24c844add6b3982601bcb32",
+      "inputs": [
+        {
+          "method": "pixel",
+          "frames": 69,
+          "recorded_npz": "outputs/website_celeba_morphs/smiles/Smiling_183135_pixel.npz",
+          "sha256": "ef06d2cf43fbcef7ee3e2b3721a0c5fcb652c53ef839925c9149d8502f6e99ec",
+          "validation": {
+            "endpoint_max_abs_error": 0.0,
+            "endpoint_target_probability_error": {
+              "G": 0.0,
+              "O": 0.0,
+              "O2": 0.0
+            },
+            "matches_original_endpoint": true,
+            "recorded_frames": 69,
+            "optimizer_updates": 68,
+            "seconds": 0.56
+          }
+        },
+        {
+          "method": "fourier_phase",
+          "frames": 11,
+          "recorded_npz": "outputs/website_celeba_morphs/smiles/Smiling_183135_fourier_phase.npz",
+          "sha256": "9ecdbba5e56afb8f0ac3a52ea98afe4e337e2a37007d0dca4c3e01e36be5eb06",
+          "validation": {
+            "endpoint_max_abs_error": 0.0,
+            "endpoint_target_probability_error": {
+              "G": 0.0,
+              "O": 0.0,
+              "O2": 0.0
+            },
+            "matches_original_endpoint": true,
+            "recorded_frames": 11,
+            "optimizer_updates": 10,
+            "seconds": 0.14
+          }
+        },
+        {
+          "method": "csp_phase",
+          "frames": 28,
+          "recorded_npz": "outputs/website_celeba_morphs/smiles/Smiling_183135_csp_phase.npz",
+          "sha256": "a64f85b69376dea9cc3a8c620756a286e4de3abefe58278c4f0ce27f2a75addc",
+          "validation": {
+            "endpoint_max_abs_error": 0.0,
+            "endpoint_target_probability_error": {
+              "G": 0.0,
+              "O": 0.0,
+              "O2": 0.0
+            },
+            "matches_original_endpoint": true,
+            "recorded_frames": 28,
+            "optimizer_updates": 27,
+            "seconds": 1.44
+          }
+        },
+        {
+          "method": "csp_joint",
+          "frames": 12,
+          "recorded_npz": "outputs/website_celeba_morphs/smiles/Smiling_183135_csp_joint.npz",
+          "sha256": "a6bf2bfe074ab905a337541fc974cf96fdbbc167b594eee807f3cd25300b0378",
+          "validation": {
+            "endpoint_max_abs_error": 0.0,
+            "endpoint_target_probability_error": {
+              "G": 0.0,
+              "O": 0.0,
+              "O2": 0.0
+            },
+            "matches_original_endpoint": true,
+            "recorded_frames": 12,
+            "optimizer_updates": 11,
+            "seconds": 0.8
+          }
+        }
+      ],
+      "frame_map": [
+        {
+          "pixel": 0,
+          "fourier_phase": 0,
+          "csp_phase": 0,
+          "csp_joint": 0
+        },
+        {
+          "pixel": 1,
+          "fourier_phase": 0,
+          "csp_phase": 0,
+          "csp_joint": 0
+        },
+        {
+          "pixel": 2,
+          "fourier_phase": 0,
+          "csp_phase": 1,
+          "csp_joint": 0
+        },
+        {
+          "pixel": 3,
+          "fourier_phase": 0,
+          "csp_phase": 1,
+          "csp_joint": 0
+        },
+        {
+          "pixel": 4,
+          "fourier_phase": 1,
+          "csp_phase": 2,
+          "csp_joint": 1
+        },
+        {
+          "pixel": 5,
+          "fourier_phase": 1,
+          "csp_phase": 2,
+          "csp_joint": 1
+        },
+        {
+          "pixel": 6,
+          "fourier_phase": 1,
+          "csp_phase": 2,
+          "csp_joint": 1
+        },
+        {
+          "pixel": 7,
+          "fourier_phase": 1,
+          "csp_phase": 3,
+          "csp_joint": 1
+        },
+        {
+          "pixel": 8,
+          "fourier_phase": 1,
+          "csp_phase": 3,
+          "csp_joint": 1
+        },
+        {
+          "pixel": 9,
+          "fourier_phase": 1,
+          "csp_phase": 4,
+          "csp_joint": 1
+        },
+        {
+          "pixel": 10,
+          "fourier_phase": 1,
+          "csp_phase": 4,
+          "csp_joint": 2
+        },
+        {
+          "pixel": 11,
+          "fourier_phase": 2,
+          "csp_phase": 4,
+          "csp_joint": 2
+        },
+        {
+          "pixel": 12,
+          "fourier_phase": 2,
+          "csp_phase": 5,
+          "csp_joint": 2
+        },
+        {
+          "pixel": 13,
+          "fourier_phase": 2,
+          "csp_phase": 5,
+          "csp_joint": 2
+        },
+        {
+          "pixel": 14,
+          "fourier_phase": 2,
+          "csp_phase": 6,
+          "csp_joint": 2
+        },
+        {
+          "pixel": 15,
+          "fourier_phase": 2,
+          "csp_phase": 6,
+          "csp_joint": 2
+        },
+        {
+          "pixel": 16,
+          "fourier_phase": 2,
+          "csp_phase": 6,
+          "csp_joint": 3
+        },
+        {
+          "pixel": 17,
+          "fourier_phase": 2,
+          "csp_phase": 7,
+          "csp_joint": 3
+        },
+        {
+          "pixel": 18,
+          "fourier_phase": 3,
+          "csp_phase": 7,
+          "csp_joint": 3
+        },
+        {
+          "pixel": 19,
+          "fourier_phase": 3,
+          "csp_phase": 8,
+          "csp_joint": 3
+        },
+        {
+          "pixel": 20,
+          "fourier_phase": 3,
+          "csp_phase": 8,
+          "csp_joint": 3
+        },
+        {
+          "pixel": 21,
+          "fourier_phase": 3,
+          "csp_phase": 8,
+          "csp_joint": 3
+        },
+        {
+          "pixel": 22,
+          "fourier_phase": 3,
+          "csp_phase": 9,
+          "csp_joint": 4
+        },
+        {
+          "pixel": 23,
+          "fourier_phase": 3,
+          "csp_phase": 9,
+          "csp_joint": 4
+        },
+        {
+          "pixel": 24,
+          "fourier_phase": 4,
+          "csp_phase": 10,
+          "csp_joint": 4
+        },
+        {
+          "pixel": 25,
+          "fourier_phase": 4,
+          "csp_phase": 10,
+          "csp_joint": 4
+        },
+        {
+          "pixel": 26,
+          "fourier_phase": 4,
+          "csp_phase": 10,
+          "csp_joint": 4
+        },
+        {
+          "pixel": 27,
+          "fourier_phase": 4,
+          "csp_phase": 11,
+          "csp_joint": 4
+        },
+        {
+          "pixel": 28,
+          "fourier_phase": 4,
+          "csp_phase": 11,
+          "csp_joint": 5
+        },
+        {
+          "pixel": 29,
+          "fourier_phase": 4,
+          "csp_phase": 12,
+          "csp_joint": 5
+        },
+        {
+          "pixel": 30,
+          "fourier_phase": 4,
+          "csp_phase": 12,
+          "csp_joint": 5
+        },
+        {
+          "pixel": 31,
+          "fourier_phase": 5,
+          "csp_phase": 12,
+          "csp_joint": 5
+        },
+        {
+          "pixel": 32,
+          "fourier_phase": 5,
+          "csp_phase": 13,
+          "csp_joint": 5
+        },
+        {
+          "pixel": 33,
+          "fourier_phase": 5,
+          "csp_phase": 13,
+          "csp_joint": 5
+        },
+        {
+          "pixel": 34,
+          "fourier_phase": 5,
+          "csp_phase": 14,
+          "csp_joint": 6
+        },
+        {
+          "pixel": 35,
+          "fourier_phase": 5,
+          "csp_phase": 14,
+          "csp_joint": 6
+        },
+        {
+          "pixel": 36,
+          "fourier_phase": 5,
+          "csp_phase": 14,
+          "csp_joint": 6
+        },
+        {
+          "pixel": 37,
+          "fourier_phase": 5,
+          "csp_phase": 15,
+          "csp_joint": 6
+        },
+        {
+          "pixel": 38,
+          "fourier_phase": 6,
+          "csp_phase": 15,
+          "csp_joint": 6
+        },
+        {
+          "pixel": 39,
+          "fourier_phase": 6,
+          "csp_phase": 15,
+          "csp_joint": 6
+        },
+        {
+          "pixel": 40,
+          "fourier_phase": 6,
+          "csp_phase": 16,
+          "csp_joint": 6
+        },
+        {
+          "pixel": 41,
+          "fourier_phase": 6,
+          "csp_phase": 16,
+          "csp_joint": 7
+        },
+        {
+          "pixel": 42,
+          "fourier_phase": 6,
+          "csp_phase": 17,
+          "csp_joint": 7
+        },
+        {
+          "pixel": 43,
+          "fourier_phase": 6,
+          "csp_phase": 17,
+          "csp_joint": 7
+        },
+        {
+          "pixel": 44,
+          "fourier_phase": 6,
+          "csp_phase": 17,
+          "csp_joint": 7
+        },
+        {
+          "pixel": 45,
+          "fourier_phase": 7,
+          "csp_phase": 18,
+          "csp_joint": 7
+        },
+        {
+          "pixel": 46,
+          "fourier_phase": 7,
+          "csp_phase": 18,
+          "csp_joint": 7
+        },
+        {
+          "pixel": 47,
+          "fourier_phase": 7,
+          "csp_phase": 19,
+          "csp_joint": 8
+        },
+        {
+          "pixel": 48,
+          "fourier_phase": 7,
+          "csp_phase": 19,
+          "csp_joint": 8
+        },
+        {
+          "pixel": 49,
+          "fourier_phase": 7,
+          "csp_phase": 19,
+          "csp_joint": 8
+        },
+        {
+          "pixel": 50,
+          "fourier_phase": 7,
+          "csp_phase": 20,
+          "csp_joint": 8
+        },
+        {
+          "pixel": 51,
+          "fourier_phase": 8,
+          "csp_phase": 20,
+          "csp_joint": 8
+        },
+        {
+          "pixel": 52,
+          "fourier_phase": 8,
+          "csp_phase": 21,
+          "csp_joint": 8
+        },
+        {
+          "pixel": 53,
+          "fourier_phase": 8,
+          "csp_phase": 21,
+          "csp_joint": 9
+        },
+        {
+          "pixel": 54,
+          "fourier_phase": 8,
+          "csp_phase": 21,
+          "csp_joint": 9
+        },
+        {
+          "pixel": 55,
+          "fourier_phase": 8,
+          "csp_phase": 22,
+          "csp_joint": 9
+        },
+        {
+          "pixel": 56,
+          "fourier_phase": 8,
+          "csp_phase": 22,
+          "csp_joint": 9
+        },
+        {
+          "pixel": 57,
+          "fourier_phase": 8,
+          "csp_phase": 23,
+          "csp_joint": 9
+        },
+        {
+          "pixel": 58,
+          "fourier_phase": 9,
+          "csp_phase": 23,
+          "csp_joint": 9
+        },
+        {
+          "pixel": 59,
+          "fourier_phase": 9,
+          "csp_phase": 23,
+          "csp_joint": 10
+        },
+        {
+          "pixel": 60,
+          "fourier_phase": 9,
+          "csp_phase": 24,
+          "csp_joint": 10
+        },
+        {
+          "pixel": 61,
+          "fourier_phase": 9,
+          "csp_phase": 24,
+          "csp_joint": 10
+        },
+        {
+          "pixel": 62,
+          "fourier_phase": 9,
+          "csp_phase": 25,
+          "csp_joint": 10
+        },
+        {
+          "pixel": 63,
+          "fourier_phase": 9,
+          "csp_phase": 25,
+          "csp_joint": 10
+        },
+        {
+          "pixel": 64,
+          "fourier_phase": 9,
+          "csp_phase": 25,
+          "csp_joint": 10
+        },
+        {
+          "pixel": 65,
+          "fourier_phase": 10,
+          "csp_phase": 26,
+          "csp_joint": 11
+        },
+        {
+          "pixel": 66,
+          "fourier_phase": 10,
+          "csp_phase": 26,
+          "csp_joint": 11
+        },
+        {
+          "pixel": 67,
+          "fourier_phase": 10,
+          "csp_phase": 27,
+          "csp_joint": 11
+        },
+        {
+          "pixel": 68,
+          "fourier_phase": 10,
+          "csp_phase": 27,
+          "csp_joint": 11
+        }
+      ],
+      "encoding": "Real accepted optimizer states before the budget, followed by the exact matched-budget endpoint. All recorded states appear in chronological order. Shorter paths hold existing frames; no image interpolation. Nearest-neighbor display and grayscale palette.",
+      "selection": "First two common-attainment source IDs in each direction, excluding Eyeglasses_183143 already in the main comparison. Illustrative examples, not estimates of success rates."
+    },
+    {
+      "id": "Smiling_184591",
+      "group": "remove-smile",
+      "title": "Remove smile",
+      "source_id": "184591",
+      "gif": "celeba_smiling_184591.gif",
+      "poster": "celeba_smiling_184591_poster.png",
+      "dimensions": [
+        960,
+        390
+      ],
+      "frame_count": 55,
+      "loop_duration_ms": 9960,
+      "durations_ms": [
+        1200,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        2400
+      ],
+      "bytes": 3978626,
+      "sha256": "20ede7fcade2b4869bc99c02cda73d6d4494b974998981824d05c2555080dda1",
+      "inputs": [
+        {
+          "method": "pixel",
+          "frames": 55,
+          "recorded_npz": "outputs/website_celeba_morphs/smiles/Smiling_184591_pixel.npz",
+          "sha256": "245c8f672084bbe037a50245f5083176b355ad5c7d17bb01d5c25d64481752a9",
+          "validation": {
+            "endpoint_max_abs_error": 0.0,
+            "endpoint_target_probability_error": {
+              "G": 0.0,
+              "O": 0.0,
+              "O2": 0.0
+            },
+            "matches_original_endpoint": true,
+            "recorded_frames": 55,
+            "optimizer_updates": 54,
+            "seconds": 0.46
+          }
+        },
+        {
+          "method": "fourier_phase",
+          "frames": 11,
+          "recorded_npz": "outputs/website_celeba_morphs/smiles/Smiling_184591_fourier_phase.npz",
+          "sha256": "d0fb5eef3a2ffd5b572329e3fec64c5d8c46f6efa44a3f0874e11a434ca2d542",
+          "validation": {
+            "endpoint_max_abs_error": 0.0,
+            "endpoint_target_probability_error": {
+              "G": 0.0,
+              "O": 0.0,
+              "O2": 0.0
+            },
+            "matches_original_endpoint": true,
+            "recorded_frames": 11,
+            "optimizer_updates": 10,
+            "seconds": 0.13
+          }
+        },
+        {
+          "method": "csp_phase",
+          "frames": 25,
+          "recorded_npz": "outputs/website_celeba_morphs/smiles/Smiling_184591_csp_phase.npz",
+          "sha256": "855477d0b1ce6c15215cf31cc2b0cfc83c0137006563c37773b845d5cc6db78a",
+          "validation": {
+            "endpoint_max_abs_error": 0.0,
+            "endpoint_target_probability_error": {
+              "G": 0.0,
+              "O": 0.0,
+              "O2": 0.0
+            },
+            "matches_original_endpoint": true,
+            "recorded_frames": 25,
+            "optimizer_updates": 24,
+            "seconds": 1.63
+          }
+        },
+        {
+          "method": "csp_joint",
+          "frames": 12,
+          "recorded_npz": "outputs/website_celeba_morphs/smiles/Smiling_184591_csp_joint.npz",
+          "sha256": "5ad139f4e00468ca7560940ea357de968f72284dca79f7d8d7f5e167bc3ba9f4",
+          "validation": {
+            "endpoint_max_abs_error": 0.0,
+            "endpoint_target_probability_error": {
+              "G": 0.0,
+              "O": 0.0,
+              "O2": 0.0
+            },
+            "matches_original_endpoint": true,
+            "recorded_frames": 12,
+            "optimizer_updates": 11,
+            "seconds": 0.73
+          }
+        }
+      ],
+      "frame_map": [
+        {
+          "pixel": 0,
+          "fourier_phase": 0,
+          "csp_phase": 0,
+          "csp_joint": 0
+        },
+        {
+          "pixel": 1,
+          "fourier_phase": 0,
+          "csp_phase": 0,
+          "csp_joint": 0
+        },
+        {
+          "pixel": 2,
+          "fourier_phase": 0,
+          "csp_phase": 1,
+          "csp_joint": 0
+        },
+        {
+          "pixel": 3,
+          "fourier_phase": 1,
+          "csp_phase": 1,
+          "csp_joint": 1
+        },
+        {
+          "pixel": 4,
+          "fourier_phase": 1,
+          "csp_phase": 2,
+          "csp_joint": 1
+        },
+        {
+          "pixel": 5,
+          "fourier_phase": 1,
+          "csp_phase": 2,
+          "csp_joint": 1
+        },
+        {
+          "pixel": 6,
+          "fourier_phase": 1,
+          "csp_phase": 3,
+          "csp_joint": 1
+        },
+        {
+          "pixel": 7,
+          "fourier_phase": 1,
+          "csp_phase": 3,
+          "csp_joint": 1
+        },
+        {
+          "pixel": 8,
+          "fourier_phase": 1,
+          "csp_phase": 4,
+          "csp_joint": 2
+        },
+        {
+          "pixel": 9,
+          "fourier_phase": 2,
+          "csp_phase": 4,
+          "csp_joint": 2
+        },
+        {
+          "pixel": 10,
+          "fourier_phase": 2,
+          "csp_phase": 4,
+          "csp_joint": 2
+        },
+        {
+          "pixel": 11,
+          "fourier_phase": 2,
+          "csp_phase": 5,
+          "csp_joint": 2
+        },
+        {
+          "pixel": 12,
+          "fourier_phase": 2,
+          "csp_phase": 5,
+          "csp_joint": 2
+        },
+        {
+          "pixel": 13,
+          "fourier_phase": 2,
+          "csp_phase": 6,
+          "csp_joint": 3
+        },
+        {
+          "pixel": 14,
+          "fourier_phase": 3,
+          "csp_phase": 6,
+          "csp_joint": 3
+        },
+        {
+          "pixel": 15,
+          "fourier_phase": 3,
+          "csp_phase": 7,
+          "csp_joint": 3
+        },
+        {
+          "pixel": 16,
+          "fourier_phase": 3,
+          "csp_phase": 7,
+          "csp_joint": 3
+        },
+        {
+          "pixel": 17,
+          "fourier_phase": 3,
+          "csp_phase": 8,
+          "csp_joint": 3
+        },
+        {
+          "pixel": 18,
+          "fourier_phase": 3,
+          "csp_phase": 8,
+          "csp_joint": 4
+        },
+        {
+          "pixel": 19,
+          "fourier_phase": 4,
+          "csp_phase": 8,
+          "csp_joint": 4
+        },
+        {
+          "pixel": 20,
+          "fourier_phase": 4,
+          "csp_phase": 9,
+          "csp_joint": 4
+        },
+        {
+          "pixel": 21,
+          "fourier_phase": 4,
+          "csp_phase": 9,
+          "csp_joint": 4
+        },
+        {
+          "pixel": 22,
+          "fourier_phase": 4,
+          "csp_phase": 10,
+          "csp_joint": 4
+        },
+        {
+          "pixel": 23,
+          "fourier_phase": 4,
+          "csp_phase": 10,
+          "csp_joint": 5
+        },
+        {
+          "pixel": 24,
+          "fourier_phase": 4,
+          "csp_phase": 11,
+          "csp_joint": 5
+        },
+        {
+          "pixel": 25,
+          "fourier_phase": 5,
+          "csp_phase": 11,
+          "csp_joint": 5
+        },
+        {
+          "pixel": 26,
+          "fourier_phase": 5,
+          "csp_phase": 12,
+          "csp_joint": 5
+        },
+        {
+          "pixel": 27,
+          "fourier_phase": 5,
+          "csp_phase": 12,
+          "csp_joint": 6
+        },
+        {
+          "pixel": 28,
+          "fourier_phase": 5,
+          "csp_phase": 12,
+          "csp_joint": 6
+        },
+        {
+          "pixel": 29,
+          "fourier_phase": 5,
+          "csp_phase": 13,
+          "csp_joint": 6
+        },
+        {
+          "pixel": 30,
+          "fourier_phase": 6,
+          "csp_phase": 13,
+          "csp_joint": 6
+        },
+        {
+          "pixel": 31,
+          "fourier_phase": 6,
+          "csp_phase": 14,
+          "csp_joint": 6
+        },
+        {
+          "pixel": 32,
+          "fourier_phase": 6,
+          "csp_phase": 14,
+          "csp_joint": 7
+        },
+        {
+          "pixel": 33,
+          "fourier_phase": 6,
+          "csp_phase": 15,
+          "csp_joint": 7
+        },
+        {
+          "pixel": 34,
+          "fourier_phase": 6,
+          "csp_phase": 15,
+          "csp_joint": 7
+        },
+        {
+          "pixel": 35,
+          "fourier_phase": 6,
+          "csp_phase": 16,
+          "csp_joint": 7
+        },
+        {
+          "pixel": 36,
+          "fourier_phase": 7,
+          "csp_phase": 16,
+          "csp_joint": 7
+        },
+        {
+          "pixel": 37,
+          "fourier_phase": 7,
+          "csp_phase": 16,
+          "csp_joint": 8
+        },
+        {
+          "pixel": 38,
+          "fourier_phase": 7,
+          "csp_phase": 17,
+          "csp_joint": 8
+        },
+        {
+          "pixel": 39,
+          "fourier_phase": 7,
+          "csp_phase": 17,
+          "csp_joint": 8
+        },
+        {
+          "pixel": 40,
+          "fourier_phase": 7,
+          "csp_phase": 18,
+          "csp_joint": 8
+        },
+        {
+          "pixel": 41,
+          "fourier_phase": 8,
+          "csp_phase": 18,
+          "csp_joint": 8
+        },
+        {
+          "pixel": 42,
+          "fourier_phase": 8,
+          "csp_phase": 19,
+          "csp_joint": 9
+        },
+        {
+          "pixel": 43,
+          "fourier_phase": 8,
+          "csp_phase": 19,
+          "csp_joint": 9
+        },
+        {
+          "pixel": 44,
+          "fourier_phase": 8,
+          "csp_phase": 20,
+          "csp_joint": 9
+        },
+        {
+          "pixel": 45,
+          "fourier_phase": 8,
+          "csp_phase": 20,
+          "csp_joint": 9
+        },
+        {
+          "pixel": 46,
+          "fourier_phase": 9,
+          "csp_phase": 20,
+          "csp_joint": 9
+        },
+        {
+          "pixel": 47,
+          "fourier_phase": 9,
+          "csp_phase": 21,
+          "csp_joint": 10
+        },
+        {
+          "pixel": 48,
+          "fourier_phase": 9,
+          "csp_phase": 21,
+          "csp_joint": 10
+        },
+        {
+          "pixel": 49,
+          "fourier_phase": 9,
+          "csp_phase": 22,
+          "csp_joint": 10
+        },
+        {
+          "pixel": 50,
+          "fourier_phase": 9,
+          "csp_phase": 22,
+          "csp_joint": 10
+        },
+        {
+          "pixel": 51,
+          "fourier_phase": 9,
+          "csp_phase": 23,
+          "csp_joint": 10
+        },
+        {
+          "pixel": 52,
+          "fourier_phase": 10,
+          "csp_phase": 23,
+          "csp_joint": 11
+        },
+        {
+          "pixel": 53,
+          "fourier_phase": 10,
+          "csp_phase": 24,
+          "csp_joint": 11
+        },
+        {
+          "pixel": 54,
+          "fourier_phase": 10,
+          "csp_phase": 24,
+          "csp_joint": 11
+        }
+      ],
+      "encoding": "Real accepted optimizer states before the budget, followed by the exact matched-budget endpoint. All recorded states appear in chronological order. Shorter paths hold existing frames; no image interpolation. Nearest-neighbor display and grayscale palette.",
+      "selection": "First two common-attainment source IDs in each direction, excluding Eyeglasses_183143 already in the main comparison. Illustrative examples, not estimates of success rates."
+    },
+    {
+      "id": "Eyeglasses_183071",
+      "group": "add-glasses",
+      "title": "Add glasses",
+      "source_id": "183071",
+      "gif": "celeba_eyeglasses_183071.gif",
+      "poster": "celeba_eyeglasses_183071_poster.png",
+      "dimensions": [
+        960,
+        390
+      ],
+      "frame_count": 92,
+      "loop_duration_ms": 9900,
+      "durations_ms": [
+        1200,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        2400
+      ],
+      "bytes": 5791021,
+      "sha256": "7c89de6e9bef8a5bcfb033f5a43b231ab5aee322fcde6dd7606224c69c8dc1cf",
+      "inputs": [
+        {
+          "method": "pixel",
+          "frames": 24,
+          "recorded_npz": "outputs/website_celeba_morphs/glasses/Eyeglasses_183071_pixel.npz",
+          "sha256": "bdbf862dc5cb68fa787eec23f2f3525e660843452eeb52714dda94ca0c2ea7de",
+          "validation": {
+            "endpoint_max_abs_error": 0.0,
+            "endpoint_target_probability_error": {
+              "G": 0.0,
+              "O": 0.0,
+              "O2": 0.0
+            },
+            "matches_original_endpoint": true,
+            "recorded_frames": 24,
+            "optimizer_updates": 23,
+            "seconds": 0.25
+          }
+        },
+        {
+          "method": "fourier_phase",
+          "frames": 69,
+          "recorded_npz": "outputs/website_celeba_morphs/glasses/Eyeglasses_183071_fourier_phase.npz",
+          "sha256": "a182323d7ad590ef4384af0befffce4bc09f1abd7abf9f92e0d62f237c155ad3",
+          "validation": {
+            "endpoint_max_abs_error": 0.0,
+            "endpoint_target_probability_error": {
+              "G": 0.0,
+              "O": 0.0,
+              "O2": 0.0
+            },
+            "matches_original_endpoint": true,
+            "recorded_frames": 69,
+            "optimizer_updates": 68,
+            "seconds": 0.83
+          }
+        },
+        {
+          "method": "csp_phase",
+          "frames": 54,
+          "recorded_npz": "outputs/website_celeba_morphs/glasses/Eyeglasses_183071_csp_phase.npz",
+          "sha256": "68d802a16036ba63897d772f7cf4d90dd871a5636d84643154c180b3a35d5d98",
+          "validation": {
+            "endpoint_max_abs_error": 0.0,
+            "endpoint_target_probability_error": {
+              "G": 0.0,
+              "O": 0.0,
+              "O2": 0.0
+            },
+            "matches_original_endpoint": true,
+            "recorded_frames": 54,
+            "optimizer_updates": 53,
+            "seconds": 3.62
+          }
+        },
+        {
+          "method": "csp_joint",
+          "frames": 92,
+          "recorded_npz": "outputs/website_celeba_morphs/glasses/Eyeglasses_183071_csp_joint.npz",
+          "sha256": "24297a8866a086d02232ece312859389f9324b2f6072562b06eaa45ebb41dc38",
+          "validation": {
+            "endpoint_max_abs_error": 0.0,
+            "endpoint_target_probability_error": {
+              "G": 0.0,
+              "O": 0.0,
+              "O2": 0.0
+            },
+            "matches_original_endpoint": true,
+            "recorded_frames": 92,
+            "optimizer_updates": 91,
+            "seconds": 4.53
+          }
+        }
+      ],
+      "frame_map": [
+        {
+          "pixel": 0,
+          "fourier_phase": 0,
+          "csp_phase": 0,
+          "csp_joint": 0
+        },
+        {
+          "pixel": 0,
+          "fourier_phase": 1,
+          "csp_phase": 1,
+          "csp_joint": 1
+        },
+        {
+          "pixel": 1,
+          "fourier_phase": 1,
+          "csp_phase": 1,
+          "csp_joint": 2
+        },
+        {
+          "pixel": 1,
+          "fourier_phase": 2,
+          "csp_phase": 2,
+          "csp_joint": 3
+        },
+        {
+          "pixel": 1,
+          "fourier_phase": 3,
+          "csp_phase": 2,
+          "csp_joint": 4
+        },
+        {
+          "pixel": 1,
+          "fourier_phase": 4,
+          "csp_phase": 3,
+          "csp_joint": 5
+        },
+        {
+          "pixel": 2,
+          "fourier_phase": 4,
+          "csp_phase": 3,
+          "csp_joint": 6
+        },
+        {
+          "pixel": 2,
+          "fourier_phase": 5,
+          "csp_phase": 4,
+          "csp_joint": 7
+        },
+        {
+          "pixel": 2,
+          "fourier_phase": 6,
+          "csp_phase": 5,
+          "csp_joint": 8
+        },
+        {
+          "pixel": 2,
+          "fourier_phase": 7,
+          "csp_phase": 5,
+          "csp_joint": 9
+        },
+        {
+          "pixel": 3,
+          "fourier_phase": 7,
+          "csp_phase": 6,
+          "csp_joint": 10
+        },
+        {
+          "pixel": 3,
+          "fourier_phase": 8,
+          "csp_phase": 6,
+          "csp_joint": 11
+        },
+        {
+          "pixel": 3,
+          "fourier_phase": 9,
+          "csp_phase": 7,
+          "csp_joint": 12
+        },
+        {
+          "pixel": 3,
+          "fourier_phase": 10,
+          "csp_phase": 8,
+          "csp_joint": 13
+        },
+        {
+          "pixel": 4,
+          "fourier_phase": 10,
+          "csp_phase": 8,
+          "csp_joint": 14
+        },
+        {
+          "pixel": 4,
+          "fourier_phase": 11,
+          "csp_phase": 9,
+          "csp_joint": 15
+        },
+        {
+          "pixel": 4,
+          "fourier_phase": 12,
+          "csp_phase": 9,
+          "csp_joint": 16
+        },
+        {
+          "pixel": 4,
+          "fourier_phase": 13,
+          "csp_phase": 10,
+          "csp_joint": 17
+        },
+        {
+          "pixel": 5,
+          "fourier_phase": 13,
+          "csp_phase": 10,
+          "csp_joint": 18
+        },
+        {
+          "pixel": 5,
+          "fourier_phase": 14,
+          "csp_phase": 11,
+          "csp_joint": 19
+        },
+        {
+          "pixel": 5,
+          "fourier_phase": 15,
+          "csp_phase": 12,
+          "csp_joint": 20
+        },
+        {
+          "pixel": 5,
+          "fourier_phase": 16,
+          "csp_phase": 12,
+          "csp_joint": 21
+        },
+        {
+          "pixel": 6,
+          "fourier_phase": 16,
+          "csp_phase": 13,
+          "csp_joint": 22
+        },
+        {
+          "pixel": 6,
+          "fourier_phase": 17,
+          "csp_phase": 13,
+          "csp_joint": 23
+        },
+        {
+          "pixel": 6,
+          "fourier_phase": 18,
+          "csp_phase": 14,
+          "csp_joint": 24
+        },
+        {
+          "pixel": 6,
+          "fourier_phase": 19,
+          "csp_phase": 15,
+          "csp_joint": 25
+        },
+        {
+          "pixel": 7,
+          "fourier_phase": 19,
+          "csp_phase": 15,
+          "csp_joint": 26
+        },
+        {
+          "pixel": 7,
+          "fourier_phase": 20,
+          "csp_phase": 16,
+          "csp_joint": 27
+        },
+        {
+          "pixel": 7,
+          "fourier_phase": 21,
+          "csp_phase": 16,
+          "csp_joint": 28
+        },
+        {
+          "pixel": 7,
+          "fourier_phase": 22,
+          "csp_phase": 17,
+          "csp_joint": 29
+        },
+        {
+          "pixel": 8,
+          "fourier_phase": 22,
+          "csp_phase": 17,
+          "csp_joint": 30
+        },
+        {
+          "pixel": 8,
+          "fourier_phase": 23,
+          "csp_phase": 18,
+          "csp_joint": 31
+        },
+        {
+          "pixel": 8,
+          "fourier_phase": 24,
+          "csp_phase": 19,
+          "csp_joint": 32
+        },
+        {
+          "pixel": 8,
+          "fourier_phase": 25,
+          "csp_phase": 19,
+          "csp_joint": 33
+        },
+        {
+          "pixel": 9,
+          "fourier_phase": 25,
+          "csp_phase": 20,
+          "csp_joint": 34
+        },
+        {
+          "pixel": 9,
+          "fourier_phase": 26,
+          "csp_phase": 20,
+          "csp_joint": 35
+        },
+        {
+          "pixel": 9,
+          "fourier_phase": 27,
+          "csp_phase": 21,
+          "csp_joint": 36
+        },
+        {
+          "pixel": 9,
+          "fourier_phase": 28,
+          "csp_phase": 22,
+          "csp_joint": 37
+        },
+        {
+          "pixel": 10,
+          "fourier_phase": 28,
+          "csp_phase": 22,
+          "csp_joint": 38
+        },
+        {
+          "pixel": 10,
+          "fourier_phase": 29,
+          "csp_phase": 23,
+          "csp_joint": 39
+        },
+        {
+          "pixel": 10,
+          "fourier_phase": 30,
+          "csp_phase": 23,
+          "csp_joint": 40
+        },
+        {
+          "pixel": 10,
+          "fourier_phase": 31,
+          "csp_phase": 24,
+          "csp_joint": 41
+        },
+        {
+          "pixel": 11,
+          "fourier_phase": 31,
+          "csp_phase": 24,
+          "csp_joint": 42
+        },
+        {
+          "pixel": 11,
+          "fourier_phase": 32,
+          "csp_phase": 25,
+          "csp_joint": 43
+        },
+        {
+          "pixel": 11,
+          "fourier_phase": 33,
+          "csp_phase": 26,
+          "csp_joint": 44
+        },
+        {
+          "pixel": 11,
+          "fourier_phase": 34,
+          "csp_phase": 26,
+          "csp_joint": 45
+        },
+        {
+          "pixel": 12,
+          "fourier_phase": 34,
+          "csp_phase": 27,
+          "csp_joint": 46
+        },
+        {
+          "pixel": 12,
+          "fourier_phase": 35,
+          "csp_phase": 27,
+          "csp_joint": 47
+        },
+        {
+          "pixel": 12,
+          "fourier_phase": 36,
+          "csp_phase": 28,
+          "csp_joint": 48
+        },
+        {
+          "pixel": 12,
+          "fourier_phase": 37,
+          "csp_phase": 29,
+          "csp_joint": 49
+        },
+        {
+          "pixel": 13,
+          "fourier_phase": 37,
+          "csp_phase": 29,
+          "csp_joint": 50
+        },
+        {
+          "pixel": 13,
+          "fourier_phase": 38,
+          "csp_phase": 30,
+          "csp_joint": 51
+        },
+        {
+          "pixel": 13,
+          "fourier_phase": 39,
+          "csp_phase": 30,
+          "csp_joint": 52
+        },
+        {
+          "pixel": 13,
+          "fourier_phase": 40,
+          "csp_phase": 31,
+          "csp_joint": 53
+        },
+        {
+          "pixel": 14,
+          "fourier_phase": 40,
+          "csp_phase": 31,
+          "csp_joint": 54
+        },
+        {
+          "pixel": 14,
+          "fourier_phase": 41,
+          "csp_phase": 32,
+          "csp_joint": 55
+        },
+        {
+          "pixel": 14,
+          "fourier_phase": 42,
+          "csp_phase": 33,
+          "csp_joint": 56
+        },
+        {
+          "pixel": 14,
+          "fourier_phase": 43,
+          "csp_phase": 33,
+          "csp_joint": 57
+        },
+        {
+          "pixel": 15,
+          "fourier_phase": 43,
+          "csp_phase": 34,
+          "csp_joint": 58
+        },
+        {
+          "pixel": 15,
+          "fourier_phase": 44,
+          "csp_phase": 34,
+          "csp_joint": 59
+        },
+        {
+          "pixel": 15,
+          "fourier_phase": 45,
+          "csp_phase": 35,
+          "csp_joint": 60
+        },
+        {
+          "pixel": 15,
+          "fourier_phase": 46,
+          "csp_phase": 36,
+          "csp_joint": 61
+        },
+        {
+          "pixel": 16,
+          "fourier_phase": 46,
+          "csp_phase": 36,
+          "csp_joint": 62
+        },
+        {
+          "pixel": 16,
+          "fourier_phase": 47,
+          "csp_phase": 37,
+          "csp_joint": 63
+        },
+        {
+          "pixel": 16,
+          "fourier_phase": 48,
+          "csp_phase": 37,
+          "csp_joint": 64
+        },
+        {
+          "pixel": 16,
+          "fourier_phase": 49,
+          "csp_phase": 38,
+          "csp_joint": 65
+        },
+        {
+          "pixel": 17,
+          "fourier_phase": 49,
+          "csp_phase": 38,
+          "csp_joint": 66
+        },
+        {
+          "pixel": 17,
+          "fourier_phase": 50,
+          "csp_phase": 39,
+          "csp_joint": 67
+        },
+        {
+          "pixel": 17,
+          "fourier_phase": 51,
+          "csp_phase": 40,
+          "csp_joint": 68
+        },
+        {
+          "pixel": 17,
+          "fourier_phase": 52,
+          "csp_phase": 40,
+          "csp_joint": 69
+        },
+        {
+          "pixel": 18,
+          "fourier_phase": 52,
+          "csp_phase": 41,
+          "csp_joint": 70
+        },
+        {
+          "pixel": 18,
+          "fourier_phase": 53,
+          "csp_phase": 41,
+          "csp_joint": 71
+        },
+        {
+          "pixel": 18,
+          "fourier_phase": 54,
+          "csp_phase": 42,
+          "csp_joint": 72
+        },
+        {
+          "pixel": 18,
+          "fourier_phase": 55,
+          "csp_phase": 43,
+          "csp_joint": 73
+        },
+        {
+          "pixel": 19,
+          "fourier_phase": 55,
+          "csp_phase": 43,
+          "csp_joint": 74
+        },
+        {
+          "pixel": 19,
+          "fourier_phase": 56,
+          "csp_phase": 44,
+          "csp_joint": 75
+        },
+        {
+          "pixel": 19,
+          "fourier_phase": 57,
+          "csp_phase": 44,
+          "csp_joint": 76
+        },
+        {
+          "pixel": 19,
+          "fourier_phase": 58,
+          "csp_phase": 45,
+          "csp_joint": 77
+        },
+        {
+          "pixel": 20,
+          "fourier_phase": 58,
+          "csp_phase": 45,
+          "csp_joint": 78
+        },
+        {
+          "pixel": 20,
+          "fourier_phase": 59,
+          "csp_phase": 46,
+          "csp_joint": 79
+        },
+        {
+          "pixel": 20,
+          "fourier_phase": 60,
+          "csp_phase": 47,
+          "csp_joint": 80
+        },
+        {
+          "pixel": 20,
+          "fourier_phase": 61,
+          "csp_phase": 47,
+          "csp_joint": 81
+        },
+        {
+          "pixel": 21,
+          "fourier_phase": 61,
+          "csp_phase": 48,
+          "csp_joint": 82
+        },
+        {
+          "pixel": 21,
+          "fourier_phase": 62,
+          "csp_phase": 48,
+          "csp_joint": 83
+        },
+        {
+          "pixel": 21,
+          "fourier_phase": 63,
+          "csp_phase": 49,
+          "csp_joint": 84
+        },
+        {
+          "pixel": 21,
+          "fourier_phase": 64,
+          "csp_phase": 50,
+          "csp_joint": 85
+        },
+        {
+          "pixel": 22,
+          "fourier_phase": 64,
+          "csp_phase": 50,
+          "csp_joint": 86
+        },
+        {
+          "pixel": 22,
+          "fourier_phase": 65,
+          "csp_phase": 51,
+          "csp_joint": 87
+        },
+        {
+          "pixel": 22,
+          "fourier_phase": 66,
+          "csp_phase": 51,
+          "csp_joint": 88
+        },
+        {
+          "pixel": 22,
+          "fourier_phase": 67,
+          "csp_phase": 52,
+          "csp_joint": 89
+        },
+        {
+          "pixel": 23,
+          "fourier_phase": 67,
+          "csp_phase": 52,
+          "csp_joint": 90
+        },
+        {
+          "pixel": 23,
+          "fourier_phase": 68,
+          "csp_phase": 53,
+          "csp_joint": 91
+        }
+      ],
+      "encoding": "Real accepted optimizer states before the budget, followed by the exact matched-budget endpoint. All recorded states appear in chronological order. Shorter paths hold existing frames; no image interpolation. Nearest-neighbor display and grayscale palette.",
+      "selection": "First two common-attainment source IDs in each direction, excluding Eyeglasses_183143 already in the main comparison. Illustrative examples, not estimates of success rates."
+    },
+    {
+      "id": "Eyeglasses_183248",
+      "group": "add-glasses",
+      "title": "Add glasses",
+      "source_id": "183248",
+      "gif": "celeba_eyeglasses_183248.gif",
+      "poster": "celeba_eyeglasses_183248_poster.png",
+      "dimensions": [
+        960,
+        390
+      ],
+      "frame_count": 82,
+      "loop_duration_ms": 10000,
+      "durations_ms": [
+        1200,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        2400
+      ],
+      "bytes": 5548043,
+      "sha256": "c25b53faae64cdbd8aa6f05cd89aa38a4c441419168cece423ab7bd0949b5779",
+      "inputs": [
+        {
+          "method": "pixel",
+          "frames": 25,
+          "recorded_npz": "outputs/website_celeba_morphs/glasses/Eyeglasses_183248_pixel.npz",
+          "sha256": "c4e0e00332dac22bcdda4d3312acc56826da22396673e3636ff57d453ab4b941",
+          "validation": {
+            "endpoint_max_abs_error": 0.0,
+            "endpoint_target_probability_error": {
+              "G": 0.0,
+              "O": 0.0,
+              "O2": 0.0
+            },
+            "matches_original_endpoint": true,
+            "recorded_frames": 25,
+            "optimizer_updates": 24,
+            "seconds": 0.2
+          }
+        },
+        {
+          "method": "fourier_phase",
+          "frames": 82,
+          "recorded_npz": "outputs/website_celeba_morphs/glasses/Eyeglasses_183248_fourier_phase.npz",
+          "sha256": "d3cd3835e34835de00fc3a3e9b97044eded1b3f2aae6d835b098774b4846f111",
+          "validation": {
+            "endpoint_max_abs_error": 0.0,
+            "endpoint_target_probability_error": {
+              "G": 0.0,
+              "O": 0.0,
+              "O2": 0.0
+            },
+            "matches_original_endpoint": true,
+            "recorded_frames": 82,
+            "optimizer_updates": 81,
+            "seconds": 0.85
+          }
+        },
+        {
+          "method": "csp_phase",
+          "frames": 33,
+          "recorded_npz": "outputs/website_celeba_morphs/glasses/Eyeglasses_183248_csp_phase.npz",
+          "sha256": "35ce5fe4e373b734bdfe4d450ef3ce247cc98bb01fa9d1b27c4e40e2727c8245",
+          "validation": {
+            "endpoint_max_abs_error": 0.0,
+            "endpoint_target_probability_error": {
+              "G": 0.0,
+              "O": 0.0,
+              "O2": 0.0
+            },
+            "matches_original_endpoint": true,
+            "recorded_frames": 33,
+            "optimizer_updates": 32,
+            "seconds": 1.7
+          }
+        },
+        {
+          "method": "csp_joint",
+          "frames": 65,
+          "recorded_npz": "outputs/website_celeba_morphs/glasses/Eyeglasses_183248_csp_joint.npz",
+          "sha256": "24178f43ab929518ce84f494fd4512b66c1c9efff1e21489c15cb45cc8cb925e",
+          "validation": {
+            "endpoint_max_abs_error": 0.0,
+            "endpoint_target_probability_error": {
+              "G": 0.0,
+              "O": 0.0,
+              "O2": 0.0
+            },
+            "matches_original_endpoint": true,
+            "recorded_frames": 65,
+            "optimizer_updates": 64,
+            "seconds": 3.21
+          }
+        }
+      ],
+      "frame_map": [
+        {
+          "pixel": 0,
+          "fourier_phase": 0,
+          "csp_phase": 0,
+          "csp_joint": 0
+        },
+        {
+          "pixel": 0,
+          "fourier_phase": 1,
+          "csp_phase": 0,
+          "csp_joint": 1
+        },
+        {
+          "pixel": 1,
+          "fourier_phase": 2,
+          "csp_phase": 1,
+          "csp_joint": 2
+        },
+        {
+          "pixel": 1,
+          "fourier_phase": 3,
+          "csp_phase": 1,
+          "csp_joint": 2
+        },
+        {
+          "pixel": 1,
+          "fourier_phase": 4,
+          "csp_phase": 2,
+          "csp_joint": 3
+        },
+        {
+          "pixel": 1,
+          "fourier_phase": 5,
+          "csp_phase": 2,
+          "csp_joint": 4
+        },
+        {
+          "pixel": 2,
+          "fourier_phase": 6,
+          "csp_phase": 2,
+          "csp_joint": 5
+        },
+        {
+          "pixel": 2,
+          "fourier_phase": 7,
+          "csp_phase": 3,
+          "csp_joint": 6
+        },
+        {
+          "pixel": 2,
+          "fourier_phase": 8,
+          "csp_phase": 3,
+          "csp_joint": 6
+        },
+        {
+          "pixel": 3,
+          "fourier_phase": 9,
+          "csp_phase": 4,
+          "csp_joint": 7
+        },
+        {
+          "pixel": 3,
+          "fourier_phase": 10,
+          "csp_phase": 4,
+          "csp_joint": 8
+        },
+        {
+          "pixel": 3,
+          "fourier_phase": 11,
+          "csp_phase": 4,
+          "csp_joint": 9
+        },
+        {
+          "pixel": 4,
+          "fourier_phase": 12,
+          "csp_phase": 5,
+          "csp_joint": 9
+        },
+        {
+          "pixel": 4,
+          "fourier_phase": 13,
+          "csp_phase": 5,
+          "csp_joint": 10
+        },
+        {
+          "pixel": 4,
+          "fourier_phase": 14,
+          "csp_phase": 6,
+          "csp_joint": 11
+        },
+        {
+          "pixel": 4,
+          "fourier_phase": 15,
+          "csp_phase": 6,
+          "csp_joint": 12
+        },
+        {
+          "pixel": 5,
+          "fourier_phase": 16,
+          "csp_phase": 6,
+          "csp_joint": 13
+        },
+        {
+          "pixel": 5,
+          "fourier_phase": 17,
+          "csp_phase": 7,
+          "csp_joint": 13
+        },
+        {
+          "pixel": 5,
+          "fourier_phase": 18,
+          "csp_phase": 7,
+          "csp_joint": 14
+        },
+        {
+          "pixel": 6,
+          "fourier_phase": 19,
+          "csp_phase": 8,
+          "csp_joint": 15
+        },
+        {
+          "pixel": 6,
+          "fourier_phase": 20,
+          "csp_phase": 8,
+          "csp_joint": 16
+        },
+        {
+          "pixel": 6,
+          "fourier_phase": 21,
+          "csp_phase": 8,
+          "csp_joint": 17
+        },
+        {
+          "pixel": 7,
+          "fourier_phase": 22,
+          "csp_phase": 9,
+          "csp_joint": 17
+        },
+        {
+          "pixel": 7,
+          "fourier_phase": 23,
+          "csp_phase": 9,
+          "csp_joint": 18
+        },
+        {
+          "pixel": 7,
+          "fourier_phase": 24,
+          "csp_phase": 9,
+          "csp_joint": 19
+        },
+        {
+          "pixel": 7,
+          "fourier_phase": 25,
+          "csp_phase": 10,
+          "csp_joint": 20
+        },
+        {
+          "pixel": 8,
+          "fourier_phase": 26,
+          "csp_phase": 10,
+          "csp_joint": 21
+        },
+        {
+          "pixel": 8,
+          "fourier_phase": 27,
+          "csp_phase": 11,
+          "csp_joint": 21
+        },
+        {
+          "pixel": 8,
+          "fourier_phase": 28,
+          "csp_phase": 11,
+          "csp_joint": 22
+        },
+        {
+          "pixel": 9,
+          "fourier_phase": 29,
+          "csp_phase": 11,
+          "csp_joint": 23
+        },
+        {
+          "pixel": 9,
+          "fourier_phase": 30,
+          "csp_phase": 12,
+          "csp_joint": 24
+        },
+        {
+          "pixel": 9,
+          "fourier_phase": 31,
+          "csp_phase": 12,
+          "csp_joint": 24
+        },
+        {
+          "pixel": 9,
+          "fourier_phase": 32,
+          "csp_phase": 13,
+          "csp_joint": 25
+        },
+        {
+          "pixel": 10,
+          "fourier_phase": 33,
+          "csp_phase": 13,
+          "csp_joint": 26
+        },
+        {
+          "pixel": 10,
+          "fourier_phase": 34,
+          "csp_phase": 13,
+          "csp_joint": 27
+        },
+        {
+          "pixel": 10,
+          "fourier_phase": 35,
+          "csp_phase": 14,
+          "csp_joint": 28
+        },
+        {
+          "pixel": 11,
+          "fourier_phase": 36,
+          "csp_phase": 14,
+          "csp_joint": 28
+        },
+        {
+          "pixel": 11,
+          "fourier_phase": 37,
+          "csp_phase": 15,
+          "csp_joint": 29
+        },
+        {
+          "pixel": 11,
+          "fourier_phase": 38,
+          "csp_phase": 15,
+          "csp_joint": 30
+        },
+        {
+          "pixel": 12,
+          "fourier_phase": 39,
+          "csp_phase": 15,
+          "csp_joint": 31
+        },
+        {
+          "pixel": 12,
+          "fourier_phase": 40,
+          "csp_phase": 16,
+          "csp_joint": 32
+        },
+        {
+          "pixel": 12,
+          "fourier_phase": 41,
+          "csp_phase": 16,
+          "csp_joint": 32
+        },
+        {
+          "pixel": 12,
+          "fourier_phase": 42,
+          "csp_phase": 17,
+          "csp_joint": 33
+        },
+        {
+          "pixel": 13,
+          "fourier_phase": 43,
+          "csp_phase": 17,
+          "csp_joint": 34
+        },
+        {
+          "pixel": 13,
+          "fourier_phase": 44,
+          "csp_phase": 17,
+          "csp_joint": 35
+        },
+        {
+          "pixel": 13,
+          "fourier_phase": 45,
+          "csp_phase": 18,
+          "csp_joint": 36
+        },
+        {
+          "pixel": 14,
+          "fourier_phase": 46,
+          "csp_phase": 18,
+          "csp_joint": 36
+        },
+        {
+          "pixel": 14,
+          "fourier_phase": 47,
+          "csp_phase": 19,
+          "csp_joint": 37
+        },
+        {
+          "pixel": 14,
+          "fourier_phase": 48,
+          "csp_phase": 19,
+          "csp_joint": 38
+        },
+        {
+          "pixel": 15,
+          "fourier_phase": 49,
+          "csp_phase": 19,
+          "csp_joint": 39
+        },
+        {
+          "pixel": 15,
+          "fourier_phase": 50,
+          "csp_phase": 20,
+          "csp_joint": 40
+        },
+        {
+          "pixel": 15,
+          "fourier_phase": 51,
+          "csp_phase": 20,
+          "csp_joint": 40
+        },
+        {
+          "pixel": 15,
+          "fourier_phase": 52,
+          "csp_phase": 21,
+          "csp_joint": 41
+        },
+        {
+          "pixel": 16,
+          "fourier_phase": 53,
+          "csp_phase": 21,
+          "csp_joint": 42
+        },
+        {
+          "pixel": 16,
+          "fourier_phase": 54,
+          "csp_phase": 21,
+          "csp_joint": 43
+        },
+        {
+          "pixel": 16,
+          "fourier_phase": 55,
+          "csp_phase": 22,
+          "csp_joint": 43
+        },
+        {
+          "pixel": 17,
+          "fourier_phase": 56,
+          "csp_phase": 22,
+          "csp_joint": 44
+        },
+        {
+          "pixel": 17,
+          "fourier_phase": 57,
+          "csp_phase": 23,
+          "csp_joint": 45
+        },
+        {
+          "pixel": 17,
+          "fourier_phase": 58,
+          "csp_phase": 23,
+          "csp_joint": 46
+        },
+        {
+          "pixel": 17,
+          "fourier_phase": 59,
+          "csp_phase": 23,
+          "csp_joint": 47
+        },
+        {
+          "pixel": 18,
+          "fourier_phase": 60,
+          "csp_phase": 24,
+          "csp_joint": 47
+        },
+        {
+          "pixel": 18,
+          "fourier_phase": 61,
+          "csp_phase": 24,
+          "csp_joint": 48
+        },
+        {
+          "pixel": 18,
+          "fourier_phase": 62,
+          "csp_phase": 24,
+          "csp_joint": 49
+        },
+        {
+          "pixel": 19,
+          "fourier_phase": 63,
+          "csp_phase": 25,
+          "csp_joint": 50
+        },
+        {
+          "pixel": 19,
+          "fourier_phase": 64,
+          "csp_phase": 25,
+          "csp_joint": 51
+        },
+        {
+          "pixel": 19,
+          "fourier_phase": 65,
+          "csp_phase": 26,
+          "csp_joint": 51
+        },
+        {
+          "pixel": 20,
+          "fourier_phase": 66,
+          "csp_phase": 26,
+          "csp_joint": 52
+        },
+        {
+          "pixel": 20,
+          "fourier_phase": 67,
+          "csp_phase": 26,
+          "csp_joint": 53
+        },
+        {
+          "pixel": 20,
+          "fourier_phase": 68,
+          "csp_phase": 27,
+          "csp_joint": 54
+        },
+        {
+          "pixel": 20,
+          "fourier_phase": 69,
+          "csp_phase": 27,
+          "csp_joint": 55
+        },
+        {
+          "pixel": 21,
+          "fourier_phase": 70,
+          "csp_phase": 28,
+          "csp_joint": 55
+        },
+        {
+          "pixel": 21,
+          "fourier_phase": 71,
+          "csp_phase": 28,
+          "csp_joint": 56
+        },
+        {
+          "pixel": 21,
+          "fourier_phase": 72,
+          "csp_phase": 28,
+          "csp_joint": 57
+        },
+        {
+          "pixel": 22,
+          "fourier_phase": 73,
+          "csp_phase": 29,
+          "csp_joint": 58
+        },
+        {
+          "pixel": 22,
+          "fourier_phase": 74,
+          "csp_phase": 29,
+          "csp_joint": 58
+        },
+        {
+          "pixel": 22,
+          "fourier_phase": 75,
+          "csp_phase": 30,
+          "csp_joint": 59
+        },
+        {
+          "pixel": 23,
+          "fourier_phase": 76,
+          "csp_phase": 30,
+          "csp_joint": 60
+        },
+        {
+          "pixel": 23,
+          "fourier_phase": 77,
+          "csp_phase": 30,
+          "csp_joint": 61
+        },
+        {
+          "pixel": 23,
+          "fourier_phase": 78,
+          "csp_phase": 31,
+          "csp_joint": 62
+        },
+        {
+          "pixel": 23,
+          "fourier_phase": 79,
+          "csp_phase": 31,
+          "csp_joint": 62
+        },
+        {
+          "pixel": 24,
+          "fourier_phase": 80,
+          "csp_phase": 32,
+          "csp_joint": 63
+        },
+        {
+          "pixel": 24,
+          "fourier_phase": 81,
+          "csp_phase": 32,
+          "csp_joint": 64
+        }
+      ],
+      "encoding": "Real accepted optimizer states before the budget, followed by the exact matched-budget endpoint. All recorded states appear in chronological order. Shorter paths hold existing frames; no image interpolation. Nearest-neighbor display and grayscale palette.",
+      "selection": "First two common-attainment source IDs in each direction, excluding Eyeglasses_183143 already in the main comparison. Illustrative examples, not estimates of success rates."
+    },
+    {
+      "id": "Eyeglasses_184000",
+      "group": "remove-glasses",
+      "title": "Remove glasses",
+      "source_id": "184000",
+      "gif": "celeba_eyeglasses_184000.gif",
+      "poster": "celeba_eyeglasses_184000_poster.png",
+      "dimensions": [
+        960,
+        390
+      ],
+      "frame_count": 93,
+      "loop_duration_ms": 9970,
+      "durations_ms": [
+        1200,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        2400
+      ],
+      "bytes": 6331147,
+      "sha256": "a88673f39a11ceb3e341d70f1300f563f3f4c26a0dbd6c9c4c565b3e3a928480",
+      "inputs": [
+        {
+          "method": "pixel",
+          "frames": 87,
+          "recorded_npz": "outputs/website_celeba_morphs/glasses/Eyeglasses_184000_pixel.npz",
+          "sha256": "20350a6c16dd8fc7ef654498cac1e71431889dcf15c2b5bd9c9f430d0f78eeef",
+          "validation": {
+            "endpoint_max_abs_error": 0.0,
+            "endpoint_target_probability_error": {
+              "G": 0.0,
+              "O": 0.0,
+              "O2": 0.0
+            },
+            "matches_original_endpoint": true,
+            "recorded_frames": 87,
+            "optimizer_updates": 86,
+            "seconds": 0.9
+          }
+        },
+        {
+          "method": "fourier_phase",
+          "frames": 93,
+          "recorded_npz": "outputs/website_celeba_morphs/glasses/Eyeglasses_184000_fourier_phase.npz",
+          "sha256": "800d6b0db858ddcf583c66ad0d20fca651c1c4775653a50abfcf47bc6fb9b672",
+          "validation": {
+            "endpoint_max_abs_error": 0.0,
+            "endpoint_target_probability_error": {
+              "G": 0.0,
+              "O": 0.0,
+              "O2": 0.0
+            },
+            "matches_original_endpoint": true,
+            "recorded_frames": 93,
+            "optimizer_updates": 92,
+            "seconds": 0.96
+          }
+        },
+        {
+          "method": "csp_phase",
+          "frames": 26,
+          "recorded_npz": "outputs/website_celeba_morphs/glasses/Eyeglasses_184000_csp_phase.npz",
+          "sha256": "beb8d57b8cc5532097ee3746dcd90bf8aea64c1ae6128d34f5746dfac581c833",
+          "validation": {
+            "endpoint_max_abs_error": 0.0,
+            "endpoint_target_probability_error": {
+              "G": 0.0,
+              "O": 0.0,
+              "O2": 0.0
+            },
+            "matches_original_endpoint": true,
+            "recorded_frames": 26,
+            "optimizer_updates": 25,
+            "seconds": 1.32
+          }
+        },
+        {
+          "method": "csp_joint",
+          "frames": 55,
+          "recorded_npz": "outputs/website_celeba_morphs/glasses/Eyeglasses_184000_csp_joint.npz",
+          "sha256": "b94cb38d6d55ef76d93319be90f7b4d616e894db767d40a39503e64e9c70ca74",
+          "validation": {
+            "endpoint_max_abs_error": 0.0,
+            "endpoint_target_probability_error": {
+              "G": 0.0,
+              "O": 0.0,
+              "O2": 0.0
+            },
+            "matches_original_endpoint": true,
+            "recorded_frames": 55,
+            "optimizer_updates": 54,
+            "seconds": 2.73
+          }
+        }
+      ],
+      "frame_map": [
+        {
+          "pixel": 0,
+          "fourier_phase": 0,
+          "csp_phase": 0,
+          "csp_joint": 0
+        },
+        {
+          "pixel": 1,
+          "fourier_phase": 1,
+          "csp_phase": 0,
+          "csp_joint": 1
+        },
+        {
+          "pixel": 2,
+          "fourier_phase": 2,
+          "csp_phase": 1,
+          "csp_joint": 1
+        },
+        {
+          "pixel": 3,
+          "fourier_phase": 3,
+          "csp_phase": 1,
+          "csp_joint": 2
+        },
+        {
+          "pixel": 4,
+          "fourier_phase": 4,
+          "csp_phase": 1,
+          "csp_joint": 2
+        },
+        {
+          "pixel": 5,
+          "fourier_phase": 5,
+          "csp_phase": 1,
+          "csp_joint": 3
+        },
+        {
+          "pixel": 6,
+          "fourier_phase": 6,
+          "csp_phase": 2,
+          "csp_joint": 4
+        },
+        {
+          "pixel": 7,
+          "fourier_phase": 7,
+          "csp_phase": 2,
+          "csp_joint": 4
+        },
+        {
+          "pixel": 7,
+          "fourier_phase": 8,
+          "csp_phase": 2,
+          "csp_joint": 5
+        },
+        {
+          "pixel": 8,
+          "fourier_phase": 9,
+          "csp_phase": 2,
+          "csp_joint": 5
+        },
+        {
+          "pixel": 9,
+          "fourier_phase": 10,
+          "csp_phase": 3,
+          "csp_joint": 6
+        },
+        {
+          "pixel": 10,
+          "fourier_phase": 11,
+          "csp_phase": 3,
+          "csp_joint": 6
+        },
+        {
+          "pixel": 11,
+          "fourier_phase": 12,
+          "csp_phase": 3,
+          "csp_joint": 7
+        },
+        {
+          "pixel": 12,
+          "fourier_phase": 13,
+          "csp_phase": 4,
+          "csp_joint": 8
+        },
+        {
+          "pixel": 13,
+          "fourier_phase": 14,
+          "csp_phase": 4,
+          "csp_joint": 8
+        },
+        {
+          "pixel": 14,
+          "fourier_phase": 15,
+          "csp_phase": 4,
+          "csp_joint": 9
+        },
+        {
+          "pixel": 15,
+          "fourier_phase": 16,
+          "csp_phase": 4,
+          "csp_joint": 9
+        },
+        {
+          "pixel": 16,
+          "fourier_phase": 17,
+          "csp_phase": 5,
+          "csp_joint": 10
+        },
+        {
+          "pixel": 17,
+          "fourier_phase": 18,
+          "csp_phase": 5,
+          "csp_joint": 11
+        },
+        {
+          "pixel": 18,
+          "fourier_phase": 19,
+          "csp_phase": 5,
+          "csp_joint": 11
+        },
+        {
+          "pixel": 19,
+          "fourier_phase": 20,
+          "csp_phase": 5,
+          "csp_joint": 12
+        },
+        {
+          "pixel": 20,
+          "fourier_phase": 21,
+          "csp_phase": 6,
+          "csp_joint": 12
+        },
+        {
+          "pixel": 21,
+          "fourier_phase": 22,
+          "csp_phase": 6,
+          "csp_joint": 13
+        },
+        {
+          "pixel": 22,
+          "fourier_phase": 23,
+          "csp_phase": 6,
+          "csp_joint": 14
+        },
+        {
+          "pixel": 22,
+          "fourier_phase": 24,
+          "csp_phase": 7,
+          "csp_joint": 14
+        },
+        {
+          "pixel": 23,
+          "fourier_phase": 25,
+          "csp_phase": 7,
+          "csp_joint": 15
+        },
+        {
+          "pixel": 24,
+          "fourier_phase": 26,
+          "csp_phase": 7,
+          "csp_joint": 15
+        },
+        {
+          "pixel": 25,
+          "fourier_phase": 27,
+          "csp_phase": 7,
+          "csp_joint": 16
+        },
+        {
+          "pixel": 26,
+          "fourier_phase": 28,
+          "csp_phase": 8,
+          "csp_joint": 16
+        },
+        {
+          "pixel": 27,
+          "fourier_phase": 29,
+          "csp_phase": 8,
+          "csp_joint": 17
+        },
+        {
+          "pixel": 28,
+          "fourier_phase": 30,
+          "csp_phase": 8,
+          "csp_joint": 18
+        },
+        {
+          "pixel": 29,
+          "fourier_phase": 31,
+          "csp_phase": 8,
+          "csp_joint": 18
+        },
+        {
+          "pixel": 30,
+          "fourier_phase": 32,
+          "csp_phase": 9,
+          "csp_joint": 19
+        },
+        {
+          "pixel": 31,
+          "fourier_phase": 33,
+          "csp_phase": 9,
+          "csp_joint": 19
+        },
+        {
+          "pixel": 32,
+          "fourier_phase": 34,
+          "csp_phase": 9,
+          "csp_joint": 20
+        },
+        {
+          "pixel": 33,
+          "fourier_phase": 35,
+          "csp_phase": 10,
+          "csp_joint": 21
+        },
+        {
+          "pixel": 34,
+          "fourier_phase": 36,
+          "csp_phase": 10,
+          "csp_joint": 21
+        },
+        {
+          "pixel": 35,
+          "fourier_phase": 37,
+          "csp_phase": 10,
+          "csp_joint": 22
+        },
+        {
+          "pixel": 36,
+          "fourier_phase": 38,
+          "csp_phase": 10,
+          "csp_joint": 22
+        },
+        {
+          "pixel": 36,
+          "fourier_phase": 39,
+          "csp_phase": 11,
+          "csp_joint": 23
+        },
+        {
+          "pixel": 37,
+          "fourier_phase": 40,
+          "csp_phase": 11,
+          "csp_joint": 23
+        },
+        {
+          "pixel": 38,
+          "fourier_phase": 41,
+          "csp_phase": 11,
+          "csp_joint": 24
+        },
+        {
+          "pixel": 39,
+          "fourier_phase": 42,
+          "csp_phase": 11,
+          "csp_joint": 25
+        },
+        {
+          "pixel": 40,
+          "fourier_phase": 43,
+          "csp_phase": 12,
+          "csp_joint": 25
+        },
+        {
+          "pixel": 41,
+          "fourier_phase": 44,
+          "csp_phase": 12,
+          "csp_joint": 26
+        },
+        {
+          "pixel": 42,
+          "fourier_phase": 45,
+          "csp_phase": 12,
+          "csp_joint": 26
+        },
+        {
+          "pixel": 43,
+          "fourier_phase": 46,
+          "csp_phase": 12,
+          "csp_joint": 27
+        },
+        {
+          "pixel": 44,
+          "fourier_phase": 47,
+          "csp_phase": 13,
+          "csp_joint": 28
+        },
+        {
+          "pixel": 45,
+          "fourier_phase": 48,
+          "csp_phase": 13,
+          "csp_joint": 28
+        },
+        {
+          "pixel": 46,
+          "fourier_phase": 49,
+          "csp_phase": 13,
+          "csp_joint": 29
+        },
+        {
+          "pixel": 47,
+          "fourier_phase": 50,
+          "csp_phase": 14,
+          "csp_joint": 29
+        },
+        {
+          "pixel": 48,
+          "fourier_phase": 51,
+          "csp_phase": 14,
+          "csp_joint": 30
+        },
+        {
+          "pixel": 49,
+          "fourier_phase": 52,
+          "csp_phase": 14,
+          "csp_joint": 31
+        },
+        {
+          "pixel": 50,
+          "fourier_phase": 53,
+          "csp_phase": 14,
+          "csp_joint": 31
+        },
+        {
+          "pixel": 50,
+          "fourier_phase": 54,
+          "csp_phase": 15,
+          "csp_joint": 32
+        },
+        {
+          "pixel": 51,
+          "fourier_phase": 55,
+          "csp_phase": 15,
+          "csp_joint": 32
+        },
+        {
+          "pixel": 52,
+          "fourier_phase": 56,
+          "csp_phase": 15,
+          "csp_joint": 33
+        },
+        {
+          "pixel": 53,
+          "fourier_phase": 57,
+          "csp_phase": 15,
+          "csp_joint": 33
+        },
+        {
+          "pixel": 54,
+          "fourier_phase": 58,
+          "csp_phase": 16,
+          "csp_joint": 34
+        },
+        {
+          "pixel": 55,
+          "fourier_phase": 59,
+          "csp_phase": 16,
+          "csp_joint": 35
+        },
+        {
+          "pixel": 56,
+          "fourier_phase": 60,
+          "csp_phase": 16,
+          "csp_joint": 35
+        },
+        {
+          "pixel": 57,
+          "fourier_phase": 61,
+          "csp_phase": 17,
+          "csp_joint": 36
+        },
+        {
+          "pixel": 58,
+          "fourier_phase": 62,
+          "csp_phase": 17,
+          "csp_joint": 36
+        },
+        {
+          "pixel": 59,
+          "fourier_phase": 63,
+          "csp_phase": 17,
+          "csp_joint": 37
+        },
+        {
+          "pixel": 60,
+          "fourier_phase": 64,
+          "csp_phase": 17,
+          "csp_joint": 38
+        },
+        {
+          "pixel": 61,
+          "fourier_phase": 65,
+          "csp_phase": 18,
+          "csp_joint": 38
+        },
+        {
+          "pixel": 62,
+          "fourier_phase": 66,
+          "csp_phase": 18,
+          "csp_joint": 39
+        },
+        {
+          "pixel": 63,
+          "fourier_phase": 67,
+          "csp_phase": 18,
+          "csp_joint": 39
+        },
+        {
+          "pixel": 64,
+          "fourier_phase": 68,
+          "csp_phase": 18,
+          "csp_joint": 40
+        },
+        {
+          "pixel": 64,
+          "fourier_phase": 69,
+          "csp_phase": 19,
+          "csp_joint": 40
+        },
+        {
+          "pixel": 65,
+          "fourier_phase": 70,
+          "csp_phase": 19,
+          "csp_joint": 41
+        },
+        {
+          "pixel": 66,
+          "fourier_phase": 71,
+          "csp_phase": 19,
+          "csp_joint": 42
+        },
+        {
+          "pixel": 67,
+          "fourier_phase": 72,
+          "csp_phase": 20,
+          "csp_joint": 42
+        },
+        {
+          "pixel": 68,
+          "fourier_phase": 73,
+          "csp_phase": 20,
+          "csp_joint": 43
+        },
+        {
+          "pixel": 69,
+          "fourier_phase": 74,
+          "csp_phase": 20,
+          "csp_joint": 43
+        },
+        {
+          "pixel": 70,
+          "fourier_phase": 75,
+          "csp_phase": 20,
+          "csp_joint": 44
+        },
+        {
+          "pixel": 71,
+          "fourier_phase": 76,
+          "csp_phase": 21,
+          "csp_joint": 45
+        },
+        {
+          "pixel": 72,
+          "fourier_phase": 77,
+          "csp_phase": 21,
+          "csp_joint": 45
+        },
+        {
+          "pixel": 73,
+          "fourier_phase": 78,
+          "csp_phase": 21,
+          "csp_joint": 46
+        },
+        {
+          "pixel": 74,
+          "fourier_phase": 79,
+          "csp_phase": 21,
+          "csp_joint": 46
+        },
+        {
+          "pixel": 75,
+          "fourier_phase": 80,
+          "csp_phase": 22,
+          "csp_joint": 47
+        },
+        {
+          "pixel": 76,
+          "fourier_phase": 81,
+          "csp_phase": 22,
+          "csp_joint": 48
+        },
+        {
+          "pixel": 77,
+          "fourier_phase": 82,
+          "csp_phase": 22,
+          "csp_joint": 48
+        },
+        {
+          "pixel": 78,
+          "fourier_phase": 83,
+          "csp_phase": 23,
+          "csp_joint": 49
+        },
+        {
+          "pixel": 79,
+          "fourier_phase": 84,
+          "csp_phase": 23,
+          "csp_joint": 49
+        },
+        {
+          "pixel": 79,
+          "fourier_phase": 85,
+          "csp_phase": 23,
+          "csp_joint": 50
+        },
+        {
+          "pixel": 80,
+          "fourier_phase": 86,
+          "csp_phase": 23,
+          "csp_joint": 50
+        },
+        {
+          "pixel": 81,
+          "fourier_phase": 87,
+          "csp_phase": 24,
+          "csp_joint": 51
+        },
+        {
+          "pixel": 82,
+          "fourier_phase": 88,
+          "csp_phase": 24,
+          "csp_joint": 52
+        },
+        {
+          "pixel": 83,
+          "fourier_phase": 89,
+          "csp_phase": 24,
+          "csp_joint": 52
+        },
+        {
+          "pixel": 84,
+          "fourier_phase": 90,
+          "csp_phase": 24,
+          "csp_joint": 53
+        },
+        {
+          "pixel": 85,
+          "fourier_phase": 91,
+          "csp_phase": 25,
+          "csp_joint": 53
+        },
+        {
+          "pixel": 86,
+          "fourier_phase": 92,
+          "csp_phase": 25,
+          "csp_joint": 54
+        }
+      ],
+      "encoding": "Real accepted optimizer states before the budget, followed by the exact matched-budget endpoint. All recorded states appear in chronological order. Shorter paths hold existing frames; no image interpolation. Nearest-neighbor display and grayscale palette.",
+      "selection": "First two common-attainment source IDs in each direction, excluding Eyeglasses_183143 already in the main comparison. Illustrative examples, not estimates of success rates."
+    },
+    {
+      "id": "Eyeglasses_185223",
+      "group": "remove-glasses",
+      "title": "Remove glasses",
+      "source_id": "185223",
+      "gif": "celeba_eyeglasses_185223.gif",
+      "poster": "celeba_eyeglasses_185223_poster.png",
+      "dimensions": [
+        960,
+        390
+      ],
+      "frame_count": 240,
+      "loop_duration_ms": 15500,
+      "durations_ms": [
+        1200,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        2400
+      ],
+      "bytes": 15122037,
+      "sha256": "30845a0f6d14c80c605b6c400dded80c0154d373ca6058310764ce21d5284de1",
+      "inputs": [
+        {
+          "method": "pixel",
+          "frames": 45,
+          "recorded_npz": "outputs/website_celeba_morphs/glasses/Eyeglasses_185223_pixel.npz",
+          "sha256": "4e60283407e0896327e798ccc845e6035e98261a9da7e3f0209bcd956290150a",
+          "validation": {
+            "endpoint_max_abs_error": 0.0,
+            "endpoint_target_probability_error": {
+              "G": 0.0,
+              "O": 0.0,
+              "O2": 0.0
+            },
+            "matches_original_endpoint": true,
+            "recorded_frames": 45,
+            "optimizer_updates": 44,
+            "seconds": 0.39
+          }
+        },
+        {
+          "method": "fourier_phase",
+          "frames": 80,
+          "recorded_npz": "outputs/website_celeba_morphs/glasses/Eyeglasses_185223_fourier_phase.npz",
+          "sha256": "3098a75202a2e808fa63566aa0203d88fee2910e4cb896d33ea80134afc437a6",
+          "validation": {
+            "endpoint_max_abs_error": 0.0,
+            "endpoint_target_probability_error": {
+              "G": 0.0,
+              "O": 0.0,
+              "O2": 0.0
+            },
+            "matches_original_endpoint": true,
+            "recorded_frames": 80,
+            "optimizer_updates": 79,
+            "seconds": 0.86
+          }
+        },
+        {
+          "method": "csp_phase",
+          "frames": 33,
+          "recorded_npz": "outputs/website_celeba_morphs/glasses/Eyeglasses_185223_csp_phase.npz",
+          "sha256": "689bbdc1eefec53b67e3971e2f87193b87c242f3bf846bbc8dea5a1e3efd0228",
+          "validation": {
+            "endpoint_max_abs_error": 0.0,
+            "endpoint_target_probability_error": {
+              "G": 0.0,
+              "O": 0.0,
+              "O2": 0.0
+            },
+            "matches_original_endpoint": true,
+            "recorded_frames": 33,
+            "optimizer_updates": 32,
+            "seconds": 1.73
+          }
+        },
+        {
+          "method": "csp_joint",
+          "frames": 240,
+          "recorded_npz": "outputs/website_celeba_morphs/glasses/Eyeglasses_185223_csp_joint.npz",
+          "sha256": "7b030d15928a589750f5b35e044778756795b78c4cf7920ff886bc2a36482089",
+          "validation": {
+            "endpoint_max_abs_error": 0.0,
+            "endpoint_target_probability_error": {
+              "G": 0.0,
+              "O": 0.0,
+              "O2": 0.0
+            },
+            "matches_original_endpoint": true,
+            "recorded_frames": 240,
+            "optimizer_updates": 239,
+            "seconds": 11.27
+          }
+        }
+      ],
+      "frame_map": [
+        {
+          "pixel": 0,
+          "fourier_phase": 0,
+          "csp_phase": 0,
+          "csp_joint": 0
+        },
+        {
+          "pixel": 0,
+          "fourier_phase": 0,
+          "csp_phase": 0,
+          "csp_joint": 1
+        },
+        {
+          "pixel": 0,
+          "fourier_phase": 1,
+          "csp_phase": 0,
+          "csp_joint": 2
+        },
+        {
+          "pixel": 1,
+          "fourier_phase": 1,
+          "csp_phase": 0,
+          "csp_joint": 3
+        },
+        {
+          "pixel": 1,
+          "fourier_phase": 1,
+          "csp_phase": 1,
+          "csp_joint": 4
+        },
+        {
+          "pixel": 1,
+          "fourier_phase": 2,
+          "csp_phase": 1,
+          "csp_joint": 5
+        },
+        {
+          "pixel": 1,
+          "fourier_phase": 2,
+          "csp_phase": 1,
+          "csp_joint": 6
+        },
+        {
+          "pixel": 1,
+          "fourier_phase": 2,
+          "csp_phase": 1,
+          "csp_joint": 7
+        },
+        {
+          "pixel": 1,
+          "fourier_phase": 3,
+          "csp_phase": 1,
+          "csp_joint": 8
+        },
+        {
+          "pixel": 2,
+          "fourier_phase": 3,
+          "csp_phase": 1,
+          "csp_joint": 9
+        },
+        {
+          "pixel": 2,
+          "fourier_phase": 3,
+          "csp_phase": 1,
+          "csp_joint": 10
+        },
+        {
+          "pixel": 2,
+          "fourier_phase": 4,
+          "csp_phase": 1,
+          "csp_joint": 11
+        },
+        {
+          "pixel": 2,
+          "fourier_phase": 4,
+          "csp_phase": 2,
+          "csp_joint": 12
+        },
+        {
+          "pixel": 2,
+          "fourier_phase": 4,
+          "csp_phase": 2,
+          "csp_joint": 13
+        },
+        {
+          "pixel": 3,
+          "fourier_phase": 5,
+          "csp_phase": 2,
+          "csp_joint": 14
+        },
+        {
+          "pixel": 3,
+          "fourier_phase": 5,
+          "csp_phase": 2,
+          "csp_joint": 15
+        },
+        {
+          "pixel": 3,
+          "fourier_phase": 5,
+          "csp_phase": 2,
+          "csp_joint": 16
+        },
+        {
+          "pixel": 3,
+          "fourier_phase": 6,
+          "csp_phase": 2,
+          "csp_joint": 17
+        },
+        {
+          "pixel": 3,
+          "fourier_phase": 6,
+          "csp_phase": 2,
+          "csp_joint": 18
+        },
+        {
+          "pixel": 3,
+          "fourier_phase": 6,
+          "csp_phase": 3,
+          "csp_joint": 19
+        },
+        {
+          "pixel": 4,
+          "fourier_phase": 7,
+          "csp_phase": 3,
+          "csp_joint": 20
+        },
+        {
+          "pixel": 4,
+          "fourier_phase": 7,
+          "csp_phase": 3,
+          "csp_joint": 21
+        },
+        {
+          "pixel": 4,
+          "fourier_phase": 7,
+          "csp_phase": 3,
+          "csp_joint": 22
+        },
+        {
+          "pixel": 4,
+          "fourier_phase": 8,
+          "csp_phase": 3,
+          "csp_joint": 23
+        },
+        {
+          "pixel": 4,
+          "fourier_phase": 8,
+          "csp_phase": 3,
+          "csp_joint": 24
+        },
+        {
+          "pixel": 5,
+          "fourier_phase": 8,
+          "csp_phase": 3,
+          "csp_joint": 25
+        },
+        {
+          "pixel": 5,
+          "fourier_phase": 9,
+          "csp_phase": 3,
+          "csp_joint": 26
+        },
+        {
+          "pixel": 5,
+          "fourier_phase": 9,
+          "csp_phase": 4,
+          "csp_joint": 27
+        },
+        {
+          "pixel": 5,
+          "fourier_phase": 9,
+          "csp_phase": 4,
+          "csp_joint": 28
+        },
+        {
+          "pixel": 5,
+          "fourier_phase": 10,
+          "csp_phase": 4,
+          "csp_joint": 29
+        },
+        {
+          "pixel": 6,
+          "fourier_phase": 10,
+          "csp_phase": 4,
+          "csp_joint": 30
+        },
+        {
+          "pixel": 6,
+          "fourier_phase": 10,
+          "csp_phase": 4,
+          "csp_joint": 31
+        },
+        {
+          "pixel": 6,
+          "fourier_phase": 11,
+          "csp_phase": 4,
+          "csp_joint": 32
+        },
+        {
+          "pixel": 6,
+          "fourier_phase": 11,
+          "csp_phase": 4,
+          "csp_joint": 33
+        },
+        {
+          "pixel": 6,
+          "fourier_phase": 11,
+          "csp_phase": 5,
+          "csp_joint": 34
+        },
+        {
+          "pixel": 6,
+          "fourier_phase": 12,
+          "csp_phase": 5,
+          "csp_joint": 35
+        },
+        {
+          "pixel": 7,
+          "fourier_phase": 12,
+          "csp_phase": 5,
+          "csp_joint": 36
+        },
+        {
+          "pixel": 7,
+          "fourier_phase": 12,
+          "csp_phase": 5,
+          "csp_joint": 37
+        },
+        {
+          "pixel": 7,
+          "fourier_phase": 13,
+          "csp_phase": 5,
+          "csp_joint": 38
+        },
+        {
+          "pixel": 7,
+          "fourier_phase": 13,
+          "csp_phase": 5,
+          "csp_joint": 39
+        },
+        {
+          "pixel": 7,
+          "fourier_phase": 13,
+          "csp_phase": 5,
+          "csp_joint": 40
+        },
+        {
+          "pixel": 8,
+          "fourier_phase": 14,
+          "csp_phase": 5,
+          "csp_joint": 41
+        },
+        {
+          "pixel": 8,
+          "fourier_phase": 14,
+          "csp_phase": 6,
+          "csp_joint": 42
+        },
+        {
+          "pixel": 8,
+          "fourier_phase": 14,
+          "csp_phase": 6,
+          "csp_joint": 43
+        },
+        {
+          "pixel": 8,
+          "fourier_phase": 15,
+          "csp_phase": 6,
+          "csp_joint": 44
+        },
+        {
+          "pixel": 8,
+          "fourier_phase": 15,
+          "csp_phase": 6,
+          "csp_joint": 45
+        },
+        {
+          "pixel": 8,
+          "fourier_phase": 15,
+          "csp_phase": 6,
+          "csp_joint": 46
+        },
+        {
+          "pixel": 9,
+          "fourier_phase": 16,
+          "csp_phase": 6,
+          "csp_joint": 47
+        },
+        {
+          "pixel": 9,
+          "fourier_phase": 16,
+          "csp_phase": 6,
+          "csp_joint": 48
+        },
+        {
+          "pixel": 9,
+          "fourier_phase": 16,
+          "csp_phase": 7,
+          "csp_joint": 49
+        },
+        {
+          "pixel": 9,
+          "fourier_phase": 17,
+          "csp_phase": 7,
+          "csp_joint": 50
+        },
+        {
+          "pixel": 9,
+          "fourier_phase": 17,
+          "csp_phase": 7,
+          "csp_joint": 51
+        },
+        {
+          "pixel": 10,
+          "fourier_phase": 17,
+          "csp_phase": 7,
+          "csp_joint": 52
+        },
+        {
+          "pixel": 10,
+          "fourier_phase": 18,
+          "csp_phase": 7,
+          "csp_joint": 53
+        },
+        {
+          "pixel": 10,
+          "fourier_phase": 18,
+          "csp_phase": 7,
+          "csp_joint": 54
+        },
+        {
+          "pixel": 10,
+          "fourier_phase": 18,
+          "csp_phase": 7,
+          "csp_joint": 55
+        },
+        {
+          "pixel": 10,
+          "fourier_phase": 19,
+          "csp_phase": 7,
+          "csp_joint": 56
+        },
+        {
+          "pixel": 10,
+          "fourier_phase": 19,
+          "csp_phase": 8,
+          "csp_joint": 57
+        },
+        {
+          "pixel": 11,
+          "fourier_phase": 19,
+          "csp_phase": 8,
+          "csp_joint": 58
+        },
+        {
+          "pixel": 11,
+          "fourier_phase": 20,
+          "csp_phase": 8,
+          "csp_joint": 59
+        },
+        {
+          "pixel": 11,
+          "fourier_phase": 20,
+          "csp_phase": 8,
+          "csp_joint": 60
+        },
+        {
+          "pixel": 11,
+          "fourier_phase": 20,
+          "csp_phase": 8,
+          "csp_joint": 61
+        },
+        {
+          "pixel": 11,
+          "fourier_phase": 20,
+          "csp_phase": 8,
+          "csp_joint": 62
+        },
+        {
+          "pixel": 12,
+          "fourier_phase": 21,
+          "csp_phase": 8,
+          "csp_joint": 63
+        },
+        {
+          "pixel": 12,
+          "fourier_phase": 21,
+          "csp_phase": 9,
+          "csp_joint": 64
+        },
+        {
+          "pixel": 12,
+          "fourier_phase": 21,
+          "csp_phase": 9,
+          "csp_joint": 65
+        },
+        {
+          "pixel": 12,
+          "fourier_phase": 22,
+          "csp_phase": 9,
+          "csp_joint": 66
+        },
+        {
+          "pixel": 12,
+          "fourier_phase": 22,
+          "csp_phase": 9,
+          "csp_joint": 67
+        },
+        {
+          "pixel": 13,
+          "fourier_phase": 22,
+          "csp_phase": 9,
+          "csp_joint": 68
+        },
+        {
+          "pixel": 13,
+          "fourier_phase": 23,
+          "csp_phase": 9,
+          "csp_joint": 69
+        },
+        {
+          "pixel": 13,
+          "fourier_phase": 23,
+          "csp_phase": 9,
+          "csp_joint": 70
+        },
+        {
+          "pixel": 13,
+          "fourier_phase": 23,
+          "csp_phase": 10,
+          "csp_joint": 71
+        },
+        {
+          "pixel": 13,
+          "fourier_phase": 24,
+          "csp_phase": 10,
+          "csp_joint": 72
+        },
+        {
+          "pixel": 13,
+          "fourier_phase": 24,
+          "csp_phase": 10,
+          "csp_joint": 73
+        },
+        {
+          "pixel": 14,
+          "fourier_phase": 24,
+          "csp_phase": 10,
+          "csp_joint": 74
+        },
+        {
+          "pixel": 14,
+          "fourier_phase": 25,
+          "csp_phase": 10,
+          "csp_joint": 75
+        },
+        {
+          "pixel": 14,
+          "fourier_phase": 25,
+          "csp_phase": 10,
+          "csp_joint": 76
+        },
+        {
+          "pixel": 14,
+          "fourier_phase": 25,
+          "csp_phase": 10,
+          "csp_joint": 77
+        },
+        {
+          "pixel": 14,
+          "fourier_phase": 26,
+          "csp_phase": 10,
+          "csp_joint": 78
+        },
+        {
+          "pixel": 15,
+          "fourier_phase": 26,
+          "csp_phase": 11,
+          "csp_joint": 79
+        },
+        {
+          "pixel": 15,
+          "fourier_phase": 26,
+          "csp_phase": 11,
+          "csp_joint": 80
+        },
+        {
+          "pixel": 15,
+          "fourier_phase": 27,
+          "csp_phase": 11,
+          "csp_joint": 81
+        },
+        {
+          "pixel": 15,
+          "fourier_phase": 27,
+          "csp_phase": 11,
+          "csp_joint": 82
+        },
+        {
+          "pixel": 15,
+          "fourier_phase": 27,
+          "csp_phase": 11,
+          "csp_joint": 83
+        },
+        {
+          "pixel": 15,
+          "fourier_phase": 28,
+          "csp_phase": 11,
+          "csp_joint": 84
+        },
+        {
+          "pixel": 16,
+          "fourier_phase": 28,
+          "csp_phase": 11,
+          "csp_joint": 85
+        },
+        {
+          "pixel": 16,
+          "fourier_phase": 28,
+          "csp_phase": 12,
+          "csp_joint": 86
+        },
+        {
+          "pixel": 16,
+          "fourier_phase": 29,
+          "csp_phase": 12,
+          "csp_joint": 87
+        },
+        {
+          "pixel": 16,
+          "fourier_phase": 29,
+          "csp_phase": 12,
+          "csp_joint": 88
+        },
+        {
+          "pixel": 16,
+          "fourier_phase": 29,
+          "csp_phase": 12,
+          "csp_joint": 89
+        },
+        {
+          "pixel": 17,
+          "fourier_phase": 30,
+          "csp_phase": 12,
+          "csp_joint": 90
+        },
+        {
+          "pixel": 17,
+          "fourier_phase": 30,
+          "csp_phase": 12,
+          "csp_joint": 91
+        },
+        {
+          "pixel": 17,
+          "fourier_phase": 30,
+          "csp_phase": 12,
+          "csp_joint": 92
+        },
+        {
+          "pixel": 17,
+          "fourier_phase": 31,
+          "csp_phase": 12,
+          "csp_joint": 93
+        },
+        {
+          "pixel": 17,
+          "fourier_phase": 31,
+          "csp_phase": 13,
+          "csp_joint": 94
+        },
+        {
+          "pixel": 17,
+          "fourier_phase": 31,
+          "csp_phase": 13,
+          "csp_joint": 95
+        },
+        {
+          "pixel": 18,
+          "fourier_phase": 32,
+          "csp_phase": 13,
+          "csp_joint": 96
+        },
+        {
+          "pixel": 18,
+          "fourier_phase": 32,
+          "csp_phase": 13,
+          "csp_joint": 97
+        },
+        {
+          "pixel": 18,
+          "fourier_phase": 32,
+          "csp_phase": 13,
+          "csp_joint": 98
+        },
+        {
+          "pixel": 18,
+          "fourier_phase": 33,
+          "csp_phase": 13,
+          "csp_joint": 99
+        },
+        {
+          "pixel": 18,
+          "fourier_phase": 33,
+          "csp_phase": 13,
+          "csp_joint": 100
+        },
+        {
+          "pixel": 19,
+          "fourier_phase": 33,
+          "csp_phase": 14,
+          "csp_joint": 101
+        },
+        {
+          "pixel": 19,
+          "fourier_phase": 34,
+          "csp_phase": 14,
+          "csp_joint": 102
+        },
+        {
+          "pixel": 19,
+          "fourier_phase": 34,
+          "csp_phase": 14,
+          "csp_joint": 103
+        },
+        {
+          "pixel": 19,
+          "fourier_phase": 34,
+          "csp_phase": 14,
+          "csp_joint": 104
+        },
+        {
+          "pixel": 19,
+          "fourier_phase": 35,
+          "csp_phase": 14,
+          "csp_joint": 105
+        },
+        {
+          "pixel": 20,
+          "fourier_phase": 35,
+          "csp_phase": 14,
+          "csp_joint": 106
+        },
+        {
+          "pixel": 20,
+          "fourier_phase": 35,
+          "csp_phase": 14,
+          "csp_joint": 107
+        },
+        {
+          "pixel": 20,
+          "fourier_phase": 36,
+          "csp_phase": 14,
+          "csp_joint": 108
+        },
+        {
+          "pixel": 20,
+          "fourier_phase": 36,
+          "csp_phase": 15,
+          "csp_joint": 109
+        },
+        {
+          "pixel": 20,
+          "fourier_phase": 36,
+          "csp_phase": 15,
+          "csp_joint": 110
+        },
+        {
+          "pixel": 20,
+          "fourier_phase": 37,
+          "csp_phase": 15,
+          "csp_joint": 111
+        },
+        {
+          "pixel": 21,
+          "fourier_phase": 37,
+          "csp_phase": 15,
+          "csp_joint": 112
+        },
+        {
+          "pixel": 21,
+          "fourier_phase": 37,
+          "csp_phase": 15,
+          "csp_joint": 113
+        },
+        {
+          "pixel": 21,
+          "fourier_phase": 38,
+          "csp_phase": 15,
+          "csp_joint": 114
+        },
+        {
+          "pixel": 21,
+          "fourier_phase": 38,
+          "csp_phase": 15,
+          "csp_joint": 115
+        },
+        {
+          "pixel": 21,
+          "fourier_phase": 38,
+          "csp_phase": 16,
+          "csp_joint": 116
+        },
+        {
+          "pixel": 22,
+          "fourier_phase": 39,
+          "csp_phase": 16,
+          "csp_joint": 117
+        },
+        {
+          "pixel": 22,
+          "fourier_phase": 39,
+          "csp_phase": 16,
+          "csp_joint": 118
+        },
+        {
+          "pixel": 22,
+          "fourier_phase": 39,
+          "csp_phase": 16,
+          "csp_joint": 119
+        },
+        {
+          "pixel": 22,
+          "fourier_phase": 40,
+          "csp_phase": 16,
+          "csp_joint": 120
+        },
+        {
+          "pixel": 22,
+          "fourier_phase": 40,
+          "csp_phase": 16,
+          "csp_joint": 121
+        },
+        {
+          "pixel": 22,
+          "fourier_phase": 40,
+          "csp_phase": 16,
+          "csp_joint": 122
+        },
+        {
+          "pixel": 23,
+          "fourier_phase": 41,
+          "csp_phase": 16,
+          "csp_joint": 123
+        },
+        {
+          "pixel": 23,
+          "fourier_phase": 41,
+          "csp_phase": 17,
+          "csp_joint": 124
+        },
+        {
+          "pixel": 23,
+          "fourier_phase": 41,
+          "csp_phase": 17,
+          "csp_joint": 125
+        },
+        {
+          "pixel": 23,
+          "fourier_phase": 42,
+          "csp_phase": 17,
+          "csp_joint": 126
+        },
+        {
+          "pixel": 23,
+          "fourier_phase": 42,
+          "csp_phase": 17,
+          "csp_joint": 127
+        },
+        {
+          "pixel": 24,
+          "fourier_phase": 42,
+          "csp_phase": 17,
+          "csp_joint": 128
+        },
+        {
+          "pixel": 24,
+          "fourier_phase": 43,
+          "csp_phase": 17,
+          "csp_joint": 129
+        },
+        {
+          "pixel": 24,
+          "fourier_phase": 43,
+          "csp_phase": 17,
+          "csp_joint": 130
+        },
+        {
+          "pixel": 24,
+          "fourier_phase": 43,
+          "csp_phase": 18,
+          "csp_joint": 131
+        },
+        {
+          "pixel": 24,
+          "fourier_phase": 44,
+          "csp_phase": 18,
+          "csp_joint": 132
+        },
+        {
+          "pixel": 24,
+          "fourier_phase": 44,
+          "csp_phase": 18,
+          "csp_joint": 133
+        },
+        {
+          "pixel": 25,
+          "fourier_phase": 44,
+          "csp_phase": 18,
+          "csp_joint": 134
+        },
+        {
+          "pixel": 25,
+          "fourier_phase": 45,
+          "csp_phase": 18,
+          "csp_joint": 135
+        },
+        {
+          "pixel": 25,
+          "fourier_phase": 45,
+          "csp_phase": 18,
+          "csp_joint": 136
+        },
+        {
+          "pixel": 25,
+          "fourier_phase": 45,
+          "csp_phase": 18,
+          "csp_joint": 137
+        },
+        {
+          "pixel": 25,
+          "fourier_phase": 46,
+          "csp_phase": 18,
+          "csp_joint": 138
+        },
+        {
+          "pixel": 26,
+          "fourier_phase": 46,
+          "csp_phase": 19,
+          "csp_joint": 139
+        },
+        {
+          "pixel": 26,
+          "fourier_phase": 46,
+          "csp_phase": 19,
+          "csp_joint": 140
+        },
+        {
+          "pixel": 26,
+          "fourier_phase": 47,
+          "csp_phase": 19,
+          "csp_joint": 141
+        },
+        {
+          "pixel": 26,
+          "fourier_phase": 47,
+          "csp_phase": 19,
+          "csp_joint": 142
+        },
+        {
+          "pixel": 26,
+          "fourier_phase": 47,
+          "csp_phase": 19,
+          "csp_joint": 143
+        },
+        {
+          "pixel": 27,
+          "fourier_phase": 48,
+          "csp_phase": 19,
+          "csp_joint": 144
+        },
+        {
+          "pixel": 27,
+          "fourier_phase": 48,
+          "csp_phase": 19,
+          "csp_joint": 145
+        },
+        {
+          "pixel": 27,
+          "fourier_phase": 48,
+          "csp_phase": 20,
+          "csp_joint": 146
+        },
+        {
+          "pixel": 27,
+          "fourier_phase": 49,
+          "csp_phase": 20,
+          "csp_joint": 147
+        },
+        {
+          "pixel": 27,
+          "fourier_phase": 49,
+          "csp_phase": 20,
+          "csp_joint": 148
+        },
+        {
+          "pixel": 27,
+          "fourier_phase": 49,
+          "csp_phase": 20,
+          "csp_joint": 149
+        },
+        {
+          "pixel": 28,
+          "fourier_phase": 50,
+          "csp_phase": 20,
+          "csp_joint": 150
+        },
+        {
+          "pixel": 28,
+          "fourier_phase": 50,
+          "csp_phase": 20,
+          "csp_joint": 151
+        },
+        {
+          "pixel": 28,
+          "fourier_phase": 50,
+          "csp_phase": 20,
+          "csp_joint": 152
+        },
+        {
+          "pixel": 28,
+          "fourier_phase": 51,
+          "csp_phase": 20,
+          "csp_joint": 153
+        },
+        {
+          "pixel": 28,
+          "fourier_phase": 51,
+          "csp_phase": 21,
+          "csp_joint": 154
+        },
+        {
+          "pixel": 29,
+          "fourier_phase": 51,
+          "csp_phase": 21,
+          "csp_joint": 155
+        },
+        {
+          "pixel": 29,
+          "fourier_phase": 52,
+          "csp_phase": 21,
+          "csp_joint": 156
+        },
+        {
+          "pixel": 29,
+          "fourier_phase": 52,
+          "csp_phase": 21,
+          "csp_joint": 157
+        },
+        {
+          "pixel": 29,
+          "fourier_phase": 52,
+          "csp_phase": 21,
+          "csp_joint": 158
+        },
+        {
+          "pixel": 29,
+          "fourier_phase": 53,
+          "csp_phase": 21,
+          "csp_joint": 159
+        },
+        {
+          "pixel": 29,
+          "fourier_phase": 53,
+          "csp_phase": 21,
+          "csp_joint": 160
+        },
+        {
+          "pixel": 30,
+          "fourier_phase": 53,
+          "csp_phase": 22,
+          "csp_joint": 161
+        },
+        {
+          "pixel": 30,
+          "fourier_phase": 54,
+          "csp_phase": 22,
+          "csp_joint": 162
+        },
+        {
+          "pixel": 30,
+          "fourier_phase": 54,
+          "csp_phase": 22,
+          "csp_joint": 163
+        },
+        {
+          "pixel": 30,
+          "fourier_phase": 54,
+          "csp_phase": 22,
+          "csp_joint": 164
+        },
+        {
+          "pixel": 30,
+          "fourier_phase": 55,
+          "csp_phase": 22,
+          "csp_joint": 165
+        },
+        {
+          "pixel": 31,
+          "fourier_phase": 55,
+          "csp_phase": 22,
+          "csp_joint": 166
+        },
+        {
+          "pixel": 31,
+          "fourier_phase": 55,
+          "csp_phase": 22,
+          "csp_joint": 167
+        },
+        {
+          "pixel": 31,
+          "fourier_phase": 56,
+          "csp_phase": 22,
+          "csp_joint": 168
+        },
+        {
+          "pixel": 31,
+          "fourier_phase": 56,
+          "csp_phase": 23,
+          "csp_joint": 169
+        },
+        {
+          "pixel": 31,
+          "fourier_phase": 56,
+          "csp_phase": 23,
+          "csp_joint": 170
+        },
+        {
+          "pixel": 31,
+          "fourier_phase": 57,
+          "csp_phase": 23,
+          "csp_joint": 171
+        },
+        {
+          "pixel": 32,
+          "fourier_phase": 57,
+          "csp_phase": 23,
+          "csp_joint": 172
+        },
+        {
+          "pixel": 32,
+          "fourier_phase": 57,
+          "csp_phase": 23,
+          "csp_joint": 173
+        },
+        {
+          "pixel": 32,
+          "fourier_phase": 58,
+          "csp_phase": 23,
+          "csp_joint": 174
+        },
+        {
+          "pixel": 32,
+          "fourier_phase": 58,
+          "csp_phase": 23,
+          "csp_joint": 175
+        },
+        {
+          "pixel": 32,
+          "fourier_phase": 58,
+          "csp_phase": 24,
+          "csp_joint": 176
+        },
+        {
+          "pixel": 33,
+          "fourier_phase": 59,
+          "csp_phase": 24,
+          "csp_joint": 177
+        },
+        {
+          "pixel": 33,
+          "fourier_phase": 59,
+          "csp_phase": 24,
+          "csp_joint": 178
+        },
+        {
+          "pixel": 33,
+          "fourier_phase": 59,
+          "csp_phase": 24,
+          "csp_joint": 179
+        },
+        {
+          "pixel": 33,
+          "fourier_phase": 59,
+          "csp_phase": 24,
+          "csp_joint": 180
+        },
+        {
+          "pixel": 33,
+          "fourier_phase": 60,
+          "csp_phase": 24,
+          "csp_joint": 181
+        },
+        {
+          "pixel": 34,
+          "fourier_phase": 60,
+          "csp_phase": 24,
+          "csp_joint": 182
+        },
+        {
+          "pixel": 34,
+          "fourier_phase": 60,
+          "csp_phase": 25,
+          "csp_joint": 183
+        },
+        {
+          "pixel": 34,
+          "fourier_phase": 61,
+          "csp_phase": 25,
+          "csp_joint": 184
+        },
+        {
+          "pixel": 34,
+          "fourier_phase": 61,
+          "csp_phase": 25,
+          "csp_joint": 185
+        },
+        {
+          "pixel": 34,
+          "fourier_phase": 61,
+          "csp_phase": 25,
+          "csp_joint": 186
+        },
+        {
+          "pixel": 34,
+          "fourier_phase": 62,
+          "csp_phase": 25,
+          "csp_joint": 187
+        },
+        {
+          "pixel": 35,
+          "fourier_phase": 62,
+          "csp_phase": 25,
+          "csp_joint": 188
+        },
+        {
+          "pixel": 35,
+          "fourier_phase": 62,
+          "csp_phase": 25,
+          "csp_joint": 189
+        },
+        {
+          "pixel": 35,
+          "fourier_phase": 63,
+          "csp_phase": 25,
+          "csp_joint": 190
+        },
+        {
+          "pixel": 35,
+          "fourier_phase": 63,
+          "csp_phase": 26,
+          "csp_joint": 191
+        },
+        {
+          "pixel": 35,
+          "fourier_phase": 63,
+          "csp_phase": 26,
+          "csp_joint": 192
+        },
+        {
+          "pixel": 36,
+          "fourier_phase": 64,
+          "csp_phase": 26,
+          "csp_joint": 193
+        },
+        {
+          "pixel": 36,
+          "fourier_phase": 64,
+          "csp_phase": 26,
+          "csp_joint": 194
+        },
+        {
+          "pixel": 36,
+          "fourier_phase": 64,
+          "csp_phase": 26,
+          "csp_joint": 195
+        },
+        {
+          "pixel": 36,
+          "fourier_phase": 65,
+          "csp_phase": 26,
+          "csp_joint": 196
+        },
+        {
+          "pixel": 36,
+          "fourier_phase": 65,
+          "csp_phase": 26,
+          "csp_joint": 197
+        },
+        {
+          "pixel": 36,
+          "fourier_phase": 65,
+          "csp_phase": 27,
+          "csp_joint": 198
+        },
+        {
+          "pixel": 37,
+          "fourier_phase": 66,
+          "csp_phase": 27,
+          "csp_joint": 199
+        },
+        {
+          "pixel": 37,
+          "fourier_phase": 66,
+          "csp_phase": 27,
+          "csp_joint": 200
+        },
+        {
+          "pixel": 37,
+          "fourier_phase": 66,
+          "csp_phase": 27,
+          "csp_joint": 201
+        },
+        {
+          "pixel": 37,
+          "fourier_phase": 67,
+          "csp_phase": 27,
+          "csp_joint": 202
+        },
+        {
+          "pixel": 37,
+          "fourier_phase": 67,
+          "csp_phase": 27,
+          "csp_joint": 203
+        },
+        {
+          "pixel": 38,
+          "fourier_phase": 67,
+          "csp_phase": 27,
+          "csp_joint": 204
+        },
+        {
+          "pixel": 38,
+          "fourier_phase": 68,
+          "csp_phase": 27,
+          "csp_joint": 205
+        },
+        {
+          "pixel": 38,
+          "fourier_phase": 68,
+          "csp_phase": 28,
+          "csp_joint": 206
+        },
+        {
+          "pixel": 38,
+          "fourier_phase": 68,
+          "csp_phase": 28,
+          "csp_joint": 207
+        },
+        {
+          "pixel": 38,
+          "fourier_phase": 69,
+          "csp_phase": 28,
+          "csp_joint": 208
+        },
+        {
+          "pixel": 38,
+          "fourier_phase": 69,
+          "csp_phase": 28,
+          "csp_joint": 209
+        },
+        {
+          "pixel": 39,
+          "fourier_phase": 69,
+          "csp_phase": 28,
+          "csp_joint": 210
+        },
+        {
+          "pixel": 39,
+          "fourier_phase": 70,
+          "csp_phase": 28,
+          "csp_joint": 211
+        },
+        {
+          "pixel": 39,
+          "fourier_phase": 70,
+          "csp_phase": 28,
+          "csp_joint": 212
+        },
+        {
+          "pixel": 39,
+          "fourier_phase": 70,
+          "csp_phase": 29,
+          "csp_joint": 213
+        },
+        {
+          "pixel": 39,
+          "fourier_phase": 71,
+          "csp_phase": 29,
+          "csp_joint": 214
+        },
+        {
+          "pixel": 40,
+          "fourier_phase": 71,
+          "csp_phase": 29,
+          "csp_joint": 215
+        },
+        {
+          "pixel": 40,
+          "fourier_phase": 71,
+          "csp_phase": 29,
+          "csp_joint": 216
+        },
+        {
+          "pixel": 40,
+          "fourier_phase": 72,
+          "csp_phase": 29,
+          "csp_joint": 217
+        },
+        {
+          "pixel": 40,
+          "fourier_phase": 72,
+          "csp_phase": 29,
+          "csp_joint": 218
+        },
+        {
+          "pixel": 40,
+          "fourier_phase": 72,
+          "csp_phase": 29,
+          "csp_joint": 219
+        },
+        {
+          "pixel": 41,
+          "fourier_phase": 73,
+          "csp_phase": 29,
+          "csp_joint": 220
+        },
+        {
+          "pixel": 41,
+          "fourier_phase": 73,
+          "csp_phase": 30,
+          "csp_joint": 221
+        },
+        {
+          "pixel": 41,
+          "fourier_phase": 73,
+          "csp_phase": 30,
+          "csp_joint": 222
+        },
+        {
+          "pixel": 41,
+          "fourier_phase": 74,
+          "csp_phase": 30,
+          "csp_joint": 223
+        },
+        {
+          "pixel": 41,
+          "fourier_phase": 74,
+          "csp_phase": 30,
+          "csp_joint": 224
+        },
+        {
+          "pixel": 41,
+          "fourier_phase": 74,
+          "csp_phase": 30,
+          "csp_joint": 225
+        },
+        {
+          "pixel": 42,
+          "fourier_phase": 75,
+          "csp_phase": 30,
+          "csp_joint": 226
+        },
+        {
+          "pixel": 42,
+          "fourier_phase": 75,
+          "csp_phase": 30,
+          "csp_joint": 227
+        },
+        {
+          "pixel": 42,
+          "fourier_phase": 75,
+          "csp_phase": 31,
+          "csp_joint": 228
+        },
+        {
+          "pixel": 42,
+          "fourier_phase": 76,
+          "csp_phase": 31,
+          "csp_joint": 229
+        },
+        {
+          "pixel": 42,
+          "fourier_phase": 76,
+          "csp_phase": 31,
+          "csp_joint": 230
+        },
+        {
+          "pixel": 43,
+          "fourier_phase": 76,
+          "csp_phase": 31,
+          "csp_joint": 231
+        },
+        {
+          "pixel": 43,
+          "fourier_phase": 77,
+          "csp_phase": 31,
+          "csp_joint": 232
+        },
+        {
+          "pixel": 43,
+          "fourier_phase": 77,
+          "csp_phase": 31,
+          "csp_joint": 233
+        },
+        {
+          "pixel": 43,
+          "fourier_phase": 77,
+          "csp_phase": 31,
+          "csp_joint": 234
+        },
+        {
+          "pixel": 43,
+          "fourier_phase": 78,
+          "csp_phase": 31,
+          "csp_joint": 235
+        },
+        {
+          "pixel": 43,
+          "fourier_phase": 78,
+          "csp_phase": 32,
+          "csp_joint": 236
+        },
+        {
+          "pixel": 44,
+          "fourier_phase": 78,
+          "csp_phase": 32,
+          "csp_joint": 237
+        },
+        {
+          "pixel": 44,
+          "fourier_phase": 79,
+          "csp_phase": 32,
+          "csp_joint": 238
+        },
+        {
+          "pixel": 44,
+          "fourier_phase": 79,
+          "csp_phase": 32,
+          "csp_joint": 239
+        }
+      ],
+      "encoding": "Real accepted optimizer states before the budget, followed by the exact matched-budget endpoint. All recorded states appear in chronological order. Shorter paths hold existing frames; no image interpolation. Nearest-neighbor display and grayscale palette.",
+      "selection": "First two common-attainment source IDs in each direction, excluding Eyeglasses_183143 already in the main comparison. Illustrative examples, not estimates of success rates."
     }
   ]
 }

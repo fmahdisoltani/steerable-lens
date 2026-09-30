@@ -118,6 +118,17 @@ html,body{margin:0}img{max-width:100%}
 .skip-link:focus{top:10px}
 @media(max-width:640px){header.hero{padding-top:40px}.authors{margin-top:18px}.animation-grid{grid-template-columns:1fr;gap:28px}.animation-toolbar{align-items:start;gap:10px}.animation-toolbar span{max-width:55%}.fig{padding:7px}section{padding-block:32px}.wrap{padding-inline:16px}.bibwrap pre{font-size:11px;padding-top:50px}.teaser .fig img{min-width:720px}.cards{grid-template-columns:1fr}}
 
+
+/* CelebA comparisons show one selected sequence at a time. */
+.celeba-controls{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin:26px 0 22px}
+.celeba-directions,.celeba-examples{display:flex;flex-wrap:wrap;gap:8px}
+.gallery-choice{font:500 14px var(--sans);padding:9px 15px;min-height:42px;border-radius:999px;border:1px solid var(--line);color:var(--ink);background:var(--surface);cursor:pointer}
+.gallery-choice:hover{border-color:var(--accent)}
+.gallery-choice[aria-pressed="true"]{background:var(--accent-ink);border-color:var(--accent-ink);color:var(--bg)}
+.celeba-examples .gallery-choice{font-size:13px;padding-inline:13px}
+.celeba-case-title{font-size:21px;margin-bottom:16px}
+@media(max-width:760px){.celeba-figure img{min-width:720px}.celeba-controls{align-items:start}.celeba-directions{gap:6px}.gallery-choice{padding-inline:12px}}
+
 </style>
 </head>
 <body>
@@ -134,7 +145,7 @@ html,body{margin:0}img{max-width:100%}
     <div class="venue">Under review as a conference paper at ICLR 2027</div>
     <nav class="btns" aria-label="Project links">
       <a class="btn" href="explore.html">Explore results</a>
-      <a class="btn" href="#animations">Animated examples</a>
+      <a class="btn" href="#celeba-animations">Animated examples</a>
       <a class="btn ghost" href="#resources">Figures &amp; data</a>
       <a class="btn ghost" href="https://github.com/fmahdisoltani/steerable-lens">Website source</a>
     </nav>
@@ -213,6 +224,38 @@ html,body{margin:0}img{max-width:100%}
     </div>
   </div>
 </section>
+
+<section id="celeba-animations">
+  <div class="wrap">
+    <div class="col">
+      <h2 class="sechead">CelebA morph sequences</h2>
+      <p class="lead">Smiles and glasses, <em>in both directions.</em></p>
+      <p>Browse eight faces, with two examples for each direction. Each animation compares Pixel, Fourier phase, CSP phase, and Joint CSP alongside the unedited source. All four methods reach the same final image distance, L&#8322; = 128/28.</p>
+    </div>
+    <div class="celeba-controls">
+      <div class="celeba-directions" role="group" aria-label="Attribute and edit direction">
+        <button class="gallery-choice" type="button" data-celeba-direction="add-smile" aria-pressed="true">Add smile</button>
+        <button class="gallery-choice" type="button" data-celeba-direction="remove-smile" aria-pressed="false">Remove smile</button>
+        <button class="gallery-choice" type="button" data-celeba-direction="add-glasses" aria-pressed="false">Add glasses</button>
+        <button class="gallery-choice" type="button" data-celeba-direction="remove-glasses" aria-pressed="false">Remove glasses</button>
+      </div>
+      <div class="celeba-examples" role="group" aria-label="Choose a face">
+        <button class="gallery-choice" type="button" data-celeba-example="0" aria-pressed="true">Example 1</button>
+        <button class="gallery-choice" type="button" data-celeba-example="1" aria-pressed="false">Example 2</button>
+      </div>
+    </div>
+    <figure>
+      <h3 id="celeba-case-title" class="celeba-case-title" aria-live="polite">Add smile &middot; Source 184729 &middot; Example 1 of 2</h3>
+      <div class="animation-toolbar"><span id="celeba-case-timing">67 animation frames &middot; 10.1-second loop</span><button class="motion-toggle" type="button" aria-pressed="true">Pause animations</button></div>
+      <div class="fig celeba-figure" tabindex="0" aria-label="CelebA four-method morph sequence; scroll horizontally on small screens">
+        <img id="celeba-morph" class="animated" src="figures/celeba_smiling_184729.gif" data-gif="figures/celeba_smiling_184729.gif" data-still="figures/celeba_smiling_184729_poster.png" width="960" height="390" loading="lazy" alt="Add smile, source 184729: actual optimization steps across all four methods, with the original source alongside.">
+      </div>
+      <figcaption>Each sequence includes the source, every accepted step before the requested budget, and the exact matched-budget endpoint. Shorter paths hold recorded frames so all four methods finish together; only the final budgets are matched. G is the optimized classifier&rsquo;s target probability. At the endpoint, &ldquo;Both judges&rdquo; reports joint target prediction and E is the warp-plus-gain reconstruction score. <a id="celeba-download" href="figures/celeba_smiling_184729.gif" download>Download this GIF</a>.</figcaption>
+    </figure>
+    <div class="col"><p class="animation-note">These are illustrative cases with common budget attainment, selected by source ID rather than classifier score. Every replay matches its original endpoint pixels and G/O/O&#8322; scores exactly. The animations use actual optimizer states, without image interpolation.</p></div>
+  </div>
+</section>
+<script type="application/json" id="celeba-gallery-data">[{"id":"Smiling_184729","group":"add-smile","title":"Add smile","source_id":"184729","gif":"celeba_smiling_184729.gif","poster":"celeba_smiling_184729_poster.png","frame_count":67,"loop_duration_ms":10100},{"id":"Smiling_186468","group":"add-smile","title":"Add smile","source_id":"186468","gif":"celeba_smiling_186468.gif","poster":"celeba_smiling_186468_poster.png","frame_count":69,"loop_duration_ms":10300},{"id":"Smiling_183135","group":"remove-smile","title":"Remove smile","source_id":"183135","gif":"celeba_smiling_183135.gif","poster":"celeba_smiling_183135_poster.png","frame_count":69,"loop_duration_ms":10300},{"id":"Smiling_184591","group":"remove-smile","title":"Remove smile","source_id":"184591","gif":"celeba_smiling_184591.gif","poster":"celeba_smiling_184591_poster.png","frame_count":55,"loop_duration_ms":9960},{"id":"Eyeglasses_183071","group":"add-glasses","title":"Add glasses","source_id":"183071","gif":"celeba_eyeglasses_183071.gif","poster":"celeba_eyeglasses_183071_poster.png","frame_count":92,"loop_duration_ms":9900},{"id":"Eyeglasses_183248","group":"add-glasses","title":"Add glasses","source_id":"183248","gif":"celeba_eyeglasses_183248.gif","poster":"celeba_eyeglasses_183248_poster.png","frame_count":82,"loop_duration_ms":10000},{"id":"Eyeglasses_184000","group":"remove-glasses","title":"Remove glasses","source_id":"184000","gif":"celeba_eyeglasses_184000.gif","poster":"celeba_eyeglasses_184000_poster.png","frame_count":93,"loop_duration_ms":9970},{"id":"Eyeglasses_185223","group":"remove-glasses","title":"Remove glasses","source_id":"185223","gif":"celeba_eyeglasses_185223.gif","poster":"celeba_eyeglasses_185223_poster.png","frame_count":240,"loop_duration_ms":15500}]</script>
 
 <section id="animations">
   <div class="wrap">
