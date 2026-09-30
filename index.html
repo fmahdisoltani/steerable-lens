@@ -144,9 +144,9 @@ html,body{margin:0}img{max-width:100%}
 <section class="teaser" id="comparison">
   <div class="wrap">
     <figure>
-      <div class="animation-toolbar"><span>Recorded source and edit endpoints</span><button class="motion-toggle" type="button" aria-pressed="true">Pause animations</button></div>
-      <div class="fig" tabindex="0" aria-label="Animated method comparison; scroll horizontally on small screens"><img class="animated" src="figures/main_dissociation.gif" data-gif="figures/main_dissociation.gif" data-still="figures/main_dissociation_poster.png" alt="Animation alternating source images and matched-budget endpoints for 3 to 8 and adding eyeglasses, across all four methods. Scores appear only on edited endpoints."></div>
-      <figcaption><b>One edit, three verdicts.</b> The GIF alternates the original sources and their recorded edited endpoints; no intermediate frames are synthesized. In the digit example, pixel and both CSP variants have target probability above 0.99, but only pixel achieves joint target agreement; CSP has higher reconstruction scores. These cases were selected after inspection. A joint-judge “no” means at least one judge does not predict the target.</figcaption>
+      <div class="animation-toolbar"><span>Full optimization sequences · 122 animation frames</span><button class="motion-toggle" type="button" aria-pressed="true">Pause animations</button></div>
+      <div class="fig" tabindex="0" aria-label="Animated method comparison; scroll horizontally on small screens"><img class="animated" src="figures/main_morph_sequence.gif" data-gif="figures/main_morph_sequence.gif" data-still="figures/main_morph_sequence_poster.png" alt="Full morph sequences for 3 to 8 and adding eyeglasses across all four methods, showing recorded intermediate optimization states, step numbers, target probabilities and image distances."></div>
+      <figcaption><b>The morph sequence, step by step.</b> The animation shows the source, all accepted steps before the requested budget, and the exact matched-budget endpoint. Each method advances through its own sequence; shorter sequences hold recorded frames so all methods finish together. The displayed step and L&#8322; track each method separately. Replays reproduce the original endpoint pixels and G/O/O&#8322; scores exactly. There is no image interpolation. These cases were selected after inspection; joint-judge “no” means at least one judge does not predict the target.</figcaption>
     </figure>
   </div>
 </section>

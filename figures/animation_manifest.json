@@ -1,5 +1,5 @@
 {
-  "encoding": "Original recorded image arrays; no tweening or generated intermediate states. GIF palette quantization only. Nearest-neighbor display scaling for the matched comparison.",
+  "encoding": "Actual optimizer states. Main comparison is a deterministic replay of the original experiments with endpoint equality verified; natural-image GIFs use their original twelve saved frames. No image interpolation.",
   "main_selection": "User-selected illustrative cases 3-8_00944 and Eyeglasses_183143, selected after inspecting images and outcomes; not representative sampling.",
   "matched_inputs": [
     {
@@ -45,20 +45,1525 @@
   ],
   "assets": [
     {
-      "gif": "main_dissociation.gif",
-      "poster": "main_dissociation_poster.png",
+      "gif": "main_morph_sequence.gif",
+      "poster": "main_morph_sequence_poster.png",
       "dimensions": [
         960,
-        648
+        710
       ],
-      "frame_count": 2,
+      "frame_count": 122,
       "durations_ms": [
         1200,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
         2400
       ],
-      "loop_duration_ms": 3600,
-      "bytes": 153870,
-      "sha256": "32d55bce05b8b6644623c739563b89ff7826f2aa72c1786e830fb94af870397c"
+      "loop_duration_ms": 9600,
+      "bytes": 10323829,
+      "sha256": "38eaea03d8484af0bb09e3afd89b067e99fc63e76573452d93b033898d56b7b5",
+      "encoding": "Actual optimizer states from deterministic replays verified against published endpoints. No image interpolation. Nearest-neighbor pixel display and grayscale GIF palette. Methods advance on separate normalized step timelines; shorter paths hold recorded frames. Every recorded state is shown.",
+      "inputs": [
+        {
+          "case": "3-8_00944",
+          "method": "pixel",
+          "recorded_npz": "outputs/website_morph_replay/3-8_00944_pixel.npz",
+          "recorded_json": "outputs/website_morph_replay/3-8_00944_pixel.json",
+          "frames": 12,
+          "sha256": "51dc76d72ad01b02c33d54aaac1d0c4176a5bc472e8f4ff3714ce249cae0b089",
+          "validation": {
+            "endpoint_max_abs_error": 0.0,
+            "endpoint_target_probability_error": {
+              "G": 0.0,
+              "O": 0.0,
+              "O2": 0.0
+            },
+            "matches_original_endpoint": true,
+            "recorded_frames": 12,
+            "optimizer_updates": 11,
+            "seconds": 0.1
+          }
+        },
+        {
+          "case": "3-8_00944",
+          "method": "fourier_phase",
+          "recorded_npz": "outputs/website_morph_replay/3-8_00944_fourier_phase.npz",
+          "recorded_json": "outputs/website_morph_replay/3-8_00944_fourier_phase.json",
+          "frames": 22,
+          "sha256": "a2b0e02236923af053bcc9f41d2b8b646d40409beffed54cdf8c9567bf7687fc",
+          "validation": {
+            "endpoint_max_abs_error": 0.0,
+            "endpoint_target_probability_error": {
+              "G": 0.0,
+              "O": 0.0,
+              "O2": 0.0
+            },
+            "matches_original_endpoint": true,
+            "recorded_frames": 22,
+            "optimizer_updates": 21,
+            "seconds": 0.07
+          }
+        },
+        {
+          "case": "3-8_00944",
+          "method": "csp_phase",
+          "recorded_npz": "outputs/website_morph_replay/3-8_00944_csp_phase.npz",
+          "recorded_json": "outputs/website_morph_replay/3-8_00944_csp_phase.json",
+          "frames": 10,
+          "sha256": "56e2ca248fc0bf2ce21f3835e1d9ca701977aaa14a63aebb5d0f0d924d641d49",
+          "validation": {
+            "endpoint_max_abs_error": 0.0,
+            "endpoint_target_probability_error": {
+              "G": 0.0,
+              "O": 0.0,
+              "O2": 0.0
+            },
+            "matches_original_endpoint": true,
+            "recorded_frames": 10,
+            "optimizer_updates": 9,
+            "seconds": 0.92
+          }
+        },
+        {
+          "case": "3-8_00944",
+          "method": "csp_joint",
+          "recorded_npz": "outputs/website_morph_replay/3-8_00944_csp_joint.npz",
+          "recorded_json": "outputs/website_morph_replay/3-8_00944_csp_joint.json",
+          "frames": 11,
+          "sha256": "6bc54a73e34422fd53e00f1240cae62ea67883889854f20aff13da7ef6937d11",
+          "validation": {
+            "endpoint_max_abs_error": 0.0,
+            "endpoint_target_probability_error": {
+              "G": 0.0,
+              "O": 0.0,
+              "O2": 0.0
+            },
+            "matches_original_endpoint": true,
+            "recorded_frames": 11,
+            "optimizer_updates": 10,
+            "seconds": 0.23
+          }
+        },
+        {
+          "case": "Eyeglasses_183143",
+          "method": "pixel",
+          "recorded_npz": "outputs/website_morph_replay/Eyeglasses_183143_pixel.npz",
+          "recorded_json": "outputs/website_morph_replay/Eyeglasses_183143_pixel.json",
+          "frames": 23,
+          "sha256": "b71c016b8de9734d35750d47a16832cc7fb82f22d59c2435adcec6c0fbfa699e",
+          "validation": {
+            "endpoint_max_abs_error": 0.0,
+            "endpoint_target_probability_error": {
+              "G": 0.0,
+              "O": 0.0,
+              "O2": 0.0
+            },
+            "matches_original_endpoint": true,
+            "recorded_frames": 23,
+            "optimizer_updates": 22,
+            "seconds": 0.17
+          }
+        },
+        {
+          "case": "Eyeglasses_183143",
+          "method": "fourier_phase",
+          "recorded_npz": "outputs/website_morph_replay/Eyeglasses_183143_fourier_phase.npz",
+          "recorded_json": "outputs/website_morph_replay/Eyeglasses_183143_fourier_phase.json",
+          "frames": 122,
+          "sha256": "3e04c6e9dd7a77a30d33b463302205b16903b31c094de14b20c96c49e40e84cb",
+          "validation": {
+            "endpoint_max_abs_error": 0.0,
+            "endpoint_target_probability_error": {
+              "G": 0.0,
+              "O": 0.0,
+              "O2": 0.0
+            },
+            "matches_original_endpoint": true,
+            "recorded_frames": 122,
+            "optimizer_updates": 121,
+            "seconds": 1.15
+          }
+        },
+        {
+          "case": "Eyeglasses_183143",
+          "method": "csp_phase",
+          "recorded_npz": "outputs/website_morph_replay/Eyeglasses_183143_csp_phase.npz",
+          "recorded_json": "outputs/website_morph_replay/Eyeglasses_183143_csp_phase.json",
+          "frames": 36,
+          "sha256": "d33d14baf81974184c157a4e92cde4fc8c958774d4f433380409734fe80c867e",
+          "validation": {
+            "endpoint_max_abs_error": 0.0,
+            "endpoint_target_probability_error": {
+              "G": 0.0,
+              "O": 0.0,
+              "O2": 0.0
+            },
+            "matches_original_endpoint": true,
+            "recorded_frames": 36,
+            "optimizer_updates": 35,
+            "seconds": 1.75
+          }
+        },
+        {
+          "case": "Eyeglasses_183143",
+          "method": "csp_joint",
+          "recorded_npz": "outputs/website_morph_replay/Eyeglasses_183143_csp_joint.npz",
+          "recorded_json": "outputs/website_morph_replay/Eyeglasses_183143_csp_joint.json",
+          "frames": 78,
+          "sha256": "5d473eb09dad2fa23d2853914d5ed86a35d4fee26cdf92d292d72910a29233a6",
+          "validation": {
+            "endpoint_max_abs_error": 0.0,
+            "endpoint_target_probability_error": {
+              "G": 0.0,
+              "O": 0.0,
+              "O2": 0.0
+            },
+            "matches_original_endpoint": true,
+            "recorded_frames": 78,
+            "optimizer_updates": 77,
+            "seconds": 3.72
+          }
+        }
+      ],
+      "frame_map": [
+        {
+          "3-8_00944_pixel": 0,
+          "3-8_00944_fourier_phase": 0,
+          "3-8_00944_csp_phase": 0,
+          "3-8_00944_csp_joint": 0,
+          "Eyeglasses_183143_pixel": 0,
+          "Eyeglasses_183143_fourier_phase": 0,
+          "Eyeglasses_183143_csp_phase": 0,
+          "Eyeglasses_183143_csp_joint": 0
+        },
+        {
+          "3-8_00944_pixel": 0,
+          "3-8_00944_fourier_phase": 0,
+          "3-8_00944_csp_phase": 0,
+          "3-8_00944_csp_joint": 0,
+          "Eyeglasses_183143_pixel": 0,
+          "Eyeglasses_183143_fourier_phase": 1,
+          "Eyeglasses_183143_csp_phase": 0,
+          "Eyeglasses_183143_csp_joint": 1
+        },
+        {
+          "3-8_00944_pixel": 0,
+          "3-8_00944_fourier_phase": 0,
+          "3-8_00944_csp_phase": 0,
+          "3-8_00944_csp_joint": 0,
+          "Eyeglasses_183143_pixel": 0,
+          "Eyeglasses_183143_fourier_phase": 2,
+          "Eyeglasses_183143_csp_phase": 1,
+          "Eyeglasses_183143_csp_joint": 1
+        },
+        {
+          "3-8_00944_pixel": 0,
+          "3-8_00944_fourier_phase": 1,
+          "3-8_00944_csp_phase": 0,
+          "3-8_00944_csp_joint": 0,
+          "Eyeglasses_183143_pixel": 1,
+          "Eyeglasses_183143_fourier_phase": 3,
+          "Eyeglasses_183143_csp_phase": 1,
+          "Eyeglasses_183143_csp_joint": 2
+        },
+        {
+          "3-8_00944_pixel": 0,
+          "3-8_00944_fourier_phase": 1,
+          "3-8_00944_csp_phase": 0,
+          "3-8_00944_csp_joint": 0,
+          "Eyeglasses_183143_pixel": 1,
+          "Eyeglasses_183143_fourier_phase": 4,
+          "Eyeglasses_183143_csp_phase": 1,
+          "Eyeglasses_183143_csp_joint": 3
+        },
+        {
+          "3-8_00944_pixel": 0,
+          "3-8_00944_fourier_phase": 1,
+          "3-8_00944_csp_phase": 0,
+          "3-8_00944_csp_joint": 0,
+          "Eyeglasses_183143_pixel": 1,
+          "Eyeglasses_183143_fourier_phase": 5,
+          "Eyeglasses_183143_csp_phase": 1,
+          "Eyeglasses_183143_csp_joint": 3
+        },
+        {
+          "3-8_00944_pixel": 1,
+          "3-8_00944_fourier_phase": 1,
+          "3-8_00944_csp_phase": 0,
+          "3-8_00944_csp_joint": 0,
+          "Eyeglasses_183143_pixel": 1,
+          "Eyeglasses_183143_fourier_phase": 6,
+          "Eyeglasses_183143_csp_phase": 2,
+          "Eyeglasses_183143_csp_joint": 4
+        },
+        {
+          "3-8_00944_pixel": 1,
+          "3-8_00944_fourier_phase": 1,
+          "3-8_00944_csp_phase": 1,
+          "3-8_00944_csp_joint": 1,
+          "Eyeglasses_183143_pixel": 1,
+          "Eyeglasses_183143_fourier_phase": 7,
+          "Eyeglasses_183143_csp_phase": 2,
+          "Eyeglasses_183143_csp_joint": 4
+        },
+        {
+          "3-8_00944_pixel": 1,
+          "3-8_00944_fourier_phase": 1,
+          "3-8_00944_csp_phase": 1,
+          "3-8_00944_csp_joint": 1,
+          "Eyeglasses_183143_pixel": 1,
+          "Eyeglasses_183143_fourier_phase": 8,
+          "Eyeglasses_183143_csp_phase": 2,
+          "Eyeglasses_183143_csp_joint": 5
+        },
+        {
+          "3-8_00944_pixel": 1,
+          "3-8_00944_fourier_phase": 2,
+          "3-8_00944_csp_phase": 1,
+          "3-8_00944_csp_joint": 1,
+          "Eyeglasses_183143_pixel": 2,
+          "Eyeglasses_183143_fourier_phase": 9,
+          "Eyeglasses_183143_csp_phase": 3,
+          "Eyeglasses_183143_csp_joint": 6
+        },
+        {
+          "3-8_00944_pixel": 1,
+          "3-8_00944_fourier_phase": 2,
+          "3-8_00944_csp_phase": 1,
+          "3-8_00944_csp_joint": 1,
+          "Eyeglasses_183143_pixel": 2,
+          "Eyeglasses_183143_fourier_phase": 10,
+          "Eyeglasses_183143_csp_phase": 3,
+          "Eyeglasses_183143_csp_joint": 6
+        },
+        {
+          "3-8_00944_pixel": 1,
+          "3-8_00944_fourier_phase": 2,
+          "3-8_00944_csp_phase": 1,
+          "3-8_00944_csp_joint": 1,
+          "Eyeglasses_183143_pixel": 2,
+          "Eyeglasses_183143_fourier_phase": 11,
+          "Eyeglasses_183143_csp_phase": 3,
+          "Eyeglasses_183143_csp_joint": 7
+        },
+        {
+          "3-8_00944_pixel": 1,
+          "3-8_00944_fourier_phase": 2,
+          "3-8_00944_csp_phase": 1,
+          "3-8_00944_csp_joint": 1,
+          "Eyeglasses_183143_pixel": 2,
+          "Eyeglasses_183143_fourier_phase": 12,
+          "Eyeglasses_183143_csp_phase": 3,
+          "Eyeglasses_183143_csp_joint": 8
+        },
+        {
+          "3-8_00944_pixel": 1,
+          "3-8_00944_fourier_phase": 2,
+          "3-8_00944_csp_phase": 1,
+          "3-8_00944_csp_joint": 1,
+          "Eyeglasses_183143_pixel": 2,
+          "Eyeglasses_183143_fourier_phase": 13,
+          "Eyeglasses_183143_csp_phase": 4,
+          "Eyeglasses_183143_csp_joint": 8
+        },
+        {
+          "3-8_00944_pixel": 1,
+          "3-8_00944_fourier_phase": 2,
+          "3-8_00944_csp_phase": 1,
+          "3-8_00944_csp_joint": 1,
+          "Eyeglasses_183143_pixel": 3,
+          "Eyeglasses_183143_fourier_phase": 14,
+          "Eyeglasses_183143_csp_phase": 4,
+          "Eyeglasses_183143_csp_joint": 9
+        },
+        {
+          "3-8_00944_pixel": 1,
+          "3-8_00944_fourier_phase": 3,
+          "3-8_00944_csp_phase": 1,
+          "3-8_00944_csp_joint": 1,
+          "Eyeglasses_183143_pixel": 3,
+          "Eyeglasses_183143_fourier_phase": 15,
+          "Eyeglasses_183143_csp_phase": 4,
+          "Eyeglasses_183143_csp_joint": 10
+        },
+        {
+          "3-8_00944_pixel": 1,
+          "3-8_00944_fourier_phase": 3,
+          "3-8_00944_csp_phase": 1,
+          "3-8_00944_csp_joint": 1,
+          "Eyeglasses_183143_pixel": 3,
+          "Eyeglasses_183143_fourier_phase": 16,
+          "Eyeglasses_183143_csp_phase": 5,
+          "Eyeglasses_183143_csp_joint": 10
+        },
+        {
+          "3-8_00944_pixel": 2,
+          "3-8_00944_fourier_phase": 3,
+          "3-8_00944_csp_phase": 1,
+          "3-8_00944_csp_joint": 1,
+          "Eyeglasses_183143_pixel": 3,
+          "Eyeglasses_183143_fourier_phase": 17,
+          "Eyeglasses_183143_csp_phase": 5,
+          "Eyeglasses_183143_csp_joint": 11
+        },
+        {
+          "3-8_00944_pixel": 2,
+          "3-8_00944_fourier_phase": 3,
+          "3-8_00944_csp_phase": 1,
+          "3-8_00944_csp_joint": 1,
+          "Eyeglasses_183143_pixel": 3,
+          "Eyeglasses_183143_fourier_phase": 18,
+          "Eyeglasses_183143_csp_phase": 5,
+          "Eyeglasses_183143_csp_joint": 11
+        },
+        {
+          "3-8_00944_pixel": 2,
+          "3-8_00944_fourier_phase": 3,
+          "3-8_00944_csp_phase": 1,
+          "3-8_00944_csp_joint": 2,
+          "Eyeglasses_183143_pixel": 3,
+          "Eyeglasses_183143_fourier_phase": 19,
+          "Eyeglasses_183143_csp_phase": 5,
+          "Eyeglasses_183143_csp_joint": 12
+        },
+        {
+          "3-8_00944_pixel": 2,
+          "3-8_00944_fourier_phase": 3,
+          "3-8_00944_csp_phase": 1,
+          "3-8_00944_csp_joint": 2,
+          "Eyeglasses_183143_pixel": 4,
+          "Eyeglasses_183143_fourier_phase": 20,
+          "Eyeglasses_183143_csp_phase": 6,
+          "Eyeglasses_183143_csp_joint": 13
+        },
+        {
+          "3-8_00944_pixel": 2,
+          "3-8_00944_fourier_phase": 4,
+          "3-8_00944_csp_phase": 2,
+          "3-8_00944_csp_joint": 2,
+          "Eyeglasses_183143_pixel": 4,
+          "Eyeglasses_183143_fourier_phase": 21,
+          "Eyeglasses_183143_csp_phase": 6,
+          "Eyeglasses_183143_csp_joint": 13
+        },
+        {
+          "3-8_00944_pixel": 2,
+          "3-8_00944_fourier_phase": 4,
+          "3-8_00944_csp_phase": 2,
+          "3-8_00944_csp_joint": 2,
+          "Eyeglasses_183143_pixel": 4,
+          "Eyeglasses_183143_fourier_phase": 22,
+          "Eyeglasses_183143_csp_phase": 6,
+          "Eyeglasses_183143_csp_joint": 14
+        },
+        {
+          "3-8_00944_pixel": 2,
+          "3-8_00944_fourier_phase": 4,
+          "3-8_00944_csp_phase": 2,
+          "3-8_00944_csp_joint": 2,
+          "Eyeglasses_183143_pixel": 4,
+          "Eyeglasses_183143_fourier_phase": 23,
+          "Eyeglasses_183143_csp_phase": 7,
+          "Eyeglasses_183143_csp_joint": 15
+        },
+        {
+          "3-8_00944_pixel": 2,
+          "3-8_00944_fourier_phase": 4,
+          "3-8_00944_csp_phase": 2,
+          "3-8_00944_csp_joint": 2,
+          "Eyeglasses_183143_pixel": 4,
+          "Eyeglasses_183143_fourier_phase": 24,
+          "Eyeglasses_183143_csp_phase": 7,
+          "Eyeglasses_183143_csp_joint": 15
+        },
+        {
+          "3-8_00944_pixel": 2,
+          "3-8_00944_fourier_phase": 4,
+          "3-8_00944_csp_phase": 2,
+          "3-8_00944_csp_joint": 2,
+          "Eyeglasses_183143_pixel": 5,
+          "Eyeglasses_183143_fourier_phase": 25,
+          "Eyeglasses_183143_csp_phase": 7,
+          "Eyeglasses_183143_csp_joint": 16
+        },
+        {
+          "3-8_00944_pixel": 2,
+          "3-8_00944_fourier_phase": 5,
+          "3-8_00944_csp_phase": 2,
+          "3-8_00944_csp_joint": 2,
+          "Eyeglasses_183143_pixel": 5,
+          "Eyeglasses_183143_fourier_phase": 26,
+          "Eyeglasses_183143_csp_phase": 8,
+          "Eyeglasses_183143_csp_joint": 17
+        },
+        {
+          "3-8_00944_pixel": 2,
+          "3-8_00944_fourier_phase": 5,
+          "3-8_00944_csp_phase": 2,
+          "3-8_00944_csp_joint": 2,
+          "Eyeglasses_183143_pixel": 5,
+          "Eyeglasses_183143_fourier_phase": 27,
+          "Eyeglasses_183143_csp_phase": 8,
+          "Eyeglasses_183143_csp_joint": 17
+        },
+        {
+          "3-8_00944_pixel": 3,
+          "3-8_00944_fourier_phase": 5,
+          "3-8_00944_csp_phase": 2,
+          "3-8_00944_csp_joint": 2,
+          "Eyeglasses_183143_pixel": 5,
+          "Eyeglasses_183143_fourier_phase": 28,
+          "Eyeglasses_183143_csp_phase": 8,
+          "Eyeglasses_183143_csp_joint": 18
+        },
+        {
+          "3-8_00944_pixel": 3,
+          "3-8_00944_fourier_phase": 5,
+          "3-8_00944_csp_phase": 2,
+          "3-8_00944_csp_joint": 2,
+          "Eyeglasses_183143_pixel": 5,
+          "Eyeglasses_183143_fourier_phase": 29,
+          "Eyeglasses_183143_csp_phase": 8,
+          "Eyeglasses_183143_csp_joint": 18
+        },
+        {
+          "3-8_00944_pixel": 3,
+          "3-8_00944_fourier_phase": 5,
+          "3-8_00944_csp_phase": 2,
+          "3-8_00944_csp_joint": 2,
+          "Eyeglasses_183143_pixel": 5,
+          "Eyeglasses_183143_fourier_phase": 30,
+          "Eyeglasses_183143_csp_phase": 9,
+          "Eyeglasses_183143_csp_joint": 19
+        },
+        {
+          "3-8_00944_pixel": 3,
+          "3-8_00944_fourier_phase": 5,
+          "3-8_00944_csp_phase": 2,
+          "3-8_00944_csp_joint": 3,
+          "Eyeglasses_183143_pixel": 6,
+          "Eyeglasses_183143_fourier_phase": 31,
+          "Eyeglasses_183143_csp_phase": 9,
+          "Eyeglasses_183143_csp_joint": 20
+        },
+        {
+          "3-8_00944_pixel": 3,
+          "3-8_00944_fourier_phase": 6,
+          "3-8_00944_csp_phase": 2,
+          "3-8_00944_csp_joint": 3,
+          "Eyeglasses_183143_pixel": 6,
+          "Eyeglasses_183143_fourier_phase": 32,
+          "Eyeglasses_183143_csp_phase": 9,
+          "Eyeglasses_183143_csp_joint": 20
+        },
+        {
+          "3-8_00944_pixel": 3,
+          "3-8_00944_fourier_phase": 6,
+          "3-8_00944_csp_phase": 2,
+          "3-8_00944_csp_joint": 3,
+          "Eyeglasses_183143_pixel": 6,
+          "Eyeglasses_183143_fourier_phase": 33,
+          "Eyeglasses_183143_csp_phase": 10,
+          "Eyeglasses_183143_csp_joint": 21
+        },
+        {
+          "3-8_00944_pixel": 3,
+          "3-8_00944_fourier_phase": 6,
+          "3-8_00944_csp_phase": 3,
+          "3-8_00944_csp_joint": 3,
+          "Eyeglasses_183143_pixel": 6,
+          "Eyeglasses_183143_fourier_phase": 34,
+          "Eyeglasses_183143_csp_phase": 10,
+          "Eyeglasses_183143_csp_joint": 22
+        },
+        {
+          "3-8_00944_pixel": 3,
+          "3-8_00944_fourier_phase": 6,
+          "3-8_00944_csp_phase": 3,
+          "3-8_00944_csp_joint": 3,
+          "Eyeglasses_183143_pixel": 6,
+          "Eyeglasses_183143_fourier_phase": 35,
+          "Eyeglasses_183143_csp_phase": 10,
+          "Eyeglasses_183143_csp_joint": 22
+        },
+        {
+          "3-8_00944_pixel": 3,
+          "3-8_00944_fourier_phase": 6,
+          "3-8_00944_csp_phase": 3,
+          "3-8_00944_csp_joint": 3,
+          "Eyeglasses_183143_pixel": 7,
+          "Eyeglasses_183143_fourier_phase": 36,
+          "Eyeglasses_183143_csp_phase": 10,
+          "Eyeglasses_183143_csp_joint": 23
+        },
+        {
+          "3-8_00944_pixel": 3,
+          "3-8_00944_fourier_phase": 6,
+          "3-8_00944_csp_phase": 3,
+          "3-8_00944_csp_joint": 3,
+          "Eyeglasses_183143_pixel": 7,
+          "Eyeglasses_183143_fourier_phase": 37,
+          "Eyeglasses_183143_csp_phase": 11,
+          "Eyeglasses_183143_csp_joint": 24
+        },
+        {
+          "3-8_00944_pixel": 3,
+          "3-8_00944_fourier_phase": 7,
+          "3-8_00944_csp_phase": 3,
+          "3-8_00944_csp_joint": 3,
+          "Eyeglasses_183143_pixel": 7,
+          "Eyeglasses_183143_fourier_phase": 38,
+          "Eyeglasses_183143_csp_phase": 11,
+          "Eyeglasses_183143_csp_joint": 24
+        },
+        {
+          "3-8_00944_pixel": 4,
+          "3-8_00944_fourier_phase": 7,
+          "3-8_00944_csp_phase": 3,
+          "3-8_00944_csp_joint": 3,
+          "Eyeglasses_183143_pixel": 7,
+          "Eyeglasses_183143_fourier_phase": 39,
+          "Eyeglasses_183143_csp_phase": 11,
+          "Eyeglasses_183143_csp_joint": 25
+        },
+        {
+          "3-8_00944_pixel": 4,
+          "3-8_00944_fourier_phase": 7,
+          "3-8_00944_csp_phase": 3,
+          "3-8_00944_csp_joint": 3,
+          "Eyeglasses_183143_pixel": 7,
+          "Eyeglasses_183143_fourier_phase": 40,
+          "Eyeglasses_183143_csp_phase": 12,
+          "Eyeglasses_183143_csp_joint": 25
+        },
+        {
+          "3-8_00944_pixel": 4,
+          "3-8_00944_fourier_phase": 7,
+          "3-8_00944_csp_phase": 3,
+          "3-8_00944_csp_joint": 3,
+          "Eyeglasses_183143_pixel": 7,
+          "Eyeglasses_183143_fourier_phase": 41,
+          "Eyeglasses_183143_csp_phase": 12,
+          "Eyeglasses_183143_csp_joint": 26
+        },
+        {
+          "3-8_00944_pixel": 4,
+          "3-8_00944_fourier_phase": 7,
+          "3-8_00944_csp_phase": 3,
+          "3-8_00944_csp_joint": 3,
+          "Eyeglasses_183143_pixel": 8,
+          "Eyeglasses_183143_fourier_phase": 42,
+          "Eyeglasses_183143_csp_phase": 12,
+          "Eyeglasses_183143_csp_joint": 27
+        },
+        {
+          "3-8_00944_pixel": 4,
+          "3-8_00944_fourier_phase": 7,
+          "3-8_00944_csp_phase": 3,
+          "3-8_00944_csp_joint": 4,
+          "Eyeglasses_183143_pixel": 8,
+          "Eyeglasses_183143_fourier_phase": 43,
+          "Eyeglasses_183143_csp_phase": 12,
+          "Eyeglasses_183143_csp_joint": 27
+        },
+        {
+          "3-8_00944_pixel": 4,
+          "3-8_00944_fourier_phase": 8,
+          "3-8_00944_csp_phase": 3,
+          "3-8_00944_csp_joint": 4,
+          "Eyeglasses_183143_pixel": 8,
+          "Eyeglasses_183143_fourier_phase": 44,
+          "Eyeglasses_183143_csp_phase": 13,
+          "Eyeglasses_183143_csp_joint": 28
+        },
+        {
+          "3-8_00944_pixel": 4,
+          "3-8_00944_fourier_phase": 8,
+          "3-8_00944_csp_phase": 3,
+          "3-8_00944_csp_joint": 4,
+          "Eyeglasses_183143_pixel": 8,
+          "Eyeglasses_183143_fourier_phase": 45,
+          "Eyeglasses_183143_csp_phase": 13,
+          "Eyeglasses_183143_csp_joint": 29
+        },
+        {
+          "3-8_00944_pixel": 4,
+          "3-8_00944_fourier_phase": 8,
+          "3-8_00944_csp_phase": 3,
+          "3-8_00944_csp_joint": 4,
+          "Eyeglasses_183143_pixel": 8,
+          "Eyeglasses_183143_fourier_phase": 46,
+          "Eyeglasses_183143_csp_phase": 13,
+          "Eyeglasses_183143_csp_joint": 29
+        },
+        {
+          "3-8_00944_pixel": 4,
+          "3-8_00944_fourier_phase": 8,
+          "3-8_00944_csp_phase": 3,
+          "3-8_00944_csp_joint": 4,
+          "Eyeglasses_183143_pixel": 9,
+          "Eyeglasses_183143_fourier_phase": 47,
+          "Eyeglasses_183143_csp_phase": 14,
+          "Eyeglasses_183143_csp_joint": 30
+        },
+        {
+          "3-8_00944_pixel": 4,
+          "3-8_00944_fourier_phase": 8,
+          "3-8_00944_csp_phase": 4,
+          "3-8_00944_csp_joint": 4,
+          "Eyeglasses_183143_pixel": 9,
+          "Eyeglasses_183143_fourier_phase": 48,
+          "Eyeglasses_183143_csp_phase": 14,
+          "Eyeglasses_183143_csp_joint": 31
+        },
+        {
+          "3-8_00944_pixel": 4,
+          "3-8_00944_fourier_phase": 9,
+          "3-8_00944_csp_phase": 4,
+          "3-8_00944_csp_joint": 4,
+          "Eyeglasses_183143_pixel": 9,
+          "Eyeglasses_183143_fourier_phase": 49,
+          "Eyeglasses_183143_csp_phase": 14,
+          "Eyeglasses_183143_csp_joint": 31
+        },
+        {
+          "3-8_00944_pixel": 5,
+          "3-8_00944_fourier_phase": 9,
+          "3-8_00944_csp_phase": 4,
+          "3-8_00944_csp_joint": 4,
+          "Eyeglasses_183143_pixel": 9,
+          "Eyeglasses_183143_fourier_phase": 50,
+          "Eyeglasses_183143_csp_phase": 14,
+          "Eyeglasses_183143_csp_joint": 32
+        },
+        {
+          "3-8_00944_pixel": 5,
+          "3-8_00944_fourier_phase": 9,
+          "3-8_00944_csp_phase": 4,
+          "3-8_00944_csp_joint": 4,
+          "Eyeglasses_183143_pixel": 9,
+          "Eyeglasses_183143_fourier_phase": 51,
+          "Eyeglasses_183143_csp_phase": 15,
+          "Eyeglasses_183143_csp_joint": 32
+        },
+        {
+          "3-8_00944_pixel": 5,
+          "3-8_00944_fourier_phase": 9,
+          "3-8_00944_csp_phase": 4,
+          "3-8_00944_csp_joint": 4,
+          "Eyeglasses_183143_pixel": 9,
+          "Eyeglasses_183143_fourier_phase": 52,
+          "Eyeglasses_183143_csp_phase": 15,
+          "Eyeglasses_183143_csp_joint": 33
+        },
+        {
+          "3-8_00944_pixel": 5,
+          "3-8_00944_fourier_phase": 9,
+          "3-8_00944_csp_phase": 4,
+          "3-8_00944_csp_joint": 4,
+          "Eyeglasses_183143_pixel": 10,
+          "Eyeglasses_183143_fourier_phase": 53,
+          "Eyeglasses_183143_csp_phase": 15,
+          "Eyeglasses_183143_csp_joint": 34
+        },
+        {
+          "3-8_00944_pixel": 5,
+          "3-8_00944_fourier_phase": 9,
+          "3-8_00944_csp_phase": 4,
+          "3-8_00944_csp_joint": 4,
+          "Eyeglasses_183143_pixel": 10,
+          "Eyeglasses_183143_fourier_phase": 54,
+          "Eyeglasses_183143_csp_phase": 16,
+          "Eyeglasses_183143_csp_joint": 34
+        },
+        {
+          "3-8_00944_pixel": 5,
+          "3-8_00944_fourier_phase": 10,
+          "3-8_00944_csp_phase": 4,
+          "3-8_00944_csp_joint": 5,
+          "Eyeglasses_183143_pixel": 10,
+          "Eyeglasses_183143_fourier_phase": 55,
+          "Eyeglasses_183143_csp_phase": 16,
+          "Eyeglasses_183143_csp_joint": 35
+        },
+        {
+          "3-8_00944_pixel": 5,
+          "3-8_00944_fourier_phase": 10,
+          "3-8_00944_csp_phase": 4,
+          "3-8_00944_csp_joint": 5,
+          "Eyeglasses_183143_pixel": 10,
+          "Eyeglasses_183143_fourier_phase": 56,
+          "Eyeglasses_183143_csp_phase": 16,
+          "Eyeglasses_183143_csp_joint": 36
+        },
+        {
+          "3-8_00944_pixel": 5,
+          "3-8_00944_fourier_phase": 10,
+          "3-8_00944_csp_phase": 4,
+          "3-8_00944_csp_joint": 5,
+          "Eyeglasses_183143_pixel": 10,
+          "Eyeglasses_183143_fourier_phase": 57,
+          "Eyeglasses_183143_csp_phase": 16,
+          "Eyeglasses_183143_csp_joint": 36
+        },
+        {
+          "3-8_00944_pixel": 5,
+          "3-8_00944_fourier_phase": 10,
+          "3-8_00944_csp_phase": 4,
+          "3-8_00944_csp_joint": 5,
+          "Eyeglasses_183143_pixel": 11,
+          "Eyeglasses_183143_fourier_phase": 58,
+          "Eyeglasses_183143_csp_phase": 17,
+          "Eyeglasses_183143_csp_joint": 37
+        },
+        {
+          "3-8_00944_pixel": 5,
+          "3-8_00944_fourier_phase": 10,
+          "3-8_00944_csp_phase": 4,
+          "3-8_00944_csp_joint": 5,
+          "Eyeglasses_183143_pixel": 11,
+          "Eyeglasses_183143_fourier_phase": 59,
+          "Eyeglasses_183143_csp_phase": 17,
+          "Eyeglasses_183143_csp_joint": 38
+        },
+        {
+          "3-8_00944_pixel": 5,
+          "3-8_00944_fourier_phase": 10,
+          "3-8_00944_csp_phase": 4,
+          "3-8_00944_csp_joint": 5,
+          "Eyeglasses_183143_pixel": 11,
+          "Eyeglasses_183143_fourier_phase": 60,
+          "Eyeglasses_183143_csp_phase": 17,
+          "Eyeglasses_183143_csp_joint": 38
+        },
+        {
+          "3-8_00944_pixel": 6,
+          "3-8_00944_fourier_phase": 11,
+          "3-8_00944_csp_phase": 5,
+          "3-8_00944_csp_joint": 5,
+          "Eyeglasses_183143_pixel": 11,
+          "Eyeglasses_183143_fourier_phase": 61,
+          "Eyeglasses_183143_csp_phase": 18,
+          "Eyeglasses_183143_csp_joint": 39
+        },
+        {
+          "3-8_00944_pixel": 6,
+          "3-8_00944_fourier_phase": 11,
+          "3-8_00944_csp_phase": 5,
+          "3-8_00944_csp_joint": 5,
+          "Eyeglasses_183143_pixel": 11,
+          "Eyeglasses_183143_fourier_phase": 62,
+          "Eyeglasses_183143_csp_phase": 18,
+          "Eyeglasses_183143_csp_joint": 39
+        },
+        {
+          "3-8_00944_pixel": 6,
+          "3-8_00944_fourier_phase": 11,
+          "3-8_00944_csp_phase": 5,
+          "3-8_00944_csp_joint": 5,
+          "Eyeglasses_183143_pixel": 11,
+          "Eyeglasses_183143_fourier_phase": 63,
+          "Eyeglasses_183143_csp_phase": 18,
+          "Eyeglasses_183143_csp_joint": 40
+        },
+        {
+          "3-8_00944_pixel": 6,
+          "3-8_00944_fourier_phase": 11,
+          "3-8_00944_csp_phase": 5,
+          "3-8_00944_csp_joint": 5,
+          "Eyeglasses_183143_pixel": 12,
+          "Eyeglasses_183143_fourier_phase": 64,
+          "Eyeglasses_183143_csp_phase": 19,
+          "Eyeglasses_183143_csp_joint": 41
+        },
+        {
+          "3-8_00944_pixel": 6,
+          "3-8_00944_fourier_phase": 11,
+          "3-8_00944_csp_phase": 5,
+          "3-8_00944_csp_joint": 5,
+          "Eyeglasses_183143_pixel": 12,
+          "Eyeglasses_183143_fourier_phase": 65,
+          "Eyeglasses_183143_csp_phase": 19,
+          "Eyeglasses_183143_csp_joint": 41
+        },
+        {
+          "3-8_00944_pixel": 6,
+          "3-8_00944_fourier_phase": 11,
+          "3-8_00944_csp_phase": 5,
+          "3-8_00944_csp_joint": 5,
+          "Eyeglasses_183143_pixel": 12,
+          "Eyeglasses_183143_fourier_phase": 66,
+          "Eyeglasses_183143_csp_phase": 19,
+          "Eyeglasses_183143_csp_joint": 42
+        },
+        {
+          "3-8_00944_pixel": 6,
+          "3-8_00944_fourier_phase": 12,
+          "3-8_00944_csp_phase": 5,
+          "3-8_00944_csp_joint": 6,
+          "Eyeglasses_183143_pixel": 12,
+          "Eyeglasses_183143_fourier_phase": 67,
+          "Eyeglasses_183143_csp_phase": 19,
+          "Eyeglasses_183143_csp_joint": 43
+        },
+        {
+          "3-8_00944_pixel": 6,
+          "3-8_00944_fourier_phase": 12,
+          "3-8_00944_csp_phase": 5,
+          "3-8_00944_csp_joint": 6,
+          "Eyeglasses_183143_pixel": 12,
+          "Eyeglasses_183143_fourier_phase": 68,
+          "Eyeglasses_183143_csp_phase": 20,
+          "Eyeglasses_183143_csp_joint": 43
+        },
+        {
+          "3-8_00944_pixel": 6,
+          "3-8_00944_fourier_phase": 12,
+          "3-8_00944_csp_phase": 5,
+          "3-8_00944_csp_joint": 6,
+          "Eyeglasses_183143_pixel": 13,
+          "Eyeglasses_183143_fourier_phase": 69,
+          "Eyeglasses_183143_csp_phase": 20,
+          "Eyeglasses_183143_csp_joint": 44
+        },
+        {
+          "3-8_00944_pixel": 6,
+          "3-8_00944_fourier_phase": 12,
+          "3-8_00944_csp_phase": 5,
+          "3-8_00944_csp_joint": 6,
+          "Eyeglasses_183143_pixel": 13,
+          "Eyeglasses_183143_fourier_phase": 70,
+          "Eyeglasses_183143_csp_phase": 20,
+          "Eyeglasses_183143_csp_joint": 45
+        },
+        {
+          "3-8_00944_pixel": 6,
+          "3-8_00944_fourier_phase": 12,
+          "3-8_00944_csp_phase": 5,
+          "3-8_00944_csp_joint": 6,
+          "Eyeglasses_183143_pixel": 13,
+          "Eyeglasses_183143_fourier_phase": 71,
+          "Eyeglasses_183143_csp_phase": 21,
+          "Eyeglasses_183143_csp_joint": 45
+        },
+        {
+          "3-8_00944_pixel": 7,
+          "3-8_00944_fourier_phase": 12,
+          "3-8_00944_csp_phase": 5,
+          "3-8_00944_csp_joint": 6,
+          "Eyeglasses_183143_pixel": 13,
+          "Eyeglasses_183143_fourier_phase": 72,
+          "Eyeglasses_183143_csp_phase": 21,
+          "Eyeglasses_183143_csp_joint": 46
+        },
+        {
+          "3-8_00944_pixel": 7,
+          "3-8_00944_fourier_phase": 13,
+          "3-8_00944_csp_phase": 5,
+          "3-8_00944_csp_joint": 6,
+          "Eyeglasses_183143_pixel": 13,
+          "Eyeglasses_183143_fourier_phase": 73,
+          "Eyeglasses_183143_csp_phase": 21,
+          "Eyeglasses_183143_csp_joint": 46
+        },
+        {
+          "3-8_00944_pixel": 7,
+          "3-8_00944_fourier_phase": 13,
+          "3-8_00944_csp_phase": 6,
+          "3-8_00944_csp_joint": 6,
+          "Eyeglasses_183143_pixel": 13,
+          "Eyeglasses_183143_fourier_phase": 74,
+          "Eyeglasses_183143_csp_phase": 21,
+          "Eyeglasses_183143_csp_joint": 47
+        },
+        {
+          "3-8_00944_pixel": 7,
+          "3-8_00944_fourier_phase": 13,
+          "3-8_00944_csp_phase": 6,
+          "3-8_00944_csp_joint": 6,
+          "Eyeglasses_183143_pixel": 14,
+          "Eyeglasses_183143_fourier_phase": 75,
+          "Eyeglasses_183143_csp_phase": 22,
+          "Eyeglasses_183143_csp_joint": 48
+        },
+        {
+          "3-8_00944_pixel": 7,
+          "3-8_00944_fourier_phase": 13,
+          "3-8_00944_csp_phase": 6,
+          "3-8_00944_csp_joint": 6,
+          "Eyeglasses_183143_pixel": 14,
+          "Eyeglasses_183143_fourier_phase": 76,
+          "Eyeglasses_183143_csp_phase": 22,
+          "Eyeglasses_183143_csp_joint": 48
+        },
+        {
+          "3-8_00944_pixel": 7,
+          "3-8_00944_fourier_phase": 13,
+          "3-8_00944_csp_phase": 6,
+          "3-8_00944_csp_joint": 6,
+          "Eyeglasses_183143_pixel": 14,
+          "Eyeglasses_183143_fourier_phase": 77,
+          "Eyeglasses_183143_csp_phase": 22,
+          "Eyeglasses_183143_csp_joint": 49
+        },
+        {
+          "3-8_00944_pixel": 7,
+          "3-8_00944_fourier_phase": 14,
+          "3-8_00944_csp_phase": 6,
+          "3-8_00944_csp_joint": 6,
+          "Eyeglasses_183143_pixel": 14,
+          "Eyeglasses_183143_fourier_phase": 78,
+          "Eyeglasses_183143_csp_phase": 23,
+          "Eyeglasses_183143_csp_joint": 50
+        },
+        {
+          "3-8_00944_pixel": 7,
+          "3-8_00944_fourier_phase": 14,
+          "3-8_00944_csp_phase": 6,
+          "3-8_00944_csp_joint": 7,
+          "Eyeglasses_183143_pixel": 14,
+          "Eyeglasses_183143_fourier_phase": 79,
+          "Eyeglasses_183143_csp_phase": 23,
+          "Eyeglasses_183143_csp_joint": 50
+        },
+        {
+          "3-8_00944_pixel": 7,
+          "3-8_00944_fourier_phase": 14,
+          "3-8_00944_csp_phase": 6,
+          "3-8_00944_csp_joint": 7,
+          "Eyeglasses_183143_pixel": 15,
+          "Eyeglasses_183143_fourier_phase": 80,
+          "Eyeglasses_183143_csp_phase": 23,
+          "Eyeglasses_183143_csp_joint": 51
+        },
+        {
+          "3-8_00944_pixel": 7,
+          "3-8_00944_fourier_phase": 14,
+          "3-8_00944_csp_phase": 6,
+          "3-8_00944_csp_joint": 7,
+          "Eyeglasses_183143_pixel": 15,
+          "Eyeglasses_183143_fourier_phase": 81,
+          "Eyeglasses_183143_csp_phase": 23,
+          "Eyeglasses_183143_csp_joint": 52
+        },
+        {
+          "3-8_00944_pixel": 7,
+          "3-8_00944_fourier_phase": 14,
+          "3-8_00944_csp_phase": 6,
+          "3-8_00944_csp_joint": 7,
+          "Eyeglasses_183143_pixel": 15,
+          "Eyeglasses_183143_fourier_phase": 82,
+          "Eyeglasses_183143_csp_phase": 24,
+          "Eyeglasses_183143_csp_joint": 52
+        },
+        {
+          "3-8_00944_pixel": 8,
+          "3-8_00944_fourier_phase": 14,
+          "3-8_00944_csp_phase": 6,
+          "3-8_00944_csp_joint": 7,
+          "Eyeglasses_183143_pixel": 15,
+          "Eyeglasses_183143_fourier_phase": 83,
+          "Eyeglasses_183143_csp_phase": 24,
+          "Eyeglasses_183143_csp_joint": 53
+        },
+        {
+          "3-8_00944_pixel": 8,
+          "3-8_00944_fourier_phase": 15,
+          "3-8_00944_csp_phase": 6,
+          "3-8_00944_csp_joint": 7,
+          "Eyeglasses_183143_pixel": 15,
+          "Eyeglasses_183143_fourier_phase": 84,
+          "Eyeglasses_183143_csp_phase": 24,
+          "Eyeglasses_183143_csp_joint": 53
+        },
+        {
+          "3-8_00944_pixel": 8,
+          "3-8_00944_fourier_phase": 15,
+          "3-8_00944_csp_phase": 6,
+          "3-8_00944_csp_joint": 7,
+          "Eyeglasses_183143_pixel": 15,
+          "Eyeglasses_183143_fourier_phase": 85,
+          "Eyeglasses_183143_csp_phase": 25,
+          "Eyeglasses_183143_csp_joint": 54
+        },
+        {
+          "3-8_00944_pixel": 8,
+          "3-8_00944_fourier_phase": 15,
+          "3-8_00944_csp_phase": 6,
+          "3-8_00944_csp_joint": 7,
+          "Eyeglasses_183143_pixel": 16,
+          "Eyeglasses_183143_fourier_phase": 86,
+          "Eyeglasses_183143_csp_phase": 25,
+          "Eyeglasses_183143_csp_joint": 55
+        },
+        {
+          "3-8_00944_pixel": 8,
+          "3-8_00944_fourier_phase": 15,
+          "3-8_00944_csp_phase": 6,
+          "3-8_00944_csp_joint": 7,
+          "Eyeglasses_183143_pixel": 16,
+          "Eyeglasses_183143_fourier_phase": 87,
+          "Eyeglasses_183143_csp_phase": 25,
+          "Eyeglasses_183143_csp_joint": 55
+        },
+        {
+          "3-8_00944_pixel": 8,
+          "3-8_00944_fourier_phase": 15,
+          "3-8_00944_csp_phase": 7,
+          "3-8_00944_csp_joint": 7,
+          "Eyeglasses_183143_pixel": 16,
+          "Eyeglasses_183143_fourier_phase": 88,
+          "Eyeglasses_183143_csp_phase": 25,
+          "Eyeglasses_183143_csp_joint": 56
+        },
+        {
+          "3-8_00944_pixel": 8,
+          "3-8_00944_fourier_phase": 15,
+          "3-8_00944_csp_phase": 7,
+          "3-8_00944_csp_joint": 7,
+          "Eyeglasses_183143_pixel": 16,
+          "Eyeglasses_183143_fourier_phase": 89,
+          "Eyeglasses_183143_csp_phase": 26,
+          "Eyeglasses_183143_csp_joint": 57
+        },
+        {
+          "3-8_00944_pixel": 8,
+          "3-8_00944_fourier_phase": 16,
+          "3-8_00944_csp_phase": 7,
+          "3-8_00944_csp_joint": 7,
+          "Eyeglasses_183143_pixel": 16,
+          "Eyeglasses_183143_fourier_phase": 90,
+          "Eyeglasses_183143_csp_phase": 26,
+          "Eyeglasses_183143_csp_joint": 57
+        },
+        {
+          "3-8_00944_pixel": 8,
+          "3-8_00944_fourier_phase": 16,
+          "3-8_00944_csp_phase": 7,
+          "3-8_00944_csp_joint": 8,
+          "Eyeglasses_183143_pixel": 17,
+          "Eyeglasses_183143_fourier_phase": 91,
+          "Eyeglasses_183143_csp_phase": 26,
+          "Eyeglasses_183143_csp_joint": 58
+        },
+        {
+          "3-8_00944_pixel": 8,
+          "3-8_00944_fourier_phase": 16,
+          "3-8_00944_csp_phase": 7,
+          "3-8_00944_csp_joint": 8,
+          "Eyeglasses_183143_pixel": 17,
+          "Eyeglasses_183143_fourier_phase": 92,
+          "Eyeglasses_183143_csp_phase": 27,
+          "Eyeglasses_183143_csp_joint": 59
+        },
+        {
+          "3-8_00944_pixel": 8,
+          "3-8_00944_fourier_phase": 16,
+          "3-8_00944_csp_phase": 7,
+          "3-8_00944_csp_joint": 8,
+          "Eyeglasses_183143_pixel": 17,
+          "Eyeglasses_183143_fourier_phase": 93,
+          "Eyeglasses_183143_csp_phase": 27,
+          "Eyeglasses_183143_csp_joint": 59
+        },
+        {
+          "3-8_00944_pixel": 9,
+          "3-8_00944_fourier_phase": 16,
+          "3-8_00944_csp_phase": 7,
+          "3-8_00944_csp_joint": 8,
+          "Eyeglasses_183143_pixel": 17,
+          "Eyeglasses_183143_fourier_phase": 94,
+          "Eyeglasses_183143_csp_phase": 27,
+          "Eyeglasses_183143_csp_joint": 60
+        },
+        {
+          "3-8_00944_pixel": 9,
+          "3-8_00944_fourier_phase": 16,
+          "3-8_00944_csp_phase": 7,
+          "3-8_00944_csp_joint": 8,
+          "Eyeglasses_183143_pixel": 17,
+          "Eyeglasses_183143_fourier_phase": 95,
+          "Eyeglasses_183143_csp_phase": 27,
+          "Eyeglasses_183143_csp_joint": 60
+        },
+        {
+          "3-8_00944_pixel": 9,
+          "3-8_00944_fourier_phase": 17,
+          "3-8_00944_csp_phase": 7,
+          "3-8_00944_csp_joint": 8,
+          "Eyeglasses_183143_pixel": 17,
+          "Eyeglasses_183143_fourier_phase": 96,
+          "Eyeglasses_183143_csp_phase": 28,
+          "Eyeglasses_183143_csp_joint": 61
+        },
+        {
+          "3-8_00944_pixel": 9,
+          "3-8_00944_fourier_phase": 17,
+          "3-8_00944_csp_phase": 7,
+          "3-8_00944_csp_joint": 8,
+          "Eyeglasses_183143_pixel": 18,
+          "Eyeglasses_183143_fourier_phase": 97,
+          "Eyeglasses_183143_csp_phase": 28,
+          "Eyeglasses_183143_csp_joint": 62
+        },
+        {
+          "3-8_00944_pixel": 9,
+          "3-8_00944_fourier_phase": 17,
+          "3-8_00944_csp_phase": 7,
+          "3-8_00944_csp_joint": 8,
+          "Eyeglasses_183143_pixel": 18,
+          "Eyeglasses_183143_fourier_phase": 98,
+          "Eyeglasses_183143_csp_phase": 28,
+          "Eyeglasses_183143_csp_joint": 62
+        },
+        {
+          "3-8_00944_pixel": 9,
+          "3-8_00944_fourier_phase": 17,
+          "3-8_00944_csp_phase": 7,
+          "3-8_00944_csp_joint": 8,
+          "Eyeglasses_183143_pixel": 18,
+          "Eyeglasses_183143_fourier_phase": 99,
+          "Eyeglasses_183143_csp_phase": 29,
+          "Eyeglasses_183143_csp_joint": 63
+        },
+        {
+          "3-8_00944_pixel": 9,
+          "3-8_00944_fourier_phase": 17,
+          "3-8_00944_csp_phase": 7,
+          "3-8_00944_csp_joint": 8,
+          "Eyeglasses_183143_pixel": 18,
+          "Eyeglasses_183143_fourier_phase": 100,
+          "Eyeglasses_183143_csp_phase": 29,
+          "Eyeglasses_183143_csp_joint": 64
+        },
+        {
+          "3-8_00944_pixel": 9,
+          "3-8_00944_fourier_phase": 18,
+          "3-8_00944_csp_phase": 8,
+          "3-8_00944_csp_joint": 8,
+          "Eyeglasses_183143_pixel": 18,
+          "Eyeglasses_183143_fourier_phase": 101,
+          "Eyeglasses_183143_csp_phase": 29,
+          "Eyeglasses_183143_csp_joint": 64
+        },
+        {
+          "3-8_00944_pixel": 9,
+          "3-8_00944_fourier_phase": 18,
+          "3-8_00944_csp_phase": 8,
+          "3-8_00944_csp_joint": 8,
+          "Eyeglasses_183143_pixel": 19,
+          "Eyeglasses_183143_fourier_phase": 102,
+          "Eyeglasses_183143_csp_phase": 30,
+          "Eyeglasses_183143_csp_joint": 65
+        },
+        {
+          "3-8_00944_pixel": 9,
+          "3-8_00944_fourier_phase": 18,
+          "3-8_00944_csp_phase": 8,
+          "3-8_00944_csp_joint": 9,
+          "Eyeglasses_183143_pixel": 19,
+          "Eyeglasses_183143_fourier_phase": 103,
+          "Eyeglasses_183143_csp_phase": 30,
+          "Eyeglasses_183143_csp_joint": 66
+        },
+        {
+          "3-8_00944_pixel": 9,
+          "3-8_00944_fourier_phase": 18,
+          "3-8_00944_csp_phase": 8,
+          "3-8_00944_csp_joint": 9,
+          "Eyeglasses_183143_pixel": 19,
+          "Eyeglasses_183143_fourier_phase": 104,
+          "Eyeglasses_183143_csp_phase": 30,
+          "Eyeglasses_183143_csp_joint": 66
+        },
+        {
+          "3-8_00944_pixel": 10,
+          "3-8_00944_fourier_phase": 18,
+          "3-8_00944_csp_phase": 8,
+          "3-8_00944_csp_joint": 9,
+          "Eyeglasses_183143_pixel": 19,
+          "Eyeglasses_183143_fourier_phase": 105,
+          "Eyeglasses_183143_csp_phase": 30,
+          "Eyeglasses_183143_csp_joint": 67
+        },
+        {
+          "3-8_00944_pixel": 10,
+          "3-8_00944_fourier_phase": 18,
+          "3-8_00944_csp_phase": 8,
+          "3-8_00944_csp_joint": 9,
+          "Eyeglasses_183143_pixel": 19,
+          "Eyeglasses_183143_fourier_phase": 106,
+          "Eyeglasses_183143_csp_phase": 31,
+          "Eyeglasses_183143_csp_joint": 67
+        },
+        {
+          "3-8_00944_pixel": 10,
+          "3-8_00944_fourier_phase": 19,
+          "3-8_00944_csp_phase": 8,
+          "3-8_00944_csp_joint": 9,
+          "Eyeglasses_183143_pixel": 19,
+          "Eyeglasses_183143_fourier_phase": 107,
+          "Eyeglasses_183143_csp_phase": 31,
+          "Eyeglasses_183143_csp_joint": 68
+        },
+        {
+          "3-8_00944_pixel": 10,
+          "3-8_00944_fourier_phase": 19,
+          "3-8_00944_csp_phase": 8,
+          "3-8_00944_csp_joint": 9,
+          "Eyeglasses_183143_pixel": 20,
+          "Eyeglasses_183143_fourier_phase": 108,
+          "Eyeglasses_183143_csp_phase": 31,
+          "Eyeglasses_183143_csp_joint": 69
+        },
+        {
+          "3-8_00944_pixel": 10,
+          "3-8_00944_fourier_phase": 19,
+          "3-8_00944_csp_phase": 8,
+          "3-8_00944_csp_joint": 9,
+          "Eyeglasses_183143_pixel": 20,
+          "Eyeglasses_183143_fourier_phase": 109,
+          "Eyeglasses_183143_csp_phase": 32,
+          "Eyeglasses_183143_csp_joint": 69
+        },
+        {
+          "3-8_00944_pixel": 10,
+          "3-8_00944_fourier_phase": 19,
+          "3-8_00944_csp_phase": 8,
+          "3-8_00944_csp_joint": 9,
+          "Eyeglasses_183143_pixel": 20,
+          "Eyeglasses_183143_fourier_phase": 110,
+          "Eyeglasses_183143_csp_phase": 32,
+          "Eyeglasses_183143_csp_joint": 70
+        },
+        {
+          "3-8_00944_pixel": 10,
+          "3-8_00944_fourier_phase": 19,
+          "3-8_00944_csp_phase": 8,
+          "3-8_00944_csp_joint": 9,
+          "Eyeglasses_183143_pixel": 20,
+          "Eyeglasses_183143_fourier_phase": 111,
+          "Eyeglasses_183143_csp_phase": 32,
+          "Eyeglasses_183143_csp_joint": 71
+        },
+        {
+          "3-8_00944_pixel": 10,
+          "3-8_00944_fourier_phase": 19,
+          "3-8_00944_csp_phase": 8,
+          "3-8_00944_csp_joint": 9,
+          "Eyeglasses_183143_pixel": 20,
+          "Eyeglasses_183143_fourier_phase": 112,
+          "Eyeglasses_183143_csp_phase": 32,
+          "Eyeglasses_183143_csp_joint": 71
+        },
+        {
+          "3-8_00944_pixel": 10,
+          "3-8_00944_fourier_phase": 20,
+          "3-8_00944_csp_phase": 8,
+          "3-8_00944_csp_joint": 9,
+          "Eyeglasses_183143_pixel": 21,
+          "Eyeglasses_183143_fourier_phase": 113,
+          "Eyeglasses_183143_csp_phase": 33,
+          "Eyeglasses_183143_csp_joint": 72
+        },
+        {
+          "3-8_00944_pixel": 10,
+          "3-8_00944_fourier_phase": 20,
+          "3-8_00944_csp_phase": 8,
+          "3-8_00944_csp_joint": 9,
+          "Eyeglasses_183143_pixel": 21,
+          "Eyeglasses_183143_fourier_phase": 114,
+          "Eyeglasses_183143_csp_phase": 33,
+          "Eyeglasses_183143_csp_joint": 73
+        },
+        {
+          "3-8_00944_pixel": 10,
+          "3-8_00944_fourier_phase": 20,
+          "3-8_00944_csp_phase": 9,
+          "3-8_00944_csp_joint": 10,
+          "Eyeglasses_183143_pixel": 21,
+          "Eyeglasses_183143_fourier_phase": 115,
+          "Eyeglasses_183143_csp_phase": 33,
+          "Eyeglasses_183143_csp_joint": 73
+        },
+        {
+          "3-8_00944_pixel": 11,
+          "3-8_00944_fourier_phase": 20,
+          "3-8_00944_csp_phase": 9,
+          "3-8_00944_csp_joint": 10,
+          "Eyeglasses_183143_pixel": 21,
+          "Eyeglasses_183143_fourier_phase": 116,
+          "Eyeglasses_183143_csp_phase": 34,
+          "Eyeglasses_183143_csp_joint": 74
+        },
+        {
+          "3-8_00944_pixel": 11,
+          "3-8_00944_fourier_phase": 20,
+          "3-8_00944_csp_phase": 9,
+          "3-8_00944_csp_joint": 10,
+          "Eyeglasses_183143_pixel": 21,
+          "Eyeglasses_183143_fourier_phase": 117,
+          "Eyeglasses_183143_csp_phase": 34,
+          "Eyeglasses_183143_csp_joint": 74
+        },
+        {
+          "3-8_00944_pixel": 11,
+          "3-8_00944_fourier_phase": 20,
+          "3-8_00944_csp_phase": 9,
+          "3-8_00944_csp_joint": 10,
+          "Eyeglasses_183143_pixel": 21,
+          "Eyeglasses_183143_fourier_phase": 118,
+          "Eyeglasses_183143_csp_phase": 34,
+          "Eyeglasses_183143_csp_joint": 75
+        },
+        {
+          "3-8_00944_pixel": 11,
+          "3-8_00944_fourier_phase": 21,
+          "3-8_00944_csp_phase": 9,
+          "3-8_00944_csp_joint": 10,
+          "Eyeglasses_183143_pixel": 22,
+          "Eyeglasses_183143_fourier_phase": 119,
+          "Eyeglasses_183143_csp_phase": 34,
+          "Eyeglasses_183143_csp_joint": 76
+        },
+        {
+          "3-8_00944_pixel": 11,
+          "3-8_00944_fourier_phase": 21,
+          "3-8_00944_csp_phase": 9,
+          "3-8_00944_csp_joint": 10,
+          "Eyeglasses_183143_pixel": 22,
+          "Eyeglasses_183143_fourier_phase": 120,
+          "Eyeglasses_183143_csp_phase": 35,
+          "Eyeglasses_183143_csp_joint": 76
+        },
+        {
+          "3-8_00944_pixel": 11,
+          "3-8_00944_fourier_phase": 21,
+          "3-8_00944_csp_phase": 9,
+          "3-8_00944_csp_joint": 10,
+          "Eyeglasses_183143_pixel": 22,
+          "Eyeglasses_183143_fourier_phase": 121,
+          "Eyeglasses_183143_csp_phase": 35,
+          "Eyeglasses_183143_csp_joint": 77
+        }
+      ]
     },
     {
       "gif": "cat3_target285_cap1.0.gif",

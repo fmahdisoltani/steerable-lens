@@ -39,6 +39,6 @@ The site is a plain static page. Publish from the root of the `main` branch; `.n
 
 The homepage follows the supplied scholarly project-page design. The earlier interactive page remains at `explore.html`.
 
-Three GIFs in `figures/` display saved experiment outputs, without intermediate image interpolation. `animations.js` provides shared pause/play controls and respects the operating system's reduced-motion preference by showing endpoint posters. Static charts remain static. GIF color quantization is a format limitation; the interactive page displays PNG frames.
+Three GIFs in `figures/` display actual optimization sequences, without image interpolation. The main comparison contains 122 animation frames and includes the source, every accepted step before the requested budget, and the exact matched-budget endpoint for all eight trajectories. These trajectories were replayed with the original settings; final pixels and G/O/O2 probabilities match the published endpoints exactly. Shorter trajectories hold recorded states to finish together. `animations.js` provides shared pause/play controls and respects the operating system's reduced-motion preference by showing endpoint posters. Static charts remain static. GIF color quantization is a format limitation; the interactive page displays PNG frames.
 
 The original fonts are self-hosted in `fonts/`; their included OFL licenses apply. No external font service is contacted by the page.
