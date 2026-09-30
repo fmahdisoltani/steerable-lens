@@ -1,0 +1,126 @@
+{
+  "encoding": "Original recorded image arrays; no tweening or generated intermediate states. GIF palette quantization only. Nearest-neighbor display scaling for the matched comparison.",
+  "main_selection": "User-selected illustrative cases 3-8_00944 and Eyeglasses_183143, selected after inspecting images and outcomes; not representative sampling.",
+  "matched_inputs": [
+    {
+      "source": "outputs/mnist_test_structure_replication_seed20260923/assets/3-8_00944_pixel_2.0.npz",
+      "sha256": "8e16754d50683e2832f745a5a620e4724a3d303373baa84142f7344eacdf2fae",
+      "measured_l2": 2.000051736831665
+    },
+    {
+      "source": "outputs/mnist_test_structure_replication_seed20260923/assets/3-8_00944_fourier_phase_2.0.npz",
+      "sha256": "7b93d551a7e78e0dccdf4502415bb2488ad5cbdb8aa2f279123960735044b039",
+      "measured_l2": 1.9996211528778076
+    },
+    {
+      "source": "outputs/mnist_test_structure_replication_seed20260923/assets/3-8_00944_csp_phase_2.0.npz",
+      "sha256": "12a7f34cc84f67380fd385d8f3177fbbd3cab8ca533063b8dc89fdbd90fd2e2f",
+      "measured_l2": 2.0001659393310547
+    },
+    {
+      "source": "outputs/mnist_test_structure_replication_seed20260923/assets/3-8_00944_csp_joint_2.0.npz",
+      "sha256": "bb07850758647390df787cd3080154c60fe1ed2e1548f732c4ec22bd5f741540",
+      "measured_l2": 2.000300645828247
+    },
+    {
+      "source": "outputs/celeba_structure_margin_seed20260923/evaluation/assets/Eyeglasses_183143_pixel_4.571428571428571.npz",
+      "sha256": "56d2a05785aec042cdd9a7c0998b5be920ef3e8b30719b1c8a05856fb0b7bcf9",
+      "measured_l2": 4.57177734375
+    },
+    {
+      "source": "outputs/celeba_structure_margin_seed20260923/evaluation/assets/Eyeglasses_183143_fourier_phase_4.571428571428571.npz",
+      "sha256": "18f78c7d4b9aa32fc101fd767b0e8f3e015b2cdd54dffb3455deaa9c35a41a16",
+      "measured_l2": 4.571318626403809
+    },
+    {
+      "source": "outputs/celeba_structure_margin_seed20260923/evaluation/assets/Eyeglasses_183143_csp_phase_4.571428571428571.npz",
+      "sha256": "86bb5b6f3280ff150b58c409e0163b54d9725e2689de8860f02bf9aad49675d7",
+      "measured_l2": 4.57110071182251
+    },
+    {
+      "source": "outputs/celeba_structure_margin_seed20260923/evaluation/assets/Eyeglasses_183143_csp_joint_4.571428571428571.npz",
+      "sha256": "a869ca7e61bf4df017d8d42b264bc50eb2400472e620d3a6e2d15d96a39a209f",
+      "measured_l2": 4.571918487548828
+    }
+  ],
+  "assets": [
+    {
+      "gif": "main_dissociation.gif",
+      "poster": "main_dissociation_poster.png",
+      "dimensions": [
+        960,
+        648
+      ],
+      "frame_count": 2,
+      "durations_ms": [
+        1200,
+        2400
+      ],
+      "loop_duration_ms": 3600,
+      "bytes": 153870,
+      "sha256": "32d55bce05b8b6644623c739563b89ff7826f2aa72c1786e830fb94af870397c"
+    },
+    {
+      "gif": "cat3_target285_cap1.0.gif",
+      "poster": "cat3_target285_cap1.0_poster.png",
+      "dimensions": [
+        500,
+        358
+      ],
+      "frame_count": 12,
+      "durations_ms": [
+        1200,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        1800
+      ],
+      "loop_duration_ms": 7000,
+      "bytes": 1072343,
+      "sha256": "23b09ef8f7143713572950f1a04d0241ffb78838fc191475fe589fa71e68dda5",
+      "recorded_npz": "outputs/imagenet_current_live_yiq/cat3_target285_cap1.0.npz",
+      "recorded_json": "outputs/imagenet_current_live_yiq/cat3_target285_cap1.0.json",
+      "source_sha256": "6dcb2915c98e532fd349e8e648a6572bdb5ff80390b9dff730e712bd4f7b9b10",
+      "l2_verified_atol": 0.0002,
+      "max_l2_recalculation_difference": 8.96453857421875e-05
+    },
+    {
+      "gif": "cat1_target282_cap1.0.gif",
+      "poster": "cat1_target282_cap1.0_poster.png",
+      "dimensions": [
+        500,
+        358
+      ],
+      "frame_count": 12,
+      "durations_ms": [
+        1200,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        1800
+      ],
+      "loop_duration_ms": 7000,
+      "bytes": 989161,
+      "sha256": "0b6435f24033a8143505d0eb2183c4e9ca5362f6705b652642d0477e880fdffe",
+      "recorded_npz": "outputs/imagenet_current_live_yiq/cat1_target282_cap1.0.npz",
+      "recorded_json": "outputs/imagenet_current_live_yiq/cat1_target282_cap1.0.json",
+      "source_sha256": "5ac514f9c10cc3712329406b4f664bc0e5e95ca7bf18328a2e3f858c43a5fbfb",
+      "l2_verified_atol": 0.0002,
+      "max_l2_recalculation_difference": 0.00014495849609375
+    }
+  ]
+}

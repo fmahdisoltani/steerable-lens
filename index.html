@@ -1,14 +1,280 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Steerable Lens: inspect classifier-driven image edits and compare optimized confidence, independent transfer, and smooth reconstruction."><title>Steerable Lens — Confidence Is Not Evidence</title><link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2315223b'/%3E%3Ccircle cx='16' cy='16' r='10' fill='none' stroke='%2361c4ff' stroke-width='2'/%3E%3Cpath d='M6 16h20M16 6v20' stroke='%23fff' stroke-width='2'/%3E%3C/svg%3E"><link rel="stylesheet" href="styles.css"><script src="app.js" defer></script></head>
-<body><a class="skip" href="#comparison">Skip to comparisons</a>
-<header class="site-header"><a class="brand" href="#top"><span class="brand-icon" aria-hidden="true">⊕</span> Steerable Lens</a><nav aria-label="Main navigation"><a href="#comparison">Compare</a><a href="#results">Results</a><a href="#trajectories">Trajectories</a><a href="#protocol">Protocol</a></nav><span class="edition">Research companion</span></header>
-<main id="top">
-<section class="hero wrap"><div><p class="eyebrow">CLASSIFIER SENSITIVITY, UNDER INSPECTION</p><h1>Confidence is<br><em>not evidence.</em></h1></div><div class="hero-copy"><p class="lead">A classifier can change its mind <br>without changing what we see.</p><p>Steerable Lens edits images through multiscale phase and amplitude coordinates. We examine what those edits reveal—and what their scores cannot establish.</p><a class="text-link" href="#comparison">Inspect the evidence <span aria-hidden="true">↓</span></a></div></section>
-<section class="comparison-section" id="comparison"><div class="wrap"><div class="section-heading"><div><p class="eyebrow">01 / THE SAME IMAGE BUDGET</p><h2>One edit. Different verdicts.</h2></div><div class="case-controls"><label for="dataset">Dataset<select id="dataset"><option>MNIST</option><option>CelebA</option></select></label><label for="case">Source & target<select id="case"></select></label></div></div><div class="case-meta"><span id="case-title"></span><span id="case-budget"></span></div><div id="comparison-grid" class="comparison-grid" aria-live="polite"></div><p id="case-reading" class="reading"></p><div class="legend-notes"><p><b>G</b> is the classifier used to optimize the edit. <b>Joint transfer</b> requires both classifiers excluded from edit optimization to predict the target; “No” means at least one does not.</p><p><b>E</b> is edit energy explained by an 8×8 smooth warp + gain fit. A higher score means a better fit to this family, not a more recognizable target.</p></div><p class="footnote">Illustrative cases, not a representative sample. Four MNIST examples and Eyeglasses_183143 were selected after inspecting outcomes; other cases follow record order (MNIST) or sorted common-attainment IDs (CelebA). All displayed methods attain the stated budget.</p></div></section>
-<section id="results" class="section wrap"><div class="section-heading"><div><p class="eyebrow">02 / RECONSTRUCTION DEPENDS ON THE FAMILY</p><h2>Change the fit. Change the ranking.</h2></div><div class="segmented" role="group" aria-label="Reconstruction family"><button type="button" data-family="warp" aria-pressed="false">Warp only</button><button type="button" data-family="gain" aria-pressed="true">Warp + gain</button></div></div><p class="intro">How much of an edit can a smooth transformation of the source recover? Compare the same endpoints under two fitting families.</p><p class="footnote">Median explained edit energy E (%) · 8×8 control grid · Same common sources in both fits</p><div id="chart-grid" class="chart-grid" aria-live="polite"></div><p id="result-reading" class="result-note"></p><p class="footnote">CelebA uses L₂ = 128/28, matching MNIST L₂ = 2 in RMS. Counts show sources where all four methods attain the budget, out of all requested sources. Bars are marginal medians; they do not show paired differences or uncertainty intervals.</p><div class="stat-strip"><div><strong>300 / 300</strong><p>MNIST sources reach both budgets under every method.</p></div><div><strong>681 / 800</strong><p>CelebA method–budget endpoints attain their requested distance.</p></div><div><strong>6 / 300</strong><p>CSP-phase MNIST edits at L₂ = 2 receive a target prediction from both judges.</p></div></div></section>
-<section id="trajectories" class="section trajectory-section"><div class="wrap"><div class="section-heading"><div><p class="eyebrow">03 / WATCH THE OPTIMIZATION</p><h2>A score evolves. Inspect the image.</h2></div><div class="trajectory-controls"><label for="trajectory">Source & target<select id="trajectory"><option value="cat3">Cat 3 · Egyptian cat</option><option value="cat1">Cat 1 · Tiger cat</option></select></label><label for="cap">Phase cap<select id="cap"><option value="0.25">0.25 rad</option><option value="0.5">0.5 rad</option><option value="1" selected>1.0 rad</option></select></label></div></div><p class="intro">Twelve saved frames from step-local luminance steering. The current image is reanalyzed at every step; the phase cap limits each candidate step, not the final image distance.</p><div class="trajectory-layout"><div class="trajectory-images"><figure><img id="trajectory-source" width="448" height="448" alt="Source cat photograph"><figcaption>Source <span>Frame 0</span></figcaption></figure><figure><img id="trajectory-frame" width="448" height="448" alt="Current edited cat photograph"><figcaption>Edited image <span id="image-frame-label">Frame 11</span></figcaption></figure></div><div class="trajectory-panel"><h3 id="trajectory-title"></h3><div class="trajectory-metrics" aria-live="off"><div><strong id="trajectory-g"></strong><span>G target probability</span></div><div><strong id="trajectory-o"></strong><span>O target probability</span></div><div><strong id="trajectory-l2"></strong><span>Image L₂ distance</span></div></div><svg id="sparkline" class="sparkline" viewBox="0 0 440 90" role="img" aria-label="Target probability of G and O across all twelve frames"></svg><div class="spark-legend"><span><i style="background:#70c7ff"></i>Optimized G</span><span><i style="background:#edbced"></i>Independent O</span></div><div class="playback"><button id="play" type="button" aria-label="Play trajectory">Play</button><label class="sr-only" for="frame">Trajectory frame</label><input id="frame" type="range" min="0" max="11" step="1" value="11" aria-label="Trajectory frame"><output class="frame-count" id="frame-count" for="frame">11 / 11</output></div><p class="trajectory-disclaimer">G: robust ResNet-50. O: standard ResNet-18. These selected trajectories are not a matched method comparison or a human-validated semantic change.</p></div></div><p class="footnote">Current reference implementation · Luminance-only phase edits · Fixed amplitudes and residuals within each step · RGB clipping is part of the evaluated operator. Historical LocalPyramid runs use a different update and are not pooled here.</p></div></section>
-<section id="protocol" class="section wrap"><div class="section-heading"><div><p class="eyebrow">04 / WHAT THE MEASUREMENTS MEAN</p><h2>Keep the questions separate.</h2></div></div><p class="intro">Steerable Lens is a controlled instrument for probing sensitivity. Each measurement answers a different question about the resulting edit.</p><div class="protocol-grid"><article class="protocol-card"><span class="protocol-num">G / RESPONSE</span><h3>Did the optimized score rise?</h3><p>The driver classifier supplies the gradient. Its target probability measures the objective’s response, so it is not independent evidence that the desired visual change occurred.</p></article><article class="protocol-card"><span class="protocol-num">O, O₂ / TRANSFER</span><h3>Do other classifiers agree?</h3><p>Two judges are never differentiated through during editing. Their target predictions measure transfer. Agreement does not establish realism, identity preservation, or human recognition.</p></article><article class="protocol-card"><span class="protocol-num">E / RECONSTRUCTION</span><h3>Does a smooth transformation fit?</h3><p>A classifier-free inverse warp, with optional spatial gain, approximates the edit. E measures the fraction of edit energy recovered by this restricted family.</p></article></div><div class="human-block"><div><p class="eyebrow">HUMAN PERCEPTION IS A SEPARATE AXIS</p><h3>A small CelebA pilot.</h3><p>Two complete rating sets cover 90 source–edit pairs from 24 source–attribute cases. The interface hides method identities and classifier scores. Target change, unrelated-content preservation, and visible corruption are rated separately.</p><p>These are pooled response counts. Two ratings of an image are repeated observations, not independent image samples.</p></div><div class="table-wrap"><table><caption class="sr-only">Pooled clear target-change responses from the two complete rating sets</caption><thead><tr><th scope="col">Method</th><th scope="col">Images</th><th scope="col">Clear / ratings</th><th scope="col">Ratio</th></tr></thead><tbody><tr><td>Pixel</td><td>23</td><td>2 / 46</td><td>4.3%</td></tr><tr><td>Fourier phase</td><td>23</td><td>9 / 46</td><td>19.6%</td></tr><tr><td>CSP phase</td><td>22</td><td>20 / 44</td><td>45.5%</td></tr><tr><td>Joint CSP</td><td>22</td><td>22 / 44</td><td>50.0%</td></tr></tbody></table><p class="footnote" style="margin-top:15px">Descriptive convenience sample: friends and family participated voluntarily. This pilot does not cover MNIST or the natural-image trajectories.</p></div></div><details><summary>Three editing regimes, with different coordinate anchors</summary><p><b>Frozen sensitivity:</b> one gradient at the source, followed by a finite extrapolation. <b>Persistent coordinates:</b> refreshed gradients update increments anchored to the source decomposition; this is used for the matched MNIST and CelebA comparisons. <b>Step-local steering:</b> reanalysis of the current image at every step; amplitudes and residuals can drift across the trajectory. The natural-image playback above uses this last regime.</p></details><details><summary>Limits on interpretation and generalization</summary><p>MNIST test images and CelebA faces were used in earlier experiments, and the legacy O checkpoint was selected on test performance. These runs are retrospective evidence, not fresh held-out confirmation. CelebA reconstruction estimates are conditional on common budget attainment; the lowest coverage is 7/25 for smile addition. Fits are restricted and nonconvex. Selected examples illustrate outcomes rather than estimate their frequency. The human pilot is small, and personal familiarity with the researchers may influence responses.</p></details><details><summary>How the images and measurements on this page were prepared</summary><p>Example images and trajectory frames are exported from saved arrays with only conversion to an 8-bit PNG. MNIST is displayed with nearest-neighbor scaling. Chart values are recomputed from the saved fits on common sources, and G/O scores come from saved endpoint records. Scores are rounded for display; the download retains their full precision. The first four MNIST cases and Eyeglasses_183143 were chosen after inspecting outcomes. The other MNIST case is first in record order; remaining CelebA cases are the first common-attainment IDs in sorted order.</p></details></section>
-<section id="downloads" class="section wrap"><div class="section-heading"><div><p class="eyebrow">05 / INSPECT THE RECORD</p><h2>Figures and underlying values.</h2></div></div><p class="intro">Download the two main comparison figures and the values used by this page, including source-file hashes.</p><div class="download-grid"><a class="download" href="assets/main_dissociation.pdf" download>Method comparison <small>PDF</small></a><a class="download" href="assets/structure_comparison.pdf" download>Six-panel reconstruction figure <small>PDF</small></a><a class="download" href="data.json" download="steerable-lens-data.json">Page data & provenance <small>JSON</small></a></div></section>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Confidence Is Not Evidence: Probing Classifier Sensitivity with Steerable Lens - ICLR 2027 submission project page.">
+<title>Steerable Lens — Confidence Is Not Evidence</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<script src="animations.js" defer></script>
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>
+/* Layout: single centered scholarly column; hero + abstract + three-axis cards + figure results + bibtex. */
+:root{
+  --bg:#f2f4f4; --surface:#ffffff; --ink:#16201c; --muted:#586863; --faint:#7b8a84;
+  --line:#dde3e0; --accent:#2f7d5b; --accent-ink:#245e45; --figbg:#ffffff; --figline:#e4e8e6;
+  --shadow:0 1px 2px rgba(20,40,32,.04),0 8px 30px rgba(20,40,32,.06);
+  --serif:"Spectral",Georgia,"Times New Roman",serif;
+  --sans:"IBM Plex Sans",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0e1412; --surface:#151c19; --ink:#e7edea; --muted:#9fb1a9; --faint:#7f9089;
+  --line:#25302b; --accent:#63c398; --accent-ink:#8ad3b2; --figbg:#f7f8f7; --figline:#20282400;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 34px rgba(0,0,0,.35); color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --bg:#0e1412; --surface:#151c19; --ink:#e7edea; --muted:#9fb1a9; --faint:#7f9089;
+  --line:#25302b; --accent:#63c398; --accent-ink:#8ad3b2; --figbg:#f7f8f7; --figline:#00000000;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 34px rgba(0,0,0,.35); color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.6;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+.wrap{max-width:1000px;margin:0 auto;padding-inline:20px;padding-block:0}
+.col{max-width:720px;margin-inline:auto}
+a{color:var(--accent-ink);text-decoration:none;border-bottom:1px solid color-mix(in srgb,var(--accent) 35%,transparent)}
+a:hover{border-bottom-color:var(--accent)}
+h1,h2,h3{font-family:var(--serif);font-weight:600;text-wrap:balance;line-height:1.15;margin:0}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-ink)}
 
-</main><footer class="wrap site-footer"><a class="brand" href="#top">⊕ &nbsp;Steerable Lens</a><p>Steerable Lens research companion · No analytics or visitor tracking added.</p></footer>
-<noscript><p class="wrap">Enable JavaScript for the interactive examples. You can also <a href="assets/main_dissociation.pdf">download the comparison figure</a>.</p></noscript></body></html>
+/* hero */
+header.hero{padding-block:64px 34px;text-align:center;border-bottom:1px solid var(--line)}
+.hero h1{font-size:clamp(31px,5.4vw,50px);letter-spacing:-.01em}
+.hero .sub{font-family:var(--serif);font-weight:400;font-style:italic;font-size:clamp(17px,2.6vw,23px);
+  color:var(--muted);margin-top:12px}
+.authors{margin-top:26px;font-size:16px;color:var(--ink)}
+.authors .note{display:block;margin-top:6px;font-size:13px;color:var(--faint)}
+.affil{margin-top:8px;font-size:14px;color:var(--muted)}
+.venue{margin-top:18px;font-family:var(--mono);font-size:12.5px;letter-spacing:.08em;color:var(--faint)}
+.btns{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:26px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:999px;
+  background:var(--ink);color:var(--bg);font-size:14px;font-weight:500;border:1px solid var(--ink);
+  cursor:pointer;transition:background .15s,border-color .15s,transform .05s}
+.btn:hover{background:var(--accent-ink);border-color:var(--accent-ink);transform:translateY(-1px)}
+.btn svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.8}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn.ghost:hover{background:transparent;border-color:var(--accent);color:var(--accent-ink);transform:translateY(-1px)}
+
+/* figure */
+figure{margin:0}
+.fig{background:var(--figbg);border:1px solid var(--figline);border-radius:12px;padding:16px;
+  box-shadow:var(--shadow);overflow-x:auto}
+.fig img{display:block;width:100%;height:auto;border-radius:4px}
+figcaption{font-size:13.5px;color:var(--muted);line-height:1.55;margin-top:14px}
+figcaption b{color:var(--ink);font-weight:600}
+
+section{padding-block:44px}
+section+section{border-top:1px solid var(--line)}
+.teaser{padding-block:34px}
+h2.sechead{font-size:14px;font-family:var(--mono);font-weight:500;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--accent-ink);margin-bottom:20px}
+.abstract p{font-size:17px;margin:0}
+.lead{font-family:var(--serif);font-size:clamp(19px,2.7vw,25px);line-height:1.4;font-weight:500;margin:0}
+.lead em{font-style:italic;color:var(--accent-ink)}
+
+/* three axis cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;margin-top:6px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px;box-shadow:var(--shadow)}
+.card .k{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;color:var(--faint)}
+.card h3{font-size:19px;margin-top:7px;margin-bottom:9px}
+.card p{margin:0;font-size:14.5px;color:var(--muted);line-height:1.55}
+
+.result{margin-top:8px}
+.result h3{font-size:22px;margin-bottom:10px;letter-spacing:-.005em}
+.result p{font-size:16px;color:var(--ink)}
+.result p+figure{margin-top:22px}
+.result .stat{color:var(--accent-ink);font-weight:600;font-variant-numeric:tabular-nums}
+.gap{margin-top:40px}
+
+.callout{background:color-mix(in srgb,var(--accent) 9%,var(--surface));
+  border:1px solid color-mix(in srgb,var(--accent) 30%,var(--line));border-left:3px solid var(--accent);
+  border-radius:10px;padding:20px 22px}
+.callout p{margin:0;font-family:var(--serif);font-size:19px;line-height:1.45}
+
+/* bibtex */
+.bibwrap{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.bibwrap pre{margin:0;padding:20px;overflow-x:auto;font-family:var(--mono);font-size:13px;line-height:1.65;color:var(--ink)}
+.copy{position:absolute;top:10px;right:10px;padding:5px 11px;border-radius:7px;border:1px solid var(--line);
+  background:var(--bg);color:var(--muted);font-family:var(--mono);font-size:11.5px;cursor:pointer}
+.copy:hover{color:var(--accent-ink);border-color:var(--accent)}
+
+footer{padding-block:34px 48px;text-align:center;color:var(--faint);font-size:13px;border-top:1px solid var(--line)}
+footer a{color:var(--muted)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:3px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+html,body{margin:0}img{max-width:100%}
+
+/* Recorded animations and accessible playback controls. */
+.animation-toolbar{display:flex;justify-content:space-between;align-items:center;gap:16px;margin:0 0 12px;color:var(--muted);font-size:13px}
+.motion-toggle{font:500 13px var(--sans);padding:8px 13px;color:var(--accent-ink);background:var(--surface);border:1px solid var(--line);border-radius:999px;cursor:pointer;white-space:nowrap;min-height:40px}
+.motion-toggle:hover{border-color:var(--accent)}
+.animation-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-block:26px}
+.animation-grid h3{font-size:21px;margin-bottom:13px}
+.animation-grid .fig{padding:10px}
+.animation-note{font-size:14px;color:var(--muted);line-height:1.65}
+.resource-links{display:flex;flex-direction:column;align-items:start;gap:12px;margin-bottom:25px}
+.skip-link{position:absolute;top:-100px;left:20px;z-index:5;padding:10px 16px;background:var(--surface)}
+.skip-link:focus{top:10px}
+@media(max-width:640px){header.hero{padding-top:40px}.authors{margin-top:18px}.animation-grid{grid-template-columns:1fr;gap:28px}.animation-toolbar{align-items:start;gap:10px}.animation-toolbar span{max-width:55%}.fig{padding:7px}section{padding-block:32px}.wrap{padding-inline:16px}.bibwrap pre{font-size:11px;padding-top:50px}.teaser .fig img{min-width:720px}.cards{grid-template-columns:1fr}}
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#comparison">Skip to animated comparison</a>
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Interpretability &middot; Classifier sensitivity</div>
+    <h1 style="margin-top:14px">Confidence Is Not Evidence</h1>
+    <div class="sub">Probing Classifier Sensitivity with Steerable Lens</div>
+    <div class="authors">Anonymous Author(s)
+      <span class="note">Author list withheld under double-blind review</span>
+    </div>
+    <div class="affil">Affiliation withheld</div>
+    <div class="venue">Under review as a conference paper at ICLR 2027</div>
+    <nav class="btns" aria-label="Project links">
+      <a class="btn" href="explore.html">Explore results</a>
+      <a class="btn" href="#animations">Animated examples</a>
+      <a class="btn ghost" href="#resources">Figures &amp; data</a>
+      <a class="btn ghost" href="https://github.com/fmahdisoltani/steerable-lens">Website source</a>
+    </nav>
+  </div>
+</header>
+
+<section class="teaser" id="comparison">
+  <div class="wrap">
+    <figure>
+      <div class="animation-toolbar"><span>Recorded source and edit endpoints</span><button class="motion-toggle" type="button" aria-pressed="true">Pause animations</button></div>
+      <div class="fig" tabindex="0" aria-label="Animated method comparison; scroll horizontally on small screens"><img class="animated" src="figures/main_dissociation.gif" data-gif="figures/main_dissociation.gif" data-still="figures/main_dissociation_poster.png" alt="Animation alternating source images and matched-budget endpoints for 3 to 8 and adding eyeglasses, across all four methods. Scores appear only on edited endpoints."></div>
+      <figcaption><b>One edit, three verdicts.</b> The GIF alternates the original sources and their recorded edited endpoints; no intermediate frames are synthesized. In the digit example, pixel and both CSP variants have target probability above 0.99, but only pixel achieves joint target agreement; CSP has higher reconstruction scores. These cases were selected after inspection. A joint-judge “no” means at least one judge does not predict the target.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section>
+  <div class="wrap"><div class="col">
+    <p class="lead">Moving an image along a classifier's gradient can push it past a decision boundary. That crossing is <em>evidence about the classifier</em> &mdash; not proof that a person would see a change of class.</p>
+  </div></div>
+</section>
+
+<section class="abstract">
+  <div class="wrap"><div class="col">
+    <h2 class="sechead">Abstract</h2>
+    <p>Moving an image along a classifier's gradient is a common way to probe what change would carry it across a decision boundary, but crossing that boundary does not by itself establish a recognizable change toward the target class. We introduce <b>Steerable Lens</b>, a framework for investigating classifier sensitivity through complex steerable-pyramid (CSP) interventions, with pixel and Fourier-phase edits as comparators. At matched image-change budgets, we measure three quantities separately: the optimized classifier's confidence, transfer to independent classifiers, and compatibility with a smooth image transformation. These measurements yield different method rankings. On MNIST at L&#8322;&nbsp;=&nbsp;2, pixel edits reach a median target probability of 96.2%, yet joint independent-classifier agreement is infrequent and smooth reconstruction explains less edit energy than for CSP. On CelebA the structural ordering between representations depends on the reconstruction model. In a pilot human study, CSP edits receive more ratings of clear attribute change and no visible corruption than pixel or Fourier-phase edits. Frozen band probes further reveal fine-scale sensitivity in the examined driver classifiers, while larger budgets reduce common attainment across bands and controls. These results position CSP as a controlled diagnostic representation and motivate evaluating optimized confidence, classifier transfer, and smooth reconstruction separately, without treating any one as certification of recognizable target-class change.</p>
+  </div></div>
+</section>
+
+<section>
+  <div class="wrap"><div class="col">
+    <h2 class="sechead">Three measurements, usually conflated</h2>
+  </div>
+  <div class="cards">
+    <div class="card"><div class="k">AXIS 01</div><h3>Optimized confidence</h3><p>The target probability of the classifier whose gradient produced the edit. This is the response pursued during optimization; it does not independently validate recognizable target change.</p></div>
+    <div class="card"><div class="k">AXIS 02</div><h3>Independent transfer</h3><p>Two classifiers excluded from edit optimization are evaluated separately and jointly. Agreement measures transfer of the edit, not ground truth about its appearance.</p></div>
+    <div class="card"><div class="k">AXIS 03</div><h3>Smooth compatibility</h3><p>The fraction of edit energy explained by a restricted smooth warp, with optional spatial gain. It measures approximation by that family, not physical motion or recognizable change.</p></div>
+  </div>
+  <div class="wrap" style="padding:0"><div class="col" style="margin-top:22px">
+    <p style="font-size:16px;color:var(--muted);margin:0">At matched image-change budgets these three axes rank the edit families <b style="color:var(--ink)">differently</b>. The rest of the paper is about that disagreement.</p>
+  </div></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="col"><h2 class="sechead">What we find</h2></div>
+
+    <div class="col result">
+      <h3>On MNIST, confidence and evidence come apart</h3>
+      <p>At a matched L&#8322;&nbsp;=&nbsp;2 budget, pixel edits reach a <span class="stat">median 96.2%</span> probability on the classifier they optimize &mdash; while the two independent judges jointly confirm the target for only a handful of 300 edits. CSP edits have low median driver confidence at this budget yet are the most compatible with a smooth warp. High confidence and independent confirmation point in different directions.</p>
+    </div>
+
+    <figure class="col gap">
+      <div class="fig"><img src="figures/fig2.png" alt="Six bar panels of median explained edit energy for pixel, Fourier-phase, CSP-phase and joint-CSP edits: two MNIST panels where CSP variants lead, and four CelebA panels where Fourier phase leads."></div>
+      <figcaption><b>Smooth-reconstruction compatibility</b> (median explained edit energy) under an 8&times;8 warp-plus-gain fit. In the two MNIST panels both CSP variants lead; in the four CelebA panels Fourier phase leads. Compatibility is a property of an edit relative to a chosen family, not a fixed ranking of the representations.</figcaption>
+    </figure>
+
+    <div class="col result gap">
+      <h3>The ordering is not universal</h3>
+      <p>Repeating the comparison on CelebA faces reverses it: under the same smooth family, Fourier-phase edits become the most reconstructible. Which representation looks &ldquo;most structural&rdquo; depends on the dataset and on the fitting family &mdash; another reason no single axis can stand in for recognizable class change.</p>
+    </div>
+
+    <figure class="col gap">
+      <div class="fig"><img src="figures/fig3.png" alt="Eight small scatter panels of signed margin advantage versus pyramid scale, top row driver classifier and bottom row independent judge, with the response concentrated at the finest scales."></div>
+      <figcaption><b>Frozen single-band probes</b> on development faces at image L&#8322; = 0.025. Signed response above matched Gaussian controls concentrates at the finest scales, for both the driver <em>G</em> (top) and an independent judge <em>O</em> (bottom). A larger response marks a sensitive coordinate, not an anatomical feature; larger edit budgets erode the common attainment needed to compare bands.</figcaption>
+    </figure>
+
+    <div class="col result gap">
+      <h3>A small human pilot, reported as such</h3>
+      <p>In a voluntary convenience sample of friends and family, two complete response sets yield 180 ratings on 90 edited images from 24 source&ndash;attribute cases. In these ratings, CSP edits drew more &ldquo;clear attribute change&rdquo; and &ldquo;no corruption&rdquo; ratings than pixel or Fourier-phase edits. These pooled ratings are repeated observations of the same images, not independent image samples. They provide descriptive evidence about these edits and do not show that any automated measurement predicts human judgment.</p>
+    </div>
+
+    <div class="col gap callout">
+      <p>A classifier response is evidence about that classifier. A claim of recognizable change requires validation beyond the score being optimized.</p>
+    </div>
+  </div>
+</section>
+
+<section id="animations">
+  <div class="wrap">
+    <div class="col"><h2 class="sechead">Natural-image trajectories</h2>
+      <p class="lead">Watch the image as the <em>target score changes.</em></p>
+      <p>Each GIF shows twelve recorded frames from step-local luminance steering, with the unedited source alongside. The per-step phase cap is 1 radian. G is robust ResNet-50; O is standard ResNet-18.</p>
+    </div>
+    <div class="animation-toolbar"><span>Twelve saved frames &middot; no interpolation</span><button class="motion-toggle" type="button" aria-pressed="true">Pause animations</button></div>
+    <div class="animation-grid">
+      <figure><h3>Cat 3 &rarr; Egyptian cat</h3><div class="fig"><img class="animated" src="figures/cat3_target285_cap1.0.gif" data-gif="figures/cat3_target285_cap1.0.gif" data-still="figures/cat3_target285_cap1.0_poster.png" loading="lazy" alt="Twelve recorded frames of cat3 toward Egyptian cat, with source alongside and per-frame G, O, and L2 measurements."></div><figcaption>Endpoint: G = <b>60.6%</b>, O = <b>30.1%</b>, image L&#8322; = <b>27.84</b>.</figcaption></figure>
+      <figure><h3>Cat 1 &rarr; Tiger cat</h3><div class="fig"><img class="animated" src="figures/cat1_target282_cap1.0.gif" data-gif="figures/cat1_target282_cap1.0.gif" data-still="figures/cat1_target282_cap1.0_poster.png" loading="lazy" alt="Twelve recorded frames of cat1 toward tiger cat, with source alongside and per-frame G, O, and L2 measurements."></div><figcaption>Endpoint: G = <b>53.4%</b>, O = <b>23.8%</b>, image L&#8322; = <b>28.07</b>.</figcaption></figure>
+    </div>
+    <div class="col"><p class="animation-note">These selected demonstrations use the current reference implementation. They are not a matched method comparison or a human-validated semantic change. Amplitudes and residuals stay fixed within each step but can drift across the trajectory. GIFs use a limited color palette; the interactive viewer retains PNG frames.</p><p><a href="explore.html#trajectories">Inspect every frame and all three phase caps</a></p></div>
+  </div>
+</section>
+<section id="resources">
+  <div class="wrap"><div class="col">
+    <h2 class="sechead">Figures &amp; data</h2>
+    <div class="resource-links">
+      <a href="assets/main_dissociation.pdf" download>Method comparison &middot; PDF</a>
+      <a href="assets/structure_comparison.pdf" download>Reconstruction results &middot; PDF</a>
+      <a href="data.json" download="steerable-lens-data.json">Page measurements &amp; provenance &middot; JSON</a>
+      <a href="figures/animation_manifest.json" download>Animation sources &amp; frame timing &middot; JSON</a>
+    </div>
+    <p class="animation-note">MNIST test images and CelebA faces had historical project exposure; CelebA also inherits historical checkpoint selection. Structural comparisons on faces are conditional on common budget attainment (7/25, 17/25, 24/25 and 22/25 at the larger budget). The interactive results page retains these denominators.</p>
+  </div></div>
+</section>
+<section id="bibtex">
+  <div class="wrap"><div class="col">
+    <h2 class="sechead">BibTeX</h2>
+    <div class="bibwrap">
+      <button class="copy" id="copybtn" type="button">copy</button>
+      <pre id="bib">@unpublished{anonymous2027confidence,
+  title  = {Confidence Is Not Evidence: Probing Classifier
+            Sensitivity with Steerable Lens},
+  author = {Anonymous Author(s)},
+  year   = {2027},
+  note   = {Manuscript under review at ICLR 2027}
+}</pre>
+    </div>
+  </div></div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Page style adapted from the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template">Academic Project Page</a> and <a href="https://nerfies.github.io">Nerfies</a> templates.<br>
+    <a href="explore.html">Interactive results</a> &middot; <a href="https://github.com/fmahdisoltani/steerable-lens">Website source</a> &middot; No analytics added.
+  </div>
+</footer>
+
+<script>
+(function(){
+  var b=document.getElementById("copybtn"),src=document.getElementById("bib");
+  if(!b) return;
+  b.addEventListener("click",function(){
+    var t=src.innerText;
+    function done(){b.textContent="copied";setTimeout(function(){b.textContent="copy";},1400);}
+    try{navigator.clipboard.writeText(t).then(done,sel);}catch(e){sel();}
+    function sel(){var r=document.createRange();r.selectNodeContents(src);
+      var s=window.getSelection();s.removeAllRanges();s.addRange(r);done();}
+  });
+})();
+</script>
+</body>
+</html>

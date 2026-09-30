@@ -34,3 +34,11 @@ Preserve the selection disclosures, metric definitions, and common-attainment de
 ## GitHub Pages
 
 The site is a plain static page. Publish from the root of the `main` branch; `.nojekyll` preserves the assets without Jekyll processing. Changes pushed to `main` update the website through GitHub Pages.
+
+## Current layout and animations
+
+The homepage follows the supplied scholarly project-page design. The earlier interactive page remains at `explore.html`.
+
+Three GIFs in `figures/` display saved experiment outputs, without intermediate image interpolation. `animations.js` provides shared pause/play controls and respects the operating system's reduced-motion preference by showing endpoint posters. Static charts remain static. GIF color quantization is a format limitation; the interactive page displays PNG frames.
+
+The original fonts are self-hosted in `fonts/`; their included OFL licenses apply. No external font service is contacted by the page.
