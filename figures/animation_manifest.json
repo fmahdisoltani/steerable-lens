@@ -1,5 +1,5 @@
 {
-  "encoding": "Recorded optimization states; no generated or interpolated intermediate images. Main and CelebA trajectories are verified deterministic replays. Reference cats and golf use saved arrays. Additional legacy cats use exact saved figure panels and their printed, rounded target scores. GIF palette quantization applies.",
+  "encoding": "Recorded optimization states; no generated or interpolated intermediate images. Main and CelebA trajectories are verified deterministic replays. Reference cats and golf use saved arrays. Additional legacy cats use exact saved figure panels and their printed, rounded target scores. GIF palette quantization applies. Each added fixed-gradient run computes one source gradient; synchronized comparison GIFs show all twelve actual live and fixed states with identical timing, from verified live replays or saved arrays. Source/model/transform/amplification match within each pair; image distances are not matched.",
   "main_selection": "User-selected illustrative cases 3-8_00944 and Eyeglasses_183143, selected after inspecting images and outcomes; not representative sampling.",
   "matched_inputs": [
     {
@@ -9568,6 +9568,4046 @@
         "website_selection": "User-selected example supplied as a trajectory strip.",
         "builder_sha256": "2a46352702a4a9ea6a008973e0b21b71ef8778515b2a4057d2e8dbeace2b7ae7",
         "uncertainties": []
+      }
+    },
+    {
+      "live_id": "legacy_cat1_lynx_amp250",
+      "id": "fixed_cat1_lynx_amp250",
+      "group": "cat1",
+      "title": "cat1 \u2192 lynx",
+      "target_label": "lynx",
+      "target_class_index": 287,
+      "legacy_amp": 250,
+      "description": "Fixed source-gradient trajectory with amp 250; 12 computed states. The source gradient is evaluated once. Live replay matches all original saved image tiles and rounded scores; the first live and fixed updates are identical.",
+      "frame_count": 12,
+      "dimensions": [
+        500,
+        382
+      ],
+      "durations_ms": [
+        1200,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        1800
+      ],
+      "loop_duration_ms": 7000,
+      "recorded_npz": "outputs/website_fixed_gradients/cats/fixed_cat1_lynx_amp250.npz",
+      "recorded_npz_sha256": "326f5c22cf1bf8c5914e044bf8974d44571eb16f90e1757a9928edeee2e782eb",
+      "recorded_json": "outputs/website_fixed_gradients/cats/fixed_cat1_lynx_amp250.json",
+      "live_replay_npz": "outputs/website_fixed_gradients/cats/fixed_cat1_lynx_amp250_live_replay.npz",
+      "target_probabilities": [
+        0.02098793350160122,
+        0.22612638771533966,
+        0.20762892067432404,
+        0.10302352905273438,
+        0.04782383516430855,
+        0.022987160831689835,
+        0.011698391288518906,
+        0.006843289360404015,
+        0.004061577841639519,
+        0.002402097452431917,
+        0.0016554497415199876,
+        0.001276412163861096
+      ],
+      "top1_class_indices": [
+        285,
+        287,
+        287,
+        357,
+        357,
+        357,
+        38,
+        38,
+        38,
+        38,
+        38,
+        591
+      ],
+      "top1_labels": [
+        "Egyptian cat",
+        "lynx",
+        "lynx",
+        "mink",
+        "mink",
+        "mink",
+        "banded gecko",
+        "banded gecko",
+        "banded gecko",
+        "banded gecko",
+        "banded gecko",
+        "handkerchief"
+      ],
+      "l2_from_source": [
+        0.002320856088772416,
+        15.344619750976562,
+        25.851802825927734,
+        33.74492645263672,
+        40.03257751464844,
+        45.225521087646484,
+        49.65843200683594,
+        53.46342849731445,
+        56.839637756347656,
+        59.9007453918457,
+        62.609832763671875,
+        65.02745819091797
+      ],
+      "source_image": "data/cats/cat1.jpg",
+      "source_image_sha256": "2743ac102aca5d2aec6870e1a127041d97d1fd5b0be0900e58ec9e179f33a442",
+      "original_live_strip": "outputs/imagenet_live/cat1_live_to_287_amp250.png",
+      "original_live_strip_sha256": "6538b47dbac12a09f6fe960cee1b5b799785749382192ce22d86cb0171f0998e",
+      "live_replay_target_probabilities": [
+        0.020988158881664276,
+        0.22612638771533966,
+        0.4781748354434967,
+        0.730423092842102,
+        0.8612913489341736,
+        0.8959996104240417,
+        0.9144147634506226,
+        0.9275213479995728,
+        0.9362238645553589,
+        0.9425501823425293,
+        0.9477270841598511,
+        0.9519696235656738
+      ],
+      "live_replay_l2_from_source": [
+        0.0,
+        15.344619750976562,
+        19.080097198486328,
+        21.821880340576172,
+        23.006664276123047,
+        23.67558479309082,
+        24.206668853759766,
+        24.654674530029297,
+        25.031606674194336,
+        25.341846466064453,
+        25.630464553833008,
+        25.888643264770508
+      ],
+      "validation": {
+        "live_strip_tiles_exact_match": true,
+        "live_strip_tile_errors": [
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          }
+        ],
+        "live_rounded_scores_match": true,
+        "live_top1_labels_match": true,
+        "live_fixed_first_update_max_abs_error": 0.0,
+        "fixed_zero_step_source_max_abs_error": 1.0073184967041016e-05,
+        "fixed_zero_step_source_l2": 0.002320856088772416,
+        "fixed_gradient_evaluations": 1,
+        "live_gradient_evaluations": 11,
+        "same_source_analysis_tensor": true,
+        "all_12_fixed_frames_distinct": true,
+        "finite_in_range": true
+      },
+      "provenance": {
+        "script": "outputs/website_fixed_gradients/cats/build_fixed_cats.py",
+        "script_sha256": "279fa2a51899a06fd9a0552e4dfced8b93ae5fc0e32afb9ba1f7a046e91a2fd5",
+        "backend": "ch4_eval.csp_plenoptic_rgb.generate_morph_sequence_corrected",
+        "backend_sha256": "ddee952f5ecb16be1446faa2ad7623f378590641352f875ae1c39d142b989eb9",
+        "extrapolate_sha256": "39748180d1226d94e9cc135e5d02070c5a7e919ac91e8ae279e5c1ea73a977e1",
+        "pyramid_sha256": "ca6a7c49d99bc434ed8873cd239c4200e36b051209a65974ada6b1383b1d2abd",
+        "G": "L2-robust ResNet-50, ImageNet normalization",
+        "G_checkpoint": "models/resnet50_l2_eps3.ckpt",
+        "G_checkpoint_sha256": "380b14e6f9750bffa1447cf7017f65da4dc5ce71a3dd112f107515dcf7b14d9d",
+        "pyramid": {
+          "height": "auto",
+          "order": 4,
+          "twidth": "resolved scales + 1; native LocalPyramid"
+        },
+        "color_mode": "rgb",
+        "image_dimensions": [
+          224,
+          224
+        ],
+        "magnitude_amplifiers": [
+          0,
+          0,
+          0
+        ],
+        "source_preprocessing": "PIL RGB float32 /255; torch bilinear 224x224 align_corners=False",
+        "fixed_gradient_schedule": "Native use_live_gradients=False; one source decomposition and gradient, steps 0 through 11.",
+        "live_gradient_schedule": "Native use_live_gradients=True; reanalyze current clipped image before each of 11 updates.",
+        "no_temporal_interpolation": true,
+        "selection": "All nine user-selected cats; no selection by fixed-run outcomes.",
+        "packaging_script": "outputs/website_fixed_gradients/cats/standardize_manifest.py"
+      },
+      "encoding": "224x224 rendered tensors rounded to uint8; shared 256-color GIF palette, no temporal interpolation.",
+      "frames": [
+        {
+          "frame_index": 0,
+          "step": 0,
+          "G_target_probability": 0.02098793350160122,
+          "G_top1_index": 285,
+          "G_top1_label": "Egyptian cat",
+          "l2": 0.002320856088772416
+        },
+        {
+          "frame_index": 1,
+          "step": 1,
+          "G_target_probability": 0.22612638771533966,
+          "G_top1_index": 287,
+          "G_top1_label": "lynx",
+          "l2": 15.344619750976562
+        },
+        {
+          "frame_index": 2,
+          "step": 2,
+          "G_target_probability": 0.20762892067432404,
+          "G_top1_index": 287,
+          "G_top1_label": "lynx",
+          "l2": 25.851802825927734
+        },
+        {
+          "frame_index": 3,
+          "step": 3,
+          "G_target_probability": 0.10302352905273438,
+          "G_top1_index": 357,
+          "G_top1_label": "mink",
+          "l2": 33.74492645263672
+        },
+        {
+          "frame_index": 4,
+          "step": 4,
+          "G_target_probability": 0.04782383516430855,
+          "G_top1_index": 357,
+          "G_top1_label": "mink",
+          "l2": 40.03257751464844
+        },
+        {
+          "frame_index": 5,
+          "step": 5,
+          "G_target_probability": 0.022987160831689835,
+          "G_top1_index": 357,
+          "G_top1_label": "mink",
+          "l2": 45.225521087646484
+        },
+        {
+          "frame_index": 6,
+          "step": 6,
+          "G_target_probability": 0.011698391288518906,
+          "G_top1_index": 38,
+          "G_top1_label": "banded gecko",
+          "l2": 49.65843200683594
+        },
+        {
+          "frame_index": 7,
+          "step": 7,
+          "G_target_probability": 0.006843289360404015,
+          "G_top1_index": 38,
+          "G_top1_label": "banded gecko",
+          "l2": 53.46342849731445
+        },
+        {
+          "frame_index": 8,
+          "step": 8,
+          "G_target_probability": 0.004061577841639519,
+          "G_top1_index": 38,
+          "G_top1_label": "banded gecko",
+          "l2": 56.839637756347656
+        },
+        {
+          "frame_index": 9,
+          "step": 9,
+          "G_target_probability": 0.002402097452431917,
+          "G_top1_index": 38,
+          "G_top1_label": "banded gecko",
+          "l2": 59.9007453918457
+        },
+        {
+          "frame_index": 10,
+          "step": 10,
+          "G_target_probability": 0.0016554497415199876,
+          "G_top1_index": 38,
+          "G_top1_label": "banded gecko",
+          "l2": 62.609832763671875
+        },
+        {
+          "frame_index": 11,
+          "step": 11,
+          "G_target_probability": 0.001276412163861096,
+          "G_top1_index": 591,
+          "G_top1_label": "handkerchief",
+          "l2": 65.02745819091797
+        }
+      ],
+      "gif": "fixed_cat1_lynx_amp250.gif",
+      "poster": "fixed_cat1_lynx_amp250_poster.png",
+      "poster_sha256": "cee4ac73e5458d961f8e6de21798b201a34918b030e817db8af9548e1c6cf100",
+      "npz": "fixed_cat1_lynx_amp250.npz",
+      "scores": "fixed_cat1_lynx_amp250_scores.json",
+      "live_npz": "fixed_cat1_lynx_amp250_live_replay.npz",
+      "live_scores": "fixed_cat1_lynx_amp250_live_scores.json",
+      "amp": 250,
+      "live_replay_top1_indices": [
+        285,
+        287,
+        287,
+        287,
+        287,
+        287,
+        287,
+        287,
+        287,
+        287,
+        287,
+        287
+      ],
+      "sha256": "15925cad643fd63b79252d79170298c0a9b740d14f91452a175b65edd5e6a16d",
+      "bytes": 1033768
+    },
+    {
+      "live_id": "legacy_cat2_red_fox_amp250",
+      "id": "fixed_cat2_red_fox_amp250",
+      "group": "cat2",
+      "title": "cat2 \u2192 red fox",
+      "target_label": "red fox",
+      "target_class_index": 277,
+      "legacy_amp": 250,
+      "description": "Fixed source-gradient trajectory with amp 250; 12 computed states. The source gradient is evaluated once. Live replay matches all original saved image tiles and rounded scores; the first live and fixed updates are identical.",
+      "frame_count": 12,
+      "dimensions": [
+        500,
+        382
+      ],
+      "durations_ms": [
+        1200,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        1800
+      ],
+      "loop_duration_ms": 7000,
+      "recorded_npz": "outputs/website_fixed_gradients/cats/fixed_cat2_red_fox_amp250.npz",
+      "recorded_npz_sha256": "a18cb32b30cbc8537be652718c50dbec8aff3e268fe25cc3ed932bad4c56b9bc",
+      "recorded_json": "outputs/website_fixed_gradients/cats/fixed_cat2_red_fox_amp250.json",
+      "live_replay_npz": "outputs/website_fixed_gradients/cats/fixed_cat2_red_fox_amp250_live_replay.npz",
+      "target_probabilities": [
+        0.10945773869752884,
+        0.6621904969215393,
+        0.7219234704971313,
+        0.7283316254615784,
+        0.697106659412384,
+        0.599289059638977,
+        0.46096137166023254,
+        0.28919097781181335,
+        0.13671818375587463,
+        0.05937204137444496,
+        0.026484588161110878,
+        0.01239029597491026
+      ],
+      "top1_class_indices": [
+        282,
+        277,
+        277,
+        277,
+        277,
+        277,
+        277,
+        277,
+        125,
+        125,
+        125,
+        125
+      ],
+      "top1_labels": [
+        "tiger cat",
+        "red fox",
+        "red fox",
+        "red fox",
+        "red fox",
+        "red fox",
+        "red fox",
+        "red fox",
+        "hermit crab",
+        "hermit crab",
+        "hermit crab",
+        "hermit crab"
+      ],
+      "l2_from_source": [
+        0.002049157163128257,
+        23.717985153198242,
+        35.361968994140625,
+        43.55366516113281,
+        49.86289978027344,
+        54.92702102661133,
+        59.26821517944336,
+        63.335487365722656,
+        66.9144515991211,
+        70.11326599121094,
+        73.08314514160156,
+        75.5671615600586
+      ],
+      "source_image": "data/cats/cat2.jpg",
+      "source_image_sha256": "74d09a7c6463a844572c58634a798d4fa1b646aeff8be81a42ab68915e54e049",
+      "original_live_strip": "outputs/imagenet_live/cat2_live_to_277_amp250.png",
+      "original_live_strip_sha256": "b8411be9b69885a3b4cef6f0ce6124f9381d535c96c8c3a79df1bfdb6ffcd0fb",
+      "live_replay_target_probabilities": [
+        0.10945692658424377,
+        0.6621904969215393,
+        0.762467622756958,
+        0.8160847425460815,
+        0.8540648818016052,
+        0.8775047063827515,
+        0.8936320543289185,
+        0.9056073427200317,
+        0.9149767160415649,
+        0.9228391647338867,
+        0.9291307926177979,
+        0.9341409206390381
+      ],
+      "live_replay_l2_from_source": [
+        0.0,
+        23.717985153198242,
+        23.982667922973633,
+        24.31755256652832,
+        24.664573669433594,
+        24.948408126831055,
+        25.18597984313965,
+        25.400732040405273,
+        25.593040466308594,
+        25.784873962402344,
+        25.956892013549805,
+        26.10415267944336
+      ],
+      "validation": {
+        "live_strip_tiles_exact_match": true,
+        "live_strip_tile_errors": [
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          }
+        ],
+        "live_rounded_scores_match": true,
+        "live_top1_labels_match": true,
+        "live_fixed_first_update_max_abs_error": 0.0,
+        "fixed_zero_step_source_max_abs_error": 9.357929229736328e-06,
+        "fixed_zero_step_source_l2": 0.002049157163128257,
+        "fixed_gradient_evaluations": 1,
+        "live_gradient_evaluations": 11,
+        "same_source_analysis_tensor": true,
+        "all_12_fixed_frames_distinct": true,
+        "finite_in_range": true
+      },
+      "provenance": {
+        "script": "outputs/website_fixed_gradients/cats/build_fixed_cats.py",
+        "script_sha256": "279fa2a51899a06fd9a0552e4dfced8b93ae5fc0e32afb9ba1f7a046e91a2fd5",
+        "backend": "ch4_eval.csp_plenoptic_rgb.generate_morph_sequence_corrected",
+        "backend_sha256": "ddee952f5ecb16be1446faa2ad7623f378590641352f875ae1c39d142b989eb9",
+        "extrapolate_sha256": "39748180d1226d94e9cc135e5d02070c5a7e919ac91e8ae279e5c1ea73a977e1",
+        "pyramid_sha256": "ca6a7c49d99bc434ed8873cd239c4200e36b051209a65974ada6b1383b1d2abd",
+        "G": "L2-robust ResNet-50, ImageNet normalization",
+        "G_checkpoint": "models/resnet50_l2_eps3.ckpt",
+        "G_checkpoint_sha256": "380b14e6f9750bffa1447cf7017f65da4dc5ce71a3dd112f107515dcf7b14d9d",
+        "pyramid": {
+          "height": "auto",
+          "order": 4,
+          "twidth": "resolved scales + 1; native LocalPyramid"
+        },
+        "color_mode": "rgb",
+        "image_dimensions": [
+          224,
+          224
+        ],
+        "magnitude_amplifiers": [
+          0,
+          0,
+          0
+        ],
+        "source_preprocessing": "PIL RGB float32 /255; torch bilinear 224x224 align_corners=False",
+        "fixed_gradient_schedule": "Native use_live_gradients=False; one source decomposition and gradient, steps 0 through 11.",
+        "live_gradient_schedule": "Native use_live_gradients=True; reanalyze current clipped image before each of 11 updates.",
+        "no_temporal_interpolation": true,
+        "selection": "All nine user-selected cats; no selection by fixed-run outcomes.",
+        "packaging_script": "outputs/website_fixed_gradients/cats/standardize_manifest.py"
+      },
+      "encoding": "224x224 rendered tensors rounded to uint8; shared 256-color GIF palette, no temporal interpolation.",
+      "frames": [
+        {
+          "frame_index": 0,
+          "step": 0,
+          "G_target_probability": 0.10945773869752884,
+          "G_top1_index": 282,
+          "G_top1_label": "tiger cat",
+          "l2": 0.002049157163128257
+        },
+        {
+          "frame_index": 1,
+          "step": 1,
+          "G_target_probability": 0.6621904969215393,
+          "G_top1_index": 277,
+          "G_top1_label": "red fox",
+          "l2": 23.717985153198242
+        },
+        {
+          "frame_index": 2,
+          "step": 2,
+          "G_target_probability": 0.7219234704971313,
+          "G_top1_index": 277,
+          "G_top1_label": "red fox",
+          "l2": 35.361968994140625
+        },
+        {
+          "frame_index": 3,
+          "step": 3,
+          "G_target_probability": 0.7283316254615784,
+          "G_top1_index": 277,
+          "G_top1_label": "red fox",
+          "l2": 43.55366516113281
+        },
+        {
+          "frame_index": 4,
+          "step": 4,
+          "G_target_probability": 0.697106659412384,
+          "G_top1_index": 277,
+          "G_top1_label": "red fox",
+          "l2": 49.86289978027344
+        },
+        {
+          "frame_index": 5,
+          "step": 5,
+          "G_target_probability": 0.599289059638977,
+          "G_top1_index": 277,
+          "G_top1_label": "red fox",
+          "l2": 54.92702102661133
+        },
+        {
+          "frame_index": 6,
+          "step": 6,
+          "G_target_probability": 0.46096137166023254,
+          "G_top1_index": 277,
+          "G_top1_label": "red fox",
+          "l2": 59.26821517944336
+        },
+        {
+          "frame_index": 7,
+          "step": 7,
+          "G_target_probability": 0.28919097781181335,
+          "G_top1_index": 277,
+          "G_top1_label": "red fox",
+          "l2": 63.335487365722656
+        },
+        {
+          "frame_index": 8,
+          "step": 8,
+          "G_target_probability": 0.13671818375587463,
+          "G_top1_index": 125,
+          "G_top1_label": "hermit crab",
+          "l2": 66.9144515991211
+        },
+        {
+          "frame_index": 9,
+          "step": 9,
+          "G_target_probability": 0.05937204137444496,
+          "G_top1_index": 125,
+          "G_top1_label": "hermit crab",
+          "l2": 70.11326599121094
+        },
+        {
+          "frame_index": 10,
+          "step": 10,
+          "G_target_probability": 0.026484588161110878,
+          "G_top1_index": 125,
+          "G_top1_label": "hermit crab",
+          "l2": 73.08314514160156
+        },
+        {
+          "frame_index": 11,
+          "step": 11,
+          "G_target_probability": 0.01239029597491026,
+          "G_top1_index": 125,
+          "G_top1_label": "hermit crab",
+          "l2": 75.5671615600586
+        }
+      ],
+      "gif": "fixed_cat2_red_fox_amp250.gif",
+      "poster": "fixed_cat2_red_fox_amp250_poster.png",
+      "poster_sha256": "45438dacafd392e367232d21b66dec415ddaf410ee7a465462984fd8af33a141",
+      "npz": "fixed_cat2_red_fox_amp250.npz",
+      "scores": "fixed_cat2_red_fox_amp250_scores.json",
+      "live_npz": "fixed_cat2_red_fox_amp250_live_replay.npz",
+      "live_scores": "fixed_cat2_red_fox_amp250_live_scores.json",
+      "amp": 250,
+      "live_replay_top1_indices": [
+        282,
+        277,
+        277,
+        277,
+        277,
+        277,
+        277,
+        277,
+        277,
+        277,
+        277,
+        277
+      ],
+      "sha256": "4dba0d384fd60e571429cd06dcd05a96839f4c0571eb2962909a16f96de96bee",
+      "bytes": 1111661
+    },
+    {
+      "live_id": "legacy_cat2_kit_fox_amp120",
+      "id": "fixed_cat2_kit_fox_amp120",
+      "group": "cat2",
+      "title": "cat2 \u2192 kit fox",
+      "target_label": "kit fox",
+      "target_class_index": 278,
+      "legacy_amp": 120,
+      "description": "Fixed source-gradient trajectory with amp 120; 12 computed states. The source gradient is evaluated once. Live replay matches all original saved image tiles and rounded scores; the first live and fixed updates are identical.",
+      "frame_count": 12,
+      "dimensions": [
+        500,
+        382
+      ],
+      "durations_ms": [
+        1200,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        1800
+      ],
+      "loop_duration_ms": 7000,
+      "recorded_npz": "outputs/website_fixed_gradients/cats/fixed_cat2_kit_fox_amp120.npz",
+      "recorded_npz_sha256": "06535a95036a5b13d210c095a16d2a14442149b88ffb0cae933c967fcb4639fb",
+      "recorded_json": "outputs/website_fixed_gradients/cats/fixed_cat2_kit_fox_amp120.json",
+      "live_replay_npz": "outputs/website_fixed_gradients/cats/fixed_cat2_kit_fox_amp120_live_replay.npz",
+      "target_probabilities": [
+        0.054162368178367615,
+        0.23895347118377686,
+        0.2608157694339752,
+        0.2700687646865845,
+        0.27480074763298035,
+        0.2726208567619324,
+        0.2621086835861206,
+        0.24795815348625183,
+        0.23412707448005676,
+        0.2152877300977707,
+        0.19213752448558807,
+        0.17108312249183655
+      ],
+      "top1_class_indices": [
+        282,
+        277,
+        277,
+        277,
+        277,
+        277,
+        277,
+        277,
+        277,
+        277,
+        277,
+        277
+      ],
+      "top1_labels": [
+        "tiger cat",
+        "red fox",
+        "red fox",
+        "red fox",
+        "red fox",
+        "red fox",
+        "red fox",
+        "red fox",
+        "red fox",
+        "red fox",
+        "red fox",
+        "red fox"
+      ],
+      "l2_from_source": [
+        0.002049157163128257,
+        10.410075187683105,
+        17.629375457763672,
+        23.65185546875,
+        28.83530616760254,
+        33.36912155151367,
+        37.422462463378906,
+        41.03074264526367,
+        44.25969314575195,
+        47.160579681396484,
+        49.766143798828125,
+        52.15371322631836
+      ],
+      "source_image": "data/cats/cat2.jpg",
+      "source_image_sha256": "74d09a7c6463a844572c58634a798d4fa1b646aeff8be81a42ab68915e54e049",
+      "original_live_strip": "outputs/imagenet_live/cat2_live_to_278_amp120.png",
+      "original_live_strip_sha256": "77bca2085017d7ad2aaad2d16f75f4f0c3a6112a175cd9b4f7e5f7162eb2b9ad",
+      "live_replay_target_probabilities": [
+        0.05416211858391762,
+        0.23895347118377686,
+        0.29644694924354553,
+        0.34683772921562195,
+        0.3945279121398926,
+        0.4377605617046356,
+        0.47733157873153687,
+        0.511859118938446,
+        0.5422967076301575,
+        0.570088803768158,
+        0.594907820224762,
+        0.61727374792099
+      ],
+      "live_replay_l2_from_source": [
+        0.0,
+        10.410075187683105,
+        10.976055145263672,
+        11.7001371383667,
+        12.499039649963379,
+        13.267343521118164,
+        14.00017261505127,
+        14.698994636535645,
+        15.344080924987793,
+        15.976935386657715,
+        16.572633743286133,
+        17.13481330871582
+      ],
+      "validation": {
+        "live_strip_tiles_exact_match": true,
+        "live_strip_tile_errors": [
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          }
+        ],
+        "live_rounded_scores_match": true,
+        "live_top1_labels_match": true,
+        "live_fixed_first_update_max_abs_error": 0.0,
+        "fixed_zero_step_source_max_abs_error": 9.357929229736328e-06,
+        "fixed_zero_step_source_l2": 0.002049157163128257,
+        "fixed_gradient_evaluations": 1,
+        "live_gradient_evaluations": 11,
+        "same_source_analysis_tensor": true,
+        "all_12_fixed_frames_distinct": true,
+        "finite_in_range": true
+      },
+      "provenance": {
+        "script": "outputs/website_fixed_gradients/cats/build_fixed_cats.py",
+        "script_sha256": "279fa2a51899a06fd9a0552e4dfced8b93ae5fc0e32afb9ba1f7a046e91a2fd5",
+        "backend": "ch4_eval.csp_plenoptic_rgb.generate_morph_sequence_corrected",
+        "backend_sha256": "ddee952f5ecb16be1446faa2ad7623f378590641352f875ae1c39d142b989eb9",
+        "extrapolate_sha256": "39748180d1226d94e9cc135e5d02070c5a7e919ac91e8ae279e5c1ea73a977e1",
+        "pyramid_sha256": "ca6a7c49d99bc434ed8873cd239c4200e36b051209a65974ada6b1383b1d2abd",
+        "G": "L2-robust ResNet-50, ImageNet normalization",
+        "G_checkpoint": "models/resnet50_l2_eps3.ckpt",
+        "G_checkpoint_sha256": "380b14e6f9750bffa1447cf7017f65da4dc5ce71a3dd112f107515dcf7b14d9d",
+        "pyramid": {
+          "height": "auto",
+          "order": 4,
+          "twidth": "resolved scales + 1; native LocalPyramid"
+        },
+        "color_mode": "rgb",
+        "image_dimensions": [
+          224,
+          224
+        ],
+        "magnitude_amplifiers": [
+          0,
+          0,
+          0
+        ],
+        "source_preprocessing": "PIL RGB float32 /255; torch bilinear 224x224 align_corners=False",
+        "fixed_gradient_schedule": "Native use_live_gradients=False; one source decomposition and gradient, steps 0 through 11.",
+        "live_gradient_schedule": "Native use_live_gradients=True; reanalyze current clipped image before each of 11 updates.",
+        "no_temporal_interpolation": true,
+        "selection": "All nine user-selected cats; no selection by fixed-run outcomes.",
+        "packaging_script": "outputs/website_fixed_gradients/cats/standardize_manifest.py"
+      },
+      "encoding": "224x224 rendered tensors rounded to uint8; shared 256-color GIF palette, no temporal interpolation.",
+      "frames": [
+        {
+          "frame_index": 0,
+          "step": 0,
+          "G_target_probability": 0.054162368178367615,
+          "G_top1_index": 282,
+          "G_top1_label": "tiger cat",
+          "l2": 0.002049157163128257
+        },
+        {
+          "frame_index": 1,
+          "step": 1,
+          "G_target_probability": 0.23895347118377686,
+          "G_top1_index": 277,
+          "G_top1_label": "red fox",
+          "l2": 10.410075187683105
+        },
+        {
+          "frame_index": 2,
+          "step": 2,
+          "G_target_probability": 0.2608157694339752,
+          "G_top1_index": 277,
+          "G_top1_label": "red fox",
+          "l2": 17.629375457763672
+        },
+        {
+          "frame_index": 3,
+          "step": 3,
+          "G_target_probability": 0.2700687646865845,
+          "G_top1_index": 277,
+          "G_top1_label": "red fox",
+          "l2": 23.65185546875
+        },
+        {
+          "frame_index": 4,
+          "step": 4,
+          "G_target_probability": 0.27480074763298035,
+          "G_top1_index": 277,
+          "G_top1_label": "red fox",
+          "l2": 28.83530616760254
+        },
+        {
+          "frame_index": 5,
+          "step": 5,
+          "G_target_probability": 0.2726208567619324,
+          "G_top1_index": 277,
+          "G_top1_label": "red fox",
+          "l2": 33.36912155151367
+        },
+        {
+          "frame_index": 6,
+          "step": 6,
+          "G_target_probability": 0.2621086835861206,
+          "G_top1_index": 277,
+          "G_top1_label": "red fox",
+          "l2": 37.422462463378906
+        },
+        {
+          "frame_index": 7,
+          "step": 7,
+          "G_target_probability": 0.24795815348625183,
+          "G_top1_index": 277,
+          "G_top1_label": "red fox",
+          "l2": 41.03074264526367
+        },
+        {
+          "frame_index": 8,
+          "step": 8,
+          "G_target_probability": 0.23412707448005676,
+          "G_top1_index": 277,
+          "G_top1_label": "red fox",
+          "l2": 44.25969314575195
+        },
+        {
+          "frame_index": 9,
+          "step": 9,
+          "G_target_probability": 0.2152877300977707,
+          "G_top1_index": 277,
+          "G_top1_label": "red fox",
+          "l2": 47.160579681396484
+        },
+        {
+          "frame_index": 10,
+          "step": 10,
+          "G_target_probability": 0.19213752448558807,
+          "G_top1_index": 277,
+          "G_top1_label": "red fox",
+          "l2": 49.766143798828125
+        },
+        {
+          "frame_index": 11,
+          "step": 11,
+          "G_target_probability": 0.17108312249183655,
+          "G_top1_index": 277,
+          "G_top1_label": "red fox",
+          "l2": 52.15371322631836
+        }
+      ],
+      "gif": "fixed_cat2_kit_fox_amp120.gif",
+      "poster": "fixed_cat2_kit_fox_amp120_poster.png",
+      "poster_sha256": "f051bb1d0d9f656fe15e2a1bcab7fc528d8dfdd6fc2d6bcf8e14966d5b629aaf",
+      "npz": "fixed_cat2_kit_fox_amp120.npz",
+      "scores": "fixed_cat2_kit_fox_amp120_scores.json",
+      "live_npz": "fixed_cat2_kit_fox_amp120_live_replay.npz",
+      "live_scores": "fixed_cat2_kit_fox_amp120_live_scores.json",
+      "amp": 120,
+      "live_replay_top1_indices": [
+        282,
+        277,
+        277,
+        277,
+        278,
+        278,
+        278,
+        278,
+        278,
+        278,
+        278,
+        278
+      ],
+      "sha256": "54a14bb4f9674e2a45ee03e5c9b997fcfac5c210f553e3ec57c7ae80023d19dd",
+      "bytes": 1135885
+    },
+    {
+      "live_id": "legacy_cat2_lynx_amp250",
+      "id": "fixed_cat2_lynx_amp250",
+      "group": "cat2",
+      "title": "cat2 \u2192 lynx",
+      "target_label": "lynx",
+      "target_class_index": 287,
+      "legacy_amp": 250,
+      "description": "Fixed source-gradient trajectory with amp 250; 12 computed states. The source gradient is evaluated once. Live replay matches all original saved image tiles and rounded scores; the first live and fixed updates are identical.",
+      "frame_count": 12,
+      "dimensions": [
+        500,
+        382
+      ],
+      "durations_ms": [
+        1200,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        1800
+      ],
+      "loop_duration_ms": 7000,
+      "recorded_npz": "outputs/website_fixed_gradients/cats/fixed_cat2_lynx_amp250.npz",
+      "recorded_npz_sha256": "fc7126d560c8952ef13d184f28aa0b9c3f834fe98600ebda5bff139eacc1c89c",
+      "recorded_json": "outputs/website_fixed_gradients/cats/fixed_cat2_lynx_amp250.json",
+      "live_replay_npz": "outputs/website_fixed_gradients/cats/fixed_cat2_lynx_amp250_live_replay.npz",
+      "target_probabilities": [
+        0.06807387620210648,
+        0.5009240508079529,
+        0.36853399872779846,
+        0.3238270580768585,
+        0.32435405254364014,
+        0.30294615030288696,
+        0.2109072208404541,
+        0.10190469771623611,
+        0.04111023247241974,
+        0.01445529144257307,
+        0.005959735717624426,
+        0.0029763064812868834
+      ],
+      "top1_class_indices": [
+        282,
+        287,
+        287,
+        287,
+        287,
+        287,
+        287,
+        88,
+        88,
+        88,
+        88,
+        1
+      ],
+      "top1_labels": [
+        "tiger cat",
+        "lynx",
+        "lynx",
+        "lynx",
+        "lynx",
+        "lynx",
+        "lynx",
+        "macaw",
+        "macaw",
+        "macaw",
+        "macaw",
+        "goldfish"
+      ],
+      "l2_from_source": [
+        0.002049157163128257,
+        15.370149612426758,
+        25.752756118774414,
+        33.83890914916992,
+        40.70722579956055,
+        46.59550476074219,
+        51.78237533569336,
+        56.490692138671875,
+        60.68586349487305,
+        64.4195556640625,
+        67.7355728149414,
+        70.6572036743164
+      ],
+      "source_image": "data/cats/cat2.jpg",
+      "source_image_sha256": "74d09a7c6463a844572c58634a798d4fa1b646aeff8be81a42ab68915e54e049",
+      "original_live_strip": "outputs/imagenet_live/cat2_live_to_287_amp250.png",
+      "original_live_strip_sha256": "a9cd1ec08fb5663d3ece6e706cb92982128869f2c8e897fbb541f57b3612b05e",
+      "live_replay_target_probabilities": [
+        0.0680755078792572,
+        0.5009240508079529,
+        0.792746901512146,
+        0.894185483455658,
+        0.9191397428512573,
+        0.9329533576965332,
+        0.9427260160446167,
+        0.949702799320221,
+        0.9551016092300415,
+        0.9592204093933105,
+        0.9626522064208984,
+        0.9654702544212341
+      ],
+      "live_replay_l2_from_source": [
+        0.0,
+        15.370149612426758,
+        17.09017562866211,
+        18.087860107421875,
+        18.610593795776367,
+        19.00463104248047,
+        19.33844757080078,
+        19.62181282043457,
+        19.883543014526367,
+        20.10854148864746,
+        20.310707092285156,
+        20.492755889892578
+      ],
+      "validation": {
+        "live_strip_tiles_exact_match": true,
+        "live_strip_tile_errors": [
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          }
+        ],
+        "live_rounded_scores_match": true,
+        "live_top1_labels_match": true,
+        "live_fixed_first_update_max_abs_error": 0.0,
+        "fixed_zero_step_source_max_abs_error": 9.357929229736328e-06,
+        "fixed_zero_step_source_l2": 0.002049157163128257,
+        "fixed_gradient_evaluations": 1,
+        "live_gradient_evaluations": 11,
+        "same_source_analysis_tensor": true,
+        "all_12_fixed_frames_distinct": true,
+        "finite_in_range": true
+      },
+      "provenance": {
+        "script": "outputs/website_fixed_gradients/cats/build_fixed_cats.py",
+        "script_sha256": "279fa2a51899a06fd9a0552e4dfced8b93ae5fc0e32afb9ba1f7a046e91a2fd5",
+        "backend": "ch4_eval.csp_plenoptic_rgb.generate_morph_sequence_corrected",
+        "backend_sha256": "ddee952f5ecb16be1446faa2ad7623f378590641352f875ae1c39d142b989eb9",
+        "extrapolate_sha256": "39748180d1226d94e9cc135e5d02070c5a7e919ac91e8ae279e5c1ea73a977e1",
+        "pyramid_sha256": "ca6a7c49d99bc434ed8873cd239c4200e36b051209a65974ada6b1383b1d2abd",
+        "G": "L2-robust ResNet-50, ImageNet normalization",
+        "G_checkpoint": "models/resnet50_l2_eps3.ckpt",
+        "G_checkpoint_sha256": "380b14e6f9750bffa1447cf7017f65da4dc5ce71a3dd112f107515dcf7b14d9d",
+        "pyramid": {
+          "height": "auto",
+          "order": 4,
+          "twidth": "resolved scales + 1; native LocalPyramid"
+        },
+        "color_mode": "rgb",
+        "image_dimensions": [
+          224,
+          224
+        ],
+        "magnitude_amplifiers": [
+          0,
+          0,
+          0
+        ],
+        "source_preprocessing": "PIL RGB float32 /255; torch bilinear 224x224 align_corners=False",
+        "fixed_gradient_schedule": "Native use_live_gradients=False; one source decomposition and gradient, steps 0 through 11.",
+        "live_gradient_schedule": "Native use_live_gradients=True; reanalyze current clipped image before each of 11 updates.",
+        "no_temporal_interpolation": true,
+        "selection": "All nine user-selected cats; no selection by fixed-run outcomes.",
+        "packaging_script": "outputs/website_fixed_gradients/cats/standardize_manifest.py"
+      },
+      "encoding": "224x224 rendered tensors rounded to uint8; shared 256-color GIF palette, no temporal interpolation.",
+      "frames": [
+        {
+          "frame_index": 0,
+          "step": 0,
+          "G_target_probability": 0.06807387620210648,
+          "G_top1_index": 282,
+          "G_top1_label": "tiger cat",
+          "l2": 0.002049157163128257
+        },
+        {
+          "frame_index": 1,
+          "step": 1,
+          "G_target_probability": 0.5009240508079529,
+          "G_top1_index": 287,
+          "G_top1_label": "lynx",
+          "l2": 15.370149612426758
+        },
+        {
+          "frame_index": 2,
+          "step": 2,
+          "G_target_probability": 0.36853399872779846,
+          "G_top1_index": 287,
+          "G_top1_label": "lynx",
+          "l2": 25.752756118774414
+        },
+        {
+          "frame_index": 3,
+          "step": 3,
+          "G_target_probability": 0.3238270580768585,
+          "G_top1_index": 287,
+          "G_top1_label": "lynx",
+          "l2": 33.83890914916992
+        },
+        {
+          "frame_index": 4,
+          "step": 4,
+          "G_target_probability": 0.32435405254364014,
+          "G_top1_index": 287,
+          "G_top1_label": "lynx",
+          "l2": 40.70722579956055
+        },
+        {
+          "frame_index": 5,
+          "step": 5,
+          "G_target_probability": 0.30294615030288696,
+          "G_top1_index": 287,
+          "G_top1_label": "lynx",
+          "l2": 46.59550476074219
+        },
+        {
+          "frame_index": 6,
+          "step": 6,
+          "G_target_probability": 0.2109072208404541,
+          "G_top1_index": 287,
+          "G_top1_label": "lynx",
+          "l2": 51.78237533569336
+        },
+        {
+          "frame_index": 7,
+          "step": 7,
+          "G_target_probability": 0.10190469771623611,
+          "G_top1_index": 88,
+          "G_top1_label": "macaw",
+          "l2": 56.490692138671875
+        },
+        {
+          "frame_index": 8,
+          "step": 8,
+          "G_target_probability": 0.04111023247241974,
+          "G_top1_index": 88,
+          "G_top1_label": "macaw",
+          "l2": 60.68586349487305
+        },
+        {
+          "frame_index": 9,
+          "step": 9,
+          "G_target_probability": 0.01445529144257307,
+          "G_top1_index": 88,
+          "G_top1_label": "macaw",
+          "l2": 64.4195556640625
+        },
+        {
+          "frame_index": 10,
+          "step": 10,
+          "G_target_probability": 0.005959735717624426,
+          "G_top1_index": 88,
+          "G_top1_label": "macaw",
+          "l2": 67.7355728149414
+        },
+        {
+          "frame_index": 11,
+          "step": 11,
+          "G_target_probability": 0.0029763064812868834,
+          "G_top1_index": 1,
+          "G_top1_label": "goldfish",
+          "l2": 70.6572036743164
+        }
+      ],
+      "gif": "fixed_cat2_lynx_amp250.gif",
+      "poster": "fixed_cat2_lynx_amp250_poster.png",
+      "poster_sha256": "0568d46e68c2d5fa5dea068c4e61cd3f900355d30174a89c73980def3f44b5ad",
+      "npz": "fixed_cat2_lynx_amp250.npz",
+      "scores": "fixed_cat2_lynx_amp250_scores.json",
+      "live_npz": "fixed_cat2_lynx_amp250_live_replay.npz",
+      "live_scores": "fixed_cat2_lynx_amp250_live_scores.json",
+      "amp": 250,
+      "live_replay_top1_indices": [
+        282,
+        287,
+        287,
+        287,
+        287,
+        287,
+        287,
+        287,
+        287,
+        287,
+        287,
+        287
+      ],
+      "sha256": "38b10635e700e82bb7427915d8dca210ef8dd3957ed33c6a7bed74f94377f911",
+      "bytes": 1138609
+    },
+    {
+      "live_id": "legacy_cat3_flamingo_amp30",
+      "id": "fixed_cat3_flamingo_amp30",
+      "group": "cat3",
+      "title": "cat3 \u2192 flamingo",
+      "target_label": "flamingo",
+      "target_class_index": 130,
+      "legacy_amp": 30,
+      "description": "Fixed source-gradient trajectory with amp 30; 12 computed states. The source gradient is evaluated once. Live replay matches all original saved image tiles and rounded scores; the first live and fixed updates are identical.",
+      "frame_count": 12,
+      "dimensions": [
+        500,
+        382
+      ],
+      "durations_ms": [
+        1200,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        1800
+      ],
+      "loop_duration_ms": 7000,
+      "recorded_npz": "outputs/website_fixed_gradients/cats/fixed_cat3_flamingo_amp30.npz",
+      "recorded_npz_sha256": "3bb021f3370efe9192412ced766f8c20d1177ba8de89a1245fd8817d1f0c2be0",
+      "recorded_json": "outputs/website_fixed_gradients/cats/fixed_cat3_flamingo_amp30.json",
+      "live_replay_npz": "outputs/website_fixed_gradients/cats/fixed_cat3_flamingo_amp30_live_replay.npz",
+      "target_probabilities": [
+        1.1124825505248737e-09,
+        6.58601662095748e-09,
+        2.6453134793769095e-08,
+        8.131181061798998e-08,
+        1.902977118106719e-07,
+        3.741385796729446e-07,
+        6.518435498037434e-07,
+        1.0462121053933515e-06,
+        1.547074589325348e-06,
+        2.1328648927010363e-06,
+        2.787490529954084e-06,
+        3.418011147005018e-06
+      ],
+      "top1_class_indices": [
+        287,
+        287,
+        287,
+        287,
+        287,
+        287,
+        287,
+        287,
+        287,
+        287,
+        287,
+        335
+      ],
+      "top1_labels": [
+        "lynx",
+        "lynx",
+        "lynx",
+        "lynx",
+        "lynx",
+        "lynx",
+        "lynx",
+        "lynx",
+        "lynx",
+        "lynx",
+        "lynx",
+        "fox squirrel"
+      ],
+      "l2_from_source": [
+        0.0018480204744264483,
+        2.954477071762085,
+        5.734396934509277,
+        8.312047004699707,
+        10.69896125793457,
+        12.9169282913208,
+        14.98481559753418,
+        16.922975540161133,
+        18.743589401245117,
+        20.453554153442383,
+        22.071359634399414,
+        23.60080337524414
+      ],
+      "source_image": "data/cats/cat3.jpg",
+      "source_image_sha256": "59ec9bf12a5b63e0913e986b9566b96228c9f8921fda4fb87bf2a7f9acff3dd2",
+      "original_live_strip": "outputs/imagenet_live/cat3_live_to_130_amp30.png",
+      "original_live_strip_sha256": "18f40326e0e293f7e2182c85f36e740dd364435fc6cf1bd8c2ba629603509202",
+      "live_replay_target_probabilities": [
+        1.1124441368082216e-09,
+        6.58601662095748e-09,
+        3.2664864590969955e-08,
+        1.6391358315104299e-07,
+        6.620113026656327e-07,
+        2.6240802526444895e-06,
+        9.225223948305938e-06,
+        2.8917273084516637e-05,
+        8.143611194100231e-05,
+        0.00024322228273376822,
+        0.0008324759546667337,
+        0.003422608831897378
+      ],
+      "live_replay_l2_from_source": [
+        0.0,
+        2.954477071762085,
+        5.540621280670166,
+        8.195106506347656,
+        10.353843688964844,
+        12.503376007080078,
+        14.490983963012695,
+        16.22051429748535,
+        17.79098892211914,
+        19.131349563598633,
+        20.550209045410156,
+        21.909656524658203
+      ],
+      "validation": {
+        "live_strip_tiles_exact_match": true,
+        "live_strip_tile_errors": [
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          }
+        ],
+        "live_rounded_scores_match": true,
+        "live_top1_labels_match": true,
+        "live_fixed_first_update_max_abs_error": 0.0,
+        "fixed_zero_step_source_max_abs_error": 8.52346420288086e-06,
+        "fixed_zero_step_source_l2": 0.0018480204744264483,
+        "fixed_gradient_evaluations": 1,
+        "live_gradient_evaluations": 11,
+        "same_source_analysis_tensor": true,
+        "all_12_fixed_frames_distinct": true,
+        "finite_in_range": true
+      },
+      "provenance": {
+        "script": "outputs/website_fixed_gradients/cats/build_fixed_cats.py",
+        "script_sha256": "279fa2a51899a06fd9a0552e4dfced8b93ae5fc0e32afb9ba1f7a046e91a2fd5",
+        "backend": "ch4_eval.csp_plenoptic_rgb.generate_morph_sequence_corrected",
+        "backend_sha256": "ddee952f5ecb16be1446faa2ad7623f378590641352f875ae1c39d142b989eb9",
+        "extrapolate_sha256": "39748180d1226d94e9cc135e5d02070c5a7e919ac91e8ae279e5c1ea73a977e1",
+        "pyramid_sha256": "ca6a7c49d99bc434ed8873cd239c4200e36b051209a65974ada6b1383b1d2abd",
+        "G": "L2-robust ResNet-50, ImageNet normalization",
+        "G_checkpoint": "models/resnet50_l2_eps3.ckpt",
+        "G_checkpoint_sha256": "380b14e6f9750bffa1447cf7017f65da4dc5ce71a3dd112f107515dcf7b14d9d",
+        "pyramid": {
+          "height": "auto",
+          "order": 4,
+          "twidth": "resolved scales + 1; native LocalPyramid"
+        },
+        "color_mode": "rgb",
+        "image_dimensions": [
+          224,
+          224
+        ],
+        "magnitude_amplifiers": [
+          0,
+          0,
+          0
+        ],
+        "source_preprocessing": "PIL RGB float32 /255; torch bilinear 224x224 align_corners=False",
+        "fixed_gradient_schedule": "Native use_live_gradients=False; one source decomposition and gradient, steps 0 through 11.",
+        "live_gradient_schedule": "Native use_live_gradients=True; reanalyze current clipped image before each of 11 updates.",
+        "no_temporal_interpolation": true,
+        "selection": "All nine user-selected cats; no selection by fixed-run outcomes.",
+        "packaging_script": "outputs/website_fixed_gradients/cats/standardize_manifest.py"
+      },
+      "encoding": "224x224 rendered tensors rounded to uint8; shared 256-color GIF palette, no temporal interpolation.",
+      "frames": [
+        {
+          "frame_index": 0,
+          "step": 0,
+          "G_target_probability": 1.1124825505248737e-09,
+          "G_top1_index": 287,
+          "G_top1_label": "lynx",
+          "l2": 0.0018480204744264483
+        },
+        {
+          "frame_index": 1,
+          "step": 1,
+          "G_target_probability": 6.58601662095748e-09,
+          "G_top1_index": 287,
+          "G_top1_label": "lynx",
+          "l2": 2.954477071762085
+        },
+        {
+          "frame_index": 2,
+          "step": 2,
+          "G_target_probability": 2.6453134793769095e-08,
+          "G_top1_index": 287,
+          "G_top1_label": "lynx",
+          "l2": 5.734396934509277
+        },
+        {
+          "frame_index": 3,
+          "step": 3,
+          "G_target_probability": 8.131181061798998e-08,
+          "G_top1_index": 287,
+          "G_top1_label": "lynx",
+          "l2": 8.312047004699707
+        },
+        {
+          "frame_index": 4,
+          "step": 4,
+          "G_target_probability": 1.902977118106719e-07,
+          "G_top1_index": 287,
+          "G_top1_label": "lynx",
+          "l2": 10.69896125793457
+        },
+        {
+          "frame_index": 5,
+          "step": 5,
+          "G_target_probability": 3.741385796729446e-07,
+          "G_top1_index": 287,
+          "G_top1_label": "lynx",
+          "l2": 12.9169282913208
+        },
+        {
+          "frame_index": 6,
+          "step": 6,
+          "G_target_probability": 6.518435498037434e-07,
+          "G_top1_index": 287,
+          "G_top1_label": "lynx",
+          "l2": 14.98481559753418
+        },
+        {
+          "frame_index": 7,
+          "step": 7,
+          "G_target_probability": 1.0462121053933515e-06,
+          "G_top1_index": 287,
+          "G_top1_label": "lynx",
+          "l2": 16.922975540161133
+        },
+        {
+          "frame_index": 8,
+          "step": 8,
+          "G_target_probability": 1.547074589325348e-06,
+          "G_top1_index": 287,
+          "G_top1_label": "lynx",
+          "l2": 18.743589401245117
+        },
+        {
+          "frame_index": 9,
+          "step": 9,
+          "G_target_probability": 2.1328648927010363e-06,
+          "G_top1_index": 287,
+          "G_top1_label": "lynx",
+          "l2": 20.453554153442383
+        },
+        {
+          "frame_index": 10,
+          "step": 10,
+          "G_target_probability": 2.787490529954084e-06,
+          "G_top1_index": 287,
+          "G_top1_label": "lynx",
+          "l2": 22.071359634399414
+        },
+        {
+          "frame_index": 11,
+          "step": 11,
+          "G_target_probability": 3.418011147005018e-06,
+          "G_top1_index": 335,
+          "G_top1_label": "fox squirrel",
+          "l2": 23.60080337524414
+        }
+      ],
+      "gif": "fixed_cat3_flamingo_amp30.gif",
+      "poster": "fixed_cat3_flamingo_amp30_poster.png",
+      "poster_sha256": "10ded38610093cc0a7a717cf64a5586a0fe767f88be8983e463a802e9487ba52",
+      "npz": "fixed_cat3_flamingo_amp30.npz",
+      "scores": "fixed_cat3_flamingo_amp30_scores.json",
+      "live_npz": "fixed_cat3_flamingo_amp30_live_replay.npz",
+      "live_scores": "fixed_cat3_flamingo_amp30_live_scores.json",
+      "amp": 30,
+      "live_replay_top1_indices": [
+        287,
+        287,
+        287,
+        281,
+        281,
+        281,
+        281,
+        281,
+        82,
+        82,
+        82,
+        82
+      ],
+      "sha256": "76ee2624ed06d73b59727a9856eb9e3735089d1f0f3d575f94ad2ea6f54674bf",
+      "bytes": 1097177
+    },
+    {
+      "live_id": "legacy_cat3_flamingo_amp60",
+      "id": "fixed_cat3_flamingo_amp60",
+      "group": "cat3",
+      "title": "cat3 \u2192 flamingo",
+      "target_label": "flamingo",
+      "target_class_index": 130,
+      "legacy_amp": 60,
+      "description": "Fixed source-gradient trajectory with amp 60; 12 computed states. The source gradient is evaluated once. Live replay matches all original saved image tiles and rounded scores; the first live and fixed updates are identical.",
+      "frame_count": 12,
+      "dimensions": [
+        500,
+        382
+      ],
+      "durations_ms": [
+        1200,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        1800
+      ],
+      "loop_duration_ms": 7000,
+      "recorded_npz": "outputs/website_fixed_gradients/cats/fixed_cat3_flamingo_amp60.npz",
+      "recorded_npz_sha256": "e590547f078dd273920f4f404ff8c5735a5c4fd906442deddccfd232d734e762",
+      "recorded_json": "outputs/website_fixed_gradients/cats/fixed_cat3_flamingo_amp60.json",
+      "live_replay_npz": "outputs/website_fixed_gradients/cats/fixed_cat3_flamingo_amp60_live_replay.npz",
+      "target_probabilities": [
+        1.1124825505248737e-09,
+        3.1456966809173537e-08,
+        2.338893807518616e-07,
+        8.046617381296528e-07,
+        1.8721908645602525e-06,
+        3.2645073133608093e-06,
+        4.633132448361721e-06,
+        5.8040845942741726e-06,
+        6.375761586241424e-06,
+        6.809258593420964e-06,
+        7.4212280196661595e-06,
+        7.840216312615667e-06
+      ],
+      "top1_class_indices": [
+        287,
+        287,
+        287,
+        281,
+        287,
+        287,
+        335,
+        335,
+        335,
+        335,
+        335,
+        335
+      ],
+      "top1_labels": [
+        "lynx",
+        "lynx",
+        "lynx",
+        "tabby",
+        "lynx",
+        "lynx",
+        "fox squirrel",
+        "fox squirrel",
+        "fox squirrel",
+        "fox squirrel",
+        "fox squirrel",
+        "fox squirrel"
+      ],
+      "l2_from_source": [
+        0.0018480204744264483,
+        6.196866512298584,
+        11.412832260131836,
+        15.868324279785156,
+        19.684797286987305,
+        23.02665901184082,
+        26.021778106689453,
+        28.726144790649414,
+        31.19862937927246,
+        33.49171447753906,
+        35.62126541137695,
+        37.619136810302734
+      ],
+      "source_image": "data/cats/cat3.jpg",
+      "source_image_sha256": "59ec9bf12a5b63e0913e986b9566b96228c9f8921fda4fb87bf2a7f9acff3dd2",
+      "original_live_strip": "outputs/imagenet_live/cat3_live_to_130_amp60.png",
+      "original_live_strip_sha256": "f8aa8550c9cd05a34dd4d8b3c49ad7c2baa5e080a4f86c238e1e6634263a76a9",
+      "live_replay_target_probabilities": [
+        1.1124441368082216e-09,
+        3.1456966809173537e-08,
+        5.417777515503985e-07,
+        5.435259481600951e-06,
+        3.881399243255146e-05,
+        0.0002256140433019027,
+        0.0016874638386070728,
+        0.01348088402301073,
+        0.06638014316558838,
+        0.211367666721344,
+        0.43314090371131897,
+        0.6123802065849304
+      ],
+      "live_replay_l2_from_source": [
+        0.0,
+        6.196866512298584,
+        11.028575897216797,
+        14.802148818969727,
+        18.035375595092773,
+        20.710941314697266,
+        23.04429817199707,
+        25.378896713256836,
+        27.171520233154297,
+        28.873119354248047,
+        30.152149200439453,
+        31.072757720947266
+      ],
+      "validation": {
+        "live_strip_tiles_exact_match": true,
+        "live_strip_tile_errors": [
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          }
+        ],
+        "live_rounded_scores_match": true,
+        "live_top1_labels_match": true,
+        "live_fixed_first_update_max_abs_error": 0.0,
+        "fixed_zero_step_source_max_abs_error": 8.52346420288086e-06,
+        "fixed_zero_step_source_l2": 0.0018480204744264483,
+        "fixed_gradient_evaluations": 1,
+        "live_gradient_evaluations": 11,
+        "same_source_analysis_tensor": true,
+        "all_12_fixed_frames_distinct": true,
+        "finite_in_range": true
+      },
+      "provenance": {
+        "script": "outputs/website_fixed_gradients/cats/build_fixed_cats.py",
+        "script_sha256": "279fa2a51899a06fd9a0552e4dfced8b93ae5fc0e32afb9ba1f7a046e91a2fd5",
+        "backend": "ch4_eval.csp_plenoptic_rgb.generate_morph_sequence_corrected",
+        "backend_sha256": "ddee952f5ecb16be1446faa2ad7623f378590641352f875ae1c39d142b989eb9",
+        "extrapolate_sha256": "39748180d1226d94e9cc135e5d02070c5a7e919ac91e8ae279e5c1ea73a977e1",
+        "pyramid_sha256": "ca6a7c49d99bc434ed8873cd239c4200e36b051209a65974ada6b1383b1d2abd",
+        "G": "L2-robust ResNet-50, ImageNet normalization",
+        "G_checkpoint": "models/resnet50_l2_eps3.ckpt",
+        "G_checkpoint_sha256": "380b14e6f9750bffa1447cf7017f65da4dc5ce71a3dd112f107515dcf7b14d9d",
+        "pyramid": {
+          "height": "auto",
+          "order": 4,
+          "twidth": "resolved scales + 1; native LocalPyramid"
+        },
+        "color_mode": "rgb",
+        "image_dimensions": [
+          224,
+          224
+        ],
+        "magnitude_amplifiers": [
+          0,
+          0,
+          0
+        ],
+        "source_preprocessing": "PIL RGB float32 /255; torch bilinear 224x224 align_corners=False",
+        "fixed_gradient_schedule": "Native use_live_gradients=False; one source decomposition and gradient, steps 0 through 11.",
+        "live_gradient_schedule": "Native use_live_gradients=True; reanalyze current clipped image before each of 11 updates.",
+        "no_temporal_interpolation": true,
+        "selection": "All nine user-selected cats; no selection by fixed-run outcomes.",
+        "packaging_script": "outputs/website_fixed_gradients/cats/standardize_manifest.py"
+      },
+      "encoding": "224x224 rendered tensors rounded to uint8; shared 256-color GIF palette, no temporal interpolation.",
+      "frames": [
+        {
+          "frame_index": 0,
+          "step": 0,
+          "G_target_probability": 1.1124825505248737e-09,
+          "G_top1_index": 287,
+          "G_top1_label": "lynx",
+          "l2": 0.0018480204744264483
+        },
+        {
+          "frame_index": 1,
+          "step": 1,
+          "G_target_probability": 3.1456966809173537e-08,
+          "G_top1_index": 287,
+          "G_top1_label": "lynx",
+          "l2": 6.196866512298584
+        },
+        {
+          "frame_index": 2,
+          "step": 2,
+          "G_target_probability": 2.338893807518616e-07,
+          "G_top1_index": 287,
+          "G_top1_label": "lynx",
+          "l2": 11.412832260131836
+        },
+        {
+          "frame_index": 3,
+          "step": 3,
+          "G_target_probability": 8.046617381296528e-07,
+          "G_top1_index": 281,
+          "G_top1_label": "tabby",
+          "l2": 15.868324279785156
+        },
+        {
+          "frame_index": 4,
+          "step": 4,
+          "G_target_probability": 1.8721908645602525e-06,
+          "G_top1_index": 287,
+          "G_top1_label": "lynx",
+          "l2": 19.684797286987305
+        },
+        {
+          "frame_index": 5,
+          "step": 5,
+          "G_target_probability": 3.2645073133608093e-06,
+          "G_top1_index": 287,
+          "G_top1_label": "lynx",
+          "l2": 23.02665901184082
+        },
+        {
+          "frame_index": 6,
+          "step": 6,
+          "G_target_probability": 4.633132448361721e-06,
+          "G_top1_index": 335,
+          "G_top1_label": "fox squirrel",
+          "l2": 26.021778106689453
+        },
+        {
+          "frame_index": 7,
+          "step": 7,
+          "G_target_probability": 5.8040845942741726e-06,
+          "G_top1_index": 335,
+          "G_top1_label": "fox squirrel",
+          "l2": 28.726144790649414
+        },
+        {
+          "frame_index": 8,
+          "step": 8,
+          "G_target_probability": 6.375761586241424e-06,
+          "G_top1_index": 335,
+          "G_top1_label": "fox squirrel",
+          "l2": 31.19862937927246
+        },
+        {
+          "frame_index": 9,
+          "step": 9,
+          "G_target_probability": 6.809258593420964e-06,
+          "G_top1_index": 335,
+          "G_top1_label": "fox squirrel",
+          "l2": 33.49171447753906
+        },
+        {
+          "frame_index": 10,
+          "step": 10,
+          "G_target_probability": 7.4212280196661595e-06,
+          "G_top1_index": 335,
+          "G_top1_label": "fox squirrel",
+          "l2": 35.62126541137695
+        },
+        {
+          "frame_index": 11,
+          "step": 11,
+          "G_target_probability": 7.840216312615667e-06,
+          "G_top1_index": 335,
+          "G_top1_label": "fox squirrel",
+          "l2": 37.619136810302734
+        }
+      ],
+      "gif": "fixed_cat3_flamingo_amp60.gif",
+      "poster": "fixed_cat3_flamingo_amp60_poster.png",
+      "poster_sha256": "5a99743b2625b6987ba248ccf84095dd3ed66c7d3d2ea1bf7aab1db638aa5b7c",
+      "npz": "fixed_cat3_flamingo_amp60.npz",
+      "scores": "fixed_cat3_flamingo_amp60_scores.json",
+      "live_npz": "fixed_cat3_flamingo_amp60_live_replay.npz",
+      "live_scores": "fixed_cat3_flamingo_amp60_live_scores.json",
+      "amp": 60,
+      "live_replay_top1_indices": [
+        287,
+        287,
+        281,
+        281,
+        281,
+        82,
+        82,
+        82,
+        130,
+        130,
+        130,
+        130
+      ],
+      "sha256": "f22601adb81c789cfb46ec3dee0c48961bfc12aabda3020c929f061998796c76",
+      "bytes": 1119416
+    },
+    {
+      "live_id": "legacy_cat3_flamingo_amp1000",
+      "id": "fixed_cat3_flamingo_amp1000",
+      "group": "cat3",
+      "title": "cat3 \u2192 flamingo",
+      "target_label": "flamingo",
+      "target_class_index": 130,
+      "legacy_amp": 1000,
+      "description": "Fixed source-gradient trajectory with amp 1000; 12 computed states. The source gradient is evaluated once. Live replay matches all original saved image tiles and rounded scores; the first live and fixed updates are identical.",
+      "frame_count": 12,
+      "dimensions": [
+        500,
+        382
+      ],
+      "durations_ms": [
+        1200,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        1800
+      ],
+      "loop_duration_ms": 7000,
+      "recorded_npz": "outputs/website_fixed_gradients/cats/fixed_cat3_flamingo_amp1000.npz",
+      "recorded_npz_sha256": "909e442b8cd358143547e84f17253f6cf85dd6b3dbfb162086d2d21ead13e841",
+      "recorded_json": "outputs/website_fixed_gradients/cats/fixed_cat3_flamingo_amp1000.json",
+      "live_replay_npz": "outputs/website_fixed_gradients/cats/fixed_cat3_flamingo_amp1000_live_replay.npz",
+      "target_probabilities": [
+        1.1124825505248737e-09,
+        1.3304054846230429e-05,
+        1.6173997209989466e-05,
+        3.6626282962970436e-05,
+        5.984400922898203e-05,
+        7.887659012340009e-05,
+        0.00010216454393230379,
+        6.651083094766364e-05,
+        9.224889072356746e-05,
+        7.922156510176137e-05,
+        6.925519846845418e-05,
+        6.100278187659569e-05
+      ],
+      "top1_class_indices": [
+        287,
+        30,
+        110,
+        30,
+        47,
+        591,
+        591,
+        591,
+        591,
+        591,
+        591,
+        591
+      ],
+      "top1_labels": [
+        "lynx",
+        "bullfrog",
+        "flatworm",
+        "bullfrog",
+        "African chameleon",
+        "handkerchief",
+        "handkerchief",
+        "handkerchief",
+        "handkerchief",
+        "handkerchief",
+        "handkerchief",
+        "handkerchief"
+      ],
+      "l2_from_source": [
+        0.0018480204744264483,
+        73.12561798095703,
+        76.236328125,
+        78.58258819580078,
+        79.36691284179688,
+        80.47262573242188,
+        82.27713012695312,
+        82.33922576904297,
+        82.81851196289062,
+        83.19731140136719,
+        82.66686248779297,
+        82.81049346923828
+      ],
+      "source_image": "data/cats/cat3.jpg",
+      "source_image_sha256": "59ec9bf12a5b63e0913e986b9566b96228c9f8921fda4fb87bf2a7f9acff3dd2",
+      "original_live_strip": "outputs/imagenet_live/cat3_live_to_130_amp1000.png",
+      "original_live_strip_sha256": "ef9de7680efc4243d8de2031fa7bd0f8079a4d15958345642f271b709d5b1d3d",
+      "live_replay_target_probabilities": [
+        1.1124441368082216e-09,
+        1.3304054846230429e-05,
+        0.0011359817581251264,
+        0.005021662451326847,
+        0.4159943759441376,
+        0.9864523410797119,
+        0.9972992539405823,
+        0.997808039188385,
+        0.9981507658958435,
+        0.9983987212181091,
+        0.998571515083313,
+        0.9987013339996338
+      ],
+      "live_replay_l2_from_source": [
+        0.0,
+        73.12561798095703,
+        90.17859649658203,
+        101.060791015625,
+        100.10011291503906,
+        98.64599609375,
+        98.57576751708984,
+        98.57577514648438,
+        98.57585144042969,
+        98.5754623413086,
+        98.57594299316406,
+        98.57670593261719
+      ],
+      "validation": {
+        "live_strip_tiles_exact_match": true,
+        "live_strip_tile_errors": [
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          }
+        ],
+        "live_rounded_scores_match": true,
+        "live_top1_labels_match": true,
+        "live_fixed_first_update_max_abs_error": 0.0,
+        "fixed_zero_step_source_max_abs_error": 8.52346420288086e-06,
+        "fixed_zero_step_source_l2": 0.0018480204744264483,
+        "fixed_gradient_evaluations": 1,
+        "live_gradient_evaluations": 11,
+        "same_source_analysis_tensor": true,
+        "all_12_fixed_frames_distinct": true,
+        "finite_in_range": true
+      },
+      "provenance": {
+        "script": "outputs/website_fixed_gradients/cats/build_fixed_cats.py",
+        "script_sha256": "279fa2a51899a06fd9a0552e4dfced8b93ae5fc0e32afb9ba1f7a046e91a2fd5",
+        "backend": "ch4_eval.csp_plenoptic_rgb.generate_morph_sequence_corrected",
+        "backend_sha256": "ddee952f5ecb16be1446faa2ad7623f378590641352f875ae1c39d142b989eb9",
+        "extrapolate_sha256": "39748180d1226d94e9cc135e5d02070c5a7e919ac91e8ae279e5c1ea73a977e1",
+        "pyramid_sha256": "ca6a7c49d99bc434ed8873cd239c4200e36b051209a65974ada6b1383b1d2abd",
+        "G": "L2-robust ResNet-50, ImageNet normalization",
+        "G_checkpoint": "models/resnet50_l2_eps3.ckpt",
+        "G_checkpoint_sha256": "380b14e6f9750bffa1447cf7017f65da4dc5ce71a3dd112f107515dcf7b14d9d",
+        "pyramid": {
+          "height": "auto",
+          "order": 4,
+          "twidth": "resolved scales + 1; native LocalPyramid"
+        },
+        "color_mode": "rgb",
+        "image_dimensions": [
+          224,
+          224
+        ],
+        "magnitude_amplifiers": [
+          0,
+          0,
+          0
+        ],
+        "source_preprocessing": "PIL RGB float32 /255; torch bilinear 224x224 align_corners=False",
+        "fixed_gradient_schedule": "Native use_live_gradients=False; one source decomposition and gradient, steps 0 through 11.",
+        "live_gradient_schedule": "Native use_live_gradients=True; reanalyze current clipped image before each of 11 updates.",
+        "no_temporal_interpolation": true,
+        "selection": "All nine user-selected cats; no selection by fixed-run outcomes.",
+        "packaging_script": "outputs/website_fixed_gradients/cats/standardize_manifest.py"
+      },
+      "encoding": "224x224 rendered tensors rounded to uint8; shared 256-color GIF palette, no temporal interpolation.",
+      "frames": [
+        {
+          "frame_index": 0,
+          "step": 0,
+          "G_target_probability": 1.1124825505248737e-09,
+          "G_top1_index": 287,
+          "G_top1_label": "lynx",
+          "l2": 0.0018480204744264483
+        },
+        {
+          "frame_index": 1,
+          "step": 1,
+          "G_target_probability": 1.3304054846230429e-05,
+          "G_top1_index": 30,
+          "G_top1_label": "bullfrog",
+          "l2": 73.12561798095703
+        },
+        {
+          "frame_index": 2,
+          "step": 2,
+          "G_target_probability": 1.6173997209989466e-05,
+          "G_top1_index": 110,
+          "G_top1_label": "flatworm",
+          "l2": 76.236328125
+        },
+        {
+          "frame_index": 3,
+          "step": 3,
+          "G_target_probability": 3.6626282962970436e-05,
+          "G_top1_index": 30,
+          "G_top1_label": "bullfrog",
+          "l2": 78.58258819580078
+        },
+        {
+          "frame_index": 4,
+          "step": 4,
+          "G_target_probability": 5.984400922898203e-05,
+          "G_top1_index": 47,
+          "G_top1_label": "African chameleon",
+          "l2": 79.36691284179688
+        },
+        {
+          "frame_index": 5,
+          "step": 5,
+          "G_target_probability": 7.887659012340009e-05,
+          "G_top1_index": 591,
+          "G_top1_label": "handkerchief",
+          "l2": 80.47262573242188
+        },
+        {
+          "frame_index": 6,
+          "step": 6,
+          "G_target_probability": 0.00010216454393230379,
+          "G_top1_index": 591,
+          "G_top1_label": "handkerchief",
+          "l2": 82.27713012695312
+        },
+        {
+          "frame_index": 7,
+          "step": 7,
+          "G_target_probability": 6.651083094766364e-05,
+          "G_top1_index": 591,
+          "G_top1_label": "handkerchief",
+          "l2": 82.33922576904297
+        },
+        {
+          "frame_index": 8,
+          "step": 8,
+          "G_target_probability": 9.224889072356746e-05,
+          "G_top1_index": 591,
+          "G_top1_label": "handkerchief",
+          "l2": 82.81851196289062
+        },
+        {
+          "frame_index": 9,
+          "step": 9,
+          "G_target_probability": 7.922156510176137e-05,
+          "G_top1_index": 591,
+          "G_top1_label": "handkerchief",
+          "l2": 83.19731140136719
+        },
+        {
+          "frame_index": 10,
+          "step": 10,
+          "G_target_probability": 6.925519846845418e-05,
+          "G_top1_index": 591,
+          "G_top1_label": "handkerchief",
+          "l2": 82.66686248779297
+        },
+        {
+          "frame_index": 11,
+          "step": 11,
+          "G_target_probability": 6.100278187659569e-05,
+          "G_top1_index": 591,
+          "G_top1_label": "handkerchief",
+          "l2": 82.81049346923828
+        }
+      ],
+      "gif": "fixed_cat3_flamingo_amp1000.gif",
+      "poster": "fixed_cat3_flamingo_amp1000_poster.png",
+      "poster_sha256": "3f9cd552d0695e91ceb919b79cc8a070630723d286d9ed749086ccb21304703d",
+      "npz": "fixed_cat3_flamingo_amp1000.npz",
+      "scores": "fixed_cat3_flamingo_amp1000_scores.json",
+      "live_npz": "fixed_cat3_flamingo_amp1000_live_replay.npz",
+      "live_scores": "fixed_cat3_flamingo_amp1000_live_scores.json",
+      "amp": 1000,
+      "live_replay_top1_indices": [
+        287,
+        30,
+        971,
+        971,
+        130,
+        130,
+        130,
+        130,
+        130,
+        130,
+        130,
+        130
+      ],
+      "sha256": "568aa0aaaeae9ed77c471b21a88a6a7909a7ed071d7d86c9cf0abb8a475f221e",
+      "bytes": 1157561
+    },
+    {
+      "live_id": "legacy_cat3_leopard_amp250",
+      "id": "fixed_cat3_leopard_amp250",
+      "group": "cat3",
+      "title": "cat3 \u2192 leopard",
+      "target_label": "leopard",
+      "target_class_index": 288,
+      "legacy_amp": 250,
+      "description": "Fixed source-gradient trajectory with amp 250; 12 computed states. The source gradient is evaluated once. Live replay matches all original saved image tiles and rounded scores; the first live and fixed updates are identical.",
+      "frame_count": 12,
+      "dimensions": [
+        500,
+        382
+      ],
+      "durations_ms": [
+        1200,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        1800
+      ],
+      "loop_duration_ms": 7000,
+      "recorded_npz": "outputs/website_fixed_gradients/cats/fixed_cat3_leopard_amp250.npz",
+      "recorded_npz_sha256": "d4330b869d289793dbf7ab6a0f018c4218141d9ffd3e75adb24e1299bef0aa68",
+      "recorded_json": "outputs/website_fixed_gradients/cats/fixed_cat3_leopard_amp250.json",
+      "live_replay_npz": "outputs/website_fixed_gradients/cats/fixed_cat3_leopard_amp250_live_replay.npz",
+      "target_probabilities": [
+        0.011595841497182846,
+        0.7604743838310242,
+        0.808081328868866,
+        0.530342161655426,
+        0.12121842801570892,
+        0.02918335050344467,
+        0.009264443069696426,
+        0.004704395774751902,
+        0.0034817203413695097,
+        0.0029085646383464336,
+        0.002838875399902463,
+        0.003638169029727578
+      ],
+      "top1_class_indices": [
+        287,
+        288,
+        288,
+        288,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39,
+        39
+      ],
+      "top1_labels": [
+        "lynx",
+        "leopard",
+        "leopard",
+        "leopard",
+        "common iguana",
+        "common iguana",
+        "common iguana",
+        "common iguana",
+        "common iguana",
+        "common iguana",
+        "common iguana",
+        "common iguana"
+      ],
+      "l2_from_source": [
+        0.0018480204744264483,
+        29.455745697021484,
+        37.553836822509766,
+        44.73219299316406,
+        50.42176818847656,
+        55.38672637939453,
+        60.00730514526367,
+        63.755897521972656,
+        66.76187133789062,
+        69.36949157714844,
+        71.55935668945312,
+        73.43568420410156
+      ],
+      "source_image": "data/cats/cat3.jpg",
+      "source_image_sha256": "59ec9bf12a5b63e0913e986b9566b96228c9f8921fda4fb87bf2a7f9acff3dd2",
+      "original_live_strip": "outputs/imagenet_live/cat3_live_to_288_amp250.png",
+      "original_live_strip_sha256": "3e7529acde9bd5272a68c14b9feef499cf189f68220239eca3024d02e9ee5e9e",
+      "live_replay_target_probabilities": [
+        0.01159606035798788,
+        0.7604743838310242,
+        0.8512077331542969,
+        0.8769828677177429,
+        0.8949843645095825,
+        0.9075643420219421,
+        0.917343258857727,
+        0.925182580947876,
+        0.9313081502914429,
+        0.9364197254180908,
+        0.9407869577407837,
+        0.9446486830711365
+      ],
+      "live_replay_l2_from_source": [
+        0.0,
+        29.455745697021484,
+        29.08959197998047,
+        29.00678825378418,
+        28.932641983032227,
+        28.903858184814453,
+        28.898523330688477,
+        28.908100128173828,
+        28.925447463989258,
+        28.94609260559082,
+        28.972013473510742,
+        28.998157501220703
+      ],
+      "validation": {
+        "live_strip_tiles_exact_match": true,
+        "live_strip_tile_errors": [
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          }
+        ],
+        "live_rounded_scores_match": true,
+        "live_top1_labels_match": true,
+        "live_fixed_first_update_max_abs_error": 0.0,
+        "fixed_zero_step_source_max_abs_error": 8.52346420288086e-06,
+        "fixed_zero_step_source_l2": 0.0018480204744264483,
+        "fixed_gradient_evaluations": 1,
+        "live_gradient_evaluations": 11,
+        "same_source_analysis_tensor": true,
+        "all_12_fixed_frames_distinct": true,
+        "finite_in_range": true
+      },
+      "provenance": {
+        "script": "outputs/website_fixed_gradients/cats/build_fixed_cats.py",
+        "script_sha256": "279fa2a51899a06fd9a0552e4dfced8b93ae5fc0e32afb9ba1f7a046e91a2fd5",
+        "backend": "ch4_eval.csp_plenoptic_rgb.generate_morph_sequence_corrected",
+        "backend_sha256": "ddee952f5ecb16be1446faa2ad7623f378590641352f875ae1c39d142b989eb9",
+        "extrapolate_sha256": "39748180d1226d94e9cc135e5d02070c5a7e919ac91e8ae279e5c1ea73a977e1",
+        "pyramid_sha256": "ca6a7c49d99bc434ed8873cd239c4200e36b051209a65974ada6b1383b1d2abd",
+        "G": "L2-robust ResNet-50, ImageNet normalization",
+        "G_checkpoint": "models/resnet50_l2_eps3.ckpt",
+        "G_checkpoint_sha256": "380b14e6f9750bffa1447cf7017f65da4dc5ce71a3dd112f107515dcf7b14d9d",
+        "pyramid": {
+          "height": "auto",
+          "order": 4,
+          "twidth": "resolved scales + 1; native LocalPyramid"
+        },
+        "color_mode": "rgb",
+        "image_dimensions": [
+          224,
+          224
+        ],
+        "magnitude_amplifiers": [
+          0,
+          0,
+          0
+        ],
+        "source_preprocessing": "PIL RGB float32 /255; torch bilinear 224x224 align_corners=False",
+        "fixed_gradient_schedule": "Native use_live_gradients=False; one source decomposition and gradient, steps 0 through 11.",
+        "live_gradient_schedule": "Native use_live_gradients=True; reanalyze current clipped image before each of 11 updates.",
+        "no_temporal_interpolation": true,
+        "selection": "All nine user-selected cats; no selection by fixed-run outcomes.",
+        "packaging_script": "outputs/website_fixed_gradients/cats/standardize_manifest.py"
+      },
+      "encoding": "224x224 rendered tensors rounded to uint8; shared 256-color GIF palette, no temporal interpolation.",
+      "frames": [
+        {
+          "frame_index": 0,
+          "step": 0,
+          "G_target_probability": 0.011595841497182846,
+          "G_top1_index": 287,
+          "G_top1_label": "lynx",
+          "l2": 0.0018480204744264483
+        },
+        {
+          "frame_index": 1,
+          "step": 1,
+          "G_target_probability": 0.7604743838310242,
+          "G_top1_index": 288,
+          "G_top1_label": "leopard",
+          "l2": 29.455745697021484
+        },
+        {
+          "frame_index": 2,
+          "step": 2,
+          "G_target_probability": 0.808081328868866,
+          "G_top1_index": 288,
+          "G_top1_label": "leopard",
+          "l2": 37.553836822509766
+        },
+        {
+          "frame_index": 3,
+          "step": 3,
+          "G_target_probability": 0.530342161655426,
+          "G_top1_index": 288,
+          "G_top1_label": "leopard",
+          "l2": 44.73219299316406
+        },
+        {
+          "frame_index": 4,
+          "step": 4,
+          "G_target_probability": 0.12121842801570892,
+          "G_top1_index": 39,
+          "G_top1_label": "common iguana",
+          "l2": 50.42176818847656
+        },
+        {
+          "frame_index": 5,
+          "step": 5,
+          "G_target_probability": 0.02918335050344467,
+          "G_top1_index": 39,
+          "G_top1_label": "common iguana",
+          "l2": 55.38672637939453
+        },
+        {
+          "frame_index": 6,
+          "step": 6,
+          "G_target_probability": 0.009264443069696426,
+          "G_top1_index": 39,
+          "G_top1_label": "common iguana",
+          "l2": 60.00730514526367
+        },
+        {
+          "frame_index": 7,
+          "step": 7,
+          "G_target_probability": 0.004704395774751902,
+          "G_top1_index": 39,
+          "G_top1_label": "common iguana",
+          "l2": 63.755897521972656
+        },
+        {
+          "frame_index": 8,
+          "step": 8,
+          "G_target_probability": 0.0034817203413695097,
+          "G_top1_index": 39,
+          "G_top1_label": "common iguana",
+          "l2": 66.76187133789062
+        },
+        {
+          "frame_index": 9,
+          "step": 9,
+          "G_target_probability": 0.0029085646383464336,
+          "G_top1_index": 39,
+          "G_top1_label": "common iguana",
+          "l2": 69.36949157714844
+        },
+        {
+          "frame_index": 10,
+          "step": 10,
+          "G_target_probability": 0.002838875399902463,
+          "G_top1_index": 39,
+          "G_top1_label": "common iguana",
+          "l2": 71.55935668945312
+        },
+        {
+          "frame_index": 11,
+          "step": 11,
+          "G_target_probability": 0.003638169029727578,
+          "G_top1_index": 39,
+          "G_top1_label": "common iguana",
+          "l2": 73.43568420410156
+        }
+      ],
+      "gif": "fixed_cat3_leopard_amp250.gif",
+      "poster": "fixed_cat3_leopard_amp250_poster.png",
+      "poster_sha256": "dfe2949d7bf8a1db25347726c91f417f60f462703db46bb49d7051f92315bc51",
+      "npz": "fixed_cat3_leopard_amp250.npz",
+      "scores": "fixed_cat3_leopard_amp250_scores.json",
+      "live_npz": "fixed_cat3_leopard_amp250_live_replay.npz",
+      "live_scores": "fixed_cat3_leopard_amp250_live_scores.json",
+      "amp": 250,
+      "live_replay_top1_indices": [
+        287,
+        288,
+        288,
+        288,
+        288,
+        288,
+        288,
+        288,
+        288,
+        288,
+        288,
+        288
+      ],
+      "sha256": "da39dc4b5751afa5bba51cfc2ee79d69908cf1d2a1b851bbb5ea2e518d6934c3",
+      "bytes": 1120406
+    },
+    {
+      "live_id": "legacy_cat3_tiger_amp1000",
+      "id": "fixed_cat3_tiger_amp1000",
+      "group": "cat3",
+      "title": "cat3 \u2192 tiger",
+      "target_label": "tiger",
+      "target_class_index": 292,
+      "legacy_amp": 1000,
+      "description": "Fixed source-gradient trajectory with amp 1000; 12 computed states. The source gradient is evaluated once. Live replay matches all original saved image tiles and rounded scores; the first live and fixed updates are identical.",
+      "frame_count": 12,
+      "dimensions": [
+        500,
+        382
+      ],
+      "durations_ms": [
+        1200,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        1800
+      ],
+      "loop_duration_ms": 7000,
+      "recorded_npz": "outputs/website_fixed_gradients/cats/fixed_cat3_tiger_amp1000.npz",
+      "recorded_npz_sha256": "df7532144b0b27521c559934108ff7362e237ca3fae83f426b3921ea655fa824",
+      "recorded_json": "outputs/website_fixed_gradients/cats/fixed_cat3_tiger_amp1000.json",
+      "live_replay_npz": "outputs/website_fixed_gradients/cats/fixed_cat3_tiger_amp1000_live_replay.npz",
+      "target_probabilities": [
+        0.005390695761889219,
+        0.6069454550743103,
+        0.05725264176726341,
+        0.00470769451931119,
+        0.0016691019991412759,
+        0.0012629886623471975,
+        0.0007206042646430433,
+        0.0005341473151929677,
+        0.0003685824922285974,
+        0.0002860263630282134,
+        0.0002342645457247272,
+        0.0002540047571528703
+      ],
+      "top1_class_indices": [
+        287,
+        292,
+        39,
+        39,
+        39,
+        39,
+        591,
+        591,
+        591,
+        591,
+        591,
+        591
+      ],
+      "top1_labels": [
+        "lynx",
+        "tiger",
+        "common iguana",
+        "common iguana",
+        "common iguana",
+        "common iguana",
+        "handkerchief",
+        "handkerchief",
+        "handkerchief",
+        "handkerchief",
+        "handkerchief",
+        "handkerchief"
+      ],
+      "l2_from_source": [
+        0.0018480204744264483,
+        52.08833312988281,
+        61.17110061645508,
+        68.6565933227539,
+        73.47692108154297,
+        76.9068374633789,
+        78.96273040771484,
+        80.3741226196289,
+        81.56916809082031,
+        82.77399444580078,
+        83.00172424316406,
+        82.63365173339844
+      ],
+      "source_image": "data/cats/cat3.jpg",
+      "source_image_sha256": "59ec9bf12a5b63e0913e986b9566b96228c9f8921fda4fb87bf2a7f9acff3dd2",
+      "original_live_strip": "outputs/imagenet_live/cat3_live_to_292_amp1000.png",
+      "original_live_strip_sha256": "c5eb1087347ff430e23656bb0875ee0a9f3df837e206ace7c11d0894e98d0d8e",
+      "live_replay_target_probabilities": [
+        0.005390684120357037,
+        0.6069454550743103,
+        0.8992267847061157,
+        0.9266923069953918,
+        0.9393191933631897,
+        0.9467873573303223,
+        0.9523864984512329,
+        0.9564106464385986,
+        0.959656834602356,
+        0.9624051451683044,
+        0.9646764993667603,
+        0.966618001461029
+      ],
+      "live_replay_l2_from_source": [
+        0.0,
+        52.08833312988281,
+        53.57633590698242,
+        53.3641357421875,
+        53.264610290527344,
+        53.21842575073242,
+        53.18216323852539,
+        53.17255401611328,
+        53.1678466796875,
+        53.169586181640625,
+        53.18452453613281,
+        53.21062088012695
+      ],
+      "validation": {
+        "live_strip_tiles_exact_match": true,
+        "live_strip_tile_errors": [
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          },
+          {
+            "max": 0,
+            "mean": 0.0
+          }
+        ],
+        "live_rounded_scores_match": true,
+        "live_top1_labels_match": true,
+        "live_fixed_first_update_max_abs_error": 0.0,
+        "fixed_zero_step_source_max_abs_error": 8.52346420288086e-06,
+        "fixed_zero_step_source_l2": 0.0018480204744264483,
+        "fixed_gradient_evaluations": 1,
+        "live_gradient_evaluations": 11,
+        "same_source_analysis_tensor": true,
+        "all_12_fixed_frames_distinct": true,
+        "finite_in_range": true
+      },
+      "provenance": {
+        "script": "outputs/website_fixed_gradients/cats/build_fixed_cats.py",
+        "script_sha256": "279fa2a51899a06fd9a0552e4dfced8b93ae5fc0e32afb9ba1f7a046e91a2fd5",
+        "backend": "ch4_eval.csp_plenoptic_rgb.generate_morph_sequence_corrected",
+        "backend_sha256": "ddee952f5ecb16be1446faa2ad7623f378590641352f875ae1c39d142b989eb9",
+        "extrapolate_sha256": "39748180d1226d94e9cc135e5d02070c5a7e919ac91e8ae279e5c1ea73a977e1",
+        "pyramid_sha256": "ca6a7c49d99bc434ed8873cd239c4200e36b051209a65974ada6b1383b1d2abd",
+        "G": "L2-robust ResNet-50, ImageNet normalization",
+        "G_checkpoint": "models/resnet50_l2_eps3.ckpt",
+        "G_checkpoint_sha256": "380b14e6f9750bffa1447cf7017f65da4dc5ce71a3dd112f107515dcf7b14d9d",
+        "pyramid": {
+          "height": "auto",
+          "order": 4,
+          "twidth": "resolved scales + 1; native LocalPyramid"
+        },
+        "color_mode": "rgb",
+        "image_dimensions": [
+          224,
+          224
+        ],
+        "magnitude_amplifiers": [
+          0,
+          0,
+          0
+        ],
+        "source_preprocessing": "PIL RGB float32 /255; torch bilinear 224x224 align_corners=False",
+        "fixed_gradient_schedule": "Native use_live_gradients=False; one source decomposition and gradient, steps 0 through 11.",
+        "live_gradient_schedule": "Native use_live_gradients=True; reanalyze current clipped image before each of 11 updates.",
+        "no_temporal_interpolation": true,
+        "selection": "All nine user-selected cats; no selection by fixed-run outcomes.",
+        "packaging_script": "outputs/website_fixed_gradients/cats/standardize_manifest.py"
+      },
+      "encoding": "224x224 rendered tensors rounded to uint8; shared 256-color GIF palette, no temporal interpolation.",
+      "frames": [
+        {
+          "frame_index": 0,
+          "step": 0,
+          "G_target_probability": 0.005390695761889219,
+          "G_top1_index": 287,
+          "G_top1_label": "lynx",
+          "l2": 0.0018480204744264483
+        },
+        {
+          "frame_index": 1,
+          "step": 1,
+          "G_target_probability": 0.6069454550743103,
+          "G_top1_index": 292,
+          "G_top1_label": "tiger",
+          "l2": 52.08833312988281
+        },
+        {
+          "frame_index": 2,
+          "step": 2,
+          "G_target_probability": 0.05725264176726341,
+          "G_top1_index": 39,
+          "G_top1_label": "common iguana",
+          "l2": 61.17110061645508
+        },
+        {
+          "frame_index": 3,
+          "step": 3,
+          "G_target_probability": 0.00470769451931119,
+          "G_top1_index": 39,
+          "G_top1_label": "common iguana",
+          "l2": 68.6565933227539
+        },
+        {
+          "frame_index": 4,
+          "step": 4,
+          "G_target_probability": 0.0016691019991412759,
+          "G_top1_index": 39,
+          "G_top1_label": "common iguana",
+          "l2": 73.47692108154297
+        },
+        {
+          "frame_index": 5,
+          "step": 5,
+          "G_target_probability": 0.0012629886623471975,
+          "G_top1_index": 39,
+          "G_top1_label": "common iguana",
+          "l2": 76.9068374633789
+        },
+        {
+          "frame_index": 6,
+          "step": 6,
+          "G_target_probability": 0.0007206042646430433,
+          "G_top1_index": 591,
+          "G_top1_label": "handkerchief",
+          "l2": 78.96273040771484
+        },
+        {
+          "frame_index": 7,
+          "step": 7,
+          "G_target_probability": 0.0005341473151929677,
+          "G_top1_index": 591,
+          "G_top1_label": "handkerchief",
+          "l2": 80.3741226196289
+        },
+        {
+          "frame_index": 8,
+          "step": 8,
+          "G_target_probability": 0.0003685824922285974,
+          "G_top1_index": 591,
+          "G_top1_label": "handkerchief",
+          "l2": 81.56916809082031
+        },
+        {
+          "frame_index": 9,
+          "step": 9,
+          "G_target_probability": 0.0002860263630282134,
+          "G_top1_index": 591,
+          "G_top1_label": "handkerchief",
+          "l2": 82.77399444580078
+        },
+        {
+          "frame_index": 10,
+          "step": 10,
+          "G_target_probability": 0.0002342645457247272,
+          "G_top1_index": 591,
+          "G_top1_label": "handkerchief",
+          "l2": 83.00172424316406
+        },
+        {
+          "frame_index": 11,
+          "step": 11,
+          "G_target_probability": 0.0002540047571528703,
+          "G_top1_index": 591,
+          "G_top1_label": "handkerchief",
+          "l2": 82.63365173339844
+        }
+      ],
+      "gif": "fixed_cat3_tiger_amp1000.gif",
+      "poster": "fixed_cat3_tiger_amp1000_poster.png",
+      "poster_sha256": "2b4aa6ebea9d3c92f589a6d27d0a4f0ba9cc5e989deaefb2c4d7cd8c492f7476",
+      "npz": "fixed_cat3_tiger_amp1000.npz",
+      "scores": "fixed_cat3_tiger_amp1000_scores.json",
+      "live_npz": "fixed_cat3_tiger_amp1000_live_replay.npz",
+      "live_scores": "fixed_cat3_tiger_amp1000_live_scores.json",
+      "amp": 1000,
+      "live_replay_top1_indices": [
+        287,
+        292,
+        292,
+        292,
+        292,
+        292,
+        292,
+        292,
+        292,
+        292,
+        292,
+        292
+      ],
+      "sha256": "021850af605f12af3cc5e7a6d24bcc7b9e7f13b27fcbbe0a240590117c0cbf3f",
+      "bytes": 1153891
+    },
+    {
+      "id": "golf_to_soccer_amp1000_fixed",
+      "live_id": "golf_to_soccer_amp1000",
+      "group": "golf",
+      "title": "Golf ball \u2192 Soccer ball",
+      "option_label": "Soccer ball \u00b7 amplification 1000",
+      "gif": "golf_to_soccer_amp1000_fixed.gif",
+      "poster": "golf_to_soccer_amp1000_fixed_poster.png",
+      "npz": "golf_to_soccer_amp1000_fixed.npz",
+      "scores": "golf_to_soccer_amp1000_fixed.json",
+      "frame_count": 12,
+      "dimensions": [
+        500,
+        380
+      ],
+      "durations_ms": [
+        1200,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        1800
+      ],
+      "loop_duration_ms": 7000,
+      "bytes": 1320646,
+      "sha256": "fec28228a1d1a3833bcc4b5335d9c0a17ca44fd630bb14725b23f8735878494b",
+      "poster_sha256": "a23d35595dae337fc2c6986d0b4cb7cead093ad8dd20a657076431017a17c2a8",
+      "description": "Fixed-gradient Y-only phase extrapolation: the gradient is computed once at the source, then the original source decomposition is rendered at steps 0 through 11. The source is held on the left; G and O show soccer-ball target probabilities. Amplification matches the live counterpart; image distances are not matched.",
+      "source_class": {
+        "index": 574,
+        "name": "golf ball"
+      },
+      "target_class": {
+        "index": 805,
+        "name": "soccer ball"
+      },
+      "amplification": 1000,
+      "gradient_schedule": "fixed",
+      "color_mode": "luminance",
+      "encoding": "Computed 224\u00d7224 arrays rounded to 8-bit RGB. One shared 256-color GIF palette; no resizing or image interpolation.",
+      "validation": {
+        "source_identical_to_original_live_frame_zero": true,
+        "live_replay_max_abs_pixel_error": 0.0,
+        "live_replay_max_target_probability_error": 0.0,
+        "fixed_frame_zero_reconstruction_max_abs_error": 7.033348083496094e-06,
+        "fixed_frame_zero_reconstruction_l2": 0.0012321898248046637,
+        "fixed_and_live_first_step_max_abs_error": 0.0,
+        "fixed_gradient_evaluations": 1,
+        "all_frames_finite_in_unit_interval": true,
+        "no_image_interpolation": true,
+        "all_gif_decoded_frames_match_encoded_frames": true
+      },
+      "frames": [
+        {
+          "frame": 0,
+          "extrapolation_step": 0,
+          "l2": 0.0012321898248046637,
+          "scores": {
+            "G": {
+              "contrast": -2.5467453002929688,
+              "prediction": 574,
+              "target_probability": 0.06855648756027222
+            },
+            "O": {
+              "contrast": -3.7697582244873047,
+              "prediction": 574,
+              "target_probability": 0.019194811582565308
+            }
+          }
+        },
+        {
+          "frame": 1,
+          "extrapolation_step": 1,
+          "l2": 50.51768493652344,
+          "scores": {
+            "G": {
+              "contrast": 3.442615509033203,
+              "prediction": 805,
+              "target_probability": 0.38983744382858276
+            },
+            "O": {
+              "contrast": -0.22642755508422852,
+              "prediction": 249,
+              "target_probability": 0.042045850306749344
+            }
+          }
+        },
+        {
+          "frame": 2,
+          "extrapolation_step": 2,
+          "l2": 43.194637298583984,
+          "scores": {
+            "G": {
+              "contrast": -0.4559974670410156,
+              "prediction": 574,
+              "target_probability": 0.060396090149879456
+            },
+            "O": {
+              "contrast": -3.018688201904297,
+              "prediction": 574,
+              "target_probability": 0.021068697795271873
+            }
+          }
+        },
+        {
+          "frame": 3,
+          "extrapolation_step": 3,
+          "l2": 41.49771499633789,
+          "scores": {
+            "G": {
+              "contrast": -0.05397319793701172,
+              "prediction": 574,
+              "target_probability": 0.08160355687141418
+            },
+            "O": {
+              "contrast": -2.542430877685547,
+              "prediction": 574,
+              "target_probability": 0.019954485818743706
+            }
+          }
+        },
+        {
+          "frame": 4,
+          "extrapolation_step": 4,
+          "l2": 41.22637939453125,
+          "scores": {
+            "G": {
+              "contrast": -0.6309161186218262,
+              "prediction": 574,
+              "target_probability": 0.06597147136926651
+            },
+            "O": {
+              "contrast": -3.852426052093506,
+              "prediction": 574,
+              "target_probability": 0.007323235739022493
+            }
+          }
+        },
+        {
+          "frame": 5,
+          "extrapolation_step": 5,
+          "l2": 41.352725982666016,
+          "scores": {
+            "G": {
+              "contrast": -0.7440056800842285,
+              "prediction": 574,
+              "target_probability": 0.05780346319079399
+            },
+            "O": {
+              "contrast": -4.486123085021973,
+              "prediction": 574,
+              "target_probability": 0.006209404673427343
+            }
+          }
+        },
+        {
+          "frame": 6,
+          "extrapolation_step": 6,
+          "l2": 40.27785110473633,
+          "scores": {
+            "G": {
+              "contrast": -0.8846783638000488,
+              "prediction": 574,
+              "target_probability": 0.0676446333527565
+            },
+            "O": {
+              "contrast": -3.834829330444336,
+              "prediction": 574,
+              "target_probability": 0.01151618454605341
+            }
+          }
+        },
+        {
+          "frame": 7,
+          "extrapolation_step": 7,
+          "l2": 41.129024505615234,
+          "scores": {
+            "G": {
+              "contrast": -0.796229362487793,
+              "prediction": 574,
+              "target_probability": 0.06481920927762985
+            },
+            "O": {
+              "contrast": -3.906938076019287,
+              "prediction": 574,
+              "target_probability": 0.007144348695874214
+            }
+          }
+        },
+        {
+          "frame": 8,
+          "extrapolation_step": 8,
+          "l2": 40.31900405883789,
+          "scores": {
+            "G": {
+              "contrast": -0.8781838417053223,
+              "prediction": 574,
+              "target_probability": 0.060835111886262894
+            },
+            "O": {
+              "contrast": -4.114744663238525,
+              "prediction": 574,
+              "target_probability": 0.005981369875371456
+            }
+          }
+        },
+        {
+          "frame": 9,
+          "extrapolation_step": 9,
+          "l2": 40.99697494506836,
+          "scores": {
+            "G": {
+              "contrast": -0.903862476348877,
+              "prediction": 574,
+              "target_probability": 0.06134083867073059
+            },
+            "O": {
+              "contrast": -4.4017133712768555,
+              "prediction": 574,
+              "target_probability": 0.00502193346619606
+            }
+          }
+        },
+        {
+          "frame": 10,
+          "extrapolation_step": 10,
+          "l2": 39.88511657714844,
+          "scores": {
+            "G": {
+              "contrast": -1.0660724639892578,
+              "prediction": 574,
+              "target_probability": 0.06451467424631119
+            },
+            "O": {
+              "contrast": -3.9127840995788574,
+              "prediction": 574,
+              "target_probability": 0.008961295709013939
+            }
+          }
+        },
+        {
+          "frame": 11,
+          "extrapolation_step": 11,
+          "l2": 40.62747573852539,
+          "scores": {
+            "G": {
+              "contrast": -0.8128924369812012,
+              "prediction": 574,
+              "target_probability": 0.0565742552280426
+            },
+            "O": {
+              "contrast": -4.1512651443481445,
+              "prediction": 574,
+              "target_probability": 0.007418468128889799
+            }
+          }
+        }
+      ],
+      "provenance": {
+        "inputs": {
+          "data/imagenette_morph_sample/n03445777_ILSVRC2012_val_00009902.JPEG": "1a0bdf8e00ad72a16860c4c45e17d75cbaa075cdf31a3da373af138b8402907d",
+          "outputs/imagenette_live_yiq_exploration/n03445777_ILSVRC2012_val_00009902_to805_amp1000.npz": "4c7b349b42c05af191a382181e9504f00d9f7fef4096a08ad1336c692d0d3de6",
+          "outputs/imagenette_live_yiq_exploration/n03445777_ILSVRC2012_val_00009902_to805_amp1000.json": "667f611d00da6558c94cb7e38fad039f46965dd2b4013d95f82c488218912777",
+          "outputs/imagenette_live_yiq_exploration/protocol.json": "f5d19157d5f66950e2800938733af90d24b1795f731acab20a866df2972703fe",
+          "tools/imagenette_morph_exploration.py": "635edf5d77f62dd47ec893b16f5861f2fe74e8eb03a08b395cf9e7a18d0519f6",
+          "tools/imagenet_morph.py": "ebe7522b19fbfa3c447d8e30ab73d74448289ea0286041704a8db766d95cbcf8",
+          "ch4_eval/csp_plenoptic_rgb.py": "ddee952f5ecb16be1446faa2ad7623f378590641352f875ae1c39d142b989eb9",
+          "ch4_eval/csp_plenoptic.py": "39748180d1226d94e9cc135e5d02070c5a7e919ac91e8ae279e5c1ea73a977e1",
+          "ch4_eval/local_pyramid_adapter.py": "27dc9958d02da76e5092d6bed128b69c9f1d34795ca30490a7d11934fc368cea",
+          "steerable_pyramid.py": "ca6a7c49d99bc434ed8873cd239c4200e36b051209a65974ada6b1383b1d2abd",
+          "outputs/website_fixed_gradients/golf/build_fixed_golf.py": "289b5c83813379af9b1900c5ad17dcff72fb890ce5c2fd8677bafca184cd4695"
+        },
+        "model_checkpoint_sha256": {
+          "G": "380b14e6f9750bffa1447cf7017f65da4dc5ce71a3dd112f107515dcf7b14d9d",
+          "O": "f37072fd47e89c5e827621c5baffa7500819f7896bbacec160b1a16c560e07ec"
+        },
+        "models": {
+          "G": "robust ResNet-50, L2 epsilon 3 checkpoint",
+          "O": "standard torchvision ResNet-18"
+        },
+        "procedure": "Existing generate_morph_sequence with use_live_gradients=False; exactly the same inputs/settings as the verified original live run.",
+        "settings": {
+          "pyr_height": "auto",
+          "pyr_order": 4,
+          "phase_amplifiers": [
+            1000,
+            1000,
+            1000
+          ],
+          "mag_amplifiers": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "color_mode": "luminance",
+          "num_frames": 12,
+          "device": "cpu",
+          "torch_threads": 2,
+          "random_seed": 0,
+          "update_rule": "paper"
+        },
+        "preprocessing": "bilinear square resize224 RGB; ImageNet normalization inside model",
+        "dataset": "Imagenette2-320",
+        "website_selection": "Fixed-gradient counterpart of the user-selected live example.",
+        "comparison": "Same amplification and 12-frame schedule; these are not matched-distance endpoints.",
+        "fixed_frame_zero": "The backend renders the source decomposition at step zero; reconstruction error is retained and reported, not silently replaced with the exact source.",
+        "generated_seconds": 6.800499292000001,
+        "versions": {
+          "torch": "2.8.0",
+          "numpy": "2.0.2"
+        }
+      }
+    },
+    {
+      "id": "comparison_legacy_cat1_lynx_amp250",
+      "live_id": "legacy_cat1_lynx_amp250",
+      "fixed_id": "fixed_cat1_lynx_amp250",
+      "title": "Cat 1 \u2192 lynx",
+      "gif": "comparison_legacy_cat1_lynx_amp250.gif",
+      "poster": "comparison_legacy_cat1_lynx_amp250_poster.png",
+      "dimensions": [
+        760,
+        422
+      ],
+      "frame_count": 12,
+      "durations_ms": [
+        1200,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        1800
+      ],
+      "loop_duration_ms": 7000,
+      "bytes": 1593985,
+      "sha256": "405bf2805b361044ff6362add8f4abc26075065db26ccd10a2b7f4d760c949bd",
+      "description": "Live recomputes the gradient after each edit; fixed computes it once at the source and extrapolates from that decomposition. Both use the same source, target, amplification, model and transform settings. Scores are target probabilities under G (robust ResNet-50); the golf example also reports O (standard ResNet-18). Top-1 labels are G’s predictions. Image distances are not matched.",
+      "encoding": "Synchronized actual live and fixed arrays, rounded to 8-bit RGB; one shared 256-color palette. No resizing or temporal interpolation.",
+      "validation": {
+        "first_nonzero_live_fixed_step_max_abs_error": 0.0,
+        "fixed_frame_zero_source_reconstruction_max_abs_error": 1.0073184967041016e-05,
+        "gif_frames_equal_quantized_render": true
+      },
+      "input_hashes": {
+        "outputs/website_fixed_gradients/cats/fixed_cat1_lynx_amp250_live_replay.npz": "fdc49265303c28267f616eab038a0d29ab43c84d35bf8c351bd7970645650935",
+        "outputs/website_fixed_gradients/cats/fixed_cat1_lynx_amp250_live_scores.json": "f01a1f6a36bb535133dcf2ac4c6bf76a64c70cf3bf3faaba4faa6815b819b3bb",
+        "outputs/website_fixed_gradients/cats/fixed_cat1_lynx_amp250.npz": "326f5c22cf1bf8c5914e044bf8974d44571eb16f90e1757a9928edeee2e782eb",
+        "outputs/website_fixed_gradients/cats/fixed_cat1_lynx_amp250_scores.json": "bad6d4e292bdee915d40ae44d5a4834aef27f1daed29ed2b5ca65a193e06fb51"
+      },
+      "live_endpoint": {
+        "frame": 11,
+        "l2": 25.888643264770508,
+        "scores": {
+          "G": {
+            "target_probability": 0.9519696235656738,
+            "prediction": 287,
+            "label": "lynx"
+          }
+        }
+      },
+      "fixed_endpoint": {
+        "frame": 11,
+        "l2": 65.02745819091797,
+        "scores": {
+          "G": {
+            "target_probability": 0.001276412163861096,
+            "prediction": 591,
+            "label": "handkerchief"
+          }
+        }
+      }
+    },
+    {
+      "id": "comparison_legacy_cat2_red_fox_amp250",
+      "live_id": "legacy_cat2_red_fox_amp250",
+      "fixed_id": "fixed_cat2_red_fox_amp250",
+      "title": "Cat 2 \u2192 red fox",
+      "gif": "comparison_legacy_cat2_red_fox_amp250.gif",
+      "poster": "comparison_legacy_cat2_red_fox_amp250_poster.png",
+      "dimensions": [
+        760,
+        422
+      ],
+      "frame_count": 12,
+      "durations_ms": [
+        1200,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        1800
+      ],
+      "loop_duration_ms": 7000,
+      "bytes": 1676694,
+      "sha256": "ff77f21137dd76648a5c497f3c3378a5951672aa64d203c2c4fc780bfd61619e",
+      "description": "Live recomputes the gradient after each edit; fixed computes it once at the source and extrapolates from that decomposition. Both use the same source, target, amplification, model and transform settings. Scores are target probabilities under G (robust ResNet-50); the golf example also reports O (standard ResNet-18). Top-1 labels are G’s predictions. Image distances are not matched.",
+      "encoding": "Synchronized actual live and fixed arrays, rounded to 8-bit RGB; one shared 256-color palette. No resizing or temporal interpolation.",
+      "validation": {
+        "first_nonzero_live_fixed_step_max_abs_error": 0.0,
+        "fixed_frame_zero_source_reconstruction_max_abs_error": 9.357929229736328e-06,
+        "gif_frames_equal_quantized_render": true
+      },
+      "input_hashes": {
+        "outputs/website_fixed_gradients/cats/fixed_cat2_red_fox_amp250_live_replay.npz": "aaca92d76df86f4cdb84c0ae1351c875282f701ce68d1232dd51241235a2cb20",
+        "outputs/website_fixed_gradients/cats/fixed_cat2_red_fox_amp250_live_scores.json": "49c6451bc577384fc3b6375c201803d9a4720e29d93d102c58cd55f69989e76a",
+        "outputs/website_fixed_gradients/cats/fixed_cat2_red_fox_amp250.npz": "a18cb32b30cbc8537be652718c50dbec8aff3e268fe25cc3ed932bad4c56b9bc",
+        "outputs/website_fixed_gradients/cats/fixed_cat2_red_fox_amp250_scores.json": "6c71a39b9454b1e2807228544c27b82f33cf091caffddb3e8da725b003023384"
+      },
+      "live_endpoint": {
+        "frame": 11,
+        "l2": 26.10415267944336,
+        "scores": {
+          "G": {
+            "target_probability": 0.9341409206390381,
+            "prediction": 277,
+            "label": "red fox"
+          }
+        }
+      },
+      "fixed_endpoint": {
+        "frame": 11,
+        "l2": 75.5671615600586,
+        "scores": {
+          "G": {
+            "target_probability": 0.01239029597491026,
+            "prediction": 125,
+            "label": "hermit crab"
+          }
+        }
+      }
+    },
+    {
+      "id": "comparison_legacy_cat2_kit_fox_amp120",
+      "live_id": "legacy_cat2_kit_fox_amp120",
+      "fixed_id": "fixed_cat2_kit_fox_amp120",
+      "title": "Cat 2 \u2192 kit fox",
+      "gif": "comparison_legacy_cat2_kit_fox_amp120.gif",
+      "poster": "comparison_legacy_cat2_kit_fox_amp120_poster.png",
+      "dimensions": [
+        760,
+        422
+      ],
+      "frame_count": 12,
+      "durations_ms": [
+        1200,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        1800
+      ],
+      "loop_duration_ms": 7000,
+      "bytes": 1732027,
+      "sha256": "55fa56c8702bbcc846805f547eece92ec8ed5c0b9b2fb7df6066a857a1751729",
+      "description": "Live recomputes the gradient after each edit; fixed computes it once at the source and extrapolates from that decomposition. Both use the same source, target, amplification, model and transform settings. Scores are target probabilities under G (robust ResNet-50); the golf example also reports O (standard ResNet-18). Top-1 labels are G’s predictions. Image distances are not matched.",
+      "encoding": "Synchronized actual live and fixed arrays, rounded to 8-bit RGB; one shared 256-color palette. No resizing or temporal interpolation.",
+      "validation": {
+        "first_nonzero_live_fixed_step_max_abs_error": 0.0,
+        "fixed_frame_zero_source_reconstruction_max_abs_error": 9.357929229736328e-06,
+        "gif_frames_equal_quantized_render": true
+      },
+      "input_hashes": {
+        "outputs/website_fixed_gradients/cats/fixed_cat2_kit_fox_amp120_live_replay.npz": "52adb30679cad05f85e25e06cbc682c8f9953e2871827659e06f062fd7e3515a",
+        "outputs/website_fixed_gradients/cats/fixed_cat2_kit_fox_amp120_live_scores.json": "fa30ff4c0c01da710fa6e3ee19408b3d1eb79ab8527b9f20dc6d207214a91935",
+        "outputs/website_fixed_gradients/cats/fixed_cat2_kit_fox_amp120.npz": "06535a95036a5b13d210c095a16d2a14442149b88ffb0cae933c967fcb4639fb",
+        "outputs/website_fixed_gradients/cats/fixed_cat2_kit_fox_amp120_scores.json": "db064c1d1b1664d46866c5704eafd5937c036fde29d7412336efde4552bc4d95"
+      },
+      "live_endpoint": {
+        "frame": 11,
+        "l2": 17.13481330871582,
+        "scores": {
+          "G": {
+            "target_probability": 0.61727374792099,
+            "prediction": 278,
+            "label": "kit fox"
+          }
+        }
+      },
+      "fixed_endpoint": {
+        "frame": 11,
+        "l2": 52.15371322631836,
+        "scores": {
+          "G": {
+            "target_probability": 0.17108312249183655,
+            "prediction": 277,
+            "label": "red fox"
+          }
+        }
+      }
+    },
+    {
+      "id": "comparison_legacy_cat2_lynx_amp250",
+      "live_id": "legacy_cat2_lynx_amp250",
+      "fixed_id": "fixed_cat2_lynx_amp250",
+      "title": "Cat 2 \u2192 lynx",
+      "gif": "comparison_legacy_cat2_lynx_amp250.gif",
+      "poster": "comparison_legacy_cat2_lynx_amp250_poster.png",
+      "dimensions": [
+        760,
+        422
+      ],
+      "frame_count": 12,
+      "durations_ms": [
+        1200,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        1800
+      ],
+      "loop_duration_ms": 7000,
+      "bytes": 1742740,
+      "sha256": "cf4221bc523e72c9431b69517aad0aa92d09f17b772238953ce4d2f4abb41c36",
+      "description": "Live recomputes the gradient after each edit; fixed computes it once at the source and extrapolates from that decomposition. Both use the same source, target, amplification, model and transform settings. Scores are target probabilities under G (robust ResNet-50); the golf example also reports O (standard ResNet-18). Top-1 labels are G’s predictions. Image distances are not matched.",
+      "encoding": "Synchronized actual live and fixed arrays, rounded to 8-bit RGB; one shared 256-color palette. No resizing or temporal interpolation.",
+      "validation": {
+        "first_nonzero_live_fixed_step_max_abs_error": 0.0,
+        "fixed_frame_zero_source_reconstruction_max_abs_error": 9.357929229736328e-06,
+        "gif_frames_equal_quantized_render": true
+      },
+      "input_hashes": {
+        "outputs/website_fixed_gradients/cats/fixed_cat2_lynx_amp250_live_replay.npz": "48d83e7ab40c40514305feede0391232eb3f19ae4bff9cf1f354019bca289f03",
+        "outputs/website_fixed_gradients/cats/fixed_cat2_lynx_amp250_live_scores.json": "c40de3e961cbf736a56fa4a40ca0d4386bb3161534578c5da48e4c1a583bd37f",
+        "outputs/website_fixed_gradients/cats/fixed_cat2_lynx_amp250.npz": "fc7126d560c8952ef13d184f28aa0b9c3f834fe98600ebda5bff139eacc1c89c",
+        "outputs/website_fixed_gradients/cats/fixed_cat2_lynx_amp250_scores.json": "51ce44750a06d7538a7c4d179024c345bd5f531487fb8276b213bb2af969d667"
+      },
+      "live_endpoint": {
+        "frame": 11,
+        "l2": 20.492755889892578,
+        "scores": {
+          "G": {
+            "target_probability": 0.9654702544212341,
+            "prediction": 287,
+            "label": "lynx"
+          }
+        }
+      },
+      "fixed_endpoint": {
+        "frame": 11,
+        "l2": 70.6572036743164,
+        "scores": {
+          "G": {
+            "target_probability": 0.0029763064812868834,
+            "prediction": 1,
+            "label": "goldfish"
+          }
+        }
+      }
+    },
+    {
+      "id": "comparison_legacy_cat3_flamingo_amp30",
+      "live_id": "legacy_cat3_flamingo_amp30",
+      "fixed_id": "fixed_cat3_flamingo_amp30",
+      "title": "Cat 3 \u2192 flamingo",
+      "gif": "comparison_legacy_cat3_flamingo_amp30.gif",
+      "poster": "comparison_legacy_cat3_flamingo_amp30_poster.png",
+      "dimensions": [
+        760,
+        422
+      ],
+      "frame_count": 12,
+      "durations_ms": [
+        1200,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        1800
+      ],
+      "loop_duration_ms": 7000,
+      "bytes": 1625205,
+      "sha256": "f03c1a95b7d088292f90cd34cf511b9aeb14e2e80359e653d2867f6a9196fb40",
+      "description": "Live recomputes the gradient after each edit; fixed computes it once at the source and extrapolates from that decomposition. Both use the same source, target, amplification, model and transform settings. Scores are target probabilities under G (robust ResNet-50); the golf example also reports O (standard ResNet-18). Top-1 labels are G’s predictions. Image distances are not matched.",
+      "encoding": "Synchronized actual live and fixed arrays, rounded to 8-bit RGB; one shared 256-color palette. No resizing or temporal interpolation.",
+      "validation": {
+        "first_nonzero_live_fixed_step_max_abs_error": 0.0,
+        "fixed_frame_zero_source_reconstruction_max_abs_error": 8.52346420288086e-06,
+        "gif_frames_equal_quantized_render": true
+      },
+      "input_hashes": {
+        "outputs/website_fixed_gradients/cats/fixed_cat3_flamingo_amp30_live_replay.npz": "4960f22d3912f006bed65ba7aeb8ffc1600b8860e478e9832defcf7f2736134b",
+        "outputs/website_fixed_gradients/cats/fixed_cat3_flamingo_amp30_live_scores.json": "deb73af9892118a8162ba02099d3a47b41dc228d249551dc812d98ba7403ada8",
+        "outputs/website_fixed_gradients/cats/fixed_cat3_flamingo_amp30.npz": "3bb021f3370efe9192412ced766f8c20d1177ba8de89a1245fd8817d1f0c2be0",
+        "outputs/website_fixed_gradients/cats/fixed_cat3_flamingo_amp30_scores.json": "402be0a3764ddd910769695af7d8d3b778d1397613702867cc72bf10ba03a2ca"
+      },
+      "live_endpoint": {
+        "frame": 11,
+        "l2": 21.909656524658203,
+        "scores": {
+          "G": {
+            "target_probability": 0.003422608831897378,
+            "prediction": 82,
+            "label": "ruffed grouse"
+          }
+        }
+      },
+      "fixed_endpoint": {
+        "frame": 11,
+        "l2": 23.60080337524414,
+        "scores": {
+          "G": {
+            "target_probability": 3.418011147005018e-06,
+            "prediction": 335,
+            "label": "fox squirrel"
+          }
+        }
+      }
+    },
+    {
+      "id": "comparison_legacy_cat3_flamingo_amp60",
+      "live_id": "legacy_cat3_flamingo_amp60",
+      "fixed_id": "fixed_cat3_flamingo_amp60",
+      "title": "Cat 3 \u2192 flamingo",
+      "gif": "comparison_legacy_cat3_flamingo_amp60.gif",
+      "poster": "comparison_legacy_cat3_flamingo_amp60_poster.png",
+      "dimensions": [
+        760,
+        422
+      ],
+      "frame_count": 12,
+      "durations_ms": [
+        1200,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        1800
+      ],
+      "loop_duration_ms": 7000,
+      "bytes": 1683404,
+      "sha256": "83d1e24f310d447580bafd4308f5ace35c7c78243da236fec12bee1f0024db40",
+      "description": "Live recomputes the gradient after each edit; fixed computes it once at the source and extrapolates from that decomposition. Both use the same source, target, amplification, model and transform settings. Scores are target probabilities under G (robust ResNet-50); the golf example also reports O (standard ResNet-18). Top-1 labels are G’s predictions. Image distances are not matched.",
+      "encoding": "Synchronized actual live and fixed arrays, rounded to 8-bit RGB; one shared 256-color palette. No resizing or temporal interpolation.",
+      "validation": {
+        "first_nonzero_live_fixed_step_max_abs_error": 0.0,
+        "fixed_frame_zero_source_reconstruction_max_abs_error": 8.52346420288086e-06,
+        "gif_frames_equal_quantized_render": true
+      },
+      "input_hashes": {
+        "outputs/website_fixed_gradients/cats/fixed_cat3_flamingo_amp60_live_replay.npz": "49ee0c038f993b413f8dcc9a54a3be8771d2928e46c8265e0df7c95bc56263f5",
+        "outputs/website_fixed_gradients/cats/fixed_cat3_flamingo_amp60_live_scores.json": "84778853850529c9c8614768c53e29bdf08f2a9cfe9e06a19c509865318b38e8",
+        "outputs/website_fixed_gradients/cats/fixed_cat3_flamingo_amp60.npz": "e590547f078dd273920f4f404ff8c5735a5c4fd906442deddccfd232d734e762",
+        "outputs/website_fixed_gradients/cats/fixed_cat3_flamingo_amp60_scores.json": "99fcd18583f8da5c95df40891568a093bae032edbb6b5974cd106a1714cda40a"
+      },
+      "live_endpoint": {
+        "frame": 11,
+        "l2": 31.072757720947266,
+        "scores": {
+          "G": {
+            "target_probability": 0.6123802065849304,
+            "prediction": 130,
+            "label": "flamingo"
+          }
+        }
+      },
+      "fixed_endpoint": {
+        "frame": 11,
+        "l2": 37.619136810302734,
+        "scores": {
+          "G": {
+            "target_probability": 7.840216312615667e-06,
+            "prediction": 335,
+            "label": "fox squirrel"
+          }
+        }
+      }
+    },
+    {
+      "id": "comparison_legacy_cat3_flamingo_amp1000",
+      "live_id": "legacy_cat3_flamingo_amp1000",
+      "fixed_id": "fixed_cat3_flamingo_amp1000",
+      "title": "Cat 3 \u2192 flamingo",
+      "gif": "comparison_legacy_cat3_flamingo_amp1000.gif",
+      "poster": "comparison_legacy_cat3_flamingo_amp1000_poster.png",
+      "dimensions": [
+        760,
+        422
+      ],
+      "frame_count": 12,
+      "durations_ms": [
+        1200,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        1800
+      ],
+      "loop_duration_ms": 7000,
+      "bytes": 1789285,
+      "sha256": "6558c58ebaa15cedabfee2ee121d012528f531a322a1bd132088c882884a16da",
+      "description": "Live recomputes the gradient after each edit; fixed computes it once at the source and extrapolates from that decomposition. Both use the same source, target, amplification, model and transform settings. Scores are target probabilities under G (robust ResNet-50); the golf example also reports O (standard ResNet-18). Top-1 labels are G’s predictions. Image distances are not matched.",
+      "encoding": "Synchronized actual live and fixed arrays, rounded to 8-bit RGB; one shared 256-color palette. No resizing or temporal interpolation.",
+      "validation": {
+        "first_nonzero_live_fixed_step_max_abs_error": 0.0,
+        "fixed_frame_zero_source_reconstruction_max_abs_error": 8.52346420288086e-06,
+        "gif_frames_equal_quantized_render": true
+      },
+      "input_hashes": {
+        "outputs/website_fixed_gradients/cats/fixed_cat3_flamingo_amp1000_live_replay.npz": "eaf169dc79068540a0c9097e22fcc1256534588907511838fab250e7a8effba1",
+        "outputs/website_fixed_gradients/cats/fixed_cat3_flamingo_amp1000_live_scores.json": "5be6babefaf2f1bb579b864594fad7e102a5cb25dc256352417f19ac34007648",
+        "outputs/website_fixed_gradients/cats/fixed_cat3_flamingo_amp1000.npz": "909e442b8cd358143547e84f17253f6cf85dd6b3dbfb162086d2d21ead13e841",
+        "outputs/website_fixed_gradients/cats/fixed_cat3_flamingo_amp1000_scores.json": "a68593018f2f822f132c1cf843c45bdf48cb3a51f5fe1539e20559d9a6c56ada"
+      },
+      "live_endpoint": {
+        "frame": 11,
+        "l2": 98.57670593261719,
+        "scores": {
+          "G": {
+            "target_probability": 0.9987013339996338,
+            "prediction": 130,
+            "label": "flamingo"
+          }
+        }
+      },
+      "fixed_endpoint": {
+        "frame": 11,
+        "l2": 82.81049346923828,
+        "scores": {
+          "G": {
+            "target_probability": 6.100278187659569e-05,
+            "prediction": 591,
+            "label": "handkerchief"
+          }
+        }
+      }
+    },
+    {
+      "id": "comparison_legacy_cat3_leopard_amp250",
+      "live_id": "legacy_cat3_leopard_amp250",
+      "fixed_id": "fixed_cat3_leopard_amp250",
+      "title": "Cat 3 \u2192 leopard",
+      "gif": "comparison_legacy_cat3_leopard_amp250.gif",
+      "poster": "comparison_legacy_cat3_leopard_amp250_poster.png",
+      "dimensions": [
+        760,
+        422
+      ],
+      "frame_count": 12,
+      "durations_ms": [
+        1200,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        1800
+      ],
+      "loop_duration_ms": 7000,
+      "bytes": 1708708,
+      "sha256": "563303cba6d222b8c2f46dd2d3e1bea9fd20a3d981cfe7ee7af983dd1524eb5f",
+      "description": "Live recomputes the gradient after each edit; fixed computes it once at the source and extrapolates from that decomposition. Both use the same source, target, amplification, model and transform settings. Scores are target probabilities under G (robust ResNet-50); the golf example also reports O (standard ResNet-18). Top-1 labels are G’s predictions. Image distances are not matched.",
+      "encoding": "Synchronized actual live and fixed arrays, rounded to 8-bit RGB; one shared 256-color palette. No resizing or temporal interpolation.",
+      "validation": {
+        "first_nonzero_live_fixed_step_max_abs_error": 0.0,
+        "fixed_frame_zero_source_reconstruction_max_abs_error": 8.52346420288086e-06,
+        "gif_frames_equal_quantized_render": true
+      },
+      "input_hashes": {
+        "outputs/website_fixed_gradients/cats/fixed_cat3_leopard_amp250_live_replay.npz": "895807b6d6f07b405f541a008252980f7a095dc261bc6d8a42c2eba48f453cf3",
+        "outputs/website_fixed_gradients/cats/fixed_cat3_leopard_amp250_live_scores.json": "375752adf152eefbff98c07cd993b32f911bff6e9b4b5b2c1913d4627d46dd6e",
+        "outputs/website_fixed_gradients/cats/fixed_cat3_leopard_amp250.npz": "d4330b869d289793dbf7ab6a0f018c4218141d9ffd3e75adb24e1299bef0aa68",
+        "outputs/website_fixed_gradients/cats/fixed_cat3_leopard_amp250_scores.json": "f92a596d137f1e737c4c355c9879029728b6e45ffa20c9774464d4f1b19fabaf"
+      },
+      "live_endpoint": {
+        "frame": 11,
+        "l2": 28.998157501220703,
+        "scores": {
+          "G": {
+            "target_probability": 0.9446486830711365,
+            "prediction": 288,
+            "label": "leopard"
+          }
+        }
+      },
+      "fixed_endpoint": {
+        "frame": 11,
+        "l2": 73.43568420410156,
+        "scores": {
+          "G": {
+            "target_probability": 0.003638169029727578,
+            "prediction": 39,
+            "label": "common iguana"
+          }
+        }
+      }
+    },
+    {
+      "id": "comparison_legacy_cat3_tiger_amp1000",
+      "live_id": "legacy_cat3_tiger_amp1000",
+      "fixed_id": "fixed_cat3_tiger_amp1000",
+      "title": "Cat 3 \u2192 tiger",
+      "gif": "comparison_legacy_cat3_tiger_amp1000.gif",
+      "poster": "comparison_legacy_cat3_tiger_amp1000_poster.png",
+      "dimensions": [
+        760,
+        422
+      ],
+      "frame_count": 12,
+      "durations_ms": [
+        1200,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        1800
+      ],
+      "loop_duration_ms": 7000,
+      "bytes": 1758682,
+      "sha256": "a4ae53d451b4d660677a6ede2e367d8ebc8643e179cf2d0ff4f68bfc4a71f801",
+      "description": "Live recomputes the gradient after each edit; fixed computes it once at the source and extrapolates from that decomposition. Both use the same source, target, amplification, model and transform settings. Scores are target probabilities under G (robust ResNet-50); the golf example also reports O (standard ResNet-18). Top-1 labels are G’s predictions. Image distances are not matched.",
+      "encoding": "Synchronized actual live and fixed arrays, rounded to 8-bit RGB; one shared 256-color palette. No resizing or temporal interpolation.",
+      "validation": {
+        "first_nonzero_live_fixed_step_max_abs_error": 0.0,
+        "fixed_frame_zero_source_reconstruction_max_abs_error": 8.52346420288086e-06,
+        "gif_frames_equal_quantized_render": true
+      },
+      "input_hashes": {
+        "outputs/website_fixed_gradients/cats/fixed_cat3_tiger_amp1000_live_replay.npz": "50ea3a8d45b26fed30b626e052dd11828d17f8fddfdf510bd585e6b5af6c6e6b",
+        "outputs/website_fixed_gradients/cats/fixed_cat3_tiger_amp1000_live_scores.json": "f0360bb522620457a097fd10faf06c0dd9659f9572cfcb73edab14b0ce0bb88b",
+        "outputs/website_fixed_gradients/cats/fixed_cat3_tiger_amp1000.npz": "df7532144b0b27521c559934108ff7362e237ca3fae83f426b3921ea655fa824",
+        "outputs/website_fixed_gradients/cats/fixed_cat3_tiger_amp1000_scores.json": "17d5644b919b618d5974971fac99ed7d83eba509a0fd7bf8294eb6d98ed479a4"
+      },
+      "live_endpoint": {
+        "frame": 11,
+        "l2": 53.21062088012695,
+        "scores": {
+          "G": {
+            "target_probability": 0.966618001461029,
+            "prediction": 292,
+            "label": "tiger"
+          }
+        }
+      },
+      "fixed_endpoint": {
+        "frame": 11,
+        "l2": 82.63365173339844,
+        "scores": {
+          "G": {
+            "target_probability": 0.0002540047571528703,
+            "prediction": 591,
+            "label": "handkerchief"
+          }
+        }
+      }
+    },
+    {
+      "id": "comparison_golf_to_soccer_amp1000",
+      "live_id": "golf_to_soccer_amp1000",
+      "fixed_id": "golf_to_soccer_amp1000_fixed",
+      "title": "Golf ball \u2192 Soccer ball",
+      "gif": "comparison_golf_to_soccer_amp1000.gif",
+      "poster": "comparison_golf_to_soccer_amp1000_poster.png",
+      "dimensions": [
+        760,
+        422
+      ],
+      "frame_count": 12,
+      "durations_ms": [
+        1200,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        400,
+        1800
+      ],
+      "loop_duration_ms": 7000,
+      "bytes": 1962298,
+      "sha256": "7974f4b8b5f5ac8c54552ead7de29ce362355bb24b60186a8266b5bd96a54471",
+      "description": "Live recomputes the gradient after each edit; fixed computes it once at the source and extrapolates from that decomposition. Both use the same source, target, amplification, model and transform settings. Scores are target probabilities under G (robust ResNet-50); the golf example also reports O (standard ResNet-18). Top-1 labels are G’s predictions. Image distances are not matched.",
+      "encoding": "Synchronized actual live and fixed arrays, rounded to 8-bit RGB; one shared 256-color palette. No resizing or temporal interpolation.",
+      "validation": {
+        "first_nonzero_live_fixed_step_max_abs_error": 0.0,
+        "fixed_frame_zero_source_reconstruction_max_abs_error": 7.033348083496094e-06,
+        "gif_frames_equal_quantized_render": true
+      },
+      "input_hashes": {
+        "outputs/imagenette_live_yiq_exploration/n03445777_ILSVRC2012_val_00009902_to805_amp1000.npz": "4c7b349b42c05af191a382181e9504f00d9f7fef4096a08ad1336c692d0d3de6",
+        "outputs/imagenette_live_yiq_exploration/n03445777_ILSVRC2012_val_00009902_to805_amp1000.json": "667f611d00da6558c94cb7e38fad039f46965dd2b4013d95f82c488218912777",
+        "outputs/website_fixed_gradients/golf/golf_to_soccer_amp1000_fixed.npz": "531935357a20bad7913408de00ded23f9cdf1fb31a703bad28804c02eeed78cb",
+        "outputs/website_fixed_gradients/golf/golf_to_soccer_amp1000_fixed.json": "94387e0ace76e445bc40ddcd23adedb98fbef17838aa0e0da04b39cfe0aa38f6"
+      },
+      "live_endpoint": {
+        "frame": 11,
+        "l2": 48.146785736083984,
+        "scores": {
+          "G": {
+            "contrast": 7.432400226593018,
+            "prediction": 805,
+            "target_probability": 0.9950700998306274
+          },
+          "O": {
+            "contrast": 5.85134220123291,
+            "prediction": 805,
+            "target_probability": 0.9738283157348633
+          }
+        }
+      },
+      "fixed_endpoint": {
+        "frame": 11,
+        "extrapolation_step": 11,
+        "l2": 40.62747573852539,
+        "scores": {
+          "G": {
+            "contrast": -0.8128924369812012,
+            "prediction": 574,
+            "target_probability": 0.0565742552280426
+          },
+          "O": {
+            "contrast": -4.1512651443481445,
+            "prediction": 574,
+            "target_probability": 0.007418468128889799
+          }
+        }
       }
     }
   ]

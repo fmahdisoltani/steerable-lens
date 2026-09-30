@@ -49,15 +49,19 @@
     const timing = document.getElementById('natural-case-timing');
     const description = document.getElementById('natural-case-description');
     const download = document.getElementById('natural-download');
+    const fixedDownload = document.getElementById('natural-fixed-download');
+    const liveDownload = document.getElementById('natural-live-download');
     function selectExample() {
       const item = cases.find(item => item.id === select.value);
-      image.dataset.gif = 'figures/' + item.gif;
-      image.dataset.still = 'figures/' + item.poster;
-      image.alt = `${item.title}: twelve recorded morph frames, with the original source alongside.`;
+      image.dataset.gif = 'figures/' + item.comparison.gif;
+      image.dataset.still = 'figures/' + item.comparison.poster;
+      image.alt = `${item.title}: source, live-gradient and fixed-gradient sequences shown together over twelve synchronized frames.`;
       title.textContent = item.title;
       timing.textContent = `${item.frame_count} recorded frames · ${(item.loop_duration_ms / 1000).toFixed(1)}-second loop`;
-      description.textContent = item.description;
-      download.href = 'figures/' + item.gif;
+      description.textContent = item.comparison.description;
+      download.href = 'figures/' + item.comparison.gif;
+      fixedDownload.href = 'figures/' + item.fixed.gif;
+      liveDownload.href = 'figures/' + item.gif;
       render();
     }
     function selectSource(group) {
