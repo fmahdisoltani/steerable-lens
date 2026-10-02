@@ -33,9 +33,12 @@ Then open http://localhost:8000. Opening the HTML through a file URL will not lo
 
 ## Editing
 
-- `index.html`: page content
-- `styles.css`: layout and appearance
-- `app.js`: comparisons, charts, and trajectory playback
+- `index.html`: homepage content, gallery records, and citation
+- `narrative.css`: homepage typography, layout, and responsive contents menu
+- `story.js`: active-section navigation and the four-method explainer
+- `animations.js`: homepage GIF playback and gallery selectors
+- `explore.html`: separate interactive results page
+- `styles.css` and `app.js`: interactive results page appearance, charts, and trajectory playback
 - `data.json`: recorded values, relative image paths, and source-file hashes
 - `assets/`: saved experimental images and two original paper figures
 
@@ -47,7 +50,7 @@ The site is a plain static page. Publish from the root of the `main` branch; `.n
 
 ## Current layout and animations
 
-The homepage follows the supplied scholarly project-page design. The earlier interactive page remains at `explore.html`.
+The homepage uses a reading-focused research narrative inspired by Remember to be Curious (https://recuriosity.github.io/): a centered title, opening morph sequence, short explanatory sections, and a fixed contents menu. The contents menu collapses on smaller screens. The four-method explainer is schematic; all experimental GIFs and datasets are retained unchanged. Longer abstract and replay details are available in expandable notes. The earlier interactive page remains at `explore.html`.
 
 GIFs linked from the page display actual optimization sequences, without image interpolation. The main comparison contains 122 animation frames and includes the source, every accepted step before the requested budget, and the exact matched-budget endpoint for all eight trajectories. These trajectories were replayed with the original settings; final pixels and G/O/O2 probabilities match the published endpoints exactly. Shorter trajectories hold recorded states to finish together. `animations.js` provides shared pause/play controls and respects the operating system's reduced-motion preference by showing endpoint posters. Static charts remain static. GIF color quantization is a format limitation; the interactive page displays PNG frames.
 
