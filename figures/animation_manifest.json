@@ -12978,7 +12978,7 @@
       "loop_duration_ms": 7000,
       "bytes": 1593985,
       "sha256": "405bf2805b361044ff6362add8f4abc26075065db26ccd10a2b7f4d760c949bd",
-      "description": "Live recomputes the gradient after each edit; fixed computes it once at the source and extrapolates from that decomposition. Both use the same source, target, amplification, model and transform settings. Scores are target probabilities under G (robust ResNet-50); the golf example also reports O (standard ResNet-18). Top-1 labels are G’s predictions. Image distances are not matched.",
+      "description": "Live recomputes the gradient after each edit; fixed computes it once at the source and extrapolates from that decomposition. Both use the same source, target, amplification, model and transform settings. Scores are target probabilities under G (robust ResNet-50); the golf example also reports O (standard ResNet-18). Top-1 labels are G\u2019s predictions. Image distances are not matched.",
       "encoding": "Synchronized actual live and fixed arrays, rounded to 8-bit RGB; one shared 256-color palette. No resizing or temporal interpolation.",
       "validation": {
         "first_nonzero_live_fixed_step_max_abs_error": 0.0,
@@ -13043,7 +13043,7 @@
       "loop_duration_ms": 7000,
       "bytes": 1676694,
       "sha256": "ff77f21137dd76648a5c497f3c3378a5951672aa64d203c2c4fc780bfd61619e",
-      "description": "Live recomputes the gradient after each edit; fixed computes it once at the source and extrapolates from that decomposition. Both use the same source, target, amplification, model and transform settings. Scores are target probabilities under G (robust ResNet-50); the golf example also reports O (standard ResNet-18). Top-1 labels are G’s predictions. Image distances are not matched.",
+      "description": "Live recomputes the gradient after each edit; fixed computes it once at the source and extrapolates from that decomposition. Both use the same source, target, amplification, model and transform settings. Scores are target probabilities under G (robust ResNet-50); the golf example also reports O (standard ResNet-18). Top-1 labels are G\u2019s predictions. Image distances are not matched.",
       "encoding": "Synchronized actual live and fixed arrays, rounded to 8-bit RGB; one shared 256-color palette. No resizing or temporal interpolation.",
       "validation": {
         "first_nonzero_live_fixed_step_max_abs_error": 0.0,
@@ -13108,7 +13108,7 @@
       "loop_duration_ms": 7000,
       "bytes": 1732027,
       "sha256": "55fa56c8702bbcc846805f547eece92ec8ed5c0b9b2fb7df6066a857a1751729",
-      "description": "Live recomputes the gradient after each edit; fixed computes it once at the source and extrapolates from that decomposition. Both use the same source, target, amplification, model and transform settings. Scores are target probabilities under G (robust ResNet-50); the golf example also reports O (standard ResNet-18). Top-1 labels are G’s predictions. Image distances are not matched.",
+      "description": "Live recomputes the gradient after each edit; fixed computes it once at the source and extrapolates from that decomposition. Both use the same source, target, amplification, model and transform settings. Scores are target probabilities under G (robust ResNet-50); the golf example also reports O (standard ResNet-18). Top-1 labels are G\u2019s predictions. Image distances are not matched.",
       "encoding": "Synchronized actual live and fixed arrays, rounded to 8-bit RGB; one shared 256-color palette. No resizing or temporal interpolation.",
       "validation": {
         "first_nonzero_live_fixed_step_max_abs_error": 0.0,
@@ -13173,7 +13173,7 @@
       "loop_duration_ms": 7000,
       "bytes": 1742740,
       "sha256": "cf4221bc523e72c9431b69517aad0aa92d09f17b772238953ce4d2f4abb41c36",
-      "description": "Live recomputes the gradient after each edit; fixed computes it once at the source and extrapolates from that decomposition. Both use the same source, target, amplification, model and transform settings. Scores are target probabilities under G (robust ResNet-50); the golf example also reports O (standard ResNet-18). Top-1 labels are G’s predictions. Image distances are not matched.",
+      "description": "Live recomputes the gradient after each edit; fixed computes it once at the source and extrapolates from that decomposition. Both use the same source, target, amplification, model and transform settings. Scores are target probabilities under G (robust ResNet-50); the golf example also reports O (standard ResNet-18). Top-1 labels are G\u2019s predictions. Image distances are not matched.",
       "encoding": "Synchronized actual live and fixed arrays, rounded to 8-bit RGB; one shared 256-color palette. No resizing or temporal interpolation.",
       "validation": {
         "first_nonzero_live_fixed_step_max_abs_error": 0.0,
@@ -13238,7 +13238,7 @@
       "loop_duration_ms": 7000,
       "bytes": 1625205,
       "sha256": "f03c1a95b7d088292f90cd34cf511b9aeb14e2e80359e653d2867f6a9196fb40",
-      "description": "Live recomputes the gradient after each edit; fixed computes it once at the source and extrapolates from that decomposition. Both use the same source, target, amplification, model and transform settings. Scores are target probabilities under G (robust ResNet-50); the golf example also reports O (standard ResNet-18). Top-1 labels are G’s predictions. Image distances are not matched.",
+      "description": "Live recomputes the gradient after each edit; fixed computes it once at the source and extrapolates from that decomposition. Both use the same source, target, amplification, model and transform settings. Scores are target probabilities under G (robust ResNet-50); the golf example also reports O (standard ResNet-18). Top-1 labels are G\u2019s predictions. Image distances are not matched.",
       "encoding": "Synchronized actual live and fixed arrays, rounded to 8-bit RGB; one shared 256-color palette. No resizing or temporal interpolation.",
       "validation": {
         "first_nonzero_live_fixed_step_max_abs_error": 0.0,
@@ -13303,7 +13303,7 @@
       "loop_duration_ms": 7000,
       "bytes": 1683404,
       "sha256": "83d1e24f310d447580bafd4308f5ace35c7c78243da236fec12bee1f0024db40",
-      "description": "Live recomputes the gradient after each edit; fixed computes it once at the source and extrapolates from that decomposition. Both use the same source, target, amplification, model and transform settings. Scores are target probabilities under G (robust ResNet-50); the golf example also reports O (standard ResNet-18). Top-1 labels are G’s predictions. Image distances are not matched.",
+      "description": "Live recomputes the gradient after each edit; fixed computes it once at the source and extrapolates from that decomposition. Both use the same source, target, amplification, model and transform settings. Scores are target probabilities under G (robust ResNet-50); the golf example also reports O (standard ResNet-18). Top-1 labels are G\u2019s predictions. Image distances are not matched.",
       "encoding": "Synchronized actual live and fixed arrays, rounded to 8-bit RGB; one shared 256-color palette. No resizing or temporal interpolation.",
       "validation": {
         "first_nonzero_live_fixed_step_max_abs_error": 0.0,
@@ -13368,7 +13368,7 @@
       "loop_duration_ms": 7000,
       "bytes": 1789285,
       "sha256": "6558c58ebaa15cedabfee2ee121d012528f531a322a1bd132088c882884a16da",
-      "description": "Live recomputes the gradient after each edit; fixed computes it once at the source and extrapolates from that decomposition. Both use the same source, target, amplification, model and transform settings. Scores are target probabilities under G (robust ResNet-50); the golf example also reports O (standard ResNet-18). Top-1 labels are G’s predictions. Image distances are not matched.",
+      "description": "Live recomputes the gradient after each edit; fixed computes it once at the source and extrapolates from that decomposition. Both use the same source, target, amplification, model and transform settings. Scores are target probabilities under G (robust ResNet-50); the golf example also reports O (standard ResNet-18). Top-1 labels are G\u2019s predictions. Image distances are not matched.",
       "encoding": "Synchronized actual live and fixed arrays, rounded to 8-bit RGB; one shared 256-color palette. No resizing or temporal interpolation.",
       "validation": {
         "first_nonzero_live_fixed_step_max_abs_error": 0.0,
@@ -13433,7 +13433,7 @@
       "loop_duration_ms": 7000,
       "bytes": 1708708,
       "sha256": "563303cba6d222b8c2f46dd2d3e1bea9fd20a3d981cfe7ee7af983dd1524eb5f",
-      "description": "Live recomputes the gradient after each edit; fixed computes it once at the source and extrapolates from that decomposition. Both use the same source, target, amplification, model and transform settings. Scores are target probabilities under G (robust ResNet-50); the golf example also reports O (standard ResNet-18). Top-1 labels are G’s predictions. Image distances are not matched.",
+      "description": "Live recomputes the gradient after each edit; fixed computes it once at the source and extrapolates from that decomposition. Both use the same source, target, amplification, model and transform settings. Scores are target probabilities under G (robust ResNet-50); the golf example also reports O (standard ResNet-18). Top-1 labels are G\u2019s predictions. Image distances are not matched.",
       "encoding": "Synchronized actual live and fixed arrays, rounded to 8-bit RGB; one shared 256-color palette. No resizing or temporal interpolation.",
       "validation": {
         "first_nonzero_live_fixed_step_max_abs_error": 0.0,
@@ -13498,7 +13498,7 @@
       "loop_duration_ms": 7000,
       "bytes": 1758682,
       "sha256": "a4ae53d451b4d660677a6ede2e367d8ebc8643e179cf2d0ff4f68bfc4a71f801",
-      "description": "Live recomputes the gradient after each edit; fixed computes it once at the source and extrapolates from that decomposition. Both use the same source, target, amplification, model and transform settings. Scores are target probabilities under G (robust ResNet-50); the golf example also reports O (standard ResNet-18). Top-1 labels are G’s predictions. Image distances are not matched.",
+      "description": "Live recomputes the gradient after each edit; fixed computes it once at the source and extrapolates from that decomposition. Both use the same source, target, amplification, model and transform settings. Scores are target probabilities under G (robust ResNet-50); the golf example also reports O (standard ResNet-18). Top-1 labels are G\u2019s predictions. Image distances are not matched.",
       "encoding": "Synchronized actual live and fixed arrays, rounded to 8-bit RGB; one shared 256-color palette. No resizing or temporal interpolation.",
       "validation": {
         "first_nonzero_live_fixed_step_max_abs_error": 0.0,
@@ -13563,7 +13563,7 @@
       "loop_duration_ms": 7000,
       "bytes": 1962298,
       "sha256": "7974f4b8b5f5ac8c54552ead7de29ce362355bb24b60186a8266b5bd96a54471",
-      "description": "Live recomputes the gradient after each edit; fixed computes it once at the source and extrapolates from that decomposition. Both use the same source, target, amplification, model and transform settings. Scores are target probabilities under G (robust ResNet-50); the golf example also reports O (standard ResNet-18). Top-1 labels are G’s predictions. Image distances are not matched.",
+      "description": "Live recomputes the gradient after each edit; fixed computes it once at the source and extrapolates from that decomposition. Both use the same source, target, amplification, model and transform settings. Scores are target probabilities under G (robust ResNet-50); the golf example also reports O (standard ResNet-18). Top-1 labels are G\u2019s predictions. Image distances are not matched.",
       "encoding": "Synchronized actual live and fixed arrays, rounded to 8-bit RGB; one shared 256-color palette. No resizing or temporal interpolation.",
       "validation": {
         "first_nonzero_live_fixed_step_max_abs_error": 0.0,
@@ -13610,5 +13610,13 @@
         }
       }
     }
-  ]
+  ],
+  "additional_dog_trajectory": {
+    "source": "dog_recorded_trajectory_strip.png",
+    "sha256": "6831f87d1f140906c281a5dfa32421f5db0aa2758ea6ee2e60ea8fdbca826d48",
+    "gif": "dog_recorded_trajectory.gif",
+    "frame_count": 12,
+    "loop_duration_ms": 7000,
+    "encoding": "Exact 224\u00d7224 tiles from supplied strip, in order; source held fixed; original stage annotations retained. GIF palette quantization applies. Target, amplification, and gradient-refresh configuration are not independently established for this supplied strip."
+  }
 }
