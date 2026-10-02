@@ -33,7 +33,7 @@ Then open http://localhost:8000. Opening the HTML through a file URL will not lo
 
 ## Editing
 
-- `index.html`: homepage content, gallery records, and citation
+- `index.html`: homepage content and gallery records
 - `narrative.css`: homepage typography, layout, and responsive contents menu
 - `story.js`: active-section navigation and the four-method explainer
 - `animations.js`: homepage GIF playback and gallery selectors
