@@ -13618,5 +13618,73 @@
     "frame_count": 12,
     "loop_duration_ms": 7000,
     "encoding": "Exact 224\u00d7224 tiles from supplied strip, in order; source held fixed; original stage annotations retained. GIF palette quantization applies. Target, amplification, and gradient-refresh configuration are not independently established for this supplied strip."
-  }
+  },
+  "closeup_trajectories": [
+    {
+      "id": "cat_closeup",
+      "title": "Cat \u00b7 close-up trajectory",
+      "amplification": null,
+      "source": "cat_closeup_strip.png",
+      "sha256": "fdd185eeae7155f844406527568963b8d94b94cf8c830eedfebe5910108be1ad",
+      "gif": "cat_closeup.gif",
+      "frame_count": 12,
+      "loop_duration_ms": 7000,
+      "encoding": "All twelve original 224\u00d7224 image tiles in order, with source held fixed and original stage annotations. No synthesized intermediate images; GIF palette quantization applies."
+    },
+    {
+      "id": "dog1_face_amp120",
+      "title": "Dog \u00b7 close-up 1",
+      "amplification": 120,
+      "source": "dog1_face_amp120_strip.png",
+      "sha256": "03e1a89e31500c434e04e228e20a3db2fe31bf4d6a7222524574323dc467ef8d",
+      "gif": "dog1_face_amp120.gif",
+      "frame_count": 12,
+      "loop_duration_ms": 7000,
+      "encoding": "All twelve original 224\u00d7224 image tiles in order, with source held fixed and original stage annotations. No synthesized intermediate images; GIF palette quantization applies."
+    },
+    {
+      "id": "dog1_face_amp1000",
+      "title": "Dog \u00b7 close-up 1",
+      "amplification": 1000,
+      "source": "dog1_face_amp1000_strip.png",
+      "sha256": "cf157345e1d9cd57bb870c64a50d98f8e6e4297b61da8ee95cb03f5389844ee4",
+      "gif": "dog1_face_amp1000.gif",
+      "frame_count": 12,
+      "loop_duration_ms": 7000,
+      "encoding": "All twelve original 224\u00d7224 image tiles in order, with source held fixed and original stage annotations. No synthesized intermediate images; GIF palette quantization applies."
+    },
+    {
+      "id": "dog2_face_amp1000",
+      "title": "Dog \u00b7 close-up 2",
+      "amplification": 1000,
+      "source": "dog2_face_amp1000_strip.png",
+      "sha256": "e1b7180901c2eb8ee5922c3202d65e0daa5628a305a34833f140492eb734276f",
+      "gif": "dog2_face_amp1000.gif",
+      "frame_count": 12,
+      "loop_duration_ms": 7000,
+      "encoding": "All twelve original 224\u00d7224 image tiles in order, with source held fixed and original stage annotations. No synthesized intermediate images; GIF palette quantization applies."
+    },
+    {
+      "id": "dog3_face_amp120",
+      "title": "Dog \u00b7 close-up 3",
+      "amplification": 120,
+      "source": "dog3_face_amp120_strip.png",
+      "sha256": "46027be8d99cc8333fe6032396ac837fc5b3d4267d61b937feba36753edccc65",
+      "gif": "dog3_face_amp120.gif",
+      "frame_count": 12,
+      "loop_duration_ms": 7000,
+      "encoding": "All twelve original 224\u00d7224 image tiles in order, with source held fixed and original stage annotations. No synthesized intermediate images; GIF palette quantization applies."
+    },
+    {
+      "id": "dog3_face_amp1000",
+      "title": "Dog \u00b7 close-up 3",
+      "amplification": 1000,
+      "source": "dog3_face_amp1000_strip.png",
+      "sha256": "e9d0b600e554a5bd07f86e20747f200bbb9c871dfe5df01294e15c210387b69e",
+      "gif": "dog3_face_amp1000.gif",
+      "frame_count": 12,
+      "loop_duration_ms": 7000,
+      "encoding": "All twelve original 224\u00d7224 image tiles in order, with source held fixed and original stage annotations. No synthesized intermediate images; GIF palette quantization applies."
+    }
+  ]
 }
