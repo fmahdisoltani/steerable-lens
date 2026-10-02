@@ -17,6 +17,7 @@
     let example = 0;
     function selectCase() {
       const group = cases.filter(item => item.group === direction);
+      example = Math.min(example, group.length - 1);
       const item = group[example];
       image.dataset.gif = 'figures/' + item.gif;
       image.dataset.still = 'figures/' + item.poster;
@@ -25,7 +26,10 @@
       timing.textContent = `${item.frame_count} animation frames · ${(item.loop_duration_ms / 1000).toFixed(1)}-second loop`;
       download.href = 'figures/' + item.gif;
       directions.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.celebaDirection === direction)));
-      examples.forEach(button => button.setAttribute('aria-pressed', String(Number(button.dataset.celebaExample) === example)));
+      examples.forEach(button => {
+        button.hidden = Number(button.dataset.celebaExample) >= group.length;
+        button.setAttribute('aria-pressed', String(Number(button.dataset.celebaExample) === example));
+      });
       render();
     }
     directions.forEach(button => button.addEventListener('click', () => {
