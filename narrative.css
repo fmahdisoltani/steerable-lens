@@ -178,3 +178,16 @@ footer a { color: #73736b; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; }
 }
+
+/* Recorded examples remain visible without using the comparison selector. */
+.homepage-examples { margin-top: 48px; padding-top: 28px; border-top: 1px solid var(--line); }
+.natural-examples-grid { gap: 32px 22px; }
+.natural-examples-grid h4 { margin: 0 0 5px; font: 600 19px var(--serif); }
+.natural-examples-grid .example-setting { margin: 0 0 12px; color: var(--muted); font-size: 12px; }
+.natural-examples-grid .fig img { min-width: 0; }
+.natural-examples-grid figcaption { padding-top: 8px; }
+
+.celeba-examples-list { display: grid; gap: 28px; margin-top: 22px; }
+.celeba-examples-list figure { margin: 0; }
+.celeba-examples-list h4 { margin: 0 0 12px; font: 600 20px var(--serif); }
+.homepage-examples { scroll-margin-top: 32px; }

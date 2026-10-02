@@ -11,7 +11,7 @@
 <script src="story.js?v=1" defer></script>
 <script src="analytics.js?v=1" defer></script>
 <link rel="stylesheet" href="fonts/fonts.css">
-<link rel="stylesheet" href="narrative.css?v=2">
+<link rel="stylesheet" href="narrative.css?v=3">
 </head>
 <body id="top">
 <a class="skip-link" href="#main">Skip to content</a>
@@ -20,8 +20,10 @@
 <a href="#measurements">Three different questions</a>
 <a href="#methods">Four ways to edit</a>
 <a href="#celeba-animations">Smiles & glasses</a>
+<a href="#celeba-examples">All face examples</a>
 <a href="#findings">What do we find?</a>
 <a href="#more-trajectories">Natural images</a>
+<a href="#natural-examples">All natural-image examples</a>
 <a href="#resources">Scope & downloads</a>
 <a class="back-top" href="#top">↑ Back to top</a></nav>
 <details class="mobile-contents"><summary>Steerable Lens <span aria-hidden="true">&nbsp; / &nbsp;</span> Contents</summary><nav class="contents" aria-label="Mobile contents"><a href="#comparison">Watch the edits</a>
@@ -29,8 +31,10 @@
 <a href="#measurements">Three different questions</a>
 <a href="#methods">Four ways to edit</a>
 <a href="#celeba-animations">Smiles & glasses</a>
+<a href="#celeba-examples">All face examples</a>
 <a href="#findings">What do we find?</a>
 <a href="#more-trajectories">Natural images</a>
+<a href="#natural-examples">All natural-image examples</a>
 <a href="#resources">Scope & downloads</a>
 </nav></details>
 <main id="main" class="page">
@@ -127,6 +131,54 @@
       <figcaption>Each sequence includes the source, every accepted step before the requested budget, and the exact matched-budget endpoint. Shorter paths hold recorded frames so all four methods finish together; only the final budgets are matched. G is the optimized classifier&rsquo;s target probability. At the endpoint, &ldquo;Both judges&rdquo; reports joint target prediction and E is the warp-plus-gain reconstruction score. <a id="celeba-download" href="figures/celeba_smiling_184729.gif" download>Download this GIF</a>.</figcaption>
     </figure>
     <details class="details-note"><summary>Selection and replay details</summary><p>These are illustrative cases with common budget attainment, selected by source ID rather than classifier score. Every replay matches its original endpoint pixels and G/O/O&#8322; scores exactly. The animations use actual optimizer states, without image interpolation.</p></details>
+    <div class="homepage-examples" id="celeba-examples">
+      <h3>All eight smile and glasses examples</h3>
+      <p>Each face is shown below with all four methods, so you can browse every sequence without changing the selector.</p>
+      <div class="animation-toolbar"><span>Two faces per edit direction</span><button class="motion-toggle" type="button" aria-pressed="true">Pause animations</button></div>
+      <div class="celeba-examples-list">
+      <figure id="showcase-Smiling_184729">
+        <h4>Add smile · Source 184729</h4>
+        <div class="fig celeba-figure" tabindex="0" aria-label="Add smile, source 184729: scroll horizontally on small screens to compare all four methods"><img class="animated" src="figures/celeba_smiling_184729.gif" data-gif="figures/celeba_smiling_184729.gif" data-still="figures/celeba_smiling_184729_poster.png" loading="lazy" width="960" height="390" alt="Add smile, source 184729: the source and full morph sequences for Pixel, Fourier phase, CSP phase, and Joint CSP."></div>
+        <figcaption>67 animation frames · Final L&#8322; = 128/28 · <a href="figures/celeba_smiling_184729.gif" download>Download GIF</a></figcaption>
+      </figure>
+      <figure id="showcase-Smiling_186468">
+        <h4>Add smile · Source 186468</h4>
+        <div class="fig celeba-figure" tabindex="0" aria-label="Add smile, source 186468: scroll horizontally on small screens to compare all four methods"><img class="animated" src="figures/celeba_smiling_186468.gif" data-gif="figures/celeba_smiling_186468.gif" data-still="figures/celeba_smiling_186468_poster.png" loading="lazy" width="960" height="390" alt="Add smile, source 186468: the source and full morph sequences for Pixel, Fourier phase, CSP phase, and Joint CSP."></div>
+        <figcaption>69 animation frames · Final L&#8322; = 128/28 · <a href="figures/celeba_smiling_186468.gif" download>Download GIF</a></figcaption>
+      </figure>
+      <figure id="showcase-Smiling_183135">
+        <h4>Remove smile · Source 183135</h4>
+        <div class="fig celeba-figure" tabindex="0" aria-label="Remove smile, source 183135: scroll horizontally on small screens to compare all four methods"><img class="animated" src="figures/celeba_smiling_183135.gif" data-gif="figures/celeba_smiling_183135.gif" data-still="figures/celeba_smiling_183135_poster.png" loading="lazy" width="960" height="390" alt="Remove smile, source 183135: the source and full morph sequences for Pixel, Fourier phase, CSP phase, and Joint CSP."></div>
+        <figcaption>69 animation frames · Final L&#8322; = 128/28 · <a href="figures/celeba_smiling_183135.gif" download>Download GIF</a></figcaption>
+      </figure>
+      <figure id="showcase-Smiling_184591">
+        <h4>Remove smile · Source 184591</h4>
+        <div class="fig celeba-figure" tabindex="0" aria-label="Remove smile, source 184591: scroll horizontally on small screens to compare all four methods"><img class="animated" src="figures/celeba_smiling_184591.gif" data-gif="figures/celeba_smiling_184591.gif" data-still="figures/celeba_smiling_184591_poster.png" loading="lazy" width="960" height="390" alt="Remove smile, source 184591: the source and full morph sequences for Pixel, Fourier phase, CSP phase, and Joint CSP."></div>
+        <figcaption>55 animation frames · Final L&#8322; = 128/28 · <a href="figures/celeba_smiling_184591.gif" download>Download GIF</a></figcaption>
+      </figure>
+      <figure id="showcase-Eyeglasses_183071">
+        <h4>Add glasses · Source 183071</h4>
+        <div class="fig celeba-figure" tabindex="0" aria-label="Add glasses, source 183071: scroll horizontally on small screens to compare all four methods"><img class="animated" src="figures/celeba_eyeglasses_183071.gif" data-gif="figures/celeba_eyeglasses_183071.gif" data-still="figures/celeba_eyeglasses_183071_poster.png" loading="lazy" width="960" height="390" alt="Add glasses, source 183071: the source and full morph sequences for Pixel, Fourier phase, CSP phase, and Joint CSP."></div>
+        <figcaption>92 animation frames · Final L&#8322; = 128/28 · <a href="figures/celeba_eyeglasses_183071.gif" download>Download GIF</a></figcaption>
+      </figure>
+      <figure id="showcase-Eyeglasses_183248">
+        <h4>Add glasses · Source 183248</h4>
+        <div class="fig celeba-figure" tabindex="0" aria-label="Add glasses, source 183248: scroll horizontally on small screens to compare all four methods"><img class="animated" src="figures/celeba_eyeglasses_183248.gif" data-gif="figures/celeba_eyeglasses_183248.gif" data-still="figures/celeba_eyeglasses_183248_poster.png" loading="lazy" width="960" height="390" alt="Add glasses, source 183248: the source and full morph sequences for Pixel, Fourier phase, CSP phase, and Joint CSP."></div>
+        <figcaption>82 animation frames · Final L&#8322; = 128/28 · <a href="figures/celeba_eyeglasses_183248.gif" download>Download GIF</a></figcaption>
+      </figure>
+      <figure id="showcase-Eyeglasses_184000">
+        <h4>Remove glasses · Source 184000</h4>
+        <div class="fig celeba-figure" tabindex="0" aria-label="Remove glasses, source 184000: scroll horizontally on small screens to compare all four methods"><img class="animated" src="figures/celeba_eyeglasses_184000.gif" data-gif="figures/celeba_eyeglasses_184000.gif" data-still="figures/celeba_eyeglasses_184000_poster.png" loading="lazy" width="960" height="390" alt="Remove glasses, source 184000: the source and full morph sequences for Pixel, Fourier phase, CSP phase, and Joint CSP."></div>
+        <figcaption>93 animation frames · Final L&#8322; = 128/28 · <a href="figures/celeba_eyeglasses_184000.gif" download>Download GIF</a></figcaption>
+      </figure>
+      <figure id="showcase-Eyeglasses_185223">
+        <h4>Remove glasses · Source 185223</h4>
+        <div class="fig celeba-figure" tabindex="0" aria-label="Remove glasses, source 185223: scroll horizontally on small screens to compare all four methods"><img class="animated" src="figures/celeba_eyeglasses_185223.gif" data-gif="figures/celeba_eyeglasses_185223.gif" data-still="figures/celeba_eyeglasses_185223_poster.png" loading="lazy" width="960" height="390" alt="Remove glasses, source 185223: the source and full morph sequences for Pixel, Fourier phase, CSP phase, and Joint CSP."></div>
+        <figcaption>240 animation frames · Final L&#8322; = 128/28 · <a href="figures/celeba_eyeglasses_185223.gif" download>Download GIF</a></figcaption>
+      </figure>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -190,6 +242,75 @@
       <figcaption><span id="natural-case-description">Live recomputes the gradient after each edit; fixed computes it once at the source and extrapolates from that decomposition. Both use the same source, target, amplification, model and transform settings. Scores are target probabilities under G (robust ResNet-50); the golf example also reports O (standard ResNet-18). Top-1 labels are G’s predictions. Image distances are not matched.</span><span class="natural-downloads"><a id="natural-download" href="figures/comparison_legacy_cat1_lynx_amp250.gif" download>Download comparison GIF</a><a id="natural-live-download" href="figures/legacy_cat1_lynx_amp250.gif" download>Original live GIF</a><a id="natural-fixed-download" href="figures/fixed_cat1_lynx_amp250.gif" download>Fixed-gradient GIF</a></span></figcaption>
     </figure>
     <details class="details-note"><summary>Reproduction details and comparison scope</summary><p>The live paths were verified against the original results: all 108 cat image panels match exactly, and the golf sequence matches its saved arrays and scores. The first nonzero live and fixed edits also match for every pair. The comparisons show actual computed states and target probabilities; no in-between images are interpolated. Amplification is held equal within each pair, while the resulting image distances can differ. These amplification values are distinct from the phase caps used in the <a href="explore.html#trajectories">interactive reference examples</a>.</p></details>
+    <div class="homepage-examples" id="natural-examples">
+      <h3>All ten live trajectories</h3>
+      <p>Watch each recorded sequence directly below. The source stays fixed beside the evolving image; the settings are those shown in the original figures.</p>
+      <div class="animation-toolbar"><span>All examples · source and live edits</span><button class="motion-toggle" type="button" aria-pressed="true">Pause animations</button></div>
+      <div class="animation-grid natural-examples-grid">
+      <figure id="showcase-legacy_cat1_lynx_amp250">
+        <h4>Cat 1 → lynx</h4>
+        <p class="example-setting">amp 250 · 12 recorded frames</p>
+        <div class="fig"><img class="animated" src="figures/legacy_cat1_lynx_amp250.gif" data-gif="figures/legacy_cat1_lynx_amp250.gif" data-still="figures/legacy_cat1_lynx_amp250_poster.png" loading="lazy" width="500" height="382" alt="Cat 1 → lynx, amp 250: all twelve recorded live-gradient states with the source held beside them."></div>
+        <figcaption><a href="figures/legacy_cat1_lynx_amp250.gif" download>Download GIF</a></figcaption>
+      </figure>
+      <figure id="showcase-legacy_cat2_red_fox_amp250">
+        <h4>Cat 2 → red fox</h4>
+        <p class="example-setting">amp 250 · 12 recorded frames</p>
+        <div class="fig"><img class="animated" src="figures/legacy_cat2_red_fox_amp250.gif" data-gif="figures/legacy_cat2_red_fox_amp250.gif" data-still="figures/legacy_cat2_red_fox_amp250_poster.png" loading="lazy" width="500" height="382" alt="Cat 2 → red fox, amp 250: all twelve recorded live-gradient states with the source held beside them."></div>
+        <figcaption><a href="figures/legacy_cat2_red_fox_amp250.gif" download>Download GIF</a></figcaption>
+      </figure>
+      <figure id="showcase-legacy_cat2_kit_fox_amp120">
+        <h4>Cat 2 → kit fox</h4>
+        <p class="example-setting">amp 120 · 12 recorded frames</p>
+        <div class="fig"><img class="animated" src="figures/legacy_cat2_kit_fox_amp120.gif" data-gif="figures/legacy_cat2_kit_fox_amp120.gif" data-still="figures/legacy_cat2_kit_fox_amp120_poster.png" loading="lazy" width="500" height="382" alt="Cat 2 → kit fox, amp 120: all twelve recorded live-gradient states with the source held beside them."></div>
+        <figcaption><a href="figures/legacy_cat2_kit_fox_amp120.gif" download>Download GIF</a></figcaption>
+      </figure>
+      <figure id="showcase-legacy_cat2_lynx_amp250">
+        <h4>Cat 2 → lynx</h4>
+        <p class="example-setting">amp 250 · 12 recorded frames</p>
+        <div class="fig"><img class="animated" src="figures/legacy_cat2_lynx_amp250.gif" data-gif="figures/legacy_cat2_lynx_amp250.gif" data-still="figures/legacy_cat2_lynx_amp250_poster.png" loading="lazy" width="500" height="382" alt="Cat 2 → lynx, amp 250: all twelve recorded live-gradient states with the source held beside them."></div>
+        <figcaption><a href="figures/legacy_cat2_lynx_amp250.gif" download>Download GIF</a></figcaption>
+      </figure>
+      <figure id="showcase-legacy_cat3_flamingo_amp30">
+        <h4>Cat 3 → flamingo</h4>
+        <p class="example-setting">amp 30 · 12 recorded frames</p>
+        <div class="fig"><img class="animated" src="figures/legacy_cat3_flamingo_amp30.gif" data-gif="figures/legacy_cat3_flamingo_amp30.gif" data-still="figures/legacy_cat3_flamingo_amp30_poster.png" loading="lazy" width="500" height="382" alt="Cat 3 → flamingo, amp 30: all twelve recorded live-gradient states with the source held beside them."></div>
+        <figcaption><a href="figures/legacy_cat3_flamingo_amp30.gif" download>Download GIF</a></figcaption>
+      </figure>
+      <figure id="showcase-legacy_cat3_flamingo_amp60">
+        <h4>Cat 3 → flamingo</h4>
+        <p class="example-setting">amp 60 · 12 recorded frames</p>
+        <div class="fig"><img class="animated" src="figures/legacy_cat3_flamingo_amp60.gif" data-gif="figures/legacy_cat3_flamingo_amp60.gif" data-still="figures/legacy_cat3_flamingo_amp60_poster.png" loading="lazy" width="500" height="382" alt="Cat 3 → flamingo, amp 60: all twelve recorded live-gradient states with the source held beside them."></div>
+        <figcaption><a href="figures/legacy_cat3_flamingo_amp60.gif" download>Download GIF</a></figcaption>
+      </figure>
+      <figure id="showcase-legacy_cat3_flamingo_amp1000">
+        <h4>Cat 3 → flamingo</h4>
+        <p class="example-setting">amp 1000 · 12 recorded frames</p>
+        <div class="fig"><img class="animated" src="figures/legacy_cat3_flamingo_amp1000.gif" data-gif="figures/legacy_cat3_flamingo_amp1000.gif" data-still="figures/legacy_cat3_flamingo_amp1000_poster.png" loading="lazy" width="500" height="382" alt="Cat 3 → flamingo, amp 1000: all twelve recorded live-gradient states with the source held beside them."></div>
+        <figcaption><a href="figures/legacy_cat3_flamingo_amp1000.gif" download>Download GIF</a></figcaption>
+      </figure>
+      <figure id="showcase-legacy_cat3_leopard_amp250">
+        <h4>Cat 3 → leopard</h4>
+        <p class="example-setting">amp 250 · 12 recorded frames</p>
+        <div class="fig"><img class="animated" src="figures/legacy_cat3_leopard_amp250.gif" data-gif="figures/legacy_cat3_leopard_amp250.gif" data-still="figures/legacy_cat3_leopard_amp250_poster.png" loading="lazy" width="500" height="382" alt="Cat 3 → leopard, amp 250: all twelve recorded live-gradient states with the source held beside them."></div>
+        <figcaption><a href="figures/legacy_cat3_leopard_amp250.gif" download>Download GIF</a></figcaption>
+      </figure>
+      <figure id="showcase-legacy_cat3_tiger_amp1000">
+        <h4>Cat 3 → tiger</h4>
+        <p class="example-setting">amp 1000 · 12 recorded frames</p>
+        <div class="fig"><img class="animated" src="figures/legacy_cat3_tiger_amp1000.gif" data-gif="figures/legacy_cat3_tiger_amp1000.gif" data-still="figures/legacy_cat3_tiger_amp1000_poster.png" loading="lazy" width="500" height="382" alt="Cat 3 → tiger, amp 1000: all twelve recorded live-gradient states with the source held beside them."></div>
+        <figcaption><a href="figures/legacy_cat3_tiger_amp1000.gif" download>Download GIF</a></figcaption>
+      </figure>
+      <figure id="showcase-golf_to_soccer_amp1000">
+        <h4>Golf ball → Soccer ball</h4>
+        <p class="example-setting">amplification 1000 · 12 recorded frames</p>
+        <div class="fig"><img class="animated" src="figures/golf_to_soccer_amp1000.gif" data-gif="figures/golf_to_soccer_amp1000.gif" data-still="figures/golf_to_soccer_amp1000_poster.png" loading="lazy" width="500" height="382" alt="Golf ball → Soccer ball, amplification 1000: all twelve recorded live-gradient states with the source held beside them."></div>
+        <figcaption><a href="figures/golf_to_soccer_amp1000.gif" download>Download GIF</a></figcaption>
+      </figure>
+      </div>
+      <p class="animation-note">Cat scores retain the rounded values printed in the original figures. The golf-ball sequence uses saved frames and G/O measurements. These selected examples have different image distances; they do not form a matched-distance comparison.</p>
+    </div>
+
   </div>
 </section>
 
