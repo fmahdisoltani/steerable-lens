@@ -9,7 +9,17 @@ An interactive companion to the Steerable Lens research project.
 - Six current-reference natural-image trajectories with twelve saved frames, driver and judge scores, and image distance.
 - Evaluation protocol, a small human pilot, limitations, and downloadable figures and data.
 
-This repository contains the website and selected research outputs, not the full experimental code or datasets. Examples are illustrative; selection and common-attainment conditions are stated on the page. The page adds no analytics, tracking scripts, external fonts, or third-party dependencies.
+This repository contains the website and selected research outputs, not the full experimental code or datasets. Examples are illustrative; selection and common-attainment conditions are stated on the page. Fonts and research assets are self-hosted. Visitor analytics is optional and configured as described below.
+
+## Visitor analytics
+
+`analytics.js` is loaded by the homepage and interactive results page. Its endpoint belongs to the owner's [private GoatCounter dashboard](https://fmahdisoltani.goatcounter.com/). The dashboard requires sign-in and the public visitor-counter feature is disabled. Sessions are enabled to estimate unique visitors; individual-pageview records, referrers, browser/system, screen-size, location and language statistics are disabled.
+
+1. Keep the GoatCounter dashboard private. Do not enable the public dashboard, visitor counter, or individual-pageview collection. Its site domain is `https://fmahdisoltani.github.io`, because recorded paths already include `/steerable-lens/`.
+2. If changing accounts, update `endpoint` in `analytics.js` to the new account's `https://YOUR-CODE.goatcounter.com/count` URL. The site code is public; never put an account password or API key in this repository.
+3. Deploy and confirm one intentional production page load appears in the private dashboard. That verification pageview counts as a visit. Browser privacy settings and blockers may prevent some visits from being recorded.
+
+The loader runs only on HTTPS `fmahdisoltani.github.io` at the three explicitly allowed project paths. It normalizes `index.html`, sends no query string, hash or referring-page address, records no click events, and respects Do Not Track and Global Privacy Control. Local previews and the local research gallery never contact the analytics provider. Pageviews and estimated visitors are different measures; these statistics begin only after activation and cannot recover historical visits. The page has no visible counter or widget; a small footer Privacy link describes collection.
 
 ## Local preview
 
