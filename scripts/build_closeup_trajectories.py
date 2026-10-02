@@ -17,7 +17,7 @@ for idx,(name,title,amp) in enumerate(cases):
  for i in range(12):
   frame=Image.new('RGB',(500,402),'white');d=ImageDraw.Draw(frame)
   d.text((16,12),title,font=font,fill='#222222')
-  subtitle=f'Amplification {amp} · 12 recorded stages' if amp else '12 recorded stages'
+  subtitle=f'Amplification {amp}' if amp else ''
   d.text((16,38),subtitle,font=small,fill='#555555')
   d.text((75,68),'Source (fixed)',font=small,fill='#222222')
   d.text((315,68),f'Stage {i+1} of 12',font=small,fill='#222222')
@@ -32,11 +32,11 @@ for idx,(name,title,amp) in enumerate(cases):
  saved=Image.open(path);assert saved.n_frames==12
  entries.append({'id':name,'title':title,'amplification':amp,'source':dest.name,'sha256':hashlib.sha256(dest.read_bytes()).hexdigest(),'gif':path.name,'frame_count':12,'loop_duration_ms':7000,'encoding':'All twelve original 224×224 image tiles in order, with source held fixed and original stage annotations. No synthesized intermediate images; GIF palette quantization applies.'})
 p=root/'figures/animation_manifest.json';data=json.loads(p.read_text());data['closeup_trajectories']=entries;p.write_text(json.dumps(data,indent=2)+'\n')
-p=root/'index.html';s=p.read_text();marker='      </div>\n      <p class="animation-note">Cat scores'
+p=root/'imagenet.html';s=p.read_text();marker='      </div>\n      <p class="animation-note">Cat scores'
 assert marker in s
 cards=[]
 for name,title,amp in cases:
- setting=(f'Amplification {amp} · ' if amp else '')+'12 recorded stages'
+ setting=f'Amplification {amp}' if amp else ''
  cards.append(f'''      <figure id="showcase-{name}">
         <h4>{title}</h4>
         <p class="example-setting">{setting}</p>
