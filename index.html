@@ -11,7 +11,7 @@
 <script src="story.js?v=1" defer></script>
 <script src="analytics.js?v=1" defer></script>
 <link rel="stylesheet" href="fonts/fonts.css">
-<link rel="stylesheet" href="narrative.css?v=1">
+<link rel="stylesheet" href="narrative.css?v=2">
 </head>
 <body id="top">
 <a class="skip-link" href="#main">Skip to content</a>
@@ -49,21 +49,22 @@
     <a class="btn" href="https://github.com/fmahdisoltani/steerable-lens"><svg aria-hidden="true" viewBox="0 0 20 20"><path d="m6 5-5 5 5 5m8-10 5 5-5 5M12 3 8 17"/></svg>Website source</a>
   </nav>
 </header>
+<p class="intro opening-question">A classifier can become confident in a target label as we edit an image. But would a person see that target in the result?</p>
 <section class="teaser" id="comparison">
   <div class="wrap">
     <figure>
-      <div class="animation-toolbar"><span>RECORDED OPTIMIZATION · FOUR METHODS</span><button class="motion-toggle" type="button" aria-pressed="true">Pause animations</button></div>
-      <div class="fig" tabindex="0" aria-label="Animated method comparison; scroll horizontally on small screens"><img width="960" height="710" fetchpriority="high" class="animated" src="figures/main_morph_sequence.gif" data-gif="figures/main_morph_sequence.gif" data-still="figures/main_morph_sequence_poster.png" alt="Full morph sequences for 3 to 8 and adding eyeglasses across all four methods, showing recorded intermediate optimization states, step numbers, target probabilities and image distances."></div>
-      <p class="mobile-hint">↔ Swipe the figure to compare all four methods.</p>
-      <figcaption><b>Watch the image and the score separately.</b> A digit is steered from 3 toward 8; a face is steered toward eyeglasses. Each row compares four edit families at the same final image distance. The animation follows recorded optimizer states, without interpolation.</figcaption>
+      <div class="animation-toolbar teaser-toolbar"><button class="motion-toggle" type="button" aria-pressed="true">Pause animations</button></div>
+      <div class="fig" tabindex="0" aria-label="Animated method comparison; scroll horizontally on small screens"><div class="morph-canvas"><img width="960" height="710" fetchpriority="high" class="animated" src="figures/main_morph_sequence.gif" data-gif="figures/main_morph_sequence.gif" data-still="figures/main_morph_sequence_poster.png" alt="Full morph sequences for 3 to 8 and adding eyeglasses across all four methods, showing recorded intermediate optimization states, step numbers, target probabilities and image distances."></div></div>
+      <p class="morph-footer">Optimizer states: methods advance at their own rates, final budgets are matched.</p>
+      <p class="mobile-hint">Swipe the figure to compare methods.</p>
+      <figcaption><b>Watch the image and the score separately.</b> A digit is steered from 3 toward 8; a face is steered toward wearing eyeglasses. Each row compares four edit families at the same final image distance. The animation follows recorded optimizer states, without interpolation.</figcaption>
     </figure>
-      <details class="details-note"><summary>How to read these sequences</summary><p>The animation shows the source, all accepted steps before the requested budget, and the exact matched-budget endpoint. Each method advances through its own sequence; shorter sequences hold recorded frames so all methods finish together. The displayed step and L&#8322; track each method separately. Replays reproduce the original endpoint pixels and G/O/O&#8322; scores exactly. There is no image interpolation. These cases were selected after inspection; joint-judge “no” means at least one judge does not predict the target.</p><p>On small screens, scroll the image horizontally to compare all four methods. Pausing shows the recorded endpoints.</p></details>
+      <details class="details-note"><summary>How to read these sequences</summary><p>The animation shows the source, intermediate steps before the requested budget is reached, and the exact matched-budget endpoint. Each method advances through its own sequence; shorter sequences hold recorded frames so all methods finish together. The displayed step and L&#8322; track each method separately. Replays reproduce the original endpoint pixels and G/O/O&#8322; scores exactly. There is no image interpolation. These cases were selected after inspection; joint-judge “no” means at least one judge does not predict the target.</p><p>On small screens, scroll the image horizontally to compare all four methods. Pausing shows the recorded endpoints.</p></details>
   </div>
 </section>
 
 <section id="question">
   <h2>What does confidence tell us?</h2>
-  <p class="intro">A classifier can become confident in a target label as we edit an image. But would a person see that target in the result?</p>
   <p>Steerable Lens probes this question by changing images in different representations. We measure the score being optimized, transfer to other classifiers, and compatibility with a smooth image transformation. These measurements can disagree, even when the optimized classifier is highly confident.</p>
   <details class="abstract-details"><summary>Read the paper abstract</summary><p>Moving an image along a classifier's gradient is a common way to probe what change would carry it across a decision boundary, but crossing that boundary does not by itself establish a recognizable change toward the target class. We introduce <b>Steerable Lens</b>, a framework for investigating classifier sensitivity through complex steerable-pyramid (CSP) interventions, with pixel and Fourier-phase edits as comparators. At matched image-change budgets, we measure three quantities separately: the optimized classifier's confidence, transfer to independent classifiers, and compatibility with a smooth image transformation. These measurements yield different method rankings. On MNIST at L&#8322;&nbsp;=&nbsp;2, pixel edits reach a median target probability of 96.2%, yet joint independent-classifier agreement is infrequent and smooth reconstruction explains less edit energy than for CSP. On CelebA the structural ordering between representations depends on the reconstruction model. In a pilot human study, CSP edits receive more ratings of clear attribute change and no visible corruption than pixel or Fourier-phase edits. Frozen band probes further reveal fine-scale sensitivity in the examined driver classifiers, while larger budgets reduce common attainment across bands and controls. These results position CSP as a controlled diagnostic representation and motivate evaluating optimized confidence, classifier transfer, and smooth reconstruction separately, without treating any one as certification of recognizable target-class change.</p></details>
 </section>
@@ -127,7 +128,7 @@
       <div class="fig celeba-figure" tabindex="0" aria-label="CelebA four-method morph sequence; scroll horizontally on small screens">
         <img id="celeba-morph" class="animated" src="figures/celeba_smiling_184729.gif" data-gif="figures/celeba_smiling_184729.gif" data-still="figures/celeba_smiling_184729_poster.png" width="960" height="390" loading="lazy" alt="Add smile, source 184729: actual optimization steps across all four methods, with the original source alongside.">
       </div>
-      <p class="mobile-hint">↔ Swipe the figure to compare all four methods.</p>
+      <p class="mobile-hint">Swipe the figure to compare methods.</p>
       <figcaption>Each sequence includes the source, every accepted step before the requested budget, and the exact matched-budget endpoint. Shorter paths hold recorded frames so all four methods finish together; only the final budgets are matched. G is the optimized classifier&rsquo;s target probability. At the endpoint, &ldquo;Both judges&rdquo; reports joint target prediction and E is the warp-plus-gain reconstruction score. <a id="celeba-download" href="figures/celeba_smiling_184729.gif" download>Download this GIF</a>.</figcaption>
     </figure>
     <details class="details-note"><summary>Selection and replay details</summary><p>These are illustrative cases with common budget attainment, selected by source ID rather than classifier score. Every replay matches its original endpoint pixels and G/O/O&#8322; scores exactly. The animations use actual optimizer states, without image interpolation.</p></details>

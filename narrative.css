@@ -50,13 +50,20 @@ section { padding: 44px 0 20px; scroll-margin-top: 24px; }
 .fig { overflow-x: auto; border: 1px solid var(--line); border-radius: 7px; background: #fff; }
 .fig img { width: 100%; }
 .teaser .fig { box-shadow: 0 5px 30px #00000008; }
+/* Display the unchanged scientific panels, replacing only the baked-in footer with HTML.
+   In the 960x710 asset, panel labels end at y=652 and footer text begins at y=683. */
+.morph-canvas { width: 100%; aspect-ratio: 960 / 674; overflow: hidden; }
+.morph-canvas img { width: 100%; max-width: none; height: auto; }
+.morph-footer { font-size: 12px; line-height: 1.7; color: var(--muted); margin: 10px 0 0; }
 figcaption { font-size: 13px; line-height: 1.7; color: var(--muted); padding-top: 14px; }
 figcaption b { color: #464640; }
 .animation-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; color: var(--muted); font-size: 11px; margin-bottom: 10px; }
 .animation-toolbar span { letter-spacing: .025em; }
+.teaser-toolbar { justify-content: flex-end; }
 .motion-toggle { border: 1px solid #d7d6d0; border-radius: 4px; background: white; color: #57564f; padding: 6px 12px; font-size: 12px; min-height: 35px; white-space: nowrap; }
 .motion-toggle:hover { border-color: var(--accent); color: var(--accent); }
 .intro { font-size: 19px; line-height: 1.8; }
+.opening-question { max-width: 740px; margin: 0 auto 28px; font: 400 24px/1.55 var(--serif); text-align: center; }
 .lead { font-family: var(--serif); font-size: 25px; line-height: 1.55; margin-bottom: 22px; }
 .lead em { color: var(--accent); font-style: normal; }
 .details-note { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line); margin: 18px 0; padding: 12px 0 0; }
@@ -149,6 +156,7 @@ footer a { color: #73736b; }
   .animation-toolbar span { max-width: 55%; }
   .motion-toggle { font-size: 11px; padding: 6px 8px; }
   .teaser .fig img, .celeba-figure img { min-width: 680px; }
+  .teaser .morph-canvas { min-width: 680px; }
   .mobile-hint { display: block; font-size: 11px; color: var(--muted); margin: 10px 0 0; }
   .natural-viewer .fig img { min-width: 570px; }
   .intro { font-size: 17px; }
