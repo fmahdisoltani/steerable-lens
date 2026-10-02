@@ -23,7 +23,7 @@
 <a href="#celeba-examples">All face examples</a>
 <a href="#findings">What do we find?</a>
 <a href="#more-trajectories">Natural images</a>
-<a href="#natural-examples">All natural-image examples</a>
+<a href="imagenet.html">More ImageNet examples</a>
 <a href="#resources">Scope & downloads</a>
 <a class="back-top" href="#top">↑ Back to top</a></nav>
 <details class="mobile-contents"><summary>Steerable Lens <span aria-hidden="true">&nbsp; / &nbsp;</span> Contents</summary><nav class="contents" aria-label="Mobile contents"><a href="#comparison">Watch the edits</a>
@@ -34,7 +34,7 @@
 <a href="#celeba-examples">All face examples</a>
 <a href="#findings">What do we find?</a>
 <a href="#more-trajectories">Natural images</a>
-<a href="#natural-examples">All natural-image examples</a>
+<a href="imagenet.html">More ImageNet examples</a>
 <a href="#resources">Scope & downloads</a>
 </nav></details>
 <main id="main" class="page">
@@ -232,115 +232,7 @@
       <figcaption><span id="natural-case-description">Live recomputes the gradient after each edit; fixed computes it once at the source and extrapolates from that decomposition. Both use the same source, target, amplification, model and transform settings. Scores are target probabilities under G (robust ResNet-50); the golf example also reports O (standard ResNet-18). Top-1 labels are G’s predictions. Image distances are not matched.</span><span class="natural-downloads"><a id="natural-download" href="figures/comparison_legacy_cat1_lynx_amp250.gif" download>Download comparison GIF</a><a id="natural-live-download" href="figures/legacy_cat1_lynx_amp250.gif" download>Original live GIF</a><a id="natural-fixed-download" href="figures/fixed_cat1_lynx_amp250.gif" download>Fixed-gradient GIF</a></span></figcaption>
     </figure>
     <details class="details-note"><summary>Reproduction details and comparison scope</summary><p>The live paths were verified against the original results: all 108 cat image panels match exactly, and the golf sequence matches its saved arrays and scores. The first nonzero live and fixed edits also match for every pair. The comparisons show actual computed states and target probabilities; no in-between images are interpolated. Amplification is held equal within each pair, while the resulting image distances can differ. These amplification values are distinct from the phase caps used in the <a href="explore.html#trajectories">interactive reference examples</a>.</p></details>
-    <div class="homepage-examples" id="natural-examples">
-      <h3>Natural-image trajectories</h3>
-      <div class="animation-toolbar"><span>All examples · source and live edits</span><button class="motion-toggle" type="button" aria-pressed="true">Pause animations</button></div>
-      <div class="animation-grid natural-examples-grid">
-      <figure id="showcase-legacy_cat1_lynx_amp250">
-        <h4>Cat → lynx</h4>
-        <p class="example-setting">amp 250 · 12 recorded frames</p>
-        <div class="fig"><img class="animated" src="figures/legacy_cat1_lynx_amp250.gif" data-gif="figures/legacy_cat1_lynx_amp250.gif" data-still="figures/legacy_cat1_lynx_amp250_poster.png" loading="lazy" width="500" height="382" alt="Cat → lynx, amp 250: all twelve recorded live-gradient states with the source held beside them."></div>
-        <figcaption><a href="figures/legacy_cat1_lynx_amp250.gif" download>Download GIF</a></figcaption>
-      </figure>
-      <figure id="showcase-legacy_cat2_red_fox_amp250">
-        <h4>Cat → red fox</h4>
-        <p class="example-setting">amp 250 · 12 recorded frames</p>
-        <div class="fig"><img class="animated" src="figures/legacy_cat2_red_fox_amp250.gif" data-gif="figures/legacy_cat2_red_fox_amp250.gif" data-still="figures/legacy_cat2_red_fox_amp250_poster.png" loading="lazy" width="500" height="382" alt="Cat → red fox, amp 250: all twelve recorded live-gradient states with the source held beside them."></div>
-        <figcaption><a href="figures/legacy_cat2_red_fox_amp250.gif" download>Download GIF</a></figcaption>
-      </figure>
-      <figure id="showcase-legacy_cat2_kit_fox_amp120">
-        <h4>Cat → kit fox</h4>
-        <p class="example-setting">amp 120 · 12 recorded frames</p>
-        <div class="fig"><img class="animated" src="figures/legacy_cat2_kit_fox_amp120.gif" data-gif="figures/legacy_cat2_kit_fox_amp120.gif" data-still="figures/legacy_cat2_kit_fox_amp120_poster.png" loading="lazy" width="500" height="382" alt="Cat → kit fox, amp 120: all twelve recorded live-gradient states with the source held beside them."></div>
-        <figcaption><a href="figures/legacy_cat2_kit_fox_amp120.gif" download>Download GIF</a></figcaption>
-      </figure>
-      <figure id="showcase-legacy_cat2_lynx_amp250">
-        <h4>Cat → lynx</h4>
-        <p class="example-setting">amp 250 · 12 recorded frames</p>
-        <div class="fig"><img class="animated" src="figures/legacy_cat2_lynx_amp250.gif" data-gif="figures/legacy_cat2_lynx_amp250.gif" data-still="figures/legacy_cat2_lynx_amp250_poster.png" loading="lazy" width="500" height="382" alt="Cat → lynx, amp 250: all twelve recorded live-gradient states with the source held beside them."></div>
-        <figcaption><a href="figures/legacy_cat2_lynx_amp250.gif" download>Download GIF</a></figcaption>
-      </figure>
-      <figure id="showcase-legacy_cat3_flamingo_amp30">
-        <h4>Cat → flamingo</h4>
-        <p class="example-setting">amp 30 · 12 recorded frames</p>
-        <div class="fig"><img class="animated" src="figures/legacy_cat3_flamingo_amp30.gif" data-gif="figures/legacy_cat3_flamingo_amp30.gif" data-still="figures/legacy_cat3_flamingo_amp30_poster.png" loading="lazy" width="500" height="382" alt="Cat → flamingo, amp 30: all twelve recorded live-gradient states with the source held beside them."></div>
-        <figcaption><a href="figures/legacy_cat3_flamingo_amp30.gif" download>Download GIF</a></figcaption>
-      </figure>
-      <figure id="showcase-legacy_cat3_flamingo_amp60">
-        <h4>Cat → flamingo</h4>
-        <p class="example-setting">amp 60 · 12 recorded frames</p>
-        <div class="fig"><img class="animated" src="figures/legacy_cat3_flamingo_amp60.gif" data-gif="figures/legacy_cat3_flamingo_amp60.gif" data-still="figures/legacy_cat3_flamingo_amp60_poster.png" loading="lazy" width="500" height="382" alt="Cat → flamingo, amp 60: all twelve recorded live-gradient states with the source held beside them."></div>
-        <figcaption><a href="figures/legacy_cat3_flamingo_amp60.gif" download>Download GIF</a></figcaption>
-      </figure>
-      <figure id="showcase-legacy_cat3_flamingo_amp1000">
-        <h4>Cat → flamingo</h4>
-        <p class="example-setting">amp 1000 · 12 recorded frames</p>
-        <div class="fig"><img class="animated" src="figures/legacy_cat3_flamingo_amp1000.gif" data-gif="figures/legacy_cat3_flamingo_amp1000.gif" data-still="figures/legacy_cat3_flamingo_amp1000_poster.png" loading="lazy" width="500" height="382" alt="Cat → flamingo, amp 1000: all twelve recorded live-gradient states with the source held beside them."></div>
-        <figcaption><a href="figures/legacy_cat3_flamingo_amp1000.gif" download>Download GIF</a></figcaption>
-      </figure>
-      <figure id="showcase-legacy_cat3_leopard_amp250">
-        <h4>Cat → leopard</h4>
-        <p class="example-setting">amp 250 · 12 recorded frames</p>
-        <div class="fig"><img class="animated" src="figures/legacy_cat3_leopard_amp250.gif" data-gif="figures/legacy_cat3_leopard_amp250.gif" data-still="figures/legacy_cat3_leopard_amp250_poster.png" loading="lazy" width="500" height="382" alt="Cat → leopard, amp 250: all twelve recorded live-gradient states with the source held beside them."></div>
-        <figcaption><a href="figures/legacy_cat3_leopard_amp250.gif" download>Download GIF</a></figcaption>
-      </figure>
-      <figure id="showcase-legacy_cat3_tiger_amp1000">
-        <h4>Cat → tiger</h4>
-        <p class="example-setting">amp 1000 · 12 recorded frames</p>
-        <div class="fig"><img class="animated" src="figures/legacy_cat3_tiger_amp1000.gif" data-gif="figures/legacy_cat3_tiger_amp1000.gif" data-still="figures/legacy_cat3_tiger_amp1000_poster.png" loading="lazy" width="500" height="382" alt="Cat → tiger, amp 1000: all twelve recorded live-gradient states with the source held beside them."></div>
-        <figcaption><a href="figures/legacy_cat3_tiger_amp1000.gif" download>Download GIF</a></figcaption>
-      </figure>
-      <figure id="showcase-golf_to_soccer_amp1000">
-        <h4>Golf ball → Soccer ball</h4>
-        <p class="example-setting">amplification 1000 · 12 recorded frames</p>
-        <div class="fig"><img class="animated" src="figures/golf_to_soccer_amp1000.gif" data-gif="figures/golf_to_soccer_amp1000.gif" data-still="figures/golf_to_soccer_amp1000_poster.png" loading="lazy" width="500" height="382" alt="Golf ball → Soccer ball, amplification 1000: all twelve recorded live-gradient states with the source held beside them."></div>
-        <figcaption><a href="figures/golf_to_soccer_amp1000.gif" download>Download GIF</a></figcaption>
-      </figure>
-      <figure id="showcase-dog-recorded-trajectory">
-        <h4>Dog · recorded trajectory</h4>
-        <p class="example-setting">12 recorded stages</p>
-        <div class="fig"><img class="animated" src="figures/dog_recorded_trajectory.gif" data-gif="figures/dog_recorded_trajectory.gif" data-still="figures/dog_recorded_trajectory_poster.png" loading="lazy" width="500" height="390" alt="Dog trajectory: all twelve supplied stages in order, with the unedited source held beside the sequence."></div>
-        <figcaption>Original stage labels and scores are retained. <a href="figures/dog_recorded_trajectory.gif" download>Download GIF</a> · <a href="figures/dog_recorded_trajectory_strip.png" download>Original sequence</a></figcaption>
-      </figure>
-      <figure id="showcase-cat_closeup">
-        <h4>Cat · close-up trajectory</h4>
-        <p class="example-setting">12 recorded stages</p>
-        <div class="fig"><img class="animated" src="figures/cat_closeup.gif" data-gif="figures/cat_closeup.gif" data-still="figures/cat_closeup_poster.png" loading="lazy" width="500" height="402" alt="Cat · close-up trajectory: all twelve recorded stages, with the unchanged source alongside."></div>
-        <figcaption>Original stage labels and scores are retained. <a href="figures/cat_closeup.gif" download>Download GIF</a> · <a href="figures/cat_closeup_strip.png" download>Original sequence</a></figcaption>
-      </figure>
-      <figure id="showcase-dog1_face_amp120">
-        <h4>Dog · close-up 1</h4>
-        <p class="example-setting">Amplification 120 · 12 recorded stages</p>
-        <div class="fig"><img class="animated" src="figures/dog1_face_amp120.gif" data-gif="figures/dog1_face_amp120.gif" data-still="figures/dog1_face_amp120_poster.png" loading="lazy" width="500" height="402" alt="Dog · close-up 1: all twelve recorded stages, with the unchanged source alongside."></div>
-        <figcaption>Original stage labels and scores are retained. <a href="figures/dog1_face_amp120.gif" download>Download GIF</a> · <a href="figures/dog1_face_amp120_strip.png" download>Original sequence</a></figcaption>
-      </figure>
-      <figure id="showcase-dog1_face_amp1000">
-        <h4>Dog · close-up 1</h4>
-        <p class="example-setting">Amplification 1000 · 12 recorded stages</p>
-        <div class="fig"><img class="animated" src="figures/dog1_face_amp1000.gif" data-gif="figures/dog1_face_amp1000.gif" data-still="figures/dog1_face_amp1000_poster.png" loading="lazy" width="500" height="402" alt="Dog · close-up 1: all twelve recorded stages, with the unchanged source alongside."></div>
-        <figcaption>Original stage labels and scores are retained. <a href="figures/dog1_face_amp1000.gif" download>Download GIF</a> · <a href="figures/dog1_face_amp1000_strip.png" download>Original sequence</a></figcaption>
-      </figure>
-      <figure id="showcase-dog2_face_amp1000">
-        <h4>Dog · close-up 2</h4>
-        <p class="example-setting">Amplification 1000 · 12 recorded stages</p>
-        <div class="fig"><img class="animated" src="figures/dog2_face_amp1000.gif" data-gif="figures/dog2_face_amp1000.gif" data-still="figures/dog2_face_amp1000_poster.png" loading="lazy" width="500" height="402" alt="Dog · close-up 2: all twelve recorded stages, with the unchanged source alongside."></div>
-        <figcaption>Original stage labels and scores are retained. <a href="figures/dog2_face_amp1000.gif" download>Download GIF</a> · <a href="figures/dog2_face_amp1000_strip.png" download>Original sequence</a></figcaption>
-      </figure>
-      <figure id="showcase-dog3_face_amp120">
-        <h4>Dog · close-up 3</h4>
-        <p class="example-setting">Amplification 120 · 12 recorded stages</p>
-        <div class="fig"><img class="animated" src="figures/dog3_face_amp120.gif" data-gif="figures/dog3_face_amp120.gif" data-still="figures/dog3_face_amp120_poster.png" loading="lazy" width="500" height="402" alt="Dog · close-up 3: all twelve recorded stages, with the unchanged source alongside."></div>
-        <figcaption>Original stage labels and scores are retained. <a href="figures/dog3_face_amp120.gif" download>Download GIF</a> · <a href="figures/dog3_face_amp120_strip.png" download>Original sequence</a></figcaption>
-      </figure>
-      <figure id="showcase-dog3_face_amp1000">
-        <h4>Dog · close-up 3</h4>
-        <p class="example-setting">Amplification 1000 · 12 recorded stages</p>
-        <div class="fig"><img class="animated" src="figures/dog3_face_amp1000.gif" data-gif="figures/dog3_face_amp1000.gif" data-still="figures/dog3_face_amp1000_poster.png" loading="lazy" width="500" height="402" alt="Dog · close-up 3: all twelve recorded stages, with the unchanged source alongside."></div>
-        <figcaption>Original stage labels and scores are retained. <a href="figures/dog3_face_amp1000.gif" download>Download GIF</a> · <a href="figures/dog3_face_amp1000_strip.png" download>Original sequence</a></figcaption>
-      </figure>
-      </div>
-      <p class="animation-note">Cat scores retain the rounded values printed in the original figures. The golf-ball sequence uses saved frames and G/O measurements. These selected examples have different image distances; they do not form a matched-distance comparison.</p>
-    </div>
+    <p id="natural-examples"><a class="btn" href="imagenet.html">More ImageNet examples →</a></p>
 
   </div>
 </section>
