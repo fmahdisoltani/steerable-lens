@@ -11,46 +11,20 @@
 <script src="story.js?v=1" defer></script>
 <script src="analytics.js?v=1" defer></script>
 <link rel="stylesheet" href="fonts/fonts.css">
-<link rel="stylesheet" href="narrative.css?v=3">
+<link rel="stylesheet" href="narrative.css?v=reordered-5">
 </head>
-<body id="top">
-<a class="skip-link" href="#main">Skip to content</a>
-<nav class="contents desktop-contents" aria-label="Contents"><span class="contents-label">On this page</span><a href="#comparison">Watch the edits</a>
-<a href="#question">What does confidence tell us?</a>
-<a href="#measurements">Three different questions</a>
-<a href="#methods">Four ways to edit</a>
-<a href="#celeba-animations">Smiles & glasses</a>
-<a href="#celeba-examples">All face examples</a>
-<a href="#findings">What do we find?</a>
-<a href="#more-trajectories">Natural images</a>
-<a href="imagenet.html">More ImageNet examples</a>
-<a href="#resources">Scope & downloads</a>
-<a class="back-top" href="#top">↑ Back to top</a></nav>
-<details class="mobile-contents"><summary>Steerable Lens <span aria-hidden="true">&nbsp; / &nbsp;</span> Contents</summary><nav class="contents" aria-label="Mobile contents"><a href="#comparison">Watch the edits</a>
-<a href="#question">What does confidence tell us?</a>
-<a href="#measurements">Three different questions</a>
-<a href="#methods">Four ways to edit</a>
-<a href="#celeba-animations">Smiles & glasses</a>
-<a href="#celeba-examples">All face examples</a>
-<a href="#findings">What do we find?</a>
-<a href="#more-trajectories">Natural images</a>
-<a href="imagenet.html">More ImageNet examples</a>
-<a href="#resources">Scope & downloads</a>
-</nav></details>
-<main id="main" class="page">
-<header class="hero">
+<body id="top"><a class="skip-link" href="#main">Skip to content</a><nav class="contents desktop-contents" aria-label="Contents"><span class="contents-label">On this page</span><a href="#comparison">Two example edits</a><a href="#measurements">Setup & measures</a><a href="#findings">Quantitative results</a><a href="#reconstruction">Reconstruction ranking</a><a href="#human-pilot">Exploratory human pilot</a><a href="#more-trajectories">Natural-image example</a><a href="#resources">Limitations & resources</a><a href="celeba.html">More face examples</a><a href="imagenet.html">More ImageNet examples</a><a class="back-top" href="#top">↑ Back to top</a></nav><details class="mobile-contents"><summary>Steerable Lens / Contents</summary><nav class="contents" aria-label="Mobile contents"><a href="#comparison">Two example edits</a><a href="#measurements">Setup & measures</a><a href="#findings">Quantitative results</a><a href="#reconstruction">Reconstruction ranking</a><a href="#human-pilot">Exploratory human pilot</a><a href="#more-trajectories">Natural-image example</a><a href="#resources">Limitations & resources</a><a href="celeba.html">More face examples</a><a href="imagenet.html">More ImageNet examples</a></nav></details><main id="main" class="page"><header class="hero">
   <div class="eyebrow">Steerable Lens · A visual research companion</div>
   <h1>Confidence Is Not Evidence<span class="sub">Probing Classifier Sensitivity<br>with Steerable Lens</span></h1>
   <div class="authors">Farzaneh Mahdisoltani, David Fleet</div>
   <div class="venue">University of Toronto &middot; Vector Institute</div>
+  <p class="contribution">Controlled edits in four representations reveal different rankings under classifier transfer and smooth reconstruction.</p>
   <nav class="btns" aria-label="Project links">
     <a class="btn" href="explore.html"><svg aria-hidden="true" viewBox="0 0 20 20"><path d="M3 16V4m0 12h14M6 12l4-5 3 3 4-6"/></svg>Explore results</a>
     <a class="btn" href="#resources"><svg aria-hidden="true" viewBox="0 0 20 20"><path d="M10 2v11m-4-4 4 4 4-4M3 13v4h14v-4"/></svg>Figures &amp; data</a>
     <a class="btn" href="https://github.com/fmahdisoltani/steerable-lens"><svg aria-hidden="true" viewBox="0 0 20 20"><path d="m6 5-5 5 5 5m8-10 5 5-5 5M12 3 8 17"/></svg>Website source</a>
   </nav>
-</header>
-<p class="intro opening-question">A classifier can become confident in a target label as we edit an image. But would a person see that target in the result?</p>
-<section class="teaser" id="comparison">
+<details class="abstract-details"><summary>Read the paper abstract</summary><p>Moving an image along a classifier's gradient is a common way to probe what change would carry it across a decision boundary, but crossing that boundary does not by itself establish a recognizable change toward the target class. We introduce <b>Steerable Lens</b>, a framework for investigating classifier sensitivity through complex steerable-pyramid (CSP) interventions, with pixel and Fourier-phase edits as comparators. At matched image-change budgets, we measure three quantities separately: the optimized classifier's confidence, transfer to independent classifiers, and compatibility with a smooth image transformation. These measurements yield different method rankings. On MNIST at L&#8322;&nbsp;=&nbsp;2, pixel edits reach a median target probability of 96.2%, yet joint independent-classifier agreement is infrequent and smooth reconstruction explains less edit energy than for CSP. On CelebA the structural ordering between representations depends on the reconstruction model. In a pilot human study, CSP edits receive more ratings of clear attribute change and no visible corruption than pixel or Fourier-phase edits. Frozen band probes further reveal fine-scale sensitivity in the examined driver classifiers, while larger budgets reduce common attainment across bands and controls. These results position CSP as a controlled diagnostic representation and motivate evaluating optimized confidence, classifier transfer, and smooth reconstruction separately, without treating any one as certification of recognizable target-class change.</p></details></header><section class="teaser" id="comparison">
   <div class="wrap">
     <figure>
       <div class="animation-toolbar teaser-toolbar"><button class="motion-toggle" type="button" aria-pressed="true">Pause animations</button></div>
@@ -61,25 +35,17 @@
     </figure>
       <details class="details-note"><summary>How to read these sequences</summary><p>The animation shows the source, intermediate steps before the requested budget is reached, and the exact matched-budget endpoint. Each method advances through its own sequence; shorter sequences hold recorded frames so all methods finish together. The displayed step and L&#8322; track each method separately. Replays reproduce the original endpoint pixels and G/O/O&#8322; scores exactly. There is no image interpolation. These cases were selected after inspection; joint-judge “no” means at least one judge does not predict the target.</p><p>On small screens, scroll the image horizontally to compare all four methods. Pausing shows the recorded endpoints.</p></details>
   </div>
-</section>
-
-<section id="question">
-  <h2>What does confidence tell us?</h2>
-  <p>Steerable Lens probes this question by changing images in different representations. We measure the score being optimized, transfer to other classifiers, and compatibility with a smooth image transformation. These measurements can disagree, even when the optimized classifier is highly confident.</p>
-  <details class="abstract-details"><summary>Read the paper abstract</summary><p>Moving an image along a classifier's gradient is a common way to probe what change would carry it across a decision boundary, but crossing that boundary does not by itself establish a recognizable change toward the target class. We introduce <b>Steerable Lens</b>, a framework for investigating classifier sensitivity through complex steerable-pyramid (CSP) interventions, with pixel and Fourier-phase edits as comparators. At matched image-change budgets, we measure three quantities separately: the optimized classifier's confidence, transfer to independent classifiers, and compatibility with a smooth image transformation. These measurements yield different method rankings. On MNIST at L&#8322;&nbsp;=&nbsp;2, pixel edits reach a median target probability of 96.2%, yet joint independent-classifier agreement is infrequent and smooth reconstruction explains less edit energy than for CSP. On CelebA the structural ordering between representations depends on the reconstruction model. In a pilot human study, CSP edits receive more ratings of clear attribute change and no visible corruption than pixel or Fourier-phase edits. Frozen band probes further reveal fine-scale sensitivity in the examined driver classifiers, while larger budgets reduce common attainment across bands and controls. These results position CSP as a controlled diagnostic representation and motivate evaluating optimized confidence, classifier transfer, and smooth reconstruction separately, without treating any one as certification of recognizable target-class change.</p></details>
-</section>
-
-<section id="measurements">
-  <h2>Three different questions</h2>
+<p id="celeba-examples"><a class="btn" href="celeba.html">More smile and glasses examples →</a></p></section><section id="measurements">
+  <h2>What is controlled, and what is measured?</h2>
+<p>Pixel, Fourier phase, CSP phase, and Joint CSP start from the same source–target pairs. The main comparisons match final pixel-space L₂ distance; intermediate optimizer steps are not matched across methods.</p>
+<p>MNIST results below use L₂ = 2 on 300 cases. CelebA uses L₂ = 128/28 (approximately 4.57), with comparisons restricted to cases where all four methods attain the budget.</p>
   <div class="measurements">
     <div class="measure"><span class="measure-number" aria-hidden="true">01</span><div><h3>Did the optimized score rise?</h3><p><b>Optimized confidence.</b> G is the classifier whose gradient produces the edit. Its target probability measures the response pursued during optimization, not independent validation.</p></div></div>
     <div class="measure"><span class="measure-number" aria-hidden="true">02</span><div><h3>Do other classifiers agree?</h3><p><b>Independent transfer.</b> Two classifiers excluded from edit optimization are evaluated separately and jointly. Agreement shows transfer; it does not establish what a person sees.</p></div></div>
     <div class="measure"><span class="measure-number" aria-hidden="true">03</span><div><h3>Can a smooth transformation explain it?</h3><p><b>Smooth compatibility.</b> E measures the fraction of edit energy explained by a restricted smooth warp, with optional spatial gain. A better fit does not certify recognizable target change.</p></div></div>
   </div>
-</section>
+<details class="details-note"><summary>How the four edit representations differ</summary>
 
-<section id="methods">
-  <h2>Four ways to change an image</h2>
   <p>The representation determines which image coordinates the gradient can change. We compare direct pixel edits with phase and amplitude edits, then evaluate the resulting images at matched final distances.</p>
   <div class="method-controls" role="group" aria-label="Choose an edit representation">
     <button class="gallery-choice" type="button" data-method="pixel" aria-pressed="true" aria-controls="method-pixel">Pixel</button>
@@ -100,147 +66,28 @@
   </div>
   <p class="small-note">This diagram describes the edit coordinates. It does not imply that any representation guarantees a semantic change.</p>
   <noscript><p>Fourier phase edits use global frequency coordinates; CSP phase edits use localized multiscale bands; Joint CSP changes both phase and amplitude.</p></noscript>
-</section>
-
-<section id="celeba-animations">
-  <div class="wrap">
-    <div class="col">
-      <h2 class="sechead">Can you see a change in smiles and glasses?</h2>
-
-      <p>Browse six faces across smile and glasses edits. Each animation compares Pixel, Fourier phase, CSP phase, and Joint CSP alongside the unedited source. All four methods reach the same final image distance, L&#8322; = 128/28.</p>
-    </div>
-    <div class="celeba-controls">
-      <div class="celeba-directions" role="group" aria-label="Attribute and edit direction">
-        <button class="gallery-choice" type="button" data-celeba-direction="add-smile" aria-pressed="true">Add smile</button>
-        <button class="gallery-choice" type="button" data-celeba-direction="remove-smile" aria-pressed="false">Remove smile</button>
-        <button class="gallery-choice" type="button" data-celeba-direction="add-glasses" aria-pressed="false">Add glasses</button>
-        <button class="gallery-choice" type="button" data-celeba-direction="remove-glasses" aria-pressed="false">Remove glasses</button>
-      </div>
-      <div class="celeba-examples" role="group" aria-label="Choose a face">
-        <button class="gallery-choice" type="button" data-celeba-example="0" aria-pressed="true">Example 1</button>
-        <button class="gallery-choice" type="button" data-celeba-example="1" aria-pressed="false">Example 2</button>
-      </div>
-    </div>
-    <figure>
-      <h3 id="celeba-case-title" class="celeba-case-title" aria-live="polite">Add smile &middot; Source 184729 &middot; Example 1 of 2</h3>
-      <div class="animation-toolbar"><span id="celeba-case-timing">67 animation frames &middot; 10.1-second loop</span><button class="motion-toggle" type="button" aria-pressed="true">Pause animations</button></div>
-      <div class="fig celeba-figure" tabindex="0" aria-label="CelebA four-method morph sequence; scroll horizontally on small screens">
-        <img id="celeba-morph" class="animated" src="figures/celeba_smiling_184729.gif" data-gif="figures/celeba_smiling_184729.gif" data-still="figures/celeba_smiling_184729_poster.png" width="960" height="390" loading="lazy" alt="Add smile, source 184729: actual optimization steps across all four methods, with the original source alongside.">
-      </div>
-      <p class="mobile-hint">Swipe the figure to compare methods.</p>
-      <figcaption>Each sequence includes the source, every accepted step before the requested budget, and the exact matched-budget endpoint. Shorter paths hold recorded frames so all four methods finish together; only the final budgets are matched. G is the optimized classifier&rsquo;s target probability. At the endpoint, &ldquo;Both judges&rdquo; reports joint target prediction and E is the warp-plus-gain reconstruction score. <a id="celeba-download" href="figures/celeba_smiling_184729.gif" download>Download this GIF</a>.</figcaption>
-    </figure>
-    <details class="details-note"><summary>Selection and replay details</summary><p>These are illustrative cases with common budget attainment, selected by source ID rather than classifier score. Every replay matches its original endpoint pixels and G/O/O&#8322; scores exactly. The animations use actual optimizer states, without image interpolation.</p></details>
-    <div class="homepage-examples" id="celeba-examples">
-      <h3>All six smile and glasses examples</h3>
-      <p>Each face is shown below with all four methods, so you can browse every sequence without changing the selector.</p>
-      <div class="animation-toolbar"><span>Six faces across four edit directions</span><button class="motion-toggle" type="button" aria-pressed="true">Pause animations</button></div>
-      <div class="celeba-examples-list">
-      <figure id="showcase-Smiling_184729">
-        <h4>Add smile · Source 184729</h4>
-        <div class="fig celeba-figure" tabindex="0" aria-label="Add smile, source 184729: scroll horizontally on small screens to compare all four methods"><img class="animated" src="figures/celeba_smiling_184729.gif" data-gif="figures/celeba_smiling_184729.gif" data-still="figures/celeba_smiling_184729_poster.png" loading="lazy" width="960" height="390" alt="Add smile, source 184729: the source and full morph sequences for Pixel, Fourier phase, CSP phase, and Joint CSP."></div>
-        <figcaption>67 animation frames · Final L&#8322; = 128/28 · <a href="figures/celeba_smiling_184729.gif" download>Download GIF</a></figcaption>
-      </figure>
-      <figure id="showcase-Smiling_186468">
-        <h4>Add smile · Source 186468</h4>
-        <div class="fig celeba-figure" tabindex="0" aria-label="Add smile, source 186468: scroll horizontally on small screens to compare all four methods"><img class="animated" src="figures/celeba_smiling_186468.gif" data-gif="figures/celeba_smiling_186468.gif" data-still="figures/celeba_smiling_186468_poster.png" loading="lazy" width="960" height="390" alt="Add smile, source 186468: the source and full morph sequences for Pixel, Fourier phase, CSP phase, and Joint CSP."></div>
-        <figcaption>69 animation frames · Final L&#8322; = 128/28 · <a href="figures/celeba_smiling_186468.gif" download>Download GIF</a></figcaption>
-      </figure>
-      <figure id="showcase-Smiling_184591">
-        <h4>Remove smile · Source 184591</h4>
-        <div class="fig celeba-figure" tabindex="0" aria-label="Remove smile, source 184591: scroll horizontally on small screens to compare all four methods"><img class="animated" src="figures/celeba_smiling_184591.gif" data-gif="figures/celeba_smiling_184591.gif" data-still="figures/celeba_smiling_184591_poster.png" loading="lazy" width="960" height="390" alt="Remove smile, source 184591: the source and full morph sequences for Pixel, Fourier phase, CSP phase, and Joint CSP."></div>
-        <figcaption>55 animation frames · Final L&#8322; = 128/28 · <a href="figures/celeba_smiling_184591.gif" download>Download GIF</a></figcaption>
-      </figure>
-      <figure id="showcase-Eyeglasses_183071">
-        <h4>Add glasses · Source 183071</h4>
-        <div class="fig celeba-figure" tabindex="0" aria-label="Add glasses, source 183071: scroll horizontally on small screens to compare all four methods"><img class="animated" src="figures/celeba_eyeglasses_183071.gif" data-gif="figures/celeba_eyeglasses_183071.gif" data-still="figures/celeba_eyeglasses_183071_poster.png" loading="lazy" width="960" height="390" alt="Add glasses, source 183071: the source and full morph sequences for Pixel, Fourier phase, CSP phase, and Joint CSP."></div>
-        <figcaption>92 animation frames · Final L&#8322; = 128/28 · <a href="figures/celeba_eyeglasses_183071.gif" download>Download GIF</a></figcaption>
-      </figure>
-      <figure id="showcase-Eyeglasses_183248">
-        <h4>Add glasses · Source 183248</h4>
-        <div class="fig celeba-figure" tabindex="0" aria-label="Add glasses, source 183248: scroll horizontally on small screens to compare all four methods"><img class="animated" src="figures/celeba_eyeglasses_183248.gif" data-gif="figures/celeba_eyeglasses_183248.gif" data-still="figures/celeba_eyeglasses_183248_poster.png" loading="lazy" width="960" height="390" alt="Add glasses, source 183248: the source and full morph sequences for Pixel, Fourier phase, CSP phase, and Joint CSP."></div>
-        <figcaption>82 animation frames · Final L&#8322; = 128/28 · <a href="figures/celeba_eyeglasses_183248.gif" download>Download GIF</a></figcaption>
-      </figure>
-      <figure id="showcase-Eyeglasses_185223">
-        <h4>Remove glasses · Source 185223</h4>
-        <div class="fig celeba-figure" tabindex="0" aria-label="Remove glasses, source 185223: scroll horizontally on small screens to compare all four methods"><img class="animated" src="figures/celeba_eyeglasses_185223.gif" data-gif="figures/celeba_eyeglasses_185223.gif" data-still="figures/celeba_eyeglasses_185223_poster.png" loading="lazy" width="960" height="390" alt="Remove glasses, source 185223: the source and full morph sequences for Pixel, Fourier phase, CSP phase, and Joint CSP."></div>
-        <figcaption>240 animation frames · Final L&#8322; = 128/28 · <a href="figures/celeba_eyeglasses_185223.gif" download>Download GIF</a></figcaption>
-      </figure>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<section id="findings">
-  <div class="wrap">
-    <div class="col"><h2 class="sechead">What do the measurements show?</h2></div>
-
-    <div class="col result">
-      <h3>On MNIST, confidence and evidence come apart</h3>
-      <p>At a matched L&#8322;&nbsp;=&nbsp;2 budget, pixel edits reach a <span class="stat">median 96.2%</span> probability on the classifier they optimize &mdash; while the two independent judges jointly confirm the target for only a handful of 300 edits. CSP edits have low median driver confidence at this budget yet are the most compatible with a smooth warp. A high optimized score does not guarantee agreement from the other classifiers.</p>
-    </div>
-
-    <figure class="col gap">
-      <div class="fig"><a href="figures/fig2.png"><img loading="lazy" src="figures/fig2.png" alt="Six bar panels of median explained edit energy for pixel, Fourier-phase, CSP-phase and joint-CSP edits: two MNIST panels where CSP variants lead, and four CelebA panels where Fourier phase leads."></a></div>
-      <figcaption><b>Smooth-reconstruction compatibility</b> (median explained edit energy) under an 8&times;8 warp-plus-gain fit. <a href="figures/fig2.png">Open the full-size figure</a>. In the two MNIST panels both CSP variants lead; in the four CelebA panels Fourier phase leads. Compatibility is a property of an edit relative to a chosen family, not a fixed ranking of the representations.</figcaption>
-    </figure>
-
-    <div class="col result gap">
-      <h3>The ordering is not universal</h3>
-      <p>Repeating the comparison on CelebA faces reverses it: under the warp-plus-gain family, Fourier-phase edits become the most reconstructible. With a warp-only fit, CSP phase leads on all four face tasks. Which representation looks &ldquo;most structural&rdquo; depends on the dataset and on the fitting family &mdash; another reason no single axis can stand in for recognizable class change.</p>
-    </div>
-
-    <figure class="col gap">
-      <div class="fig"><a href="figures/fig3.png"><img loading="lazy" src="figures/fig3.png" alt="Eight small scatter panels of signed margin advantage versus pyramid scale, top row driver classifier and bottom row independent judge, with the response concentrated at the finest scales."></a></div>
-      <figcaption><b>Frozen single-band probes</b> on development faces at image L&#8322; = 0.025. Signed response above matched Gaussian controls concentrates at the finest scales, for both the driver <em>G</em> (top) and an independent judge <em>O</em> (bottom). A larger response marks a sensitive coordinate, not an anatomical feature; larger edit budgets erode the common attainment needed to compare bands.</figcaption>
-    </figure>
-
-    <div class="col result gap">
-      <h3>What did people see?</h3>
-      <p>In a voluntary convenience sample of friends and family, two complete response sets yield 180 ratings on 90 edited images from 24 source&ndash;attribute cases. In these ratings, CSP edits drew more &ldquo;clear attribute change&rdquo; and &ldquo;no corruption&rdquo; ratings than pixel or Fourier-phase edits. These pooled ratings are repeated observations of the same images, not independent image samples. They provide descriptive evidence about these edits and do not show that any automated measurement predicts human judgment.</p>
-    </div>
-
-    <div class="col gap callout">
-      <p>A classifier response is evidence about that classifier. A claim of recognizable change requires validation beyond the score being optimized.</p>
-    </div>
-  </div>
-</section>
-
-<section id="more-trajectories">
-  <div class="wrap">
-    <div class="col">
-      <h2 class="sechead">What happens on natural images?</h2>
-      <p class="lead">Watch the image as the <em>target score changes.</em></p>
-      <h3>Recompute the gradient, or keep it fixed?</h3>
-      <p>Compare live and fixed gradients on ten examples: cats toward lynx, fox, flamingo, leopard, and tiger, plus a golf ball toward a soccer ball. Live recomputes the gradient at every step; fixed computes it once at the source. Choose an example to watch both paths in one synchronized animation.</p>
-    </div>
-    <div class="natural-controls">
-      <div class="natural-sources" role="group" aria-label="Natural-image source">
-        <button class="gallery-choice" type="button" data-natural-source="cat1" aria-pressed="true">Cat</button>
-        <button class="gallery-choice" type="button" data-natural-source="cat2" aria-pressed="false">Cat</button>
-        <button class="gallery-choice" type="button" data-natural-source="cat3" aria-pressed="false">Cat</button>
-        <button class="gallery-choice" type="button" data-natural-source="golf" aria-pressed="false">Golf ball</button>
-      </div>
-      <div class="natural-options"><label for="natural-example">Target and amplification</label><select id="natural-example"><option value="legacy_cat1_lynx_amp250">Lynx · amp 250</option></select></div>
-    </div>
-    <figure class="natural-viewer">
+</details></section><section id="findings"><h2>Confidence, transfer, and reconstruction give different answers</h2>
+<p>At the same final image distance on MNIST, pixel edits reach high median driver confidence, while CSP edits have greater smooth-reconstruction compatibility. Neither result establishes recognizable target-class change.</p>
+<div class="result-table" tabindex="0" role="region" aria-label="MNIST quantitative results"><table><caption>MNIST · L₂ = 2 · 300 cases per method</caption><thead><tr><th scope="col">Method</th><th scope="col">Median driver target probability</th><th scope="col">Both evaluation classifiers predict target</th><th scope="col">Median E: warp only</th><th scope="col">Median E: warp + gain</th></tr></thead><tbody><tr><th scope="row">Pixel</th><td>96.2%</td><td>10/300</td><td>36.5%</td><td>45.7%</td></tr><tr><th scope="row">Fourier phase</th><td>0.002%</td><td>3/300</td><td>34.5%</td><td>41.0%</td></tr><tr><th scope="row">CSP phase</th><td>0.349%</td><td>6/300</td><td>50.3%</td><td>71.9%</td></tr><tr><th scope="row">Joint CSP</th><td>0.952%</td><td>8/300</td><td>50.5%</td><td>72.2%</td></tr></tbody></table></div>
+<p class="small-note">E is explained edit energy under an 8×8 reconstruction fit. The columns measure different outcomes; a higher E is not a semantic-success rate. These are descriptive summaries. <a href="assets/mnist_matched_summary.json" download>Download these values</a> · <a href="explore.html#results">Explore reconstruction results</a></p>
+</section><section id="reconstruction"><h2>The reconstruction model changes the ranking</h2>
+<p>On the same retained CelebA cases, CSP phase has higher median explained energy than Fourier phase under a warp-only fit; Fourier phase has higher values when spatial gain is added. “More structural” therefore depends on the transformation family used to measure it.</p>
+<div class="result-table" tabindex="0" role="region" aria-label="CelebA reconstruction model comparison"><table><caption>CelebA · L₂ = 128/28 · median explained edit energy</caption><thead><tr><th scope="col" rowspan="2">Task</th><th scope="col" rowspan="2">Retained / requested</th><th scope="colgroup" colspan="2">Warp only</th><th scope="colgroup" colspan="2">Warp + gain</th></tr><tr><th scope="col">Fourier phase</th><th scope="col">CSP phase</th><th scope="col">Fourier phase</th><th scope="col">CSP phase</th></tr></thead><tbody><tr><th scope="row">Add smile</th><td>7/25</td><td>23.9%</td><td>26.3%</td><td>69.9%</td><td>62.1%</td></tr><tr><th scope="row">Remove smile</th><td>17/25</td><td>25.5%</td><td>32.0%</td><td>74.3%</td><td>73.6%</td></tr><tr><th scope="row">Add glasses</th><td>24/25</td><td>27.8%</td><td>30.0%</td><td>76.3%</td><td>70.4%</td></tr><tr><th scope="row">Remove glasses</th><td>22/25</td><td>25.8%</td><td>29.9%</td><td>72.5%</td><td>65.8%</td></tr></tbody></table></div>
+<p class="small-note">Both fits use an 8×8 grid. Cases are retained only when all four methods attain the budget; these summaries do not describe all requested cases. The differences are descriptive, without a significance claim. <a href="explore.html#results">All four methods and both reconstruction models</a>.</p>
+<details class="details-note"><summary>View the full warp-plus-gain figure</summary><figure><div class="fig"><img loading="lazy" src="figures/fig2.png" alt="Warp-plus-gain explained energy for four methods on MNIST and CelebA."></div><figcaption>Median explained edit energy. Coverage varies by CelebA task as listed above.</figcaption></figure></details></section><section id="human-pilot"><h2>What did people see? An exploratory pilot</h2><p>In a voluntary convenience sample of friends and family, two complete response sets yield 180 ratings on 90 edited images from 24 source&ndash;attribute cases. In these ratings, CSP edits drew more &ldquo;clear attribute change&rdquo; and &ldquo;no corruption&rdquo; ratings than pixel or Fourier-phase edits. These pooled ratings are repeated observations of the same images, not independent image samples. They provide descriptive evidence about these edits and do not show that any automated measurement predicts human judgment.</p><p class="small-note">The 180 ratings come from two raters; they are not 180 independent participants. This pilot supports descriptive observations about the rated examples.</p></section><section id="more-trajectories"><h2>A qualitative natural-image example</h2><p>The same source is edited toward the lynx label with a recomputed gradient and with a fixed source gradient. Amplification is equal; resulting image distances are not matched, so this demonstration is not a controlled ranking of the two update rules.</p><figure class="natural-viewer">
       <h3 id="natural-case-title" class="celeba-case-title" aria-live="polite">Cat → lynx</h3>
       <div class="animation-toolbar"><span id="natural-case-timing">12 recorded frames &middot; 7.0-second loop</span><button class="motion-toggle" type="button" aria-pressed="true">Pause animations</button></div>
       <div class="fig" tabindex="0" aria-label="Source, live and fixed gradient comparison; scroll horizontally on narrow screens"><img id="natural-morph" class="animated" src="figures/comparison_legacy_cat1_lynx_amp250.gif" data-gif="figures/comparison_legacy_cat1_lynx_amp250.gif" data-still="figures/comparison_legacy_cat1_lynx_amp250_poster.png" loading="lazy" width="760" height="422" alt="Cat → lynx: source, live-gradient and fixed-gradient sequences over twelve synchronized frames."></div>
       <p class="mobile-hint">↔ Swipe the figure to compare source, live, and fixed.</p>
-      <figcaption><span id="natural-case-description">Live recomputes the gradient after each edit; fixed computes it once at the source and extrapolates from that decomposition. Both use the same source, target, amplification, model and transform settings. Scores are target probabilities under G (robust ResNet-50); the golf example also reports O (standard ResNet-18). Top-1 labels are G’s predictions. Image distances are not matched.</span><span class="natural-downloads"><a id="natural-download" href="figures/comparison_legacy_cat1_lynx_amp250.gif" download>Download comparison GIF</a><a id="natural-live-download" href="figures/legacy_cat1_lynx_amp250.gif?v=3" download>Original live GIF</a><a id="natural-fixed-download" href="figures/fixed_cat1_lynx_amp250.gif" download>Fixed-gradient GIF</a></span></figcaption>
-    </figure>
-    <details class="details-note"><summary>Reproduction details and comparison scope</summary><p>The live paths were verified against the original results: all 108 cat image panels match exactly, and the golf sequence matches its saved arrays and scores. The first nonzero live and fixed edits also match for every pair. The comparisons show actual computed states and target probabilities; no in-between images are interpolated. Amplification is held equal within each pair, while the resulting image distances can differ. These amplification values are distinct from the phase caps used in the <a href="explore.html#trajectories">interactive reference examples</a>.</p></details>
-    <p id="natural-examples"><a class="btn" href="imagenet.html">More ImageNet examples →</a></p>
-
-  </div>
-</section>
-
-<section id="resources">
+      <figcaption><span id="natural-case-description">Live recomputes the gradient after each edit; fixed computes it once at the source and extrapolates from that decomposition. Both use the same source, target, amplification, model and transform settings. Scores are target probabilities under G (robust ResNet-50). Top-1 labels are G’s predictions. Image distances are not matched.</span><span class="natural-downloads"><a id="natural-download" href="figures/comparison_legacy_cat1_lynx_amp250.gif" download>Download comparison GIF</a><a id="natural-live-download" href="figures/legacy_cat1_lynx_amp250.gif?v=3" download>Original live GIF</a><a id="natural-fixed-download" href="figures/fixed_cat1_lynx_amp250.gif" download>Fixed-gradient GIF</a></span></figcaption>
+    </figure><p><a class="btn" href="imagenet.html">More ImageNet examples →</a></p></section><section id="resources">
   <div class="wrap"><div class="col">
-    <h2 class="sechead">Scope, figures, and data</h2>
+    <h2 class="sechead">Limitations and reproducibility</h2>
     <div class="limits"><h3>What these examples can establish</h3><p>The galleries illustrate recorded edits; they do not estimate how often an edit will look like its target. Independent classifier transfer and smooth reconstruction are diagnostic measurements, and neither replaces human evaluation.</p><p>The human pilot is descriptive, with two complete rating sets from voluntary friends-and-family participants. It supports observations about those images, not a general guarantee for CSP.</p></div>
+    <details class="details-note"><summary>Additional sensitivity analysis: frozen single-band probes</summary><p>Signed margin advantage is the direction-adjusted margin change above matched random controls. Scale 0 is the finest scale; the four orientations at each scale are shown separately.</p><figure class="col gap">
+      <div class="fig"><a href="figures/fig3.png"><img loading="lazy" src="figures/fig3.png" alt="Eight small scatter panels of signed margin advantage versus pyramid scale, top row driver classifier and bottom row independent judge, with the response concentrated at the finest scales."></a></div>
+      <figcaption><b>Frozen single-band probes</b> on development faces at image L&#8322; = 0.025. Signed response above matched Gaussian controls concentrates at the finest scales, for both the driver <em>G</em> (top) and an independent judge <em>O</em> (bottom). A larger response marks a sensitive coordinate, not an anatomical feature; larger edit budgets erode the common attainment needed to compare bands.</figcaption>
+    </figure></details>
     <div class="resource-links">
       <a href="assets/main_dissociation.pdf" download>Method comparison &middot; PDF</a>
       <a href="assets/structure_comparison.pdf" download>Reconstruction results &middot; PDF</a>
@@ -249,14 +96,7 @@
     </div>
     <p class="animation-note">MNIST test images and CelebA faces had historical project exposure; CelebA also inherits historical checkpoint selection. Structural comparisons on faces are conditional on common budget attainment (7/25, 17/25, 24/25 and 22/25 at the larger budget). The interactive results page retains these denominators.</p>
   </div></div>
-</section>
-
-<footer>
+</section><footer>
   <p>Visual storytelling inspired by <a href="https://recuriosity.github.io/">Remember to be Curious</a>.<br>Earlier layout based on <a href="https://github.com/eliahuhorwitz/Academic-project-page-template">Academic Project Page</a> and <a href="https://nerfies.github.io">Nerfies</a>.</p>
   <a href="explore.html">Interactive results</a> &nbsp;·&nbsp; <a href="https://github.com/fmahdisoltani/steerable-lens">Website source</a> &nbsp;·&nbsp; <a href="privacy.html">Privacy</a>
-</footer>
-</main>
-<script type="application/json" id="celeba-gallery-data">[{"id":"Smiling_184729","group":"add-smile","title":"Add smile","source_id":"184729","gif":"celeba_smiling_184729.gif","poster":"celeba_smiling_184729_poster.png","frame_count":67,"loop_duration_ms":10100},{"id":"Smiling_186468","group":"add-smile","title":"Add smile","source_id":"186468","gif":"celeba_smiling_186468.gif","poster":"celeba_smiling_186468_poster.png","frame_count":69,"loop_duration_ms":10300},{"id":"Smiling_184591","group":"remove-smile","title":"Remove smile","source_id":"184591","gif":"celeba_smiling_184591.gif","poster":"celeba_smiling_184591_poster.png","frame_count":55,"loop_duration_ms":9960},{"id":"Eyeglasses_183071","group":"add-glasses","title":"Add glasses","source_id":"183071","gif":"celeba_eyeglasses_183071.gif","poster":"celeba_eyeglasses_183071_poster.png","frame_count":92,"loop_duration_ms":9900},{"id":"Eyeglasses_183248","group":"add-glasses","title":"Add glasses","source_id":"183248","gif":"celeba_eyeglasses_183248.gif","poster":"celeba_eyeglasses_183248_poster.png","frame_count":82,"loop_duration_ms":10000},{"id":"Eyeglasses_185223","group":"remove-glasses","title":"Remove glasses","source_id":"185223","gif":"celeba_eyeglasses_185223.gif","poster":"celeba_eyeglasses_185223_poster.png","frame_count":240,"loop_duration_ms":15500}]</script>
-<script type="application/json" id="natural-gallery-data">[{"id":"legacy_cat1_lynx_amp250","group":"cat1","title":"Cat \u2192 lynx","option_label":"Lynx \u00b7 amp 250","gif":"legacy_cat1_lynx_amp250.gif","poster":"legacy_cat1_lynx_amp250_poster.png","frame_count":12,"loop_duration_ms":7000,"description":"Live trajectory with amp 250. All 12 saved frames are shown; G target probabilities are the two-decimal values printed on the original strip.","fixed":{"id":"fixed_cat1_lynx_amp250","gif":"fixed_cat1_lynx_amp250.gif","poster":"fixed_cat1_lynx_amp250_poster.png","description":"Fixed source-gradient trajectory with amp 250; 12 computed states. The source gradient is evaluated once. Live replay matches all original saved image tiles and rounded scores; the first live and fixed updates are identical."},"comparison":{"id":"comparison_legacy_cat1_lynx_amp250","gif":"comparison_legacy_cat1_lynx_amp250.gif","poster":"comparison_legacy_cat1_lynx_amp250_poster.png","description":"Live recomputes the gradient after each edit; fixed computes it once at the source and extrapolates from that decomposition. Both use the same source, target, amplification, model and transform settings. Scores are target probabilities under G (robust ResNet-50); the golf example also reports O (standard ResNet-18). Top-1 labels are G’s predictions. Image distances are not matched."}},{"id":"legacy_cat2_red_fox_amp250","group":"cat2","title":"Cat \u2192 red fox","option_label":"Red fox \u00b7 amp 250","gif":"legacy_cat2_red_fox_amp250.gif","poster":"legacy_cat2_red_fox_amp250_poster.png","frame_count":12,"loop_duration_ms":7000,"description":"Live trajectory with amp 250. All 12 saved frames are shown; G target probabilities are the two-decimal values printed on the original strip.","fixed":{"id":"fixed_cat2_red_fox_amp250","gif":"fixed_cat2_red_fox_amp250.gif","poster":"fixed_cat2_red_fox_amp250_poster.png","description":"Fixed source-gradient trajectory with amp 250; 12 computed states. The source gradient is evaluated once. Live replay matches all original saved image tiles and rounded scores; the first live and fixed updates are identical."},"comparison":{"id":"comparison_legacy_cat2_red_fox_amp250","gif":"comparison_legacy_cat2_red_fox_amp250.gif","poster":"comparison_legacy_cat2_red_fox_amp250_poster.png","description":"Live recomputes the gradient after each edit; fixed computes it once at the source and extrapolates from that decomposition. Both use the same source, target, amplification, model and transform settings. Scores are target probabilities under G (robust ResNet-50); the golf example also reports O (standard ResNet-18). Top-1 labels are G’s predictions. Image distances are not matched."}},{"id":"legacy_cat2_kit_fox_amp120","group":"cat2","title":"Cat \u2192 kit fox","option_label":"Kit fox \u00b7 amp 120","gif":"legacy_cat2_kit_fox_amp120.gif","poster":"legacy_cat2_kit_fox_amp120_poster.png","frame_count":12,"loop_duration_ms":7000,"description":"Live trajectory with amp 120. All 12 saved frames are shown; G target probabilities are the two-decimal values printed on the original strip.","fixed":{"id":"fixed_cat2_kit_fox_amp120","gif":"fixed_cat2_kit_fox_amp120.gif","poster":"fixed_cat2_kit_fox_amp120_poster.png","description":"Fixed source-gradient trajectory with amp 120; 12 computed states. The source gradient is evaluated once. Live replay matches all original saved image tiles and rounded scores; the first live and fixed updates are identical."},"comparison":{"id":"comparison_legacy_cat2_kit_fox_amp120","gif":"comparison_legacy_cat2_kit_fox_amp120.gif","poster":"comparison_legacy_cat2_kit_fox_amp120_poster.png","description":"Live recomputes the gradient after each edit; fixed computes it once at the source and extrapolates from that decomposition. Both use the same source, target, amplification, model and transform settings. Scores are target probabilities under G (robust ResNet-50); the golf example also reports O (standard ResNet-18). Top-1 labels are G’s predictions. Image distances are not matched."}},{"id":"legacy_cat2_lynx_amp250","group":"cat2","title":"Cat \u2192 lynx","option_label":"Lynx \u00b7 amp 250","gif":"legacy_cat2_lynx_amp250.gif","poster":"legacy_cat2_lynx_amp250_poster.png","frame_count":12,"loop_duration_ms":7000,"description":"Live trajectory with amp 250. All 12 saved frames are shown; G target probabilities are the two-decimal values printed on the original strip.","fixed":{"id":"fixed_cat2_lynx_amp250","gif":"fixed_cat2_lynx_amp250.gif","poster":"fixed_cat2_lynx_amp250_poster.png","description":"Fixed source-gradient trajectory with amp 250; 12 computed states. The source gradient is evaluated once. Live replay matches all original saved image tiles and rounded scores; the first live and fixed updates are identical."},"comparison":{"id":"comparison_legacy_cat2_lynx_amp250","gif":"comparison_legacy_cat2_lynx_amp250.gif","poster":"comparison_legacy_cat2_lynx_amp250_poster.png","description":"Live recomputes the gradient after each edit; fixed computes it once at the source and extrapolates from that decomposition. Both use the same source, target, amplification, model and transform settings. Scores are target probabilities under G (robust ResNet-50); the golf example also reports O (standard ResNet-18). Top-1 labels are G’s predictions. Image distances are not matched."}},{"id":"legacy_cat3_flamingo_amp30","group":"cat3","title":"Cat \u2192 flamingo","option_label":"Flamingo \u00b7 amp 30","gif":"legacy_cat3_flamingo_amp30.gif","poster":"legacy_cat3_flamingo_amp30_poster.png","frame_count":12,"loop_duration_ms":7000,"description":"Live trajectory with amp 30. All 12 saved frames are shown; G target probabilities are the two-decimal values printed on the original strip.","fixed":{"id":"fixed_cat3_flamingo_amp30","gif":"fixed_cat3_flamingo_amp30.gif","poster":"fixed_cat3_flamingo_amp30_poster.png","description":"Fixed source-gradient trajectory with amp 30; 12 computed states. The source gradient is evaluated once. Live replay matches all original saved image tiles and rounded scores; the first live and fixed updates are identical."},"comparison":{"id":"comparison_legacy_cat3_flamingo_amp30","gif":"comparison_legacy_cat3_flamingo_amp30.gif","poster":"comparison_legacy_cat3_flamingo_amp30_poster.png","description":"Live recomputes the gradient after each edit; fixed computes it once at the source and extrapolates from that decomposition. Both use the same source, target, amplification, model and transform settings. Scores are target probabilities under G (robust ResNet-50); the golf example also reports O (standard ResNet-18). Top-1 labels are G’s predictions. Image distances are not matched."}},{"id":"legacy_cat3_flamingo_amp60","group":"cat3","title":"Cat \u2192 flamingo","option_label":"Flamingo \u00b7 amp 60","gif":"legacy_cat3_flamingo_amp60.gif","poster":"legacy_cat3_flamingo_amp60_poster.png","frame_count":12,"loop_duration_ms":7000,"description":"Live trajectory with amp 60. All 12 saved frames are shown; G target probabilities are the two-decimal values printed on the original strip.","fixed":{"id":"fixed_cat3_flamingo_amp60","gif":"fixed_cat3_flamingo_amp60.gif","poster":"fixed_cat3_flamingo_amp60_poster.png","description":"Fixed source-gradient trajectory with amp 60; 12 computed states. The source gradient is evaluated once. Live replay matches all original saved image tiles and rounded scores; the first live and fixed updates are identical."},"comparison":{"id":"comparison_legacy_cat3_flamingo_amp60","gif":"comparison_legacy_cat3_flamingo_amp60.gif","poster":"comparison_legacy_cat3_flamingo_amp60_poster.png","description":"Live recomputes the gradient after each edit; fixed computes it once at the source and extrapolates from that decomposition. Both use the same source, target, amplification, model and transform settings. Scores are target probabilities under G (robust ResNet-50); the golf example also reports O (standard ResNet-18). Top-1 labels are G’s predictions. Image distances are not matched."}},{"id":"legacy_cat3_flamingo_amp1000","group":"cat3","title":"Cat \u2192 flamingo","option_label":"Flamingo \u00b7 amp 1000","gif":"legacy_cat3_flamingo_amp1000.gif","poster":"legacy_cat3_flamingo_amp1000_poster.png","frame_count":12,"loop_duration_ms":7000,"description":"Live trajectory with amp 1000. All 12 saved frames are shown; G target probabilities are the two-decimal values printed on the original strip.","fixed":{"id":"fixed_cat3_flamingo_amp1000","gif":"fixed_cat3_flamingo_amp1000.gif","poster":"fixed_cat3_flamingo_amp1000_poster.png","description":"Fixed source-gradient trajectory with amp 1000; 12 computed states. The source gradient is evaluated once. Live replay matches all original saved image tiles and rounded scores; the first live and fixed updates are identical."},"comparison":{"id":"comparison_legacy_cat3_flamingo_amp1000","gif":"comparison_legacy_cat3_flamingo_amp1000.gif","poster":"comparison_legacy_cat3_flamingo_amp1000_poster.png","description":"Live recomputes the gradient after each edit; fixed computes it once at the source and extrapolates from that decomposition. Both use the same source, target, amplification, model and transform settings. Scores are target probabilities under G (robust ResNet-50); the golf example also reports O (standard ResNet-18). Top-1 labels are G’s predictions. Image distances are not matched."}},{"id":"legacy_cat3_leopard_amp250","group":"cat3","title":"Cat \u2192 leopard","option_label":"Leopard \u00b7 amp 250","gif":"legacy_cat3_leopard_amp250.gif","poster":"legacy_cat3_leopard_amp250_poster.png","frame_count":12,"loop_duration_ms":7000,"description":"Live trajectory with amp 250. All 12 saved frames are shown; G target probabilities are the two-decimal values printed on the original strip.","fixed":{"id":"fixed_cat3_leopard_amp250","gif":"fixed_cat3_leopard_amp250.gif","poster":"fixed_cat3_leopard_amp250_poster.png","description":"Fixed source-gradient trajectory with amp 250; 12 computed states. The source gradient is evaluated once. Live replay matches all original saved image tiles and rounded scores; the first live and fixed updates are identical."},"comparison":{"id":"comparison_legacy_cat3_leopard_amp250","gif":"comparison_legacy_cat3_leopard_amp250.gif","poster":"comparison_legacy_cat3_leopard_amp250_poster.png","description":"Live recomputes the gradient after each edit; fixed computes it once at the source and extrapolates from that decomposition. Both use the same source, target, amplification, model and transform settings. Scores are target probabilities under G (robust ResNet-50); the golf example also reports O (standard ResNet-18). Top-1 labels are G’s predictions. Image distances are not matched."}},{"id":"legacy_cat3_tiger_amp1000","group":"cat3","title":"Cat \u2192 tiger","option_label":"Tiger \u00b7 amp 1000","gif":"legacy_cat3_tiger_amp1000.gif","poster":"legacy_cat3_tiger_amp1000_poster.png","frame_count":12,"loop_duration_ms":7000,"description":"Live trajectory with amp 1000. All 12 saved frames are shown; G target probabilities are the two-decimal values printed on the original strip.","fixed":{"id":"fixed_cat3_tiger_amp1000","gif":"fixed_cat3_tiger_amp1000.gif","poster":"fixed_cat3_tiger_amp1000_poster.png","description":"Fixed source-gradient trajectory with amp 1000; 12 computed states. The source gradient is evaluated once. Live replay matches all original saved image tiles and rounded scores; the first live and fixed updates are identical."},"comparison":{"id":"comparison_legacy_cat3_tiger_amp1000","gif":"comparison_legacy_cat3_tiger_amp1000.gif","poster":"comparison_legacy_cat3_tiger_amp1000_poster.png","description":"Live recomputes the gradient after each edit; fixed computes it once at the source and extrapolates from that decomposition. Both use the same source, target, amplification, model and transform settings. Scores are target probabilities under G (robust ResNet-50); the golf example also reports O (standard ResNet-18). Top-1 labels are G’s predictions. Image distances are not matched."}},{"id":"golf_to_soccer_amp1000","group":"golf","title":"Golf ball \u2192 Soccer ball","option_label":"Soccer ball \u00b7 amplification 1000","gif":"golf_to_soccer_amp1000.gif","poster":"golf_to_soccer_amp1000_poster.png","frame_count":12,"loop_duration_ms":7000,"description":"Twelve recorded states of a step-local Y-only phase edit, with the source fixed on the left. G is robust ResNet-50 and O is standard ResNet-18; scores are soccer-ball target probabilities.","fixed":{"id":"golf_to_soccer_amp1000_fixed","gif":"golf_to_soccer_amp1000_fixed.gif","poster":"golf_to_soccer_amp1000_fixed_poster.png","description":"Fixed-gradient Y-only phase extrapolation: the gradient is computed once at the source, then the original source decomposition is rendered at steps 0 through 11. The source is held on the left; G and O show soccer-ball target probabilities. Amplification matches the live counterpart; image distances are not matched."},"comparison":{"id":"comparison_golf_to_soccer_amp1000","gif":"comparison_golf_to_soccer_amp1000.gif","poster":"comparison_golf_to_soccer_amp1000_poster.png","description":"Live recomputes the gradient after each edit; fixed computes it once at the source and extrapolates from that decomposition. Both use the same source, target, amplification, model and transform settings. Scores are target probabilities under G (robust ResNet-50); the golf example also reports O (standard ResNet-18). Top-1 labels are G’s predictions. Image distances are not matched."}}]</script>
-</body>
-</html>
+</footer></main></body></html>

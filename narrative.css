@@ -204,3 +204,14 @@ footer a { color: #73736b; }
   .imagenet-page .natural-examples-grid figure { max-width: 360px; }
   .imagenet-page .natural-examples-grid .fig { padding: 16px; }
 }
+
+.contribution { max-width: 660px; margin: 22px auto; color: var(--muted); }
+.hero .abstract-details { text-align: left; margin: 24px auto 0; max-width: 720px; }
+.result-table { overflow-x: auto; margin: 24px 0 14px; border: 1px solid var(--line); border-radius: 7px; }
+.result-table table { border-collapse: collapse; width: 100%; min-width: 610px; font-size: 14px; font-variant-numeric: tabular-nums; }
+.result-table caption { text-align: left; padding: 16px; font-weight: 600; }
+.result-table th, .result-table td { padding: 12px; text-align: right; border-top: 1px solid var(--line); }
+.result-table th:first-child { text-align: left; }
+.result-table thead { background: var(--soft); }
+.result-table tbody th { font-weight: 500; white-space: nowrap; }
+.result-table:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }

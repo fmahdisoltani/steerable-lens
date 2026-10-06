@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="Confidence Is Not Evidence: Probing Classifier Sensitivity with Steerable Lens. Explore recorded image edits, method comparisons, and research results.">
+<title>Smiles and glasses — Steerable Lens</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<script src="animations.js?v=gallery-cleanup-2" defer></script>
+<script src="story.js?v=1" defer></script>
+<script src="analytics.js?v=1" defer></script>
+<link rel="stylesheet" href="fonts/fonts.css">
+<link rel="stylesheet" href="narrative.css?v=3">
+</head>
+<body id="top"><a class="skip-link" href="#main">Skip to content</a><main id="main" class="page"><p><a class="btn" href="index.html#comparison">← Project homepage</a></p><section id="celeba-animations">
+  <div class="wrap">
+    <div class="col">
+      <h1>Smiles and glasses</h1>
+
+      <p>Browse six faces across smile and glasses edits. Each animation compares Pixel, Fourier phase, CSP phase, and Joint CSP alongside the unedited source. All four methods reach the same final image distance, L&#8322; = 128/28.</p>
+    </div>
+    <div class="celeba-controls">
+      <div class="celeba-directions" role="group" aria-label="Attribute and edit direction">
+        <button class="gallery-choice" type="button" data-celeba-direction="add-smile" aria-pressed="true">Add smile</button>
+        <button class="gallery-choice" type="button" data-celeba-direction="remove-smile" aria-pressed="false">Remove smile</button>
+        <button class="gallery-choice" type="button" data-celeba-direction="add-glasses" aria-pressed="false">Add glasses</button>
+        <button class="gallery-choice" type="button" data-celeba-direction="remove-glasses" aria-pressed="false">Remove glasses</button>
+      </div>
+      <div class="celeba-examples" role="group" aria-label="Choose a face">
+        <button class="gallery-choice" type="button" data-celeba-example="0" aria-pressed="true">Example 1</button>
+        <button class="gallery-choice" type="button" data-celeba-example="1" aria-pressed="false">Example 2</button>
+      </div>
+    </div>
+    <figure>
+      <h3 id="celeba-case-title" class="celeba-case-title" aria-live="polite">Add smile &middot; Source 184729 &middot; Example 1 of 2</h3>
+      <div class="animation-toolbar"><span id="celeba-case-timing">67 animation frames &middot; 10.1-second loop</span><button class="motion-toggle" type="button" aria-pressed="true">Pause animations</button></div>
+      <div class="fig celeba-figure" tabindex="0" aria-label="CelebA four-method morph sequence; scroll horizontally on small screens">
+        <img id="celeba-morph" class="animated" src="figures/celeba_smiling_184729.gif" data-gif="figures/celeba_smiling_184729.gif" data-still="figures/celeba_smiling_184729_poster.png" width="960" height="390" loading="lazy" alt="Add smile, source 184729: actual optimization steps across all four methods, with the original source alongside.">
+      </div>
+      <p class="mobile-hint">Swipe the figure to compare methods.</p>
+      <figcaption>Each sequence includes the source, every accepted step before the requested budget, and the exact matched-budget endpoint. Shorter paths hold recorded frames so all four methods finish together; only the final budgets are matched. G is the optimized classifier&rsquo;s target probability. At the endpoint, &ldquo;Both judges&rdquo; reports joint target prediction and E is the warp-plus-gain reconstruction score. <a id="celeba-download" href="figures/celeba_smiling_184729.gif" download>Download this GIF</a>.</figcaption>
+    </figure>
+    <details class="details-note"><summary>Selection and replay details</summary><p>These are illustrative cases with common budget attainment, drawn from candidates originally selected by source ID, then curated for this gallery. Every replay matches its original endpoint pixels and G/O/O&#8322; scores exactly. The animations use actual optimizer states, without image interpolation.</p></details>
+    <div class="homepage-examples" id="celeba-examples">
+      <h3>All six smile and glasses examples</h3>
+      <p>Each face is shown below with all four methods, so you can browse every sequence without changing the selector.</p>
+      <div class="animation-toolbar"><span>Six faces across four edit directions</span><button class="motion-toggle" type="button" aria-pressed="true">Pause animations</button></div>
+      <div class="celeba-examples-list">
+      <figure id="showcase-Smiling_184729">
+        <h4>Add smile · Source 184729</h4>
+        <div class="fig celeba-figure" tabindex="0" aria-label="Add smile, source 184729: scroll horizontally on small screens to compare all four methods"><img class="animated" src="figures/celeba_smiling_184729.gif" data-gif="figures/celeba_smiling_184729.gif" data-still="figures/celeba_smiling_184729_poster.png" loading="lazy" width="960" height="390" alt="Add smile, source 184729: the source and full morph sequences for Pixel, Fourier phase, CSP phase, and Joint CSP."></div>
+        <figcaption>67 animation frames · Final L&#8322; = 128/28 · <a href="figures/celeba_smiling_184729.gif" download>Download GIF</a></figcaption>
+      </figure>
+      <figure id="showcase-Smiling_186468">
+        <h4>Add smile · Source 186468</h4>
+        <div class="fig celeba-figure" tabindex="0" aria-label="Add smile, source 186468: scroll horizontally on small screens to compare all four methods"><img class="animated" src="figures/celeba_smiling_186468.gif" data-gif="figures/celeba_smiling_186468.gif" data-still="figures/celeba_smiling_186468_poster.png" loading="lazy" width="960" height="390" alt="Add smile, source 186468: the source and full morph sequences for Pixel, Fourier phase, CSP phase, and Joint CSP."></div>
+        <figcaption>69 animation frames · Final L&#8322; = 128/28 · <a href="figures/celeba_smiling_186468.gif" download>Download GIF</a></figcaption>
+      </figure>
+      <figure id="showcase-Smiling_184591">
+        <h4>Remove smile · Source 184591</h4>
+        <div class="fig celeba-figure" tabindex="0" aria-label="Remove smile, source 184591: scroll horizontally on small screens to compare all four methods"><img class="animated" src="figures/celeba_smiling_184591.gif" data-gif="figures/celeba_smiling_184591.gif" data-still="figures/celeba_smiling_184591_poster.png" loading="lazy" width="960" height="390" alt="Remove smile, source 184591: the source and full morph sequences for Pixel, Fourier phase, CSP phase, and Joint CSP."></div>
+        <figcaption>55 animation frames · Final L&#8322; = 128/28 · <a href="figures/celeba_smiling_184591.gif" download>Download GIF</a></figcaption>
+      </figure>
+      <figure id="showcase-Eyeglasses_183071">
+        <h4>Add glasses · Source 183071</h4>
+        <div class="fig celeba-figure" tabindex="0" aria-label="Add glasses, source 183071: scroll horizontally on small screens to compare all four methods"><img class="animated" src="figures/celeba_eyeglasses_183071.gif" data-gif="figures/celeba_eyeglasses_183071.gif" data-still="figures/celeba_eyeglasses_183071_poster.png" loading="lazy" width="960" height="390" alt="Add glasses, source 183071: the source and full morph sequences for Pixel, Fourier phase, CSP phase, and Joint CSP."></div>
+        <figcaption>92 animation frames · Final L&#8322; = 128/28 · <a href="figures/celeba_eyeglasses_183071.gif" download>Download GIF</a></figcaption>
+      </figure>
+      <figure id="showcase-Eyeglasses_183248">
+        <h4>Add glasses · Source 183248</h4>
+        <div class="fig celeba-figure" tabindex="0" aria-label="Add glasses, source 183248: scroll horizontally on small screens to compare all four methods"><img class="animated" src="figures/celeba_eyeglasses_183248.gif" data-gif="figures/celeba_eyeglasses_183248.gif" data-still="figures/celeba_eyeglasses_183248_poster.png" loading="lazy" width="960" height="390" alt="Add glasses, source 183248: the source and full morph sequences for Pixel, Fourier phase, CSP phase, and Joint CSP."></div>
+        <figcaption>82 animation frames · Final L&#8322; = 128/28 · <a href="figures/celeba_eyeglasses_183248.gif" download>Download GIF</a></figcaption>
+      </figure>
+      <figure id="showcase-Eyeglasses_185223">
+        <h4>Remove glasses · Source 185223</h4>
+        <div class="fig celeba-figure" tabindex="0" aria-label="Remove glasses, source 185223: scroll horizontally on small screens to compare all four methods"><img class="animated" src="figures/celeba_eyeglasses_185223.gif" data-gif="figures/celeba_eyeglasses_185223.gif" data-still="figures/celeba_eyeglasses_185223_poster.png" loading="lazy" width="960" height="390" alt="Remove glasses, source 185223: the source and full morph sequences for Pixel, Fourier phase, CSP phase, and Joint CSP."></div>
+        <figcaption>240 animation frames · Final L&#8322; = 128/28 · <a href="figures/celeba_eyeglasses_185223.gif" download>Download GIF</a></figcaption>
+      </figure>
+      </div>
+    </div>
+
+  </div>
+</section><footer><a href="index.html">Project homepage</a> · <a href="privacy.html">Privacy</a></footer></main><script type="application/json" id="celeba-gallery-data">[{"id":"Smiling_184729","group":"add-smile","title":"Add smile","source_id":"184729","gif":"celeba_smiling_184729.gif","poster":"celeba_smiling_184729_poster.png","frame_count":67,"loop_duration_ms":10100},{"id":"Smiling_186468","group":"add-smile","title":"Add smile","source_id":"186468","gif":"celeba_smiling_186468.gif","poster":"celeba_smiling_186468_poster.png","frame_count":69,"loop_duration_ms":10300},{"id":"Smiling_184591","group":"remove-smile","title":"Remove smile","source_id":"184591","gif":"celeba_smiling_184591.gif","poster":"celeba_smiling_184591_poster.png","frame_count":55,"loop_duration_ms":9960},{"id":"Eyeglasses_183071","group":"add-glasses","title":"Add glasses","source_id":"183071","gif":"celeba_eyeglasses_183071.gif","poster":"celeba_eyeglasses_183071_poster.png","frame_count":92,"loop_duration_ms":9900},{"id":"Eyeglasses_183248","group":"add-glasses","title":"Add glasses","source_id":"183248","gif":"celeba_eyeglasses_183248.gif","poster":"celeba_eyeglasses_183248_poster.png","frame_count":82,"loop_duration_ms":10000},{"id":"Eyeglasses_185223","group":"remove-glasses","title":"Remove glasses","source_id":"185223","gif":"celeba_eyeglasses_185223.gif","poster":"celeba_eyeglasses_185223_poster.png","frame_count":240,"loop_duration_ms":15500}]</script></body></html>
