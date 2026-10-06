@@ -7,11 +7,11 @@
 <meta name="description" content="Confidence Is Not Evidence: Probing Classifier Sensitivity with Steerable Lens. Explore recorded image edits, method comparisons, and research results.">
 <title>Smiles and glasses — Steerable Lens</title>
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
-<script src="animations.js?v=gallery-cleanup-2" defer></script>
+<script src="animations.js?v=frames1" defer></script>
 <script src="story.js?v=1" defer></script>
 <script src="analytics.js?v=1" defer></script>
 <link rel="stylesheet" href="fonts/fonts.css">
-<link rel="stylesheet" href="narrative.css?v=3">
+<link rel="stylesheet" href="narrative.css?v=frames1">
 </head>
 <body id="top"><a class="skip-link" href="#main">Skip to content</a><main id="main" class="page"><p><a class="btn" href="index.html#comparison">← Project homepage</a></p><section id="celeba-animations">
   <div class="wrap">
@@ -39,7 +39,7 @@
         <img id="celeba-morph" class="animated" src="figures/celeba_smiling_184729.gif" data-gif="figures/celeba_smiling_184729.gif" data-still="figures/celeba_smiling_184729_poster.png" width="960" height="390" loading="lazy" alt="Add smile, source 184729: actual optimization steps across all four methods, with the original source alongside.">
       </div>
       <p class="mobile-hint">Swipe the figure to compare methods.</p>
-      <figcaption>Each sequence includes the source, every accepted step before the requested budget, and the exact matched-budget endpoint. Shorter paths hold recorded frames so all four methods finish together; only the final budgets are matched. G is the optimized classifier&rsquo;s target probability. At the endpoint, &ldquo;Both judges&rdquo; reports joint target prediction and E is the warp-plus-gain reconstruction score. <a id="celeba-download" href="figures/celeba_smiling_184729.gif" download>Download this GIF</a>.</figcaption>
+      <figcaption>Each sequence includes the source, every accepted step before the requested budget, and the exact matched-budget endpoint. Shorter paths hold recorded frames so all four methods finish together; only the final budgets are matched. G is the optimized classifier&rsquo;s target probability. At the endpoint, &ldquo;Both evaluation classifiers predict target&rdquo; reports agreement between O and O₂ and E is the warp-plus-gain reconstruction score. <a id="celeba-download" href="figures/celeba_smiling_184729.gif" download>Download this GIF</a>.</figcaption>
     </figure>
     <details class="details-note"><summary>Selection and replay details</summary><p>The original candidate pool used a source-ID selection rule among cases with common budget attainment. The six examples displayed here were subsequently curated through additions and removals; they are illustrative, not a random or representative sample. The quantitative summaries use their defined evaluation sets, not this display selection. Every replay matches its original endpoint pixels and G/O/O&#8322; scores exactly. The animations use actual optimizer states, without image interpolation.</p></details>
     <div class="homepage-examples" id="celeba-examples">

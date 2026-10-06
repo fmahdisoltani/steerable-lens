@@ -1,5 +1,7 @@
 'use strict';
 (() => {
+  let frameData = null;
+  const players = new Map();
   const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
   let playing = !preference.matches;
   const images = [...document.querySelectorAll('img.animated')];
@@ -84,17 +86,35 @@
     selectSource(cases[0].group);
   }
   function render() {
+    if (!frameData) return;
     images.forEach(image => {
-      const source = playing ? image.dataset.gif : image.dataset.still;
-      if (image.getAttribute('src') !== source) image.src = source;
-    });
-    buttons.forEach(button => {
-      button.textContent = playing ? 'Pause animations' : 'Play animations';
-      button.setAttribute('aria-pressed', String(playing));
-      button.title = playing ? 'Stop GIF playback and show recorded endpoints' : 'Play the recorded image sequence';
+      const key = image.dataset.gif.split('/').pop().split('?')[0];
+      const data = frameData[key];
+      if (!data || players.get(image)?.key === key) return;
+      players.get(image)?.stop();
+      image.parentElement.parentElement.querySelector('.frame-controls')?.remove();
+      image.parentElement.querySelector('.frame-columns')?.remove();
+      const columns = document.createElement('div'); columns.className = 'frame-columns';
+      (data.columns || []).forEach(label => { const span=document.createElement('span');span.textContent=label;columns.append(span); });
+      if (data.columns) { columns.style.gridTemplateColumns=`repeat(${data.columns.length},1fr)`;image.before(columns);image.style.height='auto';image.removeAttribute('height'); }
+      const box=document.createElement('div');box.className='frame-controls';
+      const target=document.createElement('p');target.className='frame-target';target.textContent=data.target ? `Intended target: ${data.target}` : 'Recorded optimization sequence';
+      const row=document.createElement('div');row.className='frame-buttons';
+      const button=label=>{const b=document.createElement('button');b.type='button';b.textContent=label;row.append(b);return b;};
+      const start=button('Source'),play=button('Play'),end=button('Endpoint');
+      const slider=document.createElement('input');slider.type='range';slider.min=0;slider.max=data.frames.length-1;slider.value=0;slider.setAttribute('aria-label','Recorded frame');
+      const status=document.createElement('p');status.className='frame-status';
+      const note=document.createElement('p');note.className='small-note';note.textContent=data.endpointNote || '';
+      box.append(target,row,slider,status,note);image.parentElement.after(box);
+      let index=0,timer=null,running=false,request=0;
+      const stop=()=>{running=false;++request;clearTimeout(timer);play.textContent='Play';};
+      const show=(n)=>{index=n;const token=++request;const preload=new Image();preload.onload=()=>{if(token!==request)return;image.src=preload.src;slider.value=n;status.textContent=`Frame ${n+1} of ${data.frames.length}\n${data.labels[n] || ''}`;if(running)timer=setTimeout(()=>show((n+1)%data.frames.length),data.durations[n] || 400);};preload.onerror=()=>{stop();status.textContent='Frame could not load. Try again or download the original GIF.';};preload.src=data.frames[n];};
+      play.onclick=()=>{if(running)stop();else{running=true;play.textContent='Pause';show(index);}};
+      start.onclick=()=>{stop();show(0);};end.onclick=()=>{stop();show(data.frames.length-1);};slider.oninput=()=>{stop();show(Number(slider.value));};
+      players.set(image,{key,stop});show(0);
     });
   }
-  buttons.forEach(button => button.addEventListener('click', () => { playing = !playing; render(); }));
-  preference.addEventListener('change', () => { playing = !preference.matches; render(); });
-  render();
+  buttons.forEach(button => button.remove());
+  fetch('assets/frame_players.json').then(r=>{if(!r.ok)throw new Error('Frame metadata unavailable');return r.json();}).then(data=>{frameData=data;render();}).catch(()=>{});
+  preference.addEventListener('change',()=>{if(preference.matches)players.forEach(p=>p.stop());});
 })();
