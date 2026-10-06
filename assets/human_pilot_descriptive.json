@@ -1,0 +1,203 @@
+{
+  "study": "Original two-rater CelebA pilot",
+  "raters": 2,
+  "edited_images": 90,
+  "source_attribute_cases": 24,
+  "ratings": 180,
+  "source_sha256": "40594beb2a06460318f73ff6b27bfd5e82b011e364eccb827b46934a92091851",
+  "scope": "Convenience sample; descriptive proportions only. Each rater evaluated the same 90 edited images. Pooled denominators count ratings, not independent images or participants. Future website responses are a separate study and are not included.",
+  "results": [
+    {
+      "outcome": "clear",
+      "method": "pixel",
+      "rater": "Rater A",
+      "count": 2,
+      "denominator": 23,
+      "proportion": 0.08695652173913043
+    },
+    {
+      "outcome": "clear",
+      "method": "pixel",
+      "rater": "Rater B",
+      "count": 0,
+      "denominator": 23,
+      "proportion": 0.0
+    },
+    {
+      "outcome": "clear",
+      "method": "pixel",
+      "rater": "Pooled",
+      "count": 2,
+      "denominator": 46,
+      "proportion": 0.043478260869565216
+    },
+    {
+      "outcome": "clear",
+      "method": "fourier_phase",
+      "rater": "Rater A",
+      "count": 6,
+      "denominator": 23,
+      "proportion": 0.2608695652173913
+    },
+    {
+      "outcome": "clear",
+      "method": "fourier_phase",
+      "rater": "Rater B",
+      "count": 3,
+      "denominator": 23,
+      "proportion": 0.13043478260869565
+    },
+    {
+      "outcome": "clear",
+      "method": "fourier_phase",
+      "rater": "Pooled",
+      "count": 9,
+      "denominator": 46,
+      "proportion": 0.1956521739130435
+    },
+    {
+      "outcome": "clear",
+      "method": "csp_phase",
+      "rater": "Rater A",
+      "count": 13,
+      "denominator": 22,
+      "proportion": 0.5909090909090909
+    },
+    {
+      "outcome": "clear",
+      "method": "csp_phase",
+      "rater": "Rater B",
+      "count": 7,
+      "denominator": 22,
+      "proportion": 0.3181818181818182
+    },
+    {
+      "outcome": "clear",
+      "method": "csp_phase",
+      "rater": "Pooled",
+      "count": 20,
+      "denominator": 44,
+      "proportion": 0.45454545454545453
+    },
+    {
+      "outcome": "clear",
+      "method": "csp_joint",
+      "rater": "Rater A",
+      "count": 10,
+      "denominator": 22,
+      "proportion": 0.45454545454545453
+    },
+    {
+      "outcome": "clear",
+      "method": "csp_joint",
+      "rater": "Rater B",
+      "count": 12,
+      "denominator": 22,
+      "proportion": 0.5454545454545454
+    },
+    {
+      "outcome": "clear",
+      "method": "csp_joint",
+      "rater": "Pooled",
+      "count": 22,
+      "denominator": 44,
+      "proportion": 0.5
+    },
+    {
+      "outcome": "no_corruption",
+      "method": "pixel",
+      "rater": "Rater A",
+      "count": 0,
+      "denominator": 23,
+      "proportion": 0.0
+    },
+    {
+      "outcome": "no_corruption",
+      "method": "pixel",
+      "rater": "Rater B",
+      "count": 0,
+      "denominator": 23,
+      "proportion": 0.0
+    },
+    {
+      "outcome": "no_corruption",
+      "method": "pixel",
+      "rater": "Pooled",
+      "count": 0,
+      "denominator": 46,
+      "proportion": 0.0
+    },
+    {
+      "outcome": "no_corruption",
+      "method": "fourier_phase",
+      "rater": "Rater A",
+      "count": 8,
+      "denominator": 23,
+      "proportion": 0.34782608695652173
+    },
+    {
+      "outcome": "no_corruption",
+      "method": "fourier_phase",
+      "rater": "Rater B",
+      "count": 7,
+      "denominator": 23,
+      "proportion": 0.30434782608695654
+    },
+    {
+      "outcome": "no_corruption",
+      "method": "fourier_phase",
+      "rater": "Pooled",
+      "count": 15,
+      "denominator": 46,
+      "proportion": 0.32608695652173914
+    },
+    {
+      "outcome": "no_corruption",
+      "method": "csp_phase",
+      "rater": "Rater A",
+      "count": 18,
+      "denominator": 22,
+      "proportion": 0.8181818181818182
+    },
+    {
+      "outcome": "no_corruption",
+      "method": "csp_phase",
+      "rater": "Rater B",
+      "count": 12,
+      "denominator": 22,
+      "proportion": 0.5454545454545454
+    },
+    {
+      "outcome": "no_corruption",
+      "method": "csp_phase",
+      "rater": "Pooled",
+      "count": 30,
+      "denominator": 44,
+      "proportion": 0.6818181818181818
+    },
+    {
+      "outcome": "no_corruption",
+      "method": "csp_joint",
+      "rater": "Rater A",
+      "count": 19,
+      "denominator": 22,
+      "proportion": 0.8636363636363636
+    },
+    {
+      "outcome": "no_corruption",
+      "method": "csp_joint",
+      "rater": "Rater B",
+      "count": 16,
+      "denominator": 22,
+      "proportion": 0.7272727272727273
+    },
+    {
+      "outcome": "no_corruption",
+      "method": "csp_joint",
+      "rater": "Pooled",
+      "count": 35,
+      "denominator": 44,
+      "proportion": 0.7954545454545454
+    }
+  ]
+}
