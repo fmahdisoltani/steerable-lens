@@ -24,7 +24,7 @@ for ax,(_,_,task) in zip(axes,tasks):
  ax.plot([0,1],ys,'o-',color='#99512d',lw=1.5)
  for x,y in enumerate(ys):ax.annotate(f'{y}/25',(x,y),xytext=(0,9),textcoords='offset points',ha='center',fontweight='bold')
  ax.set_title(task);ax.set_xticks([0,1],['64/28\n≈ 2.29','128/28\n≈ 4.57']);ax.set_xlim(-.3,1.3);ax.set_ylim(0,29);ax.set_yticks([0,5,10,15,20,25]);ax.grid(axis='y',alpha=.18);ax.set_axisbelow(True);ax.spines[['top','right']].set_visible(False);ax.set_xlabel('Requested image L₂')
-axes[0].set_ylabel('Cases attained by all 4 methods')
+axes[0].set_ylabel('Common attainment\n(number of cases)')
 fig.tight_layout()
 for ext in ['svg','png']:fig.savefig(root/f'figures/celeba_coverage.{ext}',dpi=180,bbox_inches='tight')
 print([(r['task'],round(r['budget'],2),r['common_attained']) for r in rows])
