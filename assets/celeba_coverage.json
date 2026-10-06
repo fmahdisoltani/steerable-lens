@@ -1,0 +1,263 @@
+{
+  "source_sha256": "5e73d8065b494ad2ff225b329ebb9739cd8a709b5a50645998487331fe1f4da6",
+  "definition": "Common attainment requires all four methods to attain the requested distance for the same source-target case at that budget. Unattained cases are excluded from conditional reconstruction summaries, not assigned zero quality.",
+  "rows": [
+    {
+      "task": "Add smile",
+      "budget": 2.2857142857142856,
+      "requested": 25,
+      "common_attained": 8,
+      "per_method_attained": {
+        "pixel": 20,
+        "fourier_phase": 19,
+        "csp_phase": 9,
+        "csp_joint": 14
+      },
+      "common_case_ids": [
+        "Smiling_184729",
+        "Smiling_186468",
+        "Smiling_190004",
+        "Smiling_191017",
+        "Smiling_191982",
+        "Smiling_196960",
+        "Smiling_197971",
+        "Smiling_200086"
+      ]
+    },
+    {
+      "task": "Add smile",
+      "budget": 4.571428571428571,
+      "requested": 25,
+      "common_attained": 7,
+      "per_method_attained": {
+        "pixel": 20,
+        "fourier_phase": 13,
+        "csp_phase": 9,
+        "csp_joint": 14
+      },
+      "common_case_ids": [
+        "Smiling_184729",
+        "Smiling_186468",
+        "Smiling_190004",
+        "Smiling_191017",
+        "Smiling_191982",
+        "Smiling_196960",
+        "Smiling_197971"
+      ]
+    },
+    {
+      "task": "Remove smile",
+      "budget": 2.2857142857142856,
+      "requested": 25,
+      "common_attained": 18,
+      "per_method_attained": {
+        "pixel": 23,
+        "fourier_phase": 21,
+        "csp_phase": 21,
+        "csp_joint": 21
+      },
+      "common_case_ids": [
+        "Smiling_183135",
+        "Smiling_184591",
+        "Smiling_185216",
+        "Smiling_185382",
+        "Smiling_187066",
+        "Smiling_189155",
+        "Smiling_189509",
+        "Smiling_191741",
+        "Smiling_191760",
+        "Smiling_192356",
+        "Smiling_193237",
+        "Smiling_196226",
+        "Smiling_196672",
+        "Smiling_196756",
+        "Smiling_197196",
+        "Smiling_199445",
+        "Smiling_201423",
+        "Smiling_201902"
+      ]
+    },
+    {
+      "task": "Remove smile",
+      "budget": 4.571428571428571,
+      "requested": 25,
+      "common_attained": 17,
+      "per_method_attained": {
+        "pixel": 23,
+        "fourier_phase": 18,
+        "csp_phase": 21,
+        "csp_joint": 21
+      },
+      "common_case_ids": [
+        "Smiling_183135",
+        "Smiling_184591",
+        "Smiling_185216",
+        "Smiling_185382",
+        "Smiling_187066",
+        "Smiling_189155",
+        "Smiling_189509",
+        "Smiling_191741",
+        "Smiling_191760",
+        "Smiling_192356",
+        "Smiling_193237",
+        "Smiling_196226",
+        "Smiling_196756",
+        "Smiling_197196",
+        "Smiling_199445",
+        "Smiling_201423",
+        "Smiling_201902"
+      ]
+    },
+    {
+      "task": "Add glasses",
+      "budget": 2.2857142857142856,
+      "requested": 25,
+      "common_attained": 25,
+      "per_method_attained": {
+        "pixel": 25,
+        "fourier_phase": 25,
+        "csp_phase": 25,
+        "csp_joint": 25
+      },
+      "common_case_ids": [
+        "Eyeglasses_183071",
+        "Eyeglasses_183143",
+        "Eyeglasses_183248",
+        "Eyeglasses_183681",
+        "Eyeglasses_184108",
+        "Eyeglasses_184188",
+        "Eyeglasses_185430",
+        "Eyeglasses_187228",
+        "Eyeglasses_187368",
+        "Eyeglasses_187550",
+        "Eyeglasses_188892",
+        "Eyeglasses_190756",
+        "Eyeglasses_191055",
+        "Eyeglasses_191556",
+        "Eyeglasses_191592",
+        "Eyeglasses_191750",
+        "Eyeglasses_192282",
+        "Eyeglasses_193156",
+        "Eyeglasses_196336",
+        "Eyeglasses_196466",
+        "Eyeglasses_198306",
+        "Eyeglasses_199439",
+        "Eyeglasses_201577",
+        "Eyeglasses_201810",
+        "Eyeglasses_202447"
+      ]
+    },
+    {
+      "task": "Add glasses",
+      "budget": 4.571428571428571,
+      "requested": 25,
+      "common_attained": 24,
+      "per_method_attained": {
+        "pixel": 25,
+        "fourier_phase": 24,
+        "csp_phase": 25,
+        "csp_joint": 25
+      },
+      "common_case_ids": [
+        "Eyeglasses_183071",
+        "Eyeglasses_183143",
+        "Eyeglasses_183248",
+        "Eyeglasses_183681",
+        "Eyeglasses_184108",
+        "Eyeglasses_184188",
+        "Eyeglasses_185430",
+        "Eyeglasses_187228",
+        "Eyeglasses_187368",
+        "Eyeglasses_187550",
+        "Eyeglasses_188892",
+        "Eyeglasses_190756",
+        "Eyeglasses_191055",
+        "Eyeglasses_191592",
+        "Eyeglasses_191750",
+        "Eyeglasses_192282",
+        "Eyeglasses_193156",
+        "Eyeglasses_196336",
+        "Eyeglasses_196466",
+        "Eyeglasses_198306",
+        "Eyeglasses_199439",
+        "Eyeglasses_201577",
+        "Eyeglasses_201810",
+        "Eyeglasses_202447"
+      ]
+    },
+    {
+      "task": "Remove glasses",
+      "budget": 2.2857142857142856,
+      "requested": 25,
+      "common_attained": 24,
+      "per_method_attained": {
+        "pixel": 24,
+        "fourier_phase": 25,
+        "csp_phase": 25,
+        "csp_joint": 25
+      },
+      "common_case_ids": [
+        "Eyeglasses_184000",
+        "Eyeglasses_185223",
+        "Eyeglasses_185590",
+        "Eyeglasses_185868",
+        "Eyeglasses_186208",
+        "Eyeglasses_187082",
+        "Eyeglasses_187546",
+        "Eyeglasses_190194",
+        "Eyeglasses_190746",
+        "Eyeglasses_191164",
+        "Eyeglasses_191309",
+        "Eyeglasses_193719",
+        "Eyeglasses_194239",
+        "Eyeglasses_195777",
+        "Eyeglasses_196248",
+        "Eyeglasses_197023",
+        "Eyeglasses_197458",
+        "Eyeglasses_197730",
+        "Eyeglasses_197916",
+        "Eyeglasses_198370",
+        "Eyeglasses_199514",
+        "Eyeglasses_200609",
+        "Eyeglasses_200837",
+        "Eyeglasses_202130"
+      ]
+    },
+    {
+      "task": "Remove glasses",
+      "budget": 4.571428571428571,
+      "requested": 25,
+      "common_attained": 22,
+      "per_method_attained": {
+        "pixel": 23,
+        "fourier_phase": 24,
+        "csp_phase": 25,
+        "csp_joint": 24
+      },
+      "common_case_ids": [
+        "Eyeglasses_184000",
+        "Eyeglasses_185223",
+        "Eyeglasses_185590",
+        "Eyeglasses_186208",
+        "Eyeglasses_187082",
+        "Eyeglasses_187546",
+        "Eyeglasses_190194",
+        "Eyeglasses_190746",
+        "Eyeglasses_191164",
+        "Eyeglasses_191309",
+        "Eyeglasses_193719",
+        "Eyeglasses_194239",
+        "Eyeglasses_195777",
+        "Eyeglasses_196248",
+        "Eyeglasses_197023",
+        "Eyeglasses_197458",
+        "Eyeglasses_197730",
+        "Eyeglasses_197916",
+        "Eyeglasses_198370",
+        "Eyeglasses_199514",
+        "Eyeglasses_200609",
+        "Eyeglasses_202130"
+      ]
+    }
+  ]
+}
