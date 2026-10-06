@@ -215,3 +215,4 @@ footer a { color: #73736b; }
 .result-table thead { background: var(--soft); }
 .result-table tbody th { font-weight: 500; white-space: nowrap; }
 .result-table:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.quantitative-figure img { min-width: 820px; }
