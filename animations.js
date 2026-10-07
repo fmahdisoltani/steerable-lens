@@ -104,7 +104,7 @@
       const slider=document.createElement('input');slider.type='range';slider.min=0;slider.max=data.frames.length-1;slider.value=0;slider.setAttribute('aria-label','Recorded frame');
       const status=document.createElement('p');status.className='frame-status';
       const note=document.createElement('p');note.className='small-note';note.textContent=data.endpointNote || '';
-      const frameLabel=document.createElement('label');frameLabel.textContent='Recorded frame · source → final';frameLabel.append(slider);
+      const frameLabel=document.createElement('label');frameLabel.append(slider);
       box.append(target,row,frameLabel,status,note);image.parentElement.after(box);
       const ampMatch=key.match(/^(.*_amp)([0-9]+)\.gif$/);
       if(ampMatch){
