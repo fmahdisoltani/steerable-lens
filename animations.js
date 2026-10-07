@@ -100,16 +100,32 @@
       const target=document.createElement('p');target.className='frame-target';target.textContent=data.target ? `Intended target: ${data.target}` : 'Recorded optimization sequence';
       const row=document.createElement('div');row.className='frame-buttons';
       const button=label=>{const b=document.createElement('button');b.type='button';b.textContent=label;row.append(b);return b;};
-      const start=button('Source'),play=button('Play'),end=button('Endpoint');
+      const play=button('Play');
       const slider=document.createElement('input');slider.type='range';slider.min=0;slider.max=data.frames.length-1;slider.value=0;slider.setAttribute('aria-label','Recorded frame');
       const status=document.createElement('p');status.className='frame-status';
       const note=document.createElement('p');note.className='small-note';note.textContent=data.endpointNote || '';
-      box.append(target,row,slider,status,note);image.parentElement.after(box);
+      const frameLabel=document.createElement('label');frameLabel.textContent='Recorded frame · source → final';frameLabel.append(slider);
+      box.append(target,row,frameLabel,status,note);image.parentElement.after(box);
+      const ampMatch=key.match(/^(.*_amp)([0-9]+)\.gif$/);
+      if(ampMatch){
+        const variants=Object.keys(frameData).map(k=>({key:k,match:k.match(/^(.*_amp)([0-9]+)\.gif$/)})).filter(v=>v.match&&v.match[1]===ampMatch[1]).sort((a,b)=>Number(a.match[2])-Number(b.match[2]));
+        const ampLabel=document.createElement('label'),amp=document.createElement('input');amp.type='range';amp.min=0;amp.max=Math.max(1,variants.length-1);amp.step=1;amp.value=variants.findIndex(v=>v.key===key);amp.disabled=variants.length<2;const ampText=document.createElement('span');ampText.textContent=`Amplification: ${ampMatch[2]}${amp.disabled?' (only recorded setting)':' · recorded settings '+variants.map(v=>v.match[2]).join(', ')}`;ampLabel.append(ampText,amp);amp.setAttribute('aria-label','Recorded amplification');amp.setAttribute('aria-valuetext',ampMatch[2]);box.insertBefore(ampLabel,frameLabel);
+        amp.oninput=()=>{stop();const next=variants[Number(amp.value)];image.dataset.gif='figures/'+next.key;const dropdown=document.getElementById('natural-example');const optionValue=next.key.replace(/^comparison_/,'').replace(/\.gif$/,'');if(image.id==='natural-morph'&&dropdown&&[...dropdown.options].some(o=>o.value===optionValue)){dropdown.value=optionValue;dropdown.dispatchEvent(new Event('change'));}else{image.dataset.still='figures/'+next.key.replace('.gif','_poster.png');image.alt=`${data.target}: amplification ${next.match[2]}, recorded sequence`;const figure=image.closest('figure');const setting=figure?.querySelector('.example-setting');if(setting)setting.textContent='Amplification '+next.match[2];const link=figure?.querySelector('a[download]');if(link)link.href='figures/'+next.key;render();}};
+      }
+      const distances=data.labels.map(text=>[...text.matchAll(/(?:image )?L₂:? ([0-9.]+)/g)].map(m=>Number(m[1])));
+      let distanceSlider=null,distanceOutput=null,reference=null;
+      if(distances.length===data.frames.length&&distances.every(v=>v.length&&v.every(Number.isFinite))){
+        const budgetLabel=document.createElement('label');distanceOutput=document.createElement('span');distanceSlider=document.createElement('input');distanceSlider.type='range';distanceSlider.min=0;distanceSlider.step='any';distanceSlider.setAttribute('aria-label','Image distance L2, nearest recorded frame');
+        const count=distances[0].length;reference=document.createElement('select');reference.setAttribute('aria-label','Distance reference');const names=count===4?['Pixel','Fourier phase','CSP phase','Joint CSP']:count===2?['Live gradient','Fixed gradient']:['Recorded edit'];names.forEach((name,i)=>{const option=document.createElement('option');option.value=i;option.textContent=name;reference.append(option);});
+        budgetLabel.append(distanceOutput);if(count>1)budgetLabel.append(reference);budgetLabel.append(distanceSlider);box.insertBefore(budgetLabel,status);
+        const hint=document.createElement('p');hint.className='small-note';hint.textContent='Image distance selects the nearest recorded frame, not a new optimization budget. Other methods may have different distances at that frame; no interpolation is applied.';box.insertBefore(hint,status);
+        reference.onchange=()=>{stop();show(index);};distanceSlider.oninput=()=>{stop();const ref=Number(reference.value),desired=Number(distanceSlider.value);let closest=0;distances.forEach((v,i)=>{if(Math.abs(v[ref]-desired)<Math.abs(distances[closest][ref]-desired))closest=i;});show(closest);};
+      }
       let index=0,timer=null,running=!preference.matches,request=0;
       const stop=()=>{running=false;++request;clearTimeout(timer);play.textContent='Play';};
-      const show=(n)=>{index=n;const token=++request;const preload=new Image();preload.onload=()=>{if(token!==request)return;image.src=preload.src;slider.value=n;status.textContent=`Frame ${n+1} of ${data.frames.length}\n${data.labels[n] || ''}`;if(running)timer=setTimeout(()=>show((n+1)%data.frames.length),data.durations[n] || 400);};preload.onerror=()=>{stop();status.textContent='Frame could not load. Try again or download the original GIF.';};preload.src=data.frames[n];};
+      const show=(n)=>{index=n;const token=++request;const preload=new Image();preload.onload=()=>{if(token!==request)return;image.src=preload.src;slider.value=n;if(distanceSlider){const ref=Number(reference.value);distanceSlider.max=Math.max(...distances.map(v=>v[ref]));distanceSlider.value=distances[n][ref];distanceOutput.textContent=`Image distance (L₂): ${distances[n][ref].toFixed(2)} · ${reference.options[ref].textContent}`;}status.textContent=`Frame ${n+1} of ${data.frames.length}\n${data.labels[n] || ''}`;if(running)timer=setTimeout(()=>show((n+1)%data.frames.length),data.durations[n] || 400);};preload.onerror=()=>{stop();status.textContent='Frame could not load. Try again or download the original GIF.';};preload.src=data.frames[n];};
       play.onclick=()=>{if(running)stop();else{running=true;play.textContent='Pause';show(index);}};
-      start.onclick=()=>{stop();show(0);};end.onclick=()=>{stop();show(data.frames.length-1);};slider.oninput=()=>{stop();show(Number(slider.value));};
+      slider.oninput=()=>{stop();show(Number(slider.value));};
       players.set(image,{key,stop});play.textContent=running?'Pause':'Play';show(0);
     });
   }
