@@ -3,7 +3,6 @@
   let frameData = null;
   const players = new Map();
   const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
-  let playing = !preference.matches;
   const images = [...document.querySelectorAll('img.animated')];
   const buttons = [...document.querySelectorAll('.motion-toggle')];
   const galleryData = document.getElementById('celeba-gallery-data');
@@ -106,12 +105,12 @@
       const status=document.createElement('p');status.className='frame-status';
       const note=document.createElement('p');note.className='small-note';note.textContent=data.endpointNote || '';
       box.append(target,row,slider,status,note);image.parentElement.after(box);
-      let index=0,timer=null,running=false,request=0;
+      let index=0,timer=null,running=!preference.matches,request=0;
       const stop=()=>{running=false;++request;clearTimeout(timer);play.textContent='Play';};
       const show=(n)=>{index=n;const token=++request;const preload=new Image();preload.onload=()=>{if(token!==request)return;image.src=preload.src;slider.value=n;status.textContent=`Frame ${n+1} of ${data.frames.length}\n${data.labels[n] || ''}`;if(running)timer=setTimeout(()=>show((n+1)%data.frames.length),data.durations[n] || 400);};preload.onerror=()=>{stop();status.textContent='Frame could not load. Try again or download the original GIF.';};preload.src=data.frames[n];};
       play.onclick=()=>{if(running)stop();else{running=true;play.textContent='Pause';show(index);}};
       start.onclick=()=>{stop();show(0);};end.onclick=()=>{stop();show(data.frames.length-1);};slider.oninput=()=>{stop();show(Number(slider.value));};
-      players.set(image,{key,stop});show(0);
+      players.set(image,{key,stop});play.textContent=running?'Pause':'Play';show(0);
     });
   }
   buttons.forEach(button => button.remove());
